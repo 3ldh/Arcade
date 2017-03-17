@@ -5,7 +5,8 @@ set(CMAKE_CXX_STANDARD 11)
 
 file(GLOB INTERFACES "arcade_interface/*.hpp")
 
-file(GLOB GAMES "games/snake/*.cpp" "games/snake/*.hpp")
+file(GLOB GAMES "games/snake/*.cpp"
+                "games/snake/*.hpp")
 
 file(GLOB GFX_LIBS "gfxLibs/sfml/*.hpp"
                     "gfxLibs/sfml/*.cpp")
@@ -14,7 +15,7 @@ file(GLOB INCLUDE_FILES "include/*.hpp")
 
 file(GLOB SOURCE_FILES "srcs/*.cpp")
 
-add_executable(cpp_arcade ${INTERFACES} ${INCLUDE_FILES} ${GFX_LIBS} ${SOURCE_FILES})
+add_executable(cpp_arcade ${INTERFACES} ${GAMES} ${INCLUDE_FILES} ${GFX_LIBS} ${SOURCE_FILES})
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules")
 #[[
 find_package(SFML REQUIRED system window graphics network audio)

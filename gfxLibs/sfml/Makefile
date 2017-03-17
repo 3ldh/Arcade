@@ -61,7 +61,7 @@ OBJS    	=	$(SRC:.cpp=.o)
 NAME	    =   ../lib/lib_arcade_sfml.so
 
 LDFLAGS     =	-shared \
-		-L./deps/SFML-2.2/lib -lsfml-audio \
+		-L./SFML-2.2/lib -lsfml-audio \
 		-lsfml-graphics -lsfml-window -lsfml-network -lsfml-system
 
 CXXFLAGS    =	-W -Wall -Wextra --std=c++11 \

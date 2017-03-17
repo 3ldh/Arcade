@@ -33,3 +33,36 @@ arcade::Units::Direction arcade::Units::getNextMove() const {
 void arcade::Units::setNextMove(arcade::Units::Direction nextMove) {
     Units::nextMove = nextMove;
 }
+
+void arcade::Units::move(arcade::Units::Direction direction) {
+    switch (direction) {
+        case UP:
+            moveUp();
+            break;
+        case DOWN:
+            moveDown();
+            break;
+        case LEFT:
+            moveLeft();
+            break;
+        case RIGHT:
+            moveRight();
+            break;
+    }
+}
+
+void arcade::Units::moveUp() {
+    setPosition(position.first, position.second + 1);
+}
+
+void arcade::Units::moveDown() {
+
+}
+
+void arcade::Units::moveLeft() {
+
+}
+
+void arcade::Units::moveRight() {
+
+}
