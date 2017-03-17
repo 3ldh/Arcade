@@ -1,0 +1,3 @@
+[submodule "arcade_interface"]
+	path = arcade_interface
+	url = git@git.epitech.eu:/petren_l/arcade_interface
