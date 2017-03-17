@@ -57,5 +57,5 @@ arcade::Tile::~Tile() {
 
 }
 
-arcade::Tile::Tile(TileTypeEvolution type) : typeEv(type) {
+arcade::Tile::Tile(TileType type) : type(type), typeEv(EMPTY) {
 }

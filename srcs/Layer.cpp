@@ -31,7 +31,7 @@ arcade::Layer::Layer(size_t width, size_t height) : width(width), height(height)
     for (size_t i = 0; i < height; ++i) {
         std::vector<ITile *> vec;
         for (size_t j = 0; j < width; ++j) {
-            vec.push_back(new Tile(EMPTY));
+            vec.push_back(new Tile(arcade::TileType::EMPTY));
         }
         tiles.push_back(vec);
     }

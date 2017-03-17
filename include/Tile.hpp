@@ -16,7 +16,7 @@ namespace arcade {
         Tile();
     public:
         virtual ~Tile();
-        Tile(TileTypeEvolution type);
+        Tile(TileType type);
         TileType getType() const override;
         void setType(TileType type) override;
         TileTypeEvolution getTypeEv() const override;

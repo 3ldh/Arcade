@@ -13,6 +13,6 @@ int main() {
     map[0].getHeight();
     std::cout << map[0][0].size() << std::endl;
     map[0][0][0]->setTypeEv(PLAYER);
-    std::cout << map[0][0][0]->getType() << std::endl;
+    std::cout << static_cast<int>(map[0][0][0]->getType()) << std::endl;
     return 0;
 }
