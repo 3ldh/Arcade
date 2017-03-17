@@ -6,7 +6,6 @@
 #define DLOPEN_TEST_DLLOADER_H
 
 #include <dlfcn.h>
-#include "IDisplayModule.h"
 
 template <typename T>
 class DLLoader {
