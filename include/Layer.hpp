@@ -5,7 +5,7 @@
 #ifndef CPP_ARCADE_LAYER_HPP
 #define CPP_ARCADE_LAYER_HPP
 
-#include "../arcade_interface/ILayer.hpp"
+#include "../ArcadeInterfaces/ILayer.hpp"
 
 namespace arcade {
     class Layer : public ILayer {
@@ -17,6 +17,7 @@ namespace arcade {
         virtual ~Layer();
         Layer(size_t width, size_t height);
         std::vector<ITile *> &operator[](int n) override;
+        std::vector<ITile *> const &operator[](int n) const override;
         size_t getWidth() const override;
         size_t getHeight() const override;
     };

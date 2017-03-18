@@ -3,7 +3,7 @@ project(cpp_arcade)
 
 set(CMAKE_CXX_STANDARD 11)
 
-file(GLOB INTERFACES "arcade_interface/*.hpp")
+file(GLOB INTERFACES "ArcadeInterfaces/*.hpp")
 
 file(GLOB GAMES "games/snake/*.cpp"
                 "games/snake/*.hpp")

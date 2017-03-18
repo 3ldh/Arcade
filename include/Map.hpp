@@ -5,7 +5,7 @@
 #ifndef CPP_ARCADE_MAP_HPP
 #define CPP_ARCADE_MAP_HPP
 
-#include "../arcade_interface/IMap.hpp"
+#include "../ArcadeInterfaces/IMap.hpp"
 
 namespace arcade {
     class Map : public IMap {
@@ -17,9 +17,11 @@ namespace arcade {
         virtual ~Map();
         Map(size_t width, size_t height, size_t nbLayer);
         ILayer &operator[](size_t n) override;
+        const ILayer &operator[](size_t n) const override;
         size_t getLayerNb() const override;
         size_t getWidth() const override;
         size_t getHeight() const override;
+        bool isWalkable(size_t layer_idx, size_t x, size_t y) const;
     };
 }
 

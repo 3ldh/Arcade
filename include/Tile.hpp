@@ -5,7 +5,7 @@
 #ifndef CPP_ARCADE_TILE_HPP
 #define CPP_ARCADE_TILE_HPP
 
-#include "../arcade_interface/ITile.hpp"
+#include "../ArcadeInterfaces/ITile.hpp"
 
 namespace arcade {
     class Tile : public ITile{

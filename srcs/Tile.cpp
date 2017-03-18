@@ -2,7 +2,6 @@
 // Created by sauvau_m on 3/17/17.
 //
 
-#include <iostream>
 #include "../include/Tile.hpp"
 
 arcade::TileType arcade::Tile::getType() const {
@@ -13,7 +12,7 @@ void arcade::Tile::setType(arcade::TileType type) {
     Tile::type = type;
 }
 
-TileTypeEvolution arcade::Tile::getTypeEv() const {
+arcade::TileTypeEvolution arcade::Tile::getTypeEv() const {
     return typeEv;
 }
 
@@ -59,3 +58,4 @@ arcade::Tile::~Tile() {
 
 arcade::Tile::Tile(TileType type) : type(type), typeEv(EMPTY) {
 }
+

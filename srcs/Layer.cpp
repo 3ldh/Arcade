@@ -19,6 +19,10 @@ std::vector<arcade::ITile *> &arcade::Layer::operator[](int n) {
     return tiles[n];
 }
 
+std::vector<arcade::ITile *> const &arcade::Layer::operator[](int n) const {
+    return tiles.at(n);
+}
+
 size_t arcade::Layer::getWidth() const {
     return width;
 }
@@ -36,5 +40,6 @@ arcade::Layer::Layer(size_t width, size_t height) : width(width), height(height)
         tiles.push_back(vec);
     }
 }
+
 
 
