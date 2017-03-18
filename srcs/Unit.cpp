@@ -27,14 +27,6 @@ void arcade::Unit::setPosition(size_t x, size_t y) {
     Unit::position = std::make_pair(x, y);
 }
 
-arcade::Unit::Direction arcade::Unit::getNextMove() const {
-    return nextMove;
-}
-
-void arcade::Unit::setNextMove(arcade::Unit::Direction move) {
-    nextMove = move;
-}
-
 bool arcade::Unit::move(IMap const &map, arcade::Unit::Direction direction) {
     switch (direction) {
         case UP:

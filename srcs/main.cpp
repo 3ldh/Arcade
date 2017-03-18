@@ -31,5 +31,17 @@ int main() {
     game.snake.move(game.getCurrentMap(), arcade::Unit::DOWN);
     game.updatePlayerPos();
     showMap(game);
+    game.clearPlayerPos();
+    game.snake.move(game.getCurrentMap(), arcade::Unit::LEFT);
+    game.updatePlayerPos();
+    showMap(game);
+    game.clearPlayerPos();
+    game.snake.move(game.getCurrentMap(), arcade::Unit::UP);
+    game.updatePlayerPos();
+    showMap(game);
+    game.clearPlayerPos();
+    game.snake.move(game.getCurrentMap(), arcade::Unit::UP);
+    game.updatePlayerPos();
+    showMap(game);
     return 0;
 }

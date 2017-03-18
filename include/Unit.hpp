@@ -21,7 +21,6 @@ namespace arcade {
 
     protected:
         std::pair<size_t , size_t> position;
-        Direction nextMove;
 
     public:
         virtual ~Unit();
@@ -35,8 +34,6 @@ namespace arcade {
         const std::pair<size_t, size_t> &getPosition() const;
         void setPosition(const std::pair<size_t, size_t> &position);
         void setPosition(size_t x, size_t y);
-        Direction getNextMove() const;
-        void setNextMove(Direction nextMove);
     };
 }
 

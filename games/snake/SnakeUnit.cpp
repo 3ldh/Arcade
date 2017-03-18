@@ -12,12 +12,11 @@ arcade::SnakeUnit::~SnakeUnit() {
 arcade::SnakeUnit::SnakeUnit(size_t x, size_t y) : Unit(x, y) {
     for (int i = 0; i < NB_STARTING_PARTS; ++i) {
         parts.push_back(new Unit(x - i, y));
-        parts[i]->setNextMove(RIGHT);
         std::cout << "move part " << i << " x : " << parts[i]->getPosition().first << " y : "<<parts[i]->getPosition().second << std::endl;
     }
 }
 
-
+//TODO do we need to remove collisino check fro the snake
 bool arcade::SnakeUnit::move(const arcade::IMap &map, arcade::Unit::Direction direction) {
     return moveAllParts(map, direction);
 }
@@ -43,16 +42,13 @@ size_t arcade::SnakeUnit::getLength() const {
 }
 
 bool arcade::SnakeUnit::moveAllParts(IMap const &map, Direction direction) {
-    if (parts[0]->move(map, direction)) {
         std::cout << "move head 0 x : " << parts[0]->getPosition().first << " y : " << parts[0]->getPosition().second << std::endl;
-        for (size_t i = parts.size() - 1; i > 1; --i) {
+        for (size_t i = parts.size() - 1; i > 0; --i) {
 //            std::cout << "direction " << parts[i]->getNextMove() << std::endl;
             parts[i]->setPosition(parts[i - 1]->getPosition());
             std::cout << "move part " << i << " x : " << parts[i]->getPosition().first << " y : "<<parts[i]->getPosition().second << std::endl;
 //            std::cout << "next direction " << parts[i]->getNextMove() << std::endl;
         }
-        parts[0]->setNextMove(direction);
-        return true;
-    }
-    return false;
+    parts[0]->move(map, direction);
+    return true;
 }
