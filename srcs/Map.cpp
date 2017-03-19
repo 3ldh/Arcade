@@ -26,8 +26,6 @@ size_t arcade::Map::getHeight() const {
     return height;
 }
 
-arcade::IMap::~IMap() {}
-
 arcade::Map::~Map() {
     for (size_t i = 0; i < layer.size(); ++i) {
         delete layer[i];
@@ -43,6 +41,7 @@ arcade::Map::Map(size_t width, size_t height, size_t nbLayer) : width(width), he
 
 bool arcade::Map::isWalkable(size_t layer_idx, size_t x, size_t y) const {
     return !(x > height || y > width ||
-    operator[](layer_idx)[x][y]->getType() == arcade::TileType::BLOCK);
+    operator[](layer_idx)[x][y]->getType() == arcade::TileType::BLOCK ||
+    operator[](layer_idx)[x][y]->getTypeEv() == arcade::TileTypeEvolution ::PLAYER);
 }
 

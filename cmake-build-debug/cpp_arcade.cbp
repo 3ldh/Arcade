@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="cpp_arcade"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cpp_arcade">
+				<Option output="/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/cpp_arcade" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/6/include-fixed"/>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/6/../../../../x86_64-suse-linux/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/c++/6/x86_64-suse-linux"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 cpp_arcade"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cpp_arcade/fast">
+				<Option output="/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/cpp_arcade" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/6/include-fixed"/>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/6/../../../../x86_64-suse-linux/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/c++/6/x86_64-suse-linux"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 cpp_arcade/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/sauvau_m/rendu/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/Color.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/Event.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/GameState.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/IComponent.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/IGUI.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/IGame.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/IGfxLib.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/ILayer.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/ILevel.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/IMap.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/IStat.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/ITile.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/NetworkPacket.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/Protocol.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gamesSrcs/snake/SnakeGame.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gamesSrcs/snake/SnakeGame.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gamesSrcs/snake/SnakeUnit.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gamesSrcs/snake/SnakeUnit.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/GfxSFML.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/GfxSFML.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/Core.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/DLLoader.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/Exception.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/GUI.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/Layer.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/Map.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/Protocol.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/Tile.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/Unit.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/srcs/Core.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/srcs/Exception.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/srcs/GUI.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/srcs/Layer.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/srcs/Map.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/srcs/Tile.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/srcs/Unit.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/srcs/main.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

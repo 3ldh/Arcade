@@ -6,6 +6,7 @@
 #define DLOPEN_TEST_DLLOADER_H
 
 #include <dlfcn.h>
+#include "Exception.hpp"
 
 template <typename T>
 class DLLoader {
@@ -19,7 +20,12 @@ public:
 };
 
 template <typename T>
-DLLoader<T>::DLLoader(std::string const &lib) : handle(dlopen(lib.c_str(), RTLD_NOW)) {}
+DLLoader<T>::DLLoader(std::string const &lib) : handle(dlopen(lib.c_str(), RTLD_NOW)) {
+    if (!handle) {
+        std::cout << dlerror() << std::endl;
+        throw arcade::DLLoaderError("DLLloader : Can't load " + lib);
+    }
+}
 
 template <typename T>
 DLLoader<T>::~DLLoader() {

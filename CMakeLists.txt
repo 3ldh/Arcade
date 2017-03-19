@@ -3,13 +3,14 @@ project(cpp_arcade)
 
 set(CMAKE_CXX_STANDARD 11)
 
-file(GLOB INTERFACES "ArcadeInterfaces/*.hpp")
+file(GLOB INTERFACES "ArcadeInterfaces/*.hpp"
+                     "ArcadeInterfaces/*.cpp")
 
-file(GLOB GAMES "games/snake/*.cpp"
-                "games/snake/*.hpp")
+file(GLOB GAMES "gamesSrcs/snake/*.cpp"
+                "gamesSrcs/snake/*.hpp")
 
-file(GLOB GFX_LIBS "gfxLibs/sfml/*.hpp"
-                    "gfxLibs/sfml/*.cpp")
+file(GLOB GFX_LIBS "gfxLibsSrcs/sfml/*.hpp"
+                    "gfxLibsSrcs/sfml/*.cpp")
 
 file(GLOB INCLUDE_FILES "include/*.hpp")
 

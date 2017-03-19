@@ -5,8 +5,6 @@
 #include "../include/Layer.hpp"
 #include "../include/Tile.hpp"
 
-arcade::ILayer::~ILayer(){};
-
 arcade::Layer::~Layer() {
     for (size_t i = 0; i < height; ++i) {
         for (size_t j = 0; j < width; ++j) {

@@ -2,7 +2,8 @@
 #include "../include/DLLoader.hpp"
 #include "../ArcadeInterfaces/IGfxLib.hpp"
 #include "../include/Map.hpp"
-#include "../games/snake/SnakeGame.hpp"
+#include "../gamesSrcs/snake/SnakeGame.hpp"
+#include "../include/Core.hpp"
 
 void showMap(arcade::SnakeGame const &game)
 {
@@ -15,32 +16,35 @@ void showMap(arcade::SnakeGame const &game)
 }
 
 int main() {
-    DLLoader<arcade::IGfxLib> loader("gfxLibs/lib/lib_arcade_sfml.so");
+    DLLoader<arcade::IGfxLib> loader("lib/lib_arcade_sfml.so");
 
     arcade::IGfxLib *lib = loader.getInstance("getClone");
     lib->display();
+
+    arcade::Core("lib/lib_arcade_sfml.so");
+
     arcade::SnakeGame game;
 
     game.updatePlayerPos();
     showMap(game);
     game.clearPlayerPos();
-    game.snake.move(game.getCurrentMap(), arcade::Unit::DOWN);
+    game.snake.move(game.getMap(), arcade::Unit::DOWN);
     game.updatePlayerPos();
     showMap(game);
     game.clearPlayerPos();
-    game.snake.move(game.getCurrentMap(), arcade::Unit::DOWN);
+    game.snake.move(game.getMap(), arcade::Unit::DOWN);
     game.updatePlayerPos();
     showMap(game);
     game.clearPlayerPos();
-    game.snake.move(game.getCurrentMap(), arcade::Unit::LEFT);
+    game.snake.move(game.getMap(), arcade::Unit::LEFT);
     game.updatePlayerPos();
     showMap(game);
     game.clearPlayerPos();
-    game.snake.move(game.getCurrentMap(), arcade::Unit::UP);
+    game.snake.move(game.getMap(), arcade::Unit::UP);
     game.updatePlayerPos();
     showMap(game);
     game.clearPlayerPos();
-    game.snake.move(game.getCurrentMap(), arcade::Unit::UP);
+    game.snake.move(game.getMap(), arcade::Unit::UP);
     game.updatePlayerPos();
     showMap(game);
     return 0;

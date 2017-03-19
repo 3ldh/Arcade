@@ -26,7 +26,7 @@ namespace arcade {
         virtual ~Unit();
         Unit(const std::pair<size_t, size_t> &position);
         Unit(size_t x, size_t y);
-        virtual bool move(IMap const &map, Direction direction);
+        virtual bool move(Map const &map, Direction direction);
         virtual void moveUp();
         virtual void moveDown();
         virtual void moveLeft();
@@ -34,6 +34,7 @@ namespace arcade {
         const std::pair<size_t, size_t> &getPosition() const;
         void setPosition(const std::pair<size_t, size_t> &position);
         void setPosition(size_t x, size_t y);
+        std::pair<size_t, size_t> convertDirection(Direction direction);
     };
 }
 
