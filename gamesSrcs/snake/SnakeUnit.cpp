@@ -72,7 +72,8 @@ void arcade::SnakeUnit::setMovingDirection(arcade::Unit::Direction movingDirecti
 bool arcade::SnakeUnit::moveAllParts(Map const &map, Direction direction) {
     std::cout << "move head 0 x : " << parts[0]->getPosition().first << " y : " << parts[0]->getPosition().second
               << std::endl;
-    if (isBodyPart(parts[0]->getPosition().first, parts[0]->getPosition().second))
+    std::pair<size_t, size_t > vector = convertDirection(direction);
+    if (isBodyPart(parts[0]->getPosition().first + vector.first, parts[0]->getPosition().second + vector.second))
         return false;
     for (size_t i = parts.size() - 1; i > 0; --i) {
 //            std::cout << "direction " << parts[i]->getNextMove() << std::endl;

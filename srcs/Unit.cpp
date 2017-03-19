@@ -56,13 +56,13 @@ void arcade::Unit::moveRight() {
 std::pair<size_t, size_t> arcade::Unit::convertDirection(arcade::Unit::Direction direction) {
     switch (direction) {
         case UP:
-            return std::make_pair(0, 1);
-        case DOWN:
             return std::make_pair(0, -1);
+        case DOWN:
+            return std::make_pair(0, 1);
         case LEFT:
-            return std::make_pair(1, 0);
-        case RIGHT:
             return std::make_pair(-1, 0);
+        case RIGHT:
+            return std::make_pair(1, 0);
     }
     return std::make_pair(0, 0);
 }

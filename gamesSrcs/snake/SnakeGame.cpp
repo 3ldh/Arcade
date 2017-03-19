@@ -62,7 +62,6 @@ const arcade::IGUI &arcade::SnakeGame::getGUI() const {
     return *new GUI();
 }
 
-//TODO remove this function of test
 void arcade::SnakeGame::updatePlayerPos() {
     for (size_t i = 0; i < snake.getLength(); ++i) {
         map[0][snake[i].getPosition().second][snake[i].getPosition().first]->setType(TileType::OTHER);
@@ -80,6 +79,7 @@ void arcade::SnakeGame::clearPlayerPos() {
 void arcade::SnakeGame::process() {
     if (!snake.move(map)) {
         //TODO GameOver
+        std::cerr << "GameOver : the Snake has lost his head" << std::endl;
     }
 }
 

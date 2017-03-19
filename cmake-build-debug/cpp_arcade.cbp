@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/Color.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/Color.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>

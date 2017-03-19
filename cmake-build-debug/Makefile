@@ -123,6 +123,33 @@ cpp_arcade/fast:
 	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/build
 .PHONY : cpp_arcade/fast
 
+ArcadeInterfaces/Color.o: ArcadeInterfaces/Color.cpp.o
+
+.PHONY : ArcadeInterfaces/Color.o
+
+# target to build an object file
+ArcadeInterfaces/Color.cpp.o:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/ArcadeInterfaces/Color.cpp.o
+.PHONY : ArcadeInterfaces/Color.cpp.o
+
+ArcadeInterfaces/Color.i: ArcadeInterfaces/Color.cpp.i
+
+.PHONY : ArcadeInterfaces/Color.i
+
+# target to preprocess a source file
+ArcadeInterfaces/Color.cpp.i:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/ArcadeInterfaces/Color.cpp.i
+.PHONY : ArcadeInterfaces/Color.cpp.i
+
+ArcadeInterfaces/Color.s: ArcadeInterfaces/Color.cpp.s
+
+.PHONY : ArcadeInterfaces/Color.s
+
+# target to generate assembly for a file
+ArcadeInterfaces/Color.cpp.s:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/ArcadeInterfaces/Color.cpp.s
+.PHONY : ArcadeInterfaces/Color.cpp.s
+
 gamesSrcs/snake/SnakeGame.o: gamesSrcs/snake/SnakeGame.cpp.o
 
 .PHONY : gamesSrcs/snake/SnakeGame.o
@@ -429,6 +456,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... cpp_arcade"
+	@echo "... ArcadeInterfaces/Color.o"
+	@echo "... ArcadeInterfaces/Color.i"
+	@echo "... ArcadeInterfaces/Color.s"
 	@echo "... gamesSrcs/snake/SnakeGame.o"
 	@echo "... gamesSrcs/snake/SnakeGame.i"
 	@echo "... gamesSrcs/snake/SnakeGame.s"

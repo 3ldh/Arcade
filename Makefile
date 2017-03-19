@@ -23,7 +23,8 @@ ECHO	=	echo -e
 # SOURCES VARIABLES
 
 SRC		=	$(wildcard srcs/*.cpp) \
-        	$(wildcard games/snake/*.cpp)
+        	$(wildcard gamesSrcs/snake/*.cpp) \
+        	$(wildcard ArcadeInterfaces/*.cpp)
 
 OBJS    	=	$(SRC:.cpp=.o)
 
