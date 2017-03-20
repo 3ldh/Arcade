@@ -24,6 +24,10 @@ arcade::SnakeGame::SnakeGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 1)),
                 map[0][i][j]->setColor(Color::White);
         }
     }
+    inputs[KeyboardKey::KB_ARROW_UP] = Unit::Direction::UP;
+    inputs[KeyboardKey::KB_ARROW_DOWN] = Unit::Direction::DOWN;
+    inputs[KeyboardKey::KB_ARROW_LEFT] = Unit::Direction::LEFT;
+    inputs[KeyboardKey::KB_ARROW_RIGHT] = Unit::Direction::RIGHT;
 }
 
 arcade::GameState arcade::SnakeGame::getGameState() const {
@@ -31,7 +35,9 @@ arcade::GameState arcade::SnakeGame::getGameState() const {
 }
 
 void arcade::SnakeGame::notifyEvent(const std::vector<arcade::Event> &events) {
-    (void) events;
+    auto it = inputs.find(events[0].kb_key);
+    if (it != inputs.end())
+        snake.setMovingDirection((*it).second);
 }
 
 void arcade::SnakeGame::notifyNetwork(const std::vector<arcade::NetworkPacket> &events) {

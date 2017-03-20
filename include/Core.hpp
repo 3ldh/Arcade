@@ -13,13 +13,16 @@
 
 namespace arcade {
     class Core {
+        DLLoader<IGfxLib> *libLoader;
+        DLLoader<IGame> *gameLoader;
+
         IGfxLib *currentLib;
         IGame *currentGame;
         std::vector<std::string> gamesPath;
         std::vector<std::string> gfxPath;
         int gfxLibIndex;
         int gameLibIndex;
-        std::map<Event, std::function<void(void)> > input;
+        std::map<arcade::KeyboardKey, std::function<void(void)> > input;
 
         bool stringEndWith(std::string const &value, std::string const &end);
         std::vector<std::string> getPathToSOFilesInDir(std::string const &pathDir);
@@ -35,7 +38,9 @@ namespace arcade {
         void nextGame();
         void prevGfxLib(void);
         void nextGfxLib();
-        void getEvent();
+        void switchMenu();
+        void menuUp();
+        void menuDown();
     };
 }
 

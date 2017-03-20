@@ -12,6 +12,11 @@
 namespace arcade {
     class GfxSFML : public IGfxLib {
         sf::RenderWindow window;
+        std::map<sf::Keyboard::Key, arcade::Event > inputsKeyboard;
+
+        sf::Event createSFMLEvent(sf::Event::EventType et, sf::Keyboard::Key keyCode);
+        arcade::Event createArcadeEvent(arcade::ActionType, arcade::KeyboardKey);
+
     public:
         virtual ~GfxSFML();
         GfxSFML();

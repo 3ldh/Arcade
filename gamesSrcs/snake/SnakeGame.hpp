@@ -5,6 +5,9 @@
 #ifndef CPP_ARCADE_SNAKE_HPP
 #define CPP_ARCADE_SNAKE_HPP
 
+#include <map>
+#include <functional>
+#include <unordered_map>
 #include "../../include/Map.hpp"
 #include "../../ArcadeInterfaces/IGame.hpp"
 #include "SnakeUnit.hpp"
@@ -15,6 +18,7 @@ namespace arcade {
         const size_t MAP_WIDTH = 10;
         Map map;
         GameState state;
+        std::unordered_map<arcade::KeyboardKey, arcade::Unit::Direction > inputs;
 
     public:
     //TODO pass it private

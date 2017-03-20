@@ -16,14 +16,14 @@ void showMap(arcade::SnakeGame const &game)
 }
 
 int main() {
-    DLLoader<arcade::IGfxLib> loader("lib/lib_arcade_sfml.so");
+/*    DLLoader<arcade::IGfxLib> loader("lib/lib_arcade_sfml.so");
 
     arcade::IGfxLib *lib = loader.getInstance("getClone");
-    lib->display();
+    lib->display();*/
 
     arcade::Core("lib/lib_arcade_sfml.so");
 
-    arcade::SnakeGame game;
+    /*arcade::SnakeGame game;
 
     game.updatePlayerPos();
     showMap(game);
@@ -46,6 +46,6 @@ int main() {
     game.clearPlayerPos();
     game.snake.move(game.getMap(), arcade::Unit::UP);
     game.updatePlayerPos();
-    showMap(game);
+    showMap(game);*/
     return 0;
 }

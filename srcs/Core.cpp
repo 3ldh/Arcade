@@ -15,20 +15,24 @@ arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0), gameLibIndex(
 
     gamesPath = getPathToSOFilesInDir("games");
     gfxPath = getPathToSOFilesInDir("lib");
+    gameLoader = NULL;
+    libLoader = NULL;
 
     loadGfxLib(pathToLib);
-    currentLib->display();
     loadGameLib(gamesPath[0]);
-
+    coreLoop();
     //TODO map event to function
-//    input[Event(EventType::ET_KEYBOARD, ActionType::AT_PRESSED, KB_2)] = std::bind(&arcade::Core::prevGfxLib, this);
-//    input[Event(EventType::ET_KEYBOARD, ActionType::AT_PRESSED, KB_3)] = std::bind(&arcade::Core::nextGfxLib, this);
+//    inputs[Event(EventType::ET_KEYBOARD, ActionType::AT_PRESSED, KB_2)] = std::bind(&arcade::Core::prevGfxLib, this);
+//    inputs[Event(EventType::ET_KEYBOARD, ActionType::AT_PRESSED, KB_3)] = std::bind(&arcade::Core::nextGfxLib, this);
 
 }
 
 void arcade::Core::loadGfxLib(std::string const &pathToLib) {
-    DLLoader<IGfxLib> loader(pathToLib);
-    IGfxLib *lib = loader.getInstance("getClone");
+    if (libLoader) {
+        delete libLoader;
+    }
+    libLoader = new DLLoader<IGfxLib>(pathToLib);
+    arcade::IGfxLib *lib = libLoader->getInstance("getClone");
 
     if (!lib)
         throw GfxLibError("Can't load GFX Library");
@@ -36,8 +40,11 @@ void arcade::Core::loadGfxLib(std::string const &pathToLib) {
 }
 
 void arcade::Core::loadGameLib(std::string const &pathToGame) {
-    DLLoader<IGame> loader(pathToGame);
-    IGame *game = loader.getInstance("getClone");
+    if (gameLoader) {
+        delete gameLoader;
+    }
+    gameLoader = new DLLoader<IGame>(pathToGame);
+    IGame *game = gameLoader->getInstance("getClone");
 
     if (!game)
         throw GameLibError("Can't load Game Library");
@@ -45,8 +52,20 @@ void arcade::Core::loadGameLib(std::string const &pathToGame) {
 }
 
 void arcade::Core::coreLoop() {
-    while (true) {
 
+    while (true) {
+        std::vector<arcade::Event> events(1);
+
+        //getEvent
+        /*currentLib->updateGUI(currentGame->getGUI());*/
+        if (currentLib->pollEvent(events[0])) {
+            if (events[0].kb_key == arcade::KeyboardKey::KB_ESCAPE)
+                break;
+            currentGame->notifyEvent(events);
+        }
+        currentGame->process();
+        currentLib->clear();
+        currentLib->display();
     }
 }
 
