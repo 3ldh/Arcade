@@ -9,8 +9,8 @@ file(GLOB INTERFACES "ArcadeInterfaces/*.hpp"
 file(GLOB GAMES "gamesSrcs/snake/*.cpp"
                 "gamesSrcs/snake/*.hpp")
 
-file(GLOB GFX_LIBS "gfxLibsSrcs/sfml/*.hpp"
-                    "gfxLibsSrcs/sfml/*.cpp")
+file(GLOB_RECURSE GFX_LIBS "gfxLibsSrcs/*.hpp"
+                           "gfxLibsSrcs/*.cpp")
 
 file(GLOB INCLUDE_FILES "include/*.hpp")
 
