@@ -5,7 +5,7 @@
 ## Login   <mathieu.sauvau@epitech.eu>
 ##
 ## Started on  Fri Mar 17 15:12:36 2017 Sauvau Mathieu
-## Last update Sun Mar 19 12:44:41 2017 Sauvau Mathieu
+## Last update Mon Mar 20 13:39:30 2017
 ##
 
 # USEFUL VARIABLES
@@ -51,8 +51,11 @@ CC          =	g++ $(CXXFLAGS)
 
 # PROJECT RULES
 
-$(NAME)		: 	$(OBJS)
-		@$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
+$(NAME)		: 	createFolder $(OBJS)
+			@$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
+
+createFolder:
+			@mkdir ../../lib
 
 compile     	:       $(OBJS)
 ifeq ($(DEBUG), YES)
