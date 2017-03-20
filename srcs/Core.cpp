@@ -90,6 +90,9 @@ std::vector<std::string> arcade::Core::getPathToSOFilesInDir(std::string const &
     DIR *dir = opendir(pathDir.c_str());
     dirent *r;
 
+    if (!dir) {
+        throw GameLibError("lib directory is not found");
+    }
     while ((r = readdir(dir))) {
         std::string name(r->d_name);
         if (stringEndWith(name, ".so"))
