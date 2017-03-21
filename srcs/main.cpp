@@ -15,13 +15,19 @@ void showMap(arcade::SnakeGame const &game)
     }
 }
 
-int main() {
+int main(int ac, char **av) {
+    if (!av[1]) {
+        std::cerr << "Usage: ./arcade pathToLibrary.so" << std::endl;
+        return (1);
+    }
+    arcade::Core(std::string(av[1]));
+    
 /*    DLLoader<arcade::IGfxLib> loader("lib/lib_arcade_sfml.so");
 
     arcade::IGfxLib *lib = loader.getInstance("getClone");
     lib->display();*/
 
-    arcade::Core("lib/lib_arcade_sfml.so");
+    
 
     /*arcade::SnakeGame game;
 

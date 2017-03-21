@@ -7,7 +7,7 @@ CXXFLAGS    = -W -Wall -Wextra --std=c++11 -Iinclude/ -fPIC \
 LIB         = -llapin -lsfml-graphics -lsfml-audio -lsfml-window \
               -lsfml-system -lstdc++ -lm -ldl -lpthread -L./LibLapin
 
-INCLUDE     = -I./include/
+INCLUDE     = -I./include/ -I./
 
 NAME        = ../../lib/lib_arcade_lapin.so
 

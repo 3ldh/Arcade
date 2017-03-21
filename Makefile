@@ -49,6 +49,8 @@ CC          =	g++ $(CXXFLAGS)
 # PROJECT RULES
 
 $(NAME)		: 	$(OBJS)
+		make -C gfxLibsSrcs
+		make -C gamesSrcs
 		@$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 
 compile     	:       $(OBJS)

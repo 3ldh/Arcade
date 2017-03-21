@@ -3,6 +3,8 @@ project(cpp_arcade)
 
 set(CMAKE_CXX_STANDARD 11)
 
+include_directories("./gfxLibsSrcs/lapin")
+
 file(GLOB INTERFACES "ArcadeInterfaces/*.hpp"
                      "ArcadeInterfaces/*.cpp")
 

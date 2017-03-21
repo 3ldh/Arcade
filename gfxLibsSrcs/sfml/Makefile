@@ -55,7 +55,7 @@ $(NAME)		: 	createFolder $(OBJS)
 			@$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 
 createFolder:
-			@mkdir ../../lib
+			@mkdir -p ../../lib
 
 compile     	:       $(OBJS)
 ifeq ($(DEBUG), YES)
