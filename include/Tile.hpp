@@ -11,6 +11,7 @@ namespace arcade {
     class Tile : public ITile{
         TileType type;
         TileTypeEvolution typeEv;
+        Color color;
 
     private:
         Tile();

@@ -14,8 +14,8 @@
 
 namespace arcade {
     class SnakeGame : public IGame {
-        const size_t MAP_HEIGHT = 10;
-        const size_t MAP_WIDTH = 10;
+        const size_t MAP_HEIGHT = 20;
+        const size_t MAP_WIDTH = 20;
         Map map;
         GameState state;
         std::unordered_map<arcade::KeyboardKey, arcade::Unit::Direction > inputs;
