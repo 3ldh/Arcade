@@ -41,7 +41,8 @@ namespace arcade {
         void switchMenu();
         void menuUp();
         void menuDown();
-    };
+		void getEvents(std::vector<arcade::Event> &);
+	};
 }
 
 

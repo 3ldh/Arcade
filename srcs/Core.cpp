@@ -51,18 +51,25 @@ void arcade::Core::loadGameLib(std::string const &pathToGame) {
     currentGame = game;
 }
 
+void arcade::Core::getEvents(std::vector<arcade::Event> &events) {
+	arcade::Event	event;
+	events.clear();
+	for (size_t i = 0; currentLib->pollEvent(event); i++) {
+		if (events[i].kb_key == arcade::KeyboardKey::KB_ESCAPE)
+			break;
+		events.push_back(event);
+	}
+}
+
 void arcade::Core::coreLoop() {
 
     while (true) {
-        std::vector<arcade::Event> events(1);
-
+        std::vector<arcade::Event>	events(0);
+		arcade::Event				event;
         //getEvent
         /*currentLib->updateGUI(currentGame->getGUI());*/
-        if (currentLib->pollEvent(events[0])) {
-            if (events[0].kb_key == arcade::KeyboardKey::KB_ESCAPE)
-                break;
-            currentGame->notifyEvent(events);
-        }
+ 		getEvents(events);
+        currentGame->notifyEvent(events);
         currentGame->process();
         currentLib->clear();
         currentLib->display();
