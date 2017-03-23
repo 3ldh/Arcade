@@ -16,7 +16,7 @@ namespace arcade {
     public:
         virtual ~Map();
         Map(size_t width, size_t height, size_t nbLayer);
-        ILayer &operator[](size_t n) override;
+        ILayer &operator[](size_t n);
         const ILayer &operator[](size_t n) const override;
         size_t getLayerNb() const override;
         size_t getWidth() const override;

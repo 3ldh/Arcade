@@ -27,11 +27,11 @@ namespace arcade {
         virtual ~SnakeGame();
         SnakeGame();
         GameState getGameState() const override;
-        void notifyEvent(std::vector<Event> const &events) override;
-        void notifyNetwork(std::vector<NetworkPacket> const &events) override;
-        std::vector<NetworkPacket> getNetworkToSend() const override;
+        void notifyEvent(std::vector<Event> &&events) override;
+        void notifyNetwork(std::vector<NetworkPacket> &&events) override;
+        std::vector<NetworkPacket> &&getNetworkToSend() override;
         std::vector<std::string> getSoundsToLoad() const override;
-        std::vector<int> getSoundsToPlay() override;
+        std::vector<int> &&getSoundsToPlay() override;
         const IMap &getCurrentMap() const override;
         const Map &getMap() const;
         const IGUI &getGUI() const override;
@@ -40,6 +40,7 @@ namespace arcade {
         void takeApple(size_t x, size_t y);
         void clearPlayerPos();
         void updatePlayerPos();
+
     };
 }
 

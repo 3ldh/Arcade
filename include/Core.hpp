@@ -26,13 +26,13 @@ namespace arcade {
 
         bool stringEndWith(std::string const &value, std::string const &end);
         std::vector<std::string> getPathToSOFilesInDir(std::string const &pathDir);
+		bool getEvents(std::vector<arcade::Event> &);
 
     public:
         virtual ~Core();
         Core(std::string const &pathToLib);
         void loadGfxLib(std::string const &pathToLib);
         void loadGameLib(std::string const &pathToGame);
-
         void coreLoop();
         void prevGame();
         void nextGame();
@@ -41,7 +41,6 @@ namespace arcade {
         void switchMenu();
         void menuUp();
         void menuDown();
-		void getEvents(std::vector<arcade::Event> &);
 	};
 }
 

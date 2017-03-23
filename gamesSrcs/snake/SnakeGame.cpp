@@ -34,17 +34,18 @@ arcade::GameState arcade::SnakeGame::getGameState() const {
     return state;
 }
 
-void arcade::SnakeGame::notifyEvent(const std::vector<arcade::Event> &events) {
+void arcade::SnakeGame::notifyEvent(std::vector<arcade::Event> &&events) {
     auto it = inputs.find(events[0].kb_key);
     if (it != inputs.end())
         snake.setMovingDirection((*it).second);
+    std::cout << snake.getMovingDirection() << std::endl;
 }
 
-void arcade::SnakeGame::notifyNetwork(const std::vector<arcade::NetworkPacket> &events) {
+void arcade::SnakeGame::notifyNetwork(std::vector<arcade::NetworkPacket> &&events) {
     (void) events;
 }
 
-std::vector<arcade::NetworkPacket> arcade::SnakeGame::getNetworkToSend() const {
+std::vector<arcade::NetworkPacket> &&arcade::SnakeGame::getNetworkToSend() {
     return std::vector<arcade::NetworkPacket>();
 }
 
@@ -52,7 +53,7 @@ std::vector<std::string> arcade::SnakeGame::getSoundsToLoad() const {
     return std::vector<std::string>();
 }
 
-std::vector<int> arcade::SnakeGame::getSoundsToPlay() {
+std::vector<int> &&arcade::SnakeGame::getSoundsToPlay() {
     return std::vector<int>();
 }
 

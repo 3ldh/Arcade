@@ -9,10 +9,18 @@
 
 namespace arcade {
     class GUI : public IGUI {
+
+    protected:
+        std::vector<IComponent *> components;
+
     public:
         virtual ~GUI();
         GUI();
-        void createComponent(const std::string &name, TypeComponent component) override;
+        size_t size() const override;
+        const IComponent &operator[](std::size_t n) const override;
+        std::vector<arcade::IComponent *>::const_iterator begin() const override;
+        std::vector<arcade::IComponent *>::const_iterator end() const override;
+        void addComponent(IComponent *component);
     };
 }
 

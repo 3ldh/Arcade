@@ -14,10 +14,9 @@ namespace arcade {
         const size_t WIN_HEIGHT = 800;
         const size_t WIN_WIDTH = 800;
         sf::RenderWindow window;
-        std::map<sf::Keyboard::Key, arcade::Event > inputsKeyboard;
-        sf::Event createSFMLEvent(sf::Event::EventType et, sf::Keyboard::Key keyCode);
-        arcade::Event createArcadeEvent(arcade::ActionType, arcade::KeyboardKey);
-
+        std::map<sf::Keyboard::Key, arcade::KeyboardKey> eventsKeyboard;
+        std::map<sf::Event::EventType, arcade::ActionType> eventsActionType;
+        std::map<sf::Event::EventType, arcade::EventType > eventsType;
 
     public:
         virtual ~GfxSFML();
@@ -27,9 +26,6 @@ namespace arcade {
         bool doesSupportSound() const override;
         void loadSounds(std::vector<std::string> const &sounds) override;
         void playSound(int soundId) override;
-        void setSize(size_t height, size_t width) override;
-        void setPosition(size_t y, size_t x) override;
-        void initializeWindow() override;
         void updateMap(IMap const &map) override;
         void updateGUI(IGUI const &gui) override;
         void display() override;

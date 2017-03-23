@@ -28,9 +28,8 @@ arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0), gameLibIndex(
 }
 
 void arcade::Core::loadGfxLib(std::string const &pathToLib) {
-    if (libLoader) {
+    if (libLoader)
         delete libLoader;
-    }
     libLoader = new DLLoader<IGfxLib>(pathToLib);
     arcade::IGfxLib *lib = libLoader->getInstance("getClone");
 
@@ -40,9 +39,8 @@ void arcade::Core::loadGfxLib(std::string const &pathToLib) {
 }
 
 void arcade::Core::loadGameLib(std::string const &pathToGame) {
-    if (gameLoader) {
+    if (gameLoader)
         delete gameLoader;
-    }
     gameLoader = new DLLoader<IGame>(pathToGame);
     IGame *game = gameLoader->getInstance("getClone");
 
@@ -51,25 +49,26 @@ void arcade::Core::loadGameLib(std::string const &pathToGame) {
     currentGame = game;
 }
 
-void arcade::Core::getEvents(std::vector<arcade::Event> &events) {
-	arcade::Event	event;
-	events.clear();
-	for (size_t i = 0; currentLib->pollEvent(event); i++) {
-		if (events[i].kb_key == arcade::KeyboardKey::KB_ESCAPE)
-			break;
-		events.push_back(event);
-	}
+bool arcade::Core::getEvents(std::vector<arcade::Event> &events) {
+    arcade::Event event;
+
+    events.clear();
+    while (currentLib->pollEvent(event)) {
+        if (event.kb_key == KB_ESCAPE || event.type == ET_QUIT)
+            return (false);
+        events.push_back(event);
+    }
+    return (true);
 }
 
 void arcade::Core::coreLoop() {
-
     while (true) {
-        std::vector<arcade::Event>	events(0);
-		arcade::Event				event;
+        std::vector<arcade::Event> events(0);
         //getEvent
         /*currentLib->updateGUI(currentGame->getGUI());*/
- 		getEvents(events);
-        currentGame->notifyEvent(events);
+        if (!getEvents(events))
+            break;
+//        currentGame->notifyEvent(events);
         currentGame->process();
         currentLib->updateMap(currentGame->getCurrentMap());
 //        currentLib->clear();
@@ -98,9 +97,8 @@ std::vector<std::string> arcade::Core::getPathToSOFilesInDir(std::string const &
     DIR *dir = opendir(pathDir.c_str());
     dirent *r;
 
-    if (!dir) {
+    if (!dir)
         throw GameLibError("Lib directory is not found");
-    }
     while ((r = readdir(dir))) {
         std::string name(r->d_name);
         if (stringEndWith(name, ".so"))

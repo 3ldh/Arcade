@@ -6,18 +6,18 @@
 #include "../include/Tile.hpp"
 
 arcade::Layer::~Layer() {
-    for (size_t i = 0; i < height; ++i) {
+    /*for (size_t i = 0; i < height; ++i) {
         for (size_t j = 0; j < width; ++j) {
           delete tiles[i][j];
         }
-    }
+    }*/
 }
 
-std::vector<arcade::ITile *> &arcade::Layer::operator[](int n) {
+std::vector<std::unique_ptr<arcade::ITile> > &arcade::Layer::operator[](int n) {
     return tiles[n];
 }
 
-std::vector<arcade::ITile *> const &arcade::Layer::operator[](int n) const {
+std::vector<std::unique_ptr<arcade::ITile> > const &arcade::Layer::operator[](int n) const {
     return tiles.at(n);
 }
 
@@ -31,10 +31,11 @@ size_t arcade::Layer::getHeight() const {
 
 arcade::Layer::Layer(size_t width, size_t height) : width(width), height(height) {
     for (size_t i = 0; i < height; ++i) {
-        std::vector<ITile *> vec;
+        std::vector<std::unique_ptr<ITile> > vec;
         for (size_t j = 0; j < width; ++j) {
-            vec.push_back(new Tile(arcade::TileType::EMPTY));
+            //vec.push_back(new Tile(arcade::TileType::EMPTY));
+            vec.push_back(std::unique_ptr<ITile>(new Tile(arcade::TileType::EMPTY)));
         }
-        tiles.push_back(vec);
+        tiles.push_back(std::move(vec));
     }
 }
