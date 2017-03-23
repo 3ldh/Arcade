@@ -71,7 +71,8 @@ void arcade::Core::coreLoop() {
  		getEvents(events);
         currentGame->notifyEvent(events);
         currentGame->process();
-        currentLib->clear();
+        currentLib->updateMap(currentGame->getCurrentMap());
+//        currentLib->clear();
         currentLib->display();
     }
 }

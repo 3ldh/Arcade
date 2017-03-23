@@ -21,11 +21,11 @@ void arcade::Tile::setTypeEv(TileTypeEvolution type) {
 }
 
 arcade::Color arcade::Tile::getColor() const {
-    return Color();
+    return color;
 }
 
 void arcade::Tile::setColor(arcade::Color color) {
-    (void)color;
+    Tile::color = Color(color);
 }
 
 size_t arcade::Tile::getSpriteId() const {

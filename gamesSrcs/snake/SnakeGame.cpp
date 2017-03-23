@@ -19,9 +19,9 @@ arcade::SnakeGame::SnakeGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 1)),
                 j == 0 || j == map.getWidth() - 1) {
                 map[0][i][j]->setType(arcade::TileType::BLOCK);
                 map[0][i][j]->setTypeEv(arcade::TileTypeEvolution::BLOCK);
-                map[0][i][j]->setColor(Color::Black);
-            } else
                 map[0][i][j]->setColor(Color::White);
+            } else
+                map[0][i][j]->setColor(Color::Black);
         }
     }
     inputs[KeyboardKey::KB_ARROW_UP] = Unit::Direction::UP;
@@ -72,6 +72,7 @@ void arcade::SnakeGame::updatePlayerPos() {
     for (size_t i = 0; i < snake.getLength(); ++i) {
         map[0][snake[i].getPosition().second][snake[i].getPosition().first]->setType(TileType::OTHER);
         map[0][snake[i].getPosition().second][snake[i].getPosition().first]->setTypeEv(TileTypeEvolution::PLAYER);
+        map[0][snake[i].getPosition().second][snake[i].getPosition().first]->setColor(Color::Green);
     }
 }
 
@@ -79,14 +80,17 @@ void arcade::SnakeGame::clearPlayerPos() {
     for (size_t i = 0; i < snake.getLength(); ++i) {
         map[0][snake[i].getPosition().second][snake[i].getPosition().first]->setType(TileType::EMPTY);
         map[0][snake[i].getPosition().second][snake[i].getPosition().first]->setTypeEv(TileTypeEvolution::EMPTY);
+        map[0][snake[i].getPosition().second][snake[i].getPosition().first]->setColor(Color::Black);
     }
 }
 
 void arcade::SnakeGame::process() {
-    if (!snake.move(map)) {
+//    clearPlayerPos();
+   /* if (!snake.move(map)) {
         //TODO GameOver
         std::cerr << "GameOver : the Snake has lost his head" << std::endl;
-    }
+    }*/
+    updatePlayerPos();
 }
 
 void arcade::SnakeGame::spawnApple() {
