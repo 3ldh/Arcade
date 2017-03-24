@@ -35,7 +35,7 @@ NAME	    =   arcade
 
 LDFLAGS     = -ldl
 
-CXXFLAGS    =	-W -Wall -Wextra --std=c++11 \
+CXXFLAGS    =	-W -Wall -Wextra --std=c++14 \
                 -Iinclude/ \
 
 ifeq ($(DEBUG), YES)

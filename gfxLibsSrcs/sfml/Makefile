@@ -35,7 +35,7 @@ LDFLAGS     =	-shared \
 		-L./SFML-2.2/lib -lsfml-audio \
 		-lsfml-graphics -lsfml-window -lsfml-network -lsfml-system
 
-CXXFLAGS    =	-W -Wall -Wextra --std=c++11 \
+CXXFLAGS    =	-W -Wall -Wextra --std=c++14 \
                 -Iinclude/ \
 		-std=c++11 \
 		-fPIC \

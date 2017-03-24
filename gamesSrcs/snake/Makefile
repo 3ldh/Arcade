@@ -40,7 +40,7 @@ NAME	    =   ../../games/lib_arcade_snake.so
 
 LDFLAGS     =	-shared \
 
-CXXFLAGS    =	-W -Wall -Wextra --std=c++11 \
+CXXFLAGS    =	-W -Wall -Wextra --std=c++14 \
 		-std=c++11 \
 		-fPIC \
 		-I../ArcadeInterfaces \

@@ -180,8 +180,8 @@ void arcade::GfxSFML::updateMap(const arcade::IMap &map) {
     for (size_t i = 0; i < map.getLayerNb(); ++i) {
         for (size_t j = 0; j < map.getHeight(); ++j) {
             for (size_t k = 0; k < map.getWidth(); ++k) {
-                arcade::Color c = map[i][j][k]->getColor();
-                if (map[i][j][k]->getTypeEv() == TileTypeEvolution::PLAYER) {
+                arcade::Color c = map.at(i, j, k).getColor();
+                if (map.at(i, j, k).getTypeEv() == TileTypeEvolution::PLAYER) {
                     sf::CircleShape circle(WIN_WIDTH / map.getWidth() / 2);
                     circle.setFillColor(sf::Color(c.rgba[0], c.rgba[1], c.rgba[2]));
                     circle.setPosition(WIN_WIDTH / map.getWidth() * k, WIN_HEIGHT / map.getHeight() * j);

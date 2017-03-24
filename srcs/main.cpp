@@ -9,7 +9,7 @@ void showMap(arcade::SnakeGame const &game)
 {
     for (size_t i = 0; i < game.getCurrentMap().getHeight(); ++i) {
         for (size_t j = 0; j < game.getCurrentMap().getWidth(); ++j) {
-            std::cout << (int)(game.getCurrentMap()[0][i][j]->getType());
+            std::cout << (int)(game.getCurrentMap().at(0, i, j).getType());
         }
         std::cout << std::endl;
     }

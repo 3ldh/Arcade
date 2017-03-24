@@ -5,10 +5,13 @@
 #ifndef CPP_ARCADE_LAYER_HPP
 #define CPP_ARCADE_LAYER_HPP
 
-#include "../ArcadeInterfaces/ILayer.hpp"
+#include <cstddef>
+#include <bits/unique_ptr.h>
+#include <vector>
+#include "../ArcadeInterfaces/ITile.hpp"
 
 namespace arcade {
-    class Layer : public ILayer {
+    class Layer {
         std::vector<std::vector<std::unique_ptr<ITile> > > tiles;
         size_t width;
         size_t height;
@@ -17,9 +20,9 @@ namespace arcade {
         virtual ~Layer();
         Layer(size_t width, size_t height);
         std::vector<std::unique_ptr<ITile> > &operator[](int n);
-        std::vector<std::unique_ptr<ITile> > const &operator[](int n) const override;
-        size_t getWidth() const override;
-        size_t getHeight() const override;
+        std::vector<std::unique_ptr<ITile> > const &operator[](int n) const;
+        size_t getWidth() const;
+        size_t getHeight() const;
     };
 }
 

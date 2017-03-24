@@ -14,7 +14,7 @@ size_t arcade::GUI::size() const {
     return components.size();
 }
 
-const arcade::IComponent &arcade::GUI::operator[](std::size_t n) const {
+const arcade::IComponent &arcade::GUI::at(std::size_t n) const {
     return *components.at(n);
 }
 
@@ -29,3 +29,4 @@ std::vector<arcade::IComponent *>::const_iterator arcade::GUI::end() const {
 void arcade::GUI::addComponent(arcade::IComponent *component) {
     components.push_back(component);
 }
+

@@ -6,12 +6,16 @@
 #include "../include/Map.hpp"
 #include "../include/Layer.hpp"
 
-arcade::ILayer &arcade::Map::operator[](size_t n) {
+arcade::Layer &arcade::Map::operator[](size_t n) {
     return (*layer[n]);
 }
 
-const arcade::ILayer &arcade::Map::operator[](size_t n) const {
+const arcade::Layer &arcade::Map::operator[](size_t n) const {
     return (*layer.at(n));
+}
+
+const arcade::ITile &arcade::Map::at(size_t layer, size_t x, size_t y) const {
+    return *operator[](layer)[x][y].get();
 }
 
 size_t arcade::Map::getLayerNb() const {
@@ -44,4 +48,5 @@ bool arcade::Map::isWalkable(size_t layer_idx, size_t x, size_t y) const {
     operator[](layer_idx)[x][y]->getType() == arcade::TileType::BLOCK ||
     operator[](layer_idx)[x][y]->getTypeEv() == arcade::TileTypeEvolution ::PLAYER);
 }
+
 

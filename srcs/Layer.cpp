@@ -6,7 +6,7 @@
 #include "../include/Tile.hpp"
 
 arcade::Layer::~Layer() {
-    /*for (size_t i = 0; i < height; ++i) {
+/*    for (size_t i = 0; i < height; ++i) {
         for (size_t j = 0; j < width; ++j) {
           delete tiles[i][j];
         }
@@ -34,6 +34,7 @@ arcade::Layer::Layer(size_t width, size_t height) : width(width), height(height)
         std::vector<std::unique_ptr<ITile> > vec;
         for (size_t j = 0; j < width; ++j) {
             //vec.push_back(new Tile(arcade::TileType::EMPTY));
+            //TODO make_unique not working
             vec.push_back(std::unique_ptr<ITile>(new Tile(arcade::TileType::EMPTY)));
         }
         tiles.push_back(std::move(vec));
