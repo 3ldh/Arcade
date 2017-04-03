@@ -11,7 +11,7 @@ arcade::Core::~Core() {
 
 }
 
-arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0), gameLibIndex(0) {
+arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0), gameLibIndex(0), events(std::vector<arcade::Event>(0)) {
 
     gamesPath = getPathToSOFilesInDir("games");
     gfxPath = getPathToSOFilesInDir("lib");
@@ -49,7 +49,7 @@ void arcade::Core::loadGameLib(std::string const &pathToGame) {
     currentGame = game;
 }
 
-bool arcade::Core::getEvents(std::vector<arcade::Event> &events) {
+bool arcade::Core::getEvents() {
     arcade::Event event;
 
     events.clear();
@@ -63,12 +63,11 @@ bool arcade::Core::getEvents(std::vector<arcade::Event> &events) {
 
 void arcade::Core::coreLoop() {
     while (true) {
-        std::vector<arcade::Event> events(0);
         //getEvent
         /*currentLib->updateGUI(currentGame->getGUI());*/
-        if (!getEvents(events))
+        if (!getEvents())
             break;
-//        currentGame->notifyEvent(events);
+        currentGame->notifyEvent(std::move(events));
         currentGame->process();
         currentLib->updateMap(currentGame->getCurrentMap());
 //        currentLib->clear();

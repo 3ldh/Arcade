@@ -12,7 +12,8 @@ arcade::SnakeGame::~SnakeGame() {
 
 arcade::SnakeGame::SnakeGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 1)),
                                  state(arcade::GameState::INGAME), snake(SnakeUnit(MAP_WIDTH / 2, MAP_HEIGHT / 2)),
-                                    sprites(std::vector<std::unique_ptr<ISprite> >()) {
+                                 sprites(std::vector<std::unique_ptr<ISprite> >()),
+                                 accelerationRate(1000) {
 
     for (size_t i = 0; i < map.getHeight(); ++i) {
         for (size_t j = 0; j < map.getWidth(); ++j) {
@@ -29,6 +30,7 @@ arcade::SnakeGame::SnakeGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 1)),
     inputs[KeyboardKey::KB_ARROW_DOWN] = Unit::Direction::DOWN;
     inputs[KeyboardKey::KB_ARROW_LEFT] = Unit::Direction::LEFT;
     inputs[KeyboardKey::KB_ARROW_RIGHT] = Unit::Direction::RIGHT;
+    timer.start();
 }
 
 arcade::GameState arcade::SnakeGame::getGameState() const {
@@ -36,10 +38,12 @@ arcade::GameState arcade::SnakeGame::getGameState() const {
 }
 
 void arcade::SnakeGame::notifyEvent(std::vector<arcade::Event> &&events) {
-    auto it = inputs.find(events[0].kb_key);
-    if (it != inputs.end())
-        snake.setMovingDirection((*it).second);
-    std::cout << snake.getMovingDirection() << std::endl;
+    if (events.size() > 0) {
+        auto it = inputs.find(events[0].kb_key);
+        if (it != inputs.end())
+            snake.setMovingDirection((*it).second);
+        std::cout << snake.getMovingDirection() << std::endl;
+    }
 }
 
 void arcade::SnakeGame::notifyNetwork(std::vector<arcade::NetworkPacket> &&events) {
@@ -91,12 +95,15 @@ void arcade::SnakeGame::clearPlayerPos() {
 }
 
 void arcade::SnakeGame::process() {
-//    clearPlayerPos();
-   /* if (!snake.move(map)) {
-        //TODO GameOver
-        std::cerr << "GameOver : the Snake has lost his head" << std::endl;
-    }*/
-    updatePlayerPos();
+    if (timer.isTimeOverMilliseconds(accelerationRate)) {
+        clearPlayerPos();
+        if (!snake.move(map)) {
+            //TODO GameOver
+            std::cerr << "GameOver : the Snake has lost his head" << std::endl;
+        }
+        updatePlayerPos();
+        timer.start();
+    }
 }
 
 void arcade::SnakeGame::spawnApple() {

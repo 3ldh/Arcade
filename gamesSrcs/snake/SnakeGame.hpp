@@ -8,11 +8,13 @@
 #include <map>
 #include <functional>
 #include <unordered_map>
+#include <chrono>
 #include "../../include/Map.hpp"
 #include "../../ArcadeInterfaces/IGame.hpp"
 #include "SnakeUnit.hpp"
 #include "../../include/Sprite.hpp"
 #include "../../include/GUI.hpp"
+#include "../../include/Timer.hpp"
 
 namespace arcade {
     class SnakeGame : public IGame {
@@ -24,6 +26,8 @@ namespace arcade {
         std::vector<std::unique_ptr<ISprite> > &&sprites;
         std::vector<std::pair<std::string, arcade::SoundType>> sounds;
         GUI gui;
+        size_t accelerationRate;
+        Timer timer;
 
     public:
     //TODO pass it private

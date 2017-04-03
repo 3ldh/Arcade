@@ -31,6 +31,7 @@ SRC		=	$(wildcard ./*.cpp) \
             ../../srcs/Tile.cpp \
             ../../srcs/GUI.cpp \
             ../../srcs/Sprite.cpp \
+            ../../srcs/Timer.cpp \
 
 OBJS    	=	$(SRC:.cpp=.o)
 

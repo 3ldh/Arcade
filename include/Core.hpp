@@ -23,10 +23,11 @@ namespace arcade {
         int gfxLibIndex;
         int gameLibIndex;
         std::map<arcade::KeyboardKey, std::function<void(void)> > input;
+		std::vector<arcade::Event> &&events;
 
         bool stringEndWith(std::string const &value, std::string const &end);
         std::vector<std::string> getPathToSOFilesInDir(std::string const &pathDir);
-		bool getEvents(std::vector<arcade::Event> &);
+		bool getEvents();
 
     public:
         virtual ~Core();
