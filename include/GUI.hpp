@@ -17,11 +17,8 @@ namespace arcade {
         virtual ~GUI();
         GUI();
         size_t size() const override;
-        const IComponent &at(std::size_t n) const override;
-        std::vector<arcade::IComponent *>::const_iterator begin() const override;
-        std::vector<arcade::IComponent *>::const_iterator end() const override;
+        IComponent &at(std::size_t n) override;
         void addComponent(IComponent *component);
-
     };
 }
 

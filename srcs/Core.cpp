@@ -31,7 +31,7 @@ void arcade::Core::loadGfxLib(std::string const &pathToLib) {
     if (libLoader)
         delete libLoader;
     libLoader = new DLLoader<IGfxLib>(pathToLib);
-    arcade::IGfxLib *lib = libLoader->getInstance("getClone");
+    arcade::IGfxLib *lib = libLoader->getInstance("getLib");
 
     if (!lib)
         throw GfxLibError("Can't load GFX Library");
@@ -42,7 +42,7 @@ void arcade::Core::loadGameLib(std::string const &pathToGame) {
     if (gameLoader)
         delete gameLoader;
     gameLoader = new DLLoader<IGame>(pathToGame);
-    IGame *game = gameLoader->getInstance("getClone");
+    IGame *game = gameLoader->getInstance("getGame");
 
     if (!game)
         throw GameLibError("Can't load Game Library");

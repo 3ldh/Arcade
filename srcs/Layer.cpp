@@ -13,11 +13,11 @@ arcade::Layer::~Layer() {
     }*/
 }
 
-std::vector<std::unique_ptr<arcade::ITile> > &arcade::Layer::operator[](int n) {
-    return tiles[n];
+std::vector<std::unique_ptr<arcade::Tile> > &arcade::Layer::operator[](int n) {
+    return  tiles[n];
 }
 
-std::vector<std::unique_ptr<arcade::ITile> > const &arcade::Layer::operator[](int n) const {
+std::vector<std::unique_ptr<arcade::Tile> > const &arcade::Layer::operator[](int n) const {
     return tiles.at(n);
 }
 
@@ -31,11 +31,11 @@ size_t arcade::Layer::getHeight() const {
 
 arcade::Layer::Layer(size_t width, size_t height) : width(width), height(height) {
     for (size_t i = 0; i < height; ++i) {
-        std::vector<std::unique_ptr<ITile> > vec;
+        std::vector<std::unique_ptr<Tile> > vec;
         for (size_t j = 0; j < width; ++j) {
             //vec.push_back(new Tile(arcade::TileType::EMPTY));
             //TODO make_unique not working
-            vec.push_back(std::unique_ptr<ITile>(new Tile(arcade::TileType::EMPTY)));
+            vec.push_back(std::unique_ptr<Tile>(new Tile(arcade::TileType::EMPTY)));
         }
         tiles.push_back(std::move(vec));
     }

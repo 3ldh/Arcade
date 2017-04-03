@@ -24,14 +24,13 @@ namespace arcade {
 
         bool pollEvent(Event &e) override;
         bool doesSupportSound() const override;
-        void loadSounds(std::vector<std::string> const &sounds) override;
-        void playSound(int soundId) override;
         void updateMap(IMap const &map) override;
-        void updateGUI(IGUI const &gui) override;
         void display() override;
         void clear() override;
-        void openWindow();
-       // void
+        void loadSounds(std::vector<std::pair<std::string, SoundType> > const &sounds) override;
+        void soundControl(const Sound &sound) override;
+        void loadSprites(std::vector<std::unique_ptr<ISprite>> &&sprites) override;
+        void updateGUI(IGUI &gui) override;
     };
 }
 

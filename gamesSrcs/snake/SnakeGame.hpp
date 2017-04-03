@@ -11,6 +11,8 @@
 #include "../../include/Map.hpp"
 #include "../../ArcadeInterfaces/IGame.hpp"
 #include "SnakeUnit.hpp"
+#include "../../include/Sprite.hpp"
+#include "../../include/GUI.hpp"
 
 namespace arcade {
     class SnakeGame : public IGame {
@@ -19,28 +21,30 @@ namespace arcade {
         Map map;
         GameState state;
         std::unordered_map<arcade::KeyboardKey, arcade::Unit::Direction > inputs;
+        std::vector<std::unique_ptr<ISprite> > &&sprites;
+        std::vector<std::pair<std::string, arcade::SoundType>> sounds;
+        GUI gui;
 
     public:
     //TODO pass it private
         SnakeUnit snake;
-
         virtual ~SnakeGame();
         SnakeGame();
         GameState getGameState() const override;
         void notifyEvent(std::vector<Event> &&events) override;
         void notifyNetwork(std::vector<NetworkPacket> &&events) override;
         std::vector<NetworkPacket> &&getNetworkToSend() override;
-        std::vector<std::string> getSoundsToLoad() const override;
+        std::vector<std::unique_ptr<ISprite>> &&getSpritesToLoad() const override;
+        std::vector<std::pair<std::string, SoundType>> getSoundsToLoad() const override;
+        IGUI &getGUI() override;
         std::vector<int> &&getSoundsToPlay() override;
         const IMap &getCurrentMap() const override;
         const Map &getMap() const;
-        const IGUI &getGUI() const override;
         void process() override;
         void spawnApple();
         void takeApple(size_t x, size_t y);
         void clearPlayerPos();
         void updatePlayerPos();
-
     };
 }
 

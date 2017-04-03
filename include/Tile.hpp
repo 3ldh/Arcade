@@ -12,6 +12,7 @@ namespace arcade {
         TileType type;
         TileTypeEvolution typeEv;
         Color color;
+        bool _hasSprite;
 
     private:
         Tile();
@@ -19,17 +20,16 @@ namespace arcade {
         virtual ~Tile();
         Tile(TileType type);
         TileType getType() const override;
-        void setType(TileType type) override;
+        void setType(TileType type);
         TileTypeEvolution getTypeEv() const override;
-        void setTypeEv(TileTypeEvolution type) override;
+        void setTypeEv(TileTypeEvolution type);
         Color getColor() const override;
-        void setColor(union Color color) override;
+        void setColor(union Color color);
         size_t getSpriteId() const override;
         size_t getSpritePos() const override;
-        void nextSprite() override;
-        void prevSprite() override;
-        void setSpritePos(size_t pos) override;
-        void setSprite(size_t id) override;
+        bool hasSprite() const override;
+        double getShiftX() const override;
+        double getShiftY() const override;
     };
 }
 

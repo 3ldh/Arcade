@@ -8,19 +8,19 @@
 #include <cstddef>
 #include <bits/unique_ptr.h>
 #include <vector>
-#include "../ArcadeInterfaces/ITile.hpp"
+#include "Tile.hpp"
 
 namespace arcade {
     class Layer {
-        std::vector<std::vector<std::unique_ptr<ITile> > > tiles;
+        std::vector<std::vector<std::unique_ptr<Tile> > > tiles;
         size_t width;
         size_t height;
 
     public:
         virtual ~Layer();
         Layer(size_t width, size_t height);
-        std::vector<std::unique_ptr<ITile> > &operator[](int n);
-        std::vector<std::unique_ptr<ITile> > const &operator[](int n) const;
+        std::vector<std::unique_ptr<Tile> > &operator[](int n);
+        std::vector<std::unique_ptr<Tile> > const &operator[](int n) const;
         size_t getWidth() const;
         size_t getHeight() const;
     };

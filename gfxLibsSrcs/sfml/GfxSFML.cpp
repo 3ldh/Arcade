@@ -168,14 +168,6 @@ bool arcade::GfxSFML::doesSupportSound() const {
     return false;
 }
 
-void arcade::GfxSFML::loadSounds(std::vector<std::string> const &sounds) {
-
-}
-
-void arcade::GfxSFML::playSound(int soundId) {
-
-}
-
 void arcade::GfxSFML::updateMap(const arcade::IMap &map) {
     for (size_t i = 0; i < map.getLayerNb(); ++i) {
         for (size_t j = 0; j < map.getHeight(); ++j) {
@@ -200,10 +192,6 @@ void arcade::GfxSFML::updateMap(const arcade::IMap &map) {
     }
 }
 
-void arcade::GfxSFML::updateGUI(const arcade::IGUI &gui) {
-
-}
-
 void arcade::GfxSFML::display() {
     window.display();
 }
@@ -212,6 +200,22 @@ void arcade::GfxSFML::clear() {
     window.clear();
 }
 
-extern "C" arcade::GfxSFML *getClone() {
+void arcade::GfxSFML::loadSounds(const std::vector<std::pair<std::string, arcade::SoundType>> &sounds) {
+
+}
+
+void arcade::GfxSFML::soundControl(const arcade::Sound &sound) {
+
+}
+
+void arcade::GfxSFML::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites) {
+
+}
+
+void arcade::GfxSFML::updateGUI(arcade::IGUI &gui) {
+
+}
+
+extern "C" arcade::GfxSFML *getLib() {
     return new arcade::GfxSFML();
 }

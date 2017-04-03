@@ -11,7 +11,8 @@ arcade::SnakeGame::~SnakeGame() {
 }
 
 arcade::SnakeGame::SnakeGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 1)),
-                                 state(arcade::GameState::INGAME), snake(SnakeUnit(MAP_WIDTH / 2, MAP_HEIGHT / 2)) {
+                                 state(arcade::GameState::INGAME), snake(SnakeUnit(MAP_WIDTH / 2, MAP_HEIGHT / 2)),
+                                    sprites(std::vector<std::unique_ptr<ISprite> >()) {
 
     for (size_t i = 0; i < map.getHeight(); ++i) {
         for (size_t j = 0; j < map.getWidth(); ++j) {
@@ -49,12 +50,20 @@ std::vector<arcade::NetworkPacket> &&arcade::SnakeGame::getNetworkToSend() {
     return std::vector<arcade::NetworkPacket>();
 }
 
-std::vector<std::string> arcade::SnakeGame::getSoundsToLoad() const {
-    return std::vector<std::string>();
-}
-
 std::vector<int> &&arcade::SnakeGame::getSoundsToPlay() {
     return std::vector<int>();
+}
+
+std::vector<std::pair<std::string, arcade::SoundType>> arcade::SnakeGame::getSoundsToLoad() const {
+    return sounds;
+}
+
+std::vector<std::unique_ptr<arcade::ISprite>> &&arcade::SnakeGame::getSpritesToLoad() const {
+    return std::move(sprites);
+}
+
+arcade::IGUI &arcade::SnakeGame::getGUI() {
+    return gui;
 }
 
 const arcade::IMap &arcade::SnakeGame::getCurrentMap() const {
@@ -63,10 +72,6 @@ const arcade::IMap &arcade::SnakeGame::getCurrentMap() const {
 
 const arcade::Map &arcade::SnakeGame::getMap() const {
     return map;
-}
-
-const arcade::IGUI &arcade::SnakeGame::getGUI() const {
-    return *new GUI();
 }
 
 void arcade::SnakeGame::updatePlayerPos() {
@@ -116,6 +121,6 @@ extern "C" void Play() {
 
 }
 
-extern "C" arcade::IGame *getClone() {
+extern "C" arcade::IGame *getGame() {
     return new arcade::SnakeGame();
 }

@@ -36,20 +36,16 @@ size_t arcade::Tile::getSpritePos() const {
     return 0;
 }
 
-void arcade::Tile::nextSprite() {
-
+bool arcade::Tile::hasSprite() const {
+    return _hasSprite;
 }
 
-void arcade::Tile::prevSprite() {
-
+double arcade::Tile::getShiftX() const {
+    return 0;
 }
 
-void arcade::Tile::setSpritePos(size_t pos) {
-    (void)pos;
-}
-
-void arcade::Tile::setSprite(size_t id) {
-    (void)id;
+double arcade::Tile::getShiftY() const {
+    return 0;
 }
 
 arcade::Tile::~Tile() {
@@ -58,4 +54,3 @@ arcade::Tile::~Tile() {
 
 arcade::Tile::Tile(TileType type) : type(type), typeEv(EMPTY) {
 }
-

@@ -30,6 +30,7 @@ SRC		=	$(wildcard ./*.cpp) \
             ../../srcs/Map.cpp \
             ../../srcs/Tile.cpp \
             ../../srcs/GUI.cpp \
+            ../../srcs/Sprite.cpp \
 
 OBJS    	=	$(SRC:.cpp=.o)
 
