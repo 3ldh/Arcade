@@ -44,6 +44,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/sauvau_m/rendu/cpp_arcade/./gfxLibsSrcs/lapin"/>
 					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/6/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/6/include-fixed"/>
@@ -67,6 +68,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/sauvau_m/rendu/cpp_arcade/./gfxLibsSrcs/lapin"/>
 					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/6/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/6/include-fixed"/>
@@ -108,13 +110,10 @@
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/IGfxLib.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
-		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/ILayer.hpp">
-			<Option target="cpp_arcade"/>
-		</Unit>
-		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/ILevel.hpp">
-			<Option target="cpp_arcade"/>
-		</Unit>
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/IMap.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/ISprite.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/IStat.hpp">
@@ -129,6 +128,24 @@
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/Protocol.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/Sound.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/ArcadeInterfaces/Sound.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gamesSrcs/SolarFox/SolarFoxGame.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gamesSrcs/SolarFox/SolarFoxGame.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gamesSrcs/SolarFox/Spaceship.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gamesSrcs/SolarFox/Spaceship.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gamesSrcs/snake/SnakeGame.cpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
@@ -141,10 +158,1135 @@
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gamesSrcs/snake/SnakeUnit.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/deps/ANetAccess.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/deps/Client.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/deps/Communication.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/deps/Communicator.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/deps/INetAccess.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/deps/NetAbs.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/deps/NetCom.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/deps/NetUnix.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/deps/PVM110N.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/deps/Server.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/deps/Threads.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/deps/To.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/deps/UsbDevice.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/deps/Work.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/deps/Workers.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/lapin/cpp_guard.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/lapin/cpp_guard_end.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/lapin/cpp_tools.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/private/configuration.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/allocator/calloc.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/allocator/free.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/allocator/get_node.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/allocator/malloc.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/allocator/realloc.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/allocator/set_memory_check.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/asynclock/asynclock.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/asynclock/delete_trap.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/asynclock/get_current_time.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/asynclock/new_trap.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/asynclock/reset_clock.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/collide/circle.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/collide/quad.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/collide/rectangular.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/collide/triangle.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/delete_ini.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/field_get_value.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/field_name.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/field_set_value.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/first_field.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/first_scope.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/get_error.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/get_field.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/get_scope.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/load_ini.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/new_ini.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/next_field.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/next_scope.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/read_ini.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/save_ini.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/scope_get_field.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/scope_name.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/scope_set_field.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/set_field.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/archive/write_ini.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/create_mode.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/dabsic/read_dabsic.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/dabsic/read_data.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/dabsic/read_function.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/dabsic/read_sequence.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/dabsic/write_dabsic.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/delete_configuration.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/get_case.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/get_child.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/get_name.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/get_node.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/get_parent.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/get_value.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/ini/read_ini.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/ini/write_ini.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/iterator.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/load_configuration.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/lua/read_lua.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/lua/write_lua.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/new_configuration.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/parsing.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/read_configuration.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/save_configuration.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/set_value.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/write_configuration.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/xml/read_xml.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/configuration/xml/write_xml.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/database/delete_database.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/database/new_database.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/abs/ANetAccess.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/abs/NetUnix.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/brd/Bit.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/brd/Close.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/brd/GetAnalog.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/brd/GetDigital.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/brd/InBitEdit_FromSystemToUser.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/brd/Open.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/brd/PVM110N.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/brd/ReadInputs.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/brd/ReceiveCommand.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/brd/SendCommand.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/brd/SendReset.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/brd/SetAnalog.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/brd/SetDigital.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/brd/TakeOverDevice.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/brd/UsbDevice.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/brd/WriteOutputs.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/clt/CheckFullPacket.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/clt/Client.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/clt/Disconnected.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/clt/InitFdSet.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/clt/Operator.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/clt/ReadOnNetwork.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/clt/Write.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/clt/WriteOnNetwork.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/cmt/Communicator.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/cmt/Comparator.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/cmt/Error.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/cmt/GetFd.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/cmt/MicroSeconds.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/cmt/Obsolete.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/cmt/PacketMaxSize.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/cmt/RetError.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/cmt/RetExpired.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/cmt/s_WriteRequest.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/srv/AnyFullPacket.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/srv/CheckFullPacket.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/srv/Disconnected.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/srv/DoomClient.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/srv/FindMaxFd.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/srv/GetIP.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/srv/InitFdSet.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/srv/KillClient.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/srv/NewClient.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/srv/NewConnexion.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/srv/Operator.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/srv/ReadOnNetwork.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/srv/Server.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/srv/Write.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/srv/WriteOnNetwork.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/srv/s_Client.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/thr/Add.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/thr/AddThread.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/thr/EvaluateTheLoad.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/thr/GetAwaitingThreads.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/thr/GetHowManyTasks.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/thr/GetHowManyThreads.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/thr/GetHowManyWorkers.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/thr/GetMessage.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/thr/IsWorking.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/thr/JumpToLoop.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/thr/Loop.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/thr/RemoveThread.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/thr/SetMessage.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/deps/thr/Workers.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/get_context.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/get_joy_axis.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/get_joy_button.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/get_joy_info.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/get_keyboard.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/get_mouse_button.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/get_mouse_position.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/get_window.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/loop.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/loop_mw.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/set_click_response.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/set_close_response.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/set_context.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/set_display_function.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/set_get_focus_response.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/set_joy_axis_response.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/set_joy_button_response.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/set_joy_connect_response.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/set_key_response.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/set_loop_main_function.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/set_lost_focus_response.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/set_move_response.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/set_resize_response.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/set_text_response.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/events/set_wheel_response.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/blit.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/clear.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/delete_clipable.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/delete_shader.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/display.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/draw.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/enable_full_blit.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/fill.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/is_shader_available.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/load_picture.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/load_pixelarray.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/load_shader.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/new_picture.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/new_pixelarray.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/new_shader.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/opengl.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/read_picture.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/read_pixelarray.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/save_pixelarray.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/set_circle.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/set_geometry.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/set_line.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/set_pixel.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/set_polygon.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/shader_set_variable.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/graphics/vectfont.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/hardware/delete_hardware.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/hardware/hardware_read.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/hardware/hardware_write.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/hardware/new_hardware.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/hash/hash.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/misc/consistancy.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/misc/evaluate.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/misc/globals.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/misc/load_file.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/misc/save_file.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/misc/self_test.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/misc/strnlen.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/network/client_poll.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/network/client_write.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/network/delete_client.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/network/delete_server.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/network/new_client.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/network/new_server.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/network/server_doom_client.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/network/server_packet_ready.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/network/server_poll.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/network/server_write.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/plugin/call.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/plugin/get_function.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/plugin/new_delete.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/security/caesar.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/security/cipher_data.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/security/cipher_file.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/security/default_key.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/security/delete_key.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/security/fill_default_key.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/security/get_ciphering.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/security/globals.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/security/new_key.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/security/shaker.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/security/uncipher_data.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/security/uncipher_file.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/security/xor.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/sound/compute_effect.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/sound/delete_sound.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/sound/load_effect.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/sound/load_music.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/sound/new_effect.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/sound/sound_attenuation.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/sound/sound_loop.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/sound/sound_pitch.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/sound/sound_play.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/sound/sound_position.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/sound/sound_stop.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/sound/sound_volume.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/threads/delete_threadpool.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/threads/new_threadpool.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/threads/thread_foreach.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/threads/thread_wait_completion.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/window/get_cursor.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/window/get_screen_resolution.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/window/move_window.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/window/request_focus.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/window/resize_window.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/window/set_key_repeat.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/window/set_mouse_position.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/window/set_mouse_visibility.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/window/start.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/src/window/stop.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/include/GfxLapin.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/lapin/src/GfxLapin.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/GfxSFML.cpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/GfxSFML.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Audio.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Audio/AlResource.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Audio/Export.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Audio/InputSoundFile.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Audio/Listener.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Audio/Music.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Audio/OutputSoundFile.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Audio/Sound.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Audio/SoundBuffer.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Audio/SoundBufferRecorder.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Audio/SoundFileFactory.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Audio/SoundFileReader.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Audio/SoundFileWriter.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Audio/SoundRecorder.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Audio/SoundSource.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Audio/SoundStream.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Config.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/BlendMode.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/CircleShape.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/Color.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/ConvexShape.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/Drawable.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/Export.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/Font.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/Glsl.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/Glyph.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/Image.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/PrimitiveType.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/Rect.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/RectangleShape.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/RenderStates.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/RenderTarget.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/RenderTexture.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/RenderWindow.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/Shader.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/Shape.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/Sprite.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/Text.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/Texture.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/Transform.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/Transformable.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/Vertex.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/VertexArray.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Graphics/View.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Main.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Network.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Network/Export.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Network/Ftp.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Network/Http.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Network/IpAddress.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Network/Packet.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Network/Socket.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Network/SocketHandle.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Network/SocketSelector.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Network/TcpListener.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Network/TcpSocket.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Network/UdpSocket.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/OpenGL.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/Clock.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/Err.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/Export.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/FileInputStream.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/InputStream.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/Lock.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/MemoryInputStream.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/Mutex.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/NativeActivity.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/NonCopyable.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/Sleep.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/String.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/Thread.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/ThreadLocal.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/ThreadLocalPtr.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/Time.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/Utf.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/Vector2.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/System/Vector3.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Window.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Window/Context.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Window/ContextSettings.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Window/Event.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Window/Export.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Window/GlResource.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Window/Joystick.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Window/Keyboard.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Window/Mouse.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Window/Sensor.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Window/Touch.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Window/VideoMode.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Window/Window.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Window/WindowHandle.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/include/SFML/Window/WindowStyle.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Effect.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.cpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/Core.hpp">
@@ -165,10 +1307,22 @@
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/Map.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/Menu.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/Protocol.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/Sprite.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/Tile.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/Timer.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/UIComponent.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/include/Unit.hpp">
@@ -189,7 +1343,19 @@
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/srcs/Map.cpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/srcs/Menu.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/srcs/Sprite.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/srcs/Tile.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/srcs/Timer.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/srcs/UIComponent.cpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
 		<Unit filename="/home/sauvau_m/rendu/cpp_arcade/srcs/Unit.cpp">
