@@ -2,62 +2,174 @@
 // Created by peau_c on 3/20/17.
 //
 
+#include <limits>
+#include <SFML/Window/Event.hpp>
 #include "../include/GfxLapin.hpp"
 
+arcade::GfxLapin::GfxLapin() {
+	
+	window = bunny_start(800, 800, false, "test");
+	pixelarray = bunny_new_pixelarray(800, 800);
+	bunny_display(window);
+	keyboardMap[sf::Keyboard::Key::C] = KB_C; /// C key
+	keyboardMap[sf::Keyboard::Key::B] = KB_B; /// B key
+	keyboardMap[sf::Keyboard::Key::A] = KB_A; /// A key
+	keyboardMap[sf::Keyboard::Key::D] = KB_D; /// D key
+	keyboardMap[sf::Keyboard::Key::E] = KB_E; /// E key
+	keyboardMap[sf::Keyboard::Key::F] = KB_F; /// F key
+	keyboardMap[sf::Keyboard::Key::G] = KB_G; /// G key
+	keyboardMap[sf::Keyboard::Key::H] = KB_H; /// H key
+	keyboardMap[sf::Keyboard::Key::I] = KB_I; /// I key
+	keyboardMap[sf::Keyboard::Key::J] = KB_J; /// J key
+	keyboardMap[sf::Keyboard::Key::K] = KB_K; /// K key
+	keyboardMap[sf::Keyboard::Key::L] = KB_L; /// L key
+	keyboardMap[sf::Keyboard::Key::M] = KB_M; /// M key
+	keyboardMap[sf::Keyboard::Key::N] = KB_N; /// N key
+	keyboardMap[sf::Keyboard::Key::O] = KB_O; /// O key
+	keyboardMap[sf::Keyboard::Key::P] = KB_P; /// P key
+	keyboardMap[sf::Keyboard::Key::Q] = KB_Q; /// Q key
+	keyboardMap[sf::Keyboard::Key::R] = KB_R; /// R key
+	keyboardMap[sf::Keyboard::Key::S] = KB_S; /// S key
+	keyboardMap[sf::Keyboard::Key::T] = KB_T; /// T key
+	keyboardMap[sf::Keyboard::Key::U] = KB_U; /// U key
+	keyboardMap[sf::Keyboard::Key::V] = KB_V; /// V key
+	keyboardMap[sf::Keyboard::Key::X] = KB_X; /// X key
+	keyboardMap[sf::Keyboard::Key::Y] = KB_Y; /// Y key
+	keyboardMap[sf::Keyboard::Key::Z] = KB_Z; /// Z key
+	keyboardMap[sf::Keyboard::Key::Num0] = KB_0; /// 0 key
+	keyboardMap[sf::Keyboard::Key::Num1] = KB_1; /// 1 key
+	keyboardMap[sf::Keyboard::Key::Num2] = KB_2; /// 2 key
+	keyboardMap[sf::Keyboard::Key::Num3] = KB_3; /// 3 key
+	keyboardMap[sf::Keyboard::Key::Num4] = KB_4; /// 4 key
+	keyboardMap[sf::Keyboard::Key::Num5] = KB_5; /// 5 key
+	keyboardMap[sf::Keyboard::Key::Num6] = KB_6; /// 6 key
+	keyboardMap[sf::Keyboard::Key::Num7] = KB_7; /// 7 key
+	keyboardMap[sf::Keyboard::Key::Num8] = KB_8; /// 8 key
+	keyboardMap[sf::Keyboard::Key::Num9] = KB_9; /// 9 key
+	keyboardMap[sf::Keyboard::Key::Left] = KB_ARROW_LEFT; /// Left arrow key
+	keyboardMap[sf::Keyboard::Key::Right] = KB_ARROW_RIGHT;/// Right arrow key
+	keyboardMap[sf::Keyboard::Key::Up] = KB_ARROW_UP; /// Up arrow key
+	keyboardMap[sf::Keyboard::Key::Down] = KB_ARROW_DOWN; /// Down arrow key
+	keyboardMap[sf::Keyboard::Key::Space] = KB_SPACE; /// Space key
+	keyboardMap[sf::Keyboard::Key::Return] = KB_ENTER; /// Enter/Carriage return key
+	keyboardMap[sf::Keyboard::Key::BackSpace] = KB_BACKSPACE; /// Backspace key
+	keyboardMap[sf::Keyboard::Key::LControl] = KB_LCTRL; /// Left Control key
+	keyboardMap[sf::Keyboard::Key::RControl] = KB_RCTRL; /// Right Control key
+	keyboardMap[sf::Keyboard::Key::LAlt] = KB_LALT; /// Left Alt key
+	keyboardMap[sf::Keyboard::Key::RAlt] = KB_RALT; /// Right Alt key
+	keyboardMap[sf::Keyboard::Key::LShift] = KB_LSHIFT; /// Left Shift key
+	keyboardMap[sf::Keyboard::Key::RShift] = KB_RSHIFT; /// Right Shift key
+	keyboardMap[sf::Keyboard::Key::Tab] = KB_TAB; /// Tabulation key
+	keyboardMap[sf::Keyboard::Key::Escape] = KB_ESCAPE; /// Escape key
+	keyboardMap[sf::Keyboard::Key::PageUp] = KB_PAGEUP; /// Page up key
+	keyboardMap[sf::Keyboard::Key::PageDown] = KB_PAGEDOWN; /// Page down
+	keyboardMap[sf::Keyboard::Key::Home] = KB_HOME; /// Home key
+	keyboardMap[sf::Keyboard::Key::End] = KB_END; /// End key
+	keyboardMap[sf::Keyboard::Key::F1] = KB_FN1; /// Function key 1 (F1)
+	keyboardMap[sf::Keyboard::Key::F2] = KB_FN2; /// Function key 2 (F2)
+	keyboardMap[sf::Keyboard::Key::F3] = KB_FN3; /// Function key 3 (F3)
+	keyboardMap[sf::Keyboard::Key::F4] = KB_FN4; /// Function key 4 (F4)
+	keyboardMap[sf::Keyboard::Key::F5] = KB_FN5; /// Function key 5 (F5)
+	keyboardMap[sf::Keyboard::Key::F6] = KB_FN6; /// Function key 6 (F6)
+	keyboardMap[sf::Keyboard::Key::F7] = KB_FN7; /// Function key 7 (F7)
+	keyboardMap[sf::Keyboard::Key::F8] = KB_FN8; /// Function key 8 (F8)
+	keyboardMap[sf::Keyboard::Key::F9] = KB_FN9; /// Function key 9 (F9)
+	keyboardMap[sf::Keyboard::Key::F10] = KB_FN10; /// Function key 10 (F10)
+	keyboardMap[sf::Keyboard::Key::F11] = KB_FN11; /// Function key 11 (F11)
+	keyboardMap[sf::Keyboard::Key::F12] = KB_FN12; /// Function key 12 (F12)
+	keyboardMap[sf::Keyboard::Key::Comma] = KB_COMMA; /// Comma key (,)
+	keyboardMap[sf::Keyboard::Key::Period] = KB_DOT; /// Dot (period) key (.)
+	keyboardMap[sf::Keyboard::Key::Slash] = KB_SLASH; /// Slash key (/)
+	keyboardMap[sf::Keyboard::Key::SemiColon] = KB_SEMICOLON; /// Semicolon key (;)
+	keyboardMap[sf::Keyboard::Key::Quote] = KB_SIMPLEQUOTE; /// Simple quote key (')
+	keyboardMap[sf::Keyboard::Key::LBracket] = KB_LEFTBRACKET; /// Left bracket key ([)
+	keyboardMap[sf::Keyboard::Key::RBracket] = KB_RIGHTBRACKET;/// Right bracker key (])
+	keyboardMap[sf::Keyboard::Key::BackSlash] = KB_BACKSLASH; /// Backslash key (\)
+	keyboardMap[sf::Keyboard::Key::Multiply] = KB_ASTERISK; /// Asterisk key (*)
+	keyboardMap[sf::Keyboard::Key::Subtract] = KB_MINUS; /// Minus symbol key (-)
+	keyboardMap[sf::Keyboard::Key::Add] = KB_PLUS; /// Plus symbol key (+)
+	keyboardMap[sf::Keyboard::Key::Equal] = KB_EQUALS;
+	keyboardMap[sf::Keyboard::Key::Delete] = KB_DELETE;
+	actionTypeMap[sf::Event::KeyPressed] = AT_PRESSED;
+	actionTypeMap[sf::Event::KeyReleased] = AT_RELEASED;
+	eventsTypeMap[sf::Event::Closed] = ET_QUIT;
+	eventsTypeMap[sf::Event::KeyPressed] = ET_KEYBOARD;
+	eventsTypeMap[sf::Event::KeyReleased] = ET_KEYBOARD;
+}
+
+arcade::GfxLapin::~GfxLapin() {
+
+}
+
+void arcade::GfxLapin::fillEvent(arcade::Event &event, arcade::ActionType actionType, arcade::EventType eventType,
+								 arcade::KeyboardKey key) {
+	printf("i've got a key\n");
+	event.type = eventType;
+	event.action = actionType;
+	event.kb_key = key;
+}
+
 bool arcade::GfxLapin::pollEvent(arcade::Event &e) {
-	return false;
+	sf::Event eventSFML;
+	bunny_window	*window;
+	
+	window = (bunny_window *)this->window;
+	bool event = window->window->pollEvent(eventSFML);
+	if (!event)
+		return (false);
+	auto itEventType = eventsTypeMap.find(eventSFML.type);
+	e.type = (itEventType != eventsTypeMap.end() ? itEventType->second : ET_NONE);
+	auto itActionType = actionTypeMap.find(eventSFML.type);
+	e.action = (itActionType != actionTypeMap.end() ? itActionType->second : AT_NONE);
+	auto itKeyboard = keyboardMap.find(eventSFML.key.code);
+	e.kb_key = (itKeyboard != keyboardMap.end() ? itKeyboard->second : KB_NONE);
+	return (true);
 }
 
 bool arcade::GfxLapin::doesSupportSound() const {
 	return true;
 }
 
-void arcade::GfxLapin::loadSounds(std::vector<std::string> const &sounds) {
-	
-}
-
-void arcade::GfxLapin::playSound(int soundId) {
-	
-}
-
-void arcade::GfxLapin::setSize(size_t height, size_t width) {
-	windowsHeight = height;
-	windowsWidth = width;
-}
-
-void arcade::GfxLapin::setPosition(size_t y, size_t x) {
-	
-}
-
-void arcade::GfxLapin::initializeWindow() {
-	
-}
-
 void arcade::GfxLapin::updateMap(const arcade::IMap &map) {
-	
-}
-
-void arcade::GfxLapin::updateGUI(const arcade::IGUI &gui) {
-	
+	//printf("Update Map\n");
+	//bunny_fill(window->window, arcade::Color::Blue.full);
+	for (size_t i = 0; i < map.getLayerNb(); ++i) {
+		for (size_t j = 0; j < map.getHeight(); ++i) {
+			for (size_t k = 0; k < map.getWidth(); ++i) {
+				if (map.at(i, j, k).hasSprite()) {
+				
+				}
+				else {
+					arcade::Color c = map.at(i, j, k).getColor();
+					printf("%d\n", c.full);
+					
+				}
+			}
+		}
+	}
 }
 
 void arcade::GfxLapin::display() {
-	
+	//printf("Display\n");
+	//bunny_display(window);
 }
 
 void arcade::GfxLapin::clear() {
-	
+
+}
+void arcade::GfxLapin::loadSounds(const std::vector<std::pair<std::string, arcade::SoundType>> &sounds) {
+
+}
+void arcade::GfxLapin::soundControl(const arcade::Sound &sound) {
+
+}
+void arcade::GfxLapin::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites) {
+
+}
+void arcade::GfxLapin::updateGUI(arcade::IGUI &gui) {
+
 }
 
-arcade::GfxLapin::~GfxLapin() {
-	initializeWindow();
-	
-}
-
-arcade::GfxLapin::GfxLapin() {
-	
-}
-
-extern "C" arcade::GfxLapin *getClone() {
+extern "C" arcade::GfxLapin *getLib() {
 	return new arcade::GfxLapin();
 }

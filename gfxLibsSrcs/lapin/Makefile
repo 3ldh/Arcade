@@ -1,4 +1,5 @@
-SRC         = $(wildcard ./src/*.cpp)
+SRC         =   $(wildcard ./src/*.cpp)  \
+				$(wildcard ../../ArcadeInterfaces/*.cpp)
 
 OBJ         = $(SRC:.cpp=.o)
 

@@ -54,7 +54,7 @@ bool arcade::Core::getEvents() {
 
     events.clear();
     while (currentLib->pollEvent(event)) {
-        if (event.kb_key == KB_ESCAPE || event.type == ET_QUIT)
+		if (event.kb_key == KB_ESCAPE || event.type == ET_QUIT)
             return (false);
         events.push_back(event);
     }
