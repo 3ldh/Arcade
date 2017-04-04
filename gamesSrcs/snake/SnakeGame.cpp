@@ -13,7 +13,7 @@ arcade::SnakeGame::~SnakeGame() {
 arcade::SnakeGame::SnakeGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 1)),
                                  state(arcade::GameState::INGAME), snake(SnakeUnit(MAP_WIDTH / 2, MAP_HEIGHT / 2)),
                                  sprites(std::vector<std::unique_ptr<ISprite> >()),
-                                 accelerationRate(1000) {
+                                 accelerationRate(1000), apple(false) {
 
     for (size_t i = 0; i < map.getHeight(); ++i) {
         for (size_t j = 0; j < map.getWidth(); ++j) {
@@ -42,7 +42,7 @@ void arcade::SnakeGame::notifyEvent(std::vector<arcade::Event> &&events) {
         auto it = inputs.find(events[0].kb_key);
         if (it != inputs.end())
             snake.setMovingDirection((*it).second);
-        std::cout << snake.getMovingDirection() << std::endl;
+//        std::cout << snake.getMovingDirection() << std::endl;
     }
 }
 
@@ -82,7 +82,10 @@ void arcade::SnakeGame::updatePlayerPos() {
     for (size_t i = 0; i < snake.getLength(); ++i) {
         map[0][snake[i].getPosition().second][snake[i].getPosition().first]->setType(TileType::OTHER);
         map[0][snake[i].getPosition().second][snake[i].getPosition().first]->setTypeEv(TileTypeEvolution::PLAYER);
-        map[0][snake[i].getPosition().second][snake[i].getPosition().first]->setColor(Color::Green);
+        if (i != 0)
+            map[0][snake[i].getPosition().second][snake[i].getPosition().first]->setColor(Color::Green);
+        else
+            map[0][snake[i].getPosition().second][snake[i].getPosition().first]->setColor(Color::Yellow);
     }
 }
 
@@ -96,36 +99,54 @@ void arcade::SnakeGame::clearPlayerPos() {
 
 void arcade::SnakeGame::process() {
     if (timer.isTimeOverMilliseconds(accelerationRate)) {
+        spawnApple();
         clearPlayerPos();
         if (!snake.move(map)) {
             //TODO GameOver
             std::cerr << "GameOver : the Snake has lost his head" << std::endl;
         }
+        takeApple(snake[0].getPosition().first, snake[0].getPosition().second);
         updatePlayerPos();
         timer.start();
     }
 }
 
 void arcade::SnakeGame::spawnApple() {
-    size_t x = 1 + random() % (map.getWidth() - 1);
-    size_t y = 1 + random() % (map.getHeight() - 1);
-
-    map[0][y][x]->setType(TileType::POWERUP);
-    map[0][y][x]->setTypeEv(TileTypeEvolution::POWERUP);
-    map[0][y][x]->setColor(Color::Red);
+    if (!apple) {
+        std::vector<std::pair<size_t , size_t>> spawnablePos = getSpawnablePos();
+        applePos = spawnablePos[rand() % spawnablePos.size()];
+        apple = true;
+        map[0][applePos.second][applePos.first]->setType(TileType::POWERUP);
+        map[0][applePos.second][applePos.first]->setTypeEv(TileTypeEvolution::POWERUP);
+        map[0][applePos.second][applePos.first]->setColor(Color::Red);
+    }
 }
 
 void arcade::SnakeGame::takeApple(size_t x, size_t y) {
-    map[0][y][x]->setType(TileType::EMPTY);
-    map[0][y][x]->setTypeEv(TileTypeEvolution::EMPTY);
-    map[0][y][x]->setColor(Color::White);
+    if (x == applePos.first && y == applePos.second) {
+        apple = false;
+        if (!snake.grow(map))
+            std::cerr << "GameOver : the Snake can't grow" << std::endl;
+    }
+}
+
+std::vector<std::pair<size_t, size_t>> arcade::SnakeGame::getSpawnablePos() {
+    std::vector<std::pair<size_t, size_t>> pos;
+
+    for (size_t y = 1; y < map.getHeight() - 1; ++y) {
+        for (size_t x = 1; x < map.getWidth() - 1; ++x) {
+            if (map[0][y][x]->getTypeEv() == TileTypeEvolution::EMPTY) {
+                pos.push_back(std::make_pair(x, y));
+            }
+        }
+    }
+    return pos;
 }
 
 extern "C" void Play() {
 /*    arcade::CommandType cmd;
     arcade::Unit::Direction direction;
     arcade::SnakeGame snakeGame;*/
-
 }
 
 extern "C" arcade::IGame *getGame() {

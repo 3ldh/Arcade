@@ -1,11 +1,11 @@
 ##
-## Makefile for MAKEFILE in /home/bougon_p
+## Makefile for  in /home/sauvau_m/rendu/cpp_arcade/gfxLibsSrcs/sfml
 ##
-## Made by bougon_p
-## Login   <bougon_p@epitech.net>
+## Made by Sauvau Mathieu
+## Login   <mathieu.sauvau@epitech.eu>
 ##
-## Started on  Wed Jan  4 12:28:45 2017 bougon_p
-## Last update Fri Mar 17 15:22:32 2017 Sauvau Mathieu
+## Started on  Fri Mar 17 15:12:36 2017 Sauvau Mathieu
+## Last update Sun Mar 19 13:05:33 2017 Sauvau Mathieu
 ##
 
 # USEFUL VARIABLES
@@ -22,20 +22,31 @@ ECHO	=	echo -e
 
 # SOURCES VARIABLES
 
-SRC		=	$(wildcard srcs/*.cpp) \
-        	$(wildcard ArcadeInterfaces/*.cpp)
+SRC		=	$(wildcard ./*.cpp) \
+        	$(wildcard ../../ArcadeInterfaces/*.cpp) \
+            ../../srcs/Exception.cpp \
+            ../../srcs/Unit.cpp \
+            ../../srcs/Layer.cpp \
+            ../../srcs/Map.cpp \
+            ../../srcs/Tile.cpp \
+            ../../srcs/GUI.cpp \
+            ../../srcs/Sprite.cpp \
+            ../../srcs/Timer.cpp \
 
 OBJS    	=	$(SRC:.cpp=.o)
 
 
 # PROJECT VARIABLES
 
-NAME	    =   arcade
+NAME	    =   ../../games/lib_arcade_solarfox.so
 
-LDFLAGS     = -ldl
+LDFLAGS     =	-shared \
 
 CXXFLAGS    =	-W -Wall -Wextra --std=c++14 \
-                -Iinclude/ \
+		-std=c++11 \
+		-fPIC \
+		-I../ArcadeInterfaces \
+		-I../include \
 
 ifeq ($(DEBUG), YES)
 CXXFLAGS	+= -g
@@ -48,8 +59,6 @@ CC          =	g++ $(CXXFLAGS)
 # PROJECT RULES
 
 $(NAME)		: 	$(OBJS)
-		make -C gfxLibsSrcs
-		make -C gamesSrcs
 		@$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 
 compile     	:       $(OBJS)

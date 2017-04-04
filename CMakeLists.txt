@@ -9,7 +9,9 @@ file(GLOB INTERFACES "ArcadeInterfaces/*.hpp"
                      "ArcadeInterfaces/*.cpp")
 
 file(GLOB GAMES "gamesSrcs/snake/*.cpp"
-                "gamesSrcs/snake/*.hpp")
+                "gamesSrcs/snake/*.hpp"
+                "gamesSrcs/solarFox/*.cpp"
+                "gamesSrcs/solarFox/*.hpp")
 
 file(GLOB_RECURSE GFX_LIBS "gfxLibsSrcs/*.hpp"
                            "gfxLibsSrcs/*.cpp")

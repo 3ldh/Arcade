@@ -8,6 +8,7 @@
 
 #include <utility>
 #include "Map.hpp"
+#include "Sprite.hpp"
 
 namespace arcade {
     class Unit {
@@ -21,6 +22,7 @@ namespace arcade {
 
     protected:
         std::pair<size_t , size_t> position;
+        Sprite sprite;
 
     public:
         virtual ~Unit();

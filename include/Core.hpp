@@ -10,20 +10,22 @@
 #include "../ArcadeInterfaces/IGfxLib.hpp"
 #include "../ArcadeInterfaces/IGame.hpp"
 #include "DLLoader.hpp"
+#include "Menu.hpp"
 
 namespace arcade {
     class Core {
         DLLoader<IGfxLib> *libLoader;
         DLLoader<IGame> *gameLoader;
-
         IGfxLib *currentLib;
         IGame *currentGame;
         std::vector<std::string> gamesPath;
         std::vector<std::string> gfxPath;
-        int gfxLibIndex;
-        int gameLibIndex;
-        std::map<arcade::KeyboardKey, std::function<void(void)> > input;
+        size_t gfxLibIndex;
+        size_t gameLibIndex;
+        std::map<arcade::KeyboardKey, std::function<void()>> input;
 		std::vector<arcade::Event> &&events;
+		Menu menu;
+        bool launched;
 
         bool stringEndWith(std::string const &value, std::string const &end);
         std::vector<std::string> getPathToSOFilesInDir(std::string const &pathDir);
@@ -37,11 +39,10 @@ namespace arcade {
         void coreLoop();
         void prevGame();
         void nextGame();
-        void prevGfxLib(void);
+        void prevGfxLib();
         void nextGfxLib();
-        void switchMenu();
-        void menuUp();
-        void menuDown();
+        void restartGame();
+        void backToMenu();
 	};
 }
 

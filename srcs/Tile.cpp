@@ -52,5 +52,5 @@ arcade::Tile::~Tile() {
 
 }
 
-arcade::Tile::Tile(TileType type) : type(type), typeEv(EMPTY) {
+arcade::Tile::Tile(TileType type) : type(type), typeEv(EMPTY), _hasSprite(false) {
 }

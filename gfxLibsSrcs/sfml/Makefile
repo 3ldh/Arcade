@@ -22,7 +22,8 @@ ECHO	=	echo -e
 
 # SOURCES VARIABLES
 
-SRC		=	$(wildcard ./*.cpp)
+SRC		=	$(wildcard ./*.cpp) \
+            ../../srcs/Exception.cpp
 
 OBJS    	=	$(SRC:.cpp=.o)
 
@@ -32,14 +33,13 @@ OBJS    	=	$(SRC:.cpp=.o)
 NAME	    =   ../../lib/lib_arcade_sfml.so
 
 LDFLAGS     =	-shared \
-		-L./SFML-2.2/lib -lsfml-audio \
+		 -lsfml-audio \
 		-lsfml-graphics -lsfml-window -lsfml-network -lsfml-system
 
 CXXFLAGS    =	-W -Wall -Wextra --std=c++14 \
                 -Iinclude/ \
 		-std=c++11 \
 		-fPIC \
-		-I./SFML-2.4.2/include
 
 ifeq ($(DEBUG), YES)
 CXXFLAGS	+= -g

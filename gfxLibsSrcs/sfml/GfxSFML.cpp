@@ -5,6 +5,7 @@
 #include <SFML/Window.hpp>
 #include <iostream>
 #include "GfxSFML.hpp"
+#include "../../include/Exception.hpp"
 
 arcade::GfxSFML::~GfxSFML() {
 
@@ -172,20 +173,24 @@ void arcade::GfxSFML::updateMap(const arcade::IMap &map) {
     for (size_t i = 0; i < map.getLayerNb(); ++i) {
         for (size_t j = 0; j < map.getHeight(); ++j) {
             for (size_t k = 0; k < map.getWidth(); ++k) {
-                arcade::Color c = map.at(i, j, k).getColor();
-                if (map.at(i, j, k).getTypeEv() == TileTypeEvolution::PLAYER) {
-                    sf::CircleShape circle(WIN_WIDTH / map.getWidth() / 2);
-                    circle.setFillColor(sf::Color(c.rgba[0], c.rgba[1], c.rgba[2]));
-                    circle.setPosition(WIN_WIDTH / map.getWidth() * k, WIN_HEIGHT / map.getHeight() * j);
-                    window.draw(circle);
+                if (map.at(i, j, k).hasSprite()) {
+
                 } else {
-                    sf::RectangleShape rectangle(
-                            sf::Vector2f(WIN_WIDTH / map.getWidth(), WIN_HEIGHT / map.getHeight()));
-                    rectangle.setPosition(WIN_WIDTH / map.getWidth() * k, WIN_HEIGHT / map.getHeight() * j);
-                    rectangle.setFillColor(sf::Color(c.rgba[0], c.rgba[1], c.rgba[2]));
-                    rectangle.setOutlineColor(sf::Color(sf::Color::Black));
-                    rectangle.setOutlineThickness(1);
-                    window.draw(rectangle);
+                    arcade::Color c = map.at(i, j, k).getColor();
+                    if (map.at(i, j, k).getTypeEv() == TileTypeEvolution::PLAYER) {
+                        sf::CircleShape circle(WIN_WIDTH / map.getWidth() / 2);
+                        circle.setFillColor(sf::Color(c.rgba[0], c.rgba[1], c.rgba[2]));
+                        circle.setPosition(WIN_WIDTH / map.getWidth() * k, WIN_HEIGHT / map.getHeight() * j);
+                        window.draw(circle);
+                    } else {
+                        sf::RectangleShape rectangle(
+                                sf::Vector2f(WIN_WIDTH / map.getWidth(), WIN_HEIGHT / map.getHeight()));
+                        rectangle.setPosition(WIN_WIDTH / map.getWidth() * k, WIN_HEIGHT / map.getHeight() * j);
+                        rectangle.setFillColor(sf::Color(c.rgba[0], c.rgba[1], c.rgba[2]));
+                        rectangle.setOutlineColor(sf::Color(sf::Color::Black));
+                        rectangle.setOutlineThickness(1);
+                        window.draw(rectangle);
+                    }
                 }
             }
         }
@@ -213,7 +218,19 @@ void arcade::GfxSFML::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> 
 }
 
 void arcade::GfxSFML::updateGUI(arcade::IGUI &gui) {
-
+    for (size_t i = 0; i < gui.size(); ++i) {
+        arcade::Color c = gui.at(i).getTextColor();
+        sf::Font font;
+        if (!font.loadFromFile("./gfxLibsSrcs/mytype.ttf"))
+            throw GfxLibError("GfxLibError : Font file not found");
+        sf::Text text;
+        text.setFont(font);
+        text.setCharacterSize(16);
+        text.setString(gui.at(i).getText());
+        text.setPosition((int) gui.at(i).getX(), (int) gui.at(i).getY());
+        text.setColor(sf::Color(c.rgba[0], c.rgba[1], c.rgba[2]));
+        window.draw(text);
+    }
 }
 
 extern "C" arcade::GfxSFML *getLib() {

@@ -28,25 +28,25 @@ void main()
     for (int i = 0; i < gl_in.length(); i++)
     {
         // Retrieve the passed vertex position
-        vec2 pos = gl_in[i].gl_Position.xy;
+        vec2 applePos = gl_in[i].gl_Position.xy;
 
         // Bottom left vertex
-        gl_Position = vec4(pos - half_size, 0.f, 1.f);
+        gl_Position = vec4(applePos - half_size, 0.f, 1.f);
         tex_coord = vec2(1.f, 1.f);
         EmitVertex();
 
         // Bottom right vertex
-        gl_Position = vec4(pos.x + half_size.x, pos.y - half_size.y, 0.f, 1.f);
+        gl_Position = vec4(applePos.x + half_size.x, applePos.y - half_size.y, 0.f, 1.f);
         tex_coord = vec2(0.f, 1.f);
         EmitVertex();
 
         // Top left vertex
-        gl_Position = vec4(pos.x - half_size.x, pos.y + half_size.y, 0.f, 1.f);
+        gl_Position = vec4(applePos.x - half_size.x, applePos.y + half_size.y, 0.f, 1.f);
         tex_coord = vec2(1.f, 0.f);
         EmitVertex();
 
         // Top right vertex
-        gl_Position = vec4(pos + half_size, 0.f, 1.f);
+        gl_Position = vec4(applePos + half_size, 0.f, 1.f);
         tex_coord = vec2(0.f, 0.f);
         EmitVertex();
 

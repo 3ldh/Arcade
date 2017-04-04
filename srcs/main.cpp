@@ -16,6 +16,8 @@ void showMap(arcade::SnakeGame const &game)
 }
 
 int main(int ac, char **av) {
+
+    srand(time(0));
     if (!av[1]) {
         std::cerr << "Usage: ./arcade pathToLibrary.so" << std::endl;
         return (1);

@@ -6,19 +6,21 @@
 #define CPP_ARCADE_GUI_HPP
 
 #include "../ArcadeInterfaces/IGUI.hpp"
+#include "UIComponent.hpp"
 
 namespace arcade {
     class GUI : public IGUI {
 
     protected:
-        std::vector<IComponent *> components;
+        std::vector<UIComponent *> components;
 
     public:
         virtual ~GUI();
         GUI();
         size_t size() const override;
         IComponent &at(std::size_t n) override;
-        void addComponent(IComponent *component);
+        void addComponent(UIComponent *component);
+        virtual void updateComponents();
     };
 }
 
