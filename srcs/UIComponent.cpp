@@ -40,3 +40,46 @@ const std::string &arcade::UIComponent::getText() const {
     return text;
 }
 
+void arcade::UIComponent::setText(const std::string &text) {
+    UIComponent::text = text;
+}
+
+void arcade::UIComponent::setBgColor(const arcade::Color &bgColor) {
+    UIComponent::bgColor = bgColor;
+}
+
+bool arcade::UIComponent::hasSprite() const {
+    return false;
+}
+
+void arcade::UIComponent::setClicked() {
+
+}
+
+arcade::Color arcade::UIComponent::getTextColor() const {
+    return textColor;
+}
+
+void arcade::UIComponent::setTextColor(const arcade::Color &textColor) {
+    UIComponent::textColor = textColor;
+}
+
+bool arcade::UIComponent::isHover() const {
+    return hover;
+}
+
+void arcade::UIComponent::setHover(bool hover) {
+    UIComponent::hover = hover;
+}
+
+bool arcade::UIComponent::isSelected() const {
+    return selected;
+}
+
+void arcade::UIComponent::setSelected(bool selected) {
+    UIComponent::selected = selected;
+}
+
+void arcade::UIComponent::toogle() {
+    selected = !selected;
+}

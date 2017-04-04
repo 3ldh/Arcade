@@ -26,12 +26,15 @@ namespace arcade {
         std::vector<std::unique_ptr<ISprite> > &&sprites;
         std::vector<std::pair<std::string, arcade::SoundType>> sounds;
         GUI gui;
-        size_t accelerationRate;
+        int accelerationRate;
         Timer timer;
+        bool apple;
+        std::pair<size_t, size_t > applePos;
+        std::vector<std::pair<size_t, size_t>> getSpawnablePos();
+        SnakeUnit snake;
 
     public:
     //TODO pass it private
-        SnakeUnit snake;
         virtual ~SnakeGame();
         SnakeGame();
         GameState getGameState() const override;

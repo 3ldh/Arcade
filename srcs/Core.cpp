@@ -11,7 +11,8 @@ arcade::Core::~Core() {
 
 }
 
-arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0), gameLibIndex(0), events(std::vector<arcade::Event>(0)) {
+arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0), gameLibIndex(0),
+                                                   events(std::vector<arcade::Event>(0)) {
 
     gamesPath = getPathToSOFilesInDir("games");
     gfxPath = getPathToSOFilesInDir("lib");
@@ -20,16 +21,24 @@ arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0), gameLibIndex(
 
     loadGfxLib(pathToLib);
     loadGameLib(gamesPath[0]);
-    coreLoop();
-    //TODO map event to function
-//    inputs[Event(EventType::ET_KEYBOARD, ActionType::AT_PRESSED, KB_2)] = std::bind(&arcade::Core::prevGfxLib, this);
-//    inputs[Event(EventType::ET_KEYBOARD, ActionType::AT_PRESSED, KB_3)] = std::bind(&arcade::Core::nextGfxLib, this);
+    menu = Menu(gamesPath, gfxPath);
 
+    input[KB_2] = std::bind(&Core::prevGfxLib, this);
+    input[KB_3] = std::bind(&Core::nextGfxLib, this);
+    input[KB_4] = std::bind(&Core::prevGame, this);
+    input[KB_5] = std::bind(&Core::nextGame, this);
+    input[KB_8] = std::bind(&Core::restartGame, this);
+    input[KB_9] = std::bind(&Core::backToMenu, this);
+    launched = false;
+    coreLoop();
 }
 
 void arcade::Core::loadGfxLib(std::string const &pathToLib) {
     if (libLoader)
         delete libLoader;
+    /*if (currentLib)
+        delete currentLib;
+    */
     libLoader = new DLLoader<IGfxLib>(pathToLib);
     arcade::IGfxLib *lib = libLoader->getInstance("getLib");
 
@@ -41,6 +50,10 @@ void arcade::Core::loadGfxLib(std::string const &pathToLib) {
 void arcade::Core::loadGameLib(std::string const &pathToGame) {
     if (gameLoader)
         delete gameLoader;
+   /* if (currentGame) {
+        delete currentGame;
+        currentGame = NULL;
+    }*/
     gameLoader = new DLLoader<IGame>(pathToGame);
     IGame *game = gameLoader->getInstance("getGame");
 
@@ -56,6 +69,8 @@ bool arcade::Core::getEvents() {
     while (currentLib->pollEvent(event)) {
         if (event.kb_key == KB_ESCAPE || event.type == ET_QUIT)
             return (false);
+        if (event.kb_key == KB_ENTER)
+            launched = true;
         events.push_back(event);
     }
     return (true);
@@ -63,32 +78,57 @@ bool arcade::Core::getEvents() {
 
 void arcade::Core::coreLoop() {
     while (true) {
-        //getEvent
-        /*currentLib->updateGUI(currentGame->getGUI());*/
+        currentLib->clear();
+//      currentLib->updateGUI(currentGame->getGUI());
         if (!getEvents())
             break;
-        currentGame->notifyEvent(std::move(events));
-        currentGame->process();
-        currentLib->updateMap(currentGame->getCurrentMap());
-//        currentLib->clear();
+        if (events.size() > 0 && events[0].action == AT_PRESSED && input.find(events[0].kb_key) != input.end())
+            input[events[0].kb_key]();
+        if (launched && currentGame) {
+            currentGame->notifyEvent(std::move(events));
+            currentGame->process();
+            currentLib->updateMap(currentGame->getCurrentMap());
+        } else {
+            currentLib->updateGUI(menu);
+        }
         currentLib->display();
     }
 }
 
 void arcade::Core::prevGame() {
-
+    std::cout << "prevGame" << std::endl;
+    --gameLibIndex;
+    gameLibIndex = gameLibIndex % gamesPath.size();
+    if (!launched)
+        menu.moveMenu(0, gameLibIndex);
+    loadGameLib(gamesPath[gameLibIndex]);
 }
 
 void arcade::Core::nextGame() {
-
+    std::cout << "nextGame" << std::endl;
+    ++gameLibIndex;
+    gameLibIndex = gameLibIndex % gamesPath.size();
+    if (!launched)
+        menu.moveMenu(0, gameLibIndex);
+    loadGameLib(gamesPath[gameLibIndex]);
 }
 
 void arcade::Core::prevGfxLib() {
-
+    std::cout << "prevLib" << std::endl;
+    --gfxLibIndex;
+    gfxLibIndex = gfxLibIndex % gfxPath.size();
+    if (!launched)
+        menu.moveMenu(1, gfxLibIndex);
+//    loadGfxLib(gamesPath[gfxLibIndex]);
 }
 
 void arcade::Core::nextGfxLib() {
-
+    std::cout << "nextLib" << std::endl;
+    ++gfxLibIndex;
+    gfxLibIndex = gfxLibIndex % gfxPath.size();
+    if (!launched)
+        menu.moveMenu(1, gfxLibIndex);
+//    loadGfxLib(gamesPath[gfxLibIndex]);
 }
 
 std::vector<std::string> arcade::Core::getPathToSOFilesInDir(std::string const &pathDir) {
@@ -97,7 +137,7 @@ std::vector<std::string> arcade::Core::getPathToSOFilesInDir(std::string const &
     dirent *r;
 
     if (!dir)
-        throw GameLibError("Lib directory is not found");
+        throw GameLibError("Lib : " + pathDir + " directory doesn't exist");
     while ((r = readdir(dir))) {
         std::string name(r->d_name);
         if (stringEndWith(name, ".so"))
@@ -110,4 +150,12 @@ bool arcade::Core::stringEndWith(std::string const &value, std::string const &en
     if (end.size() > value.size())
         return false;
     return std::equal(end.rbegin(), end.rend(), value.rbegin());
+}
+
+void arcade::Core::restartGame() {
+    std::cout << "restart Game" << std::endl;
+}
+
+void arcade::Core::backToMenu() {
+    launched = false;
 }
