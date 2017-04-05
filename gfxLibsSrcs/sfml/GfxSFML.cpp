@@ -8,7 +8,7 @@
 #include "../../include/Exception.hpp"
 
 arcade::GfxSFML::~GfxSFML() {
-
+    window.close();
 }
 
 arcade::GfxSFML::GfxSFML() {
@@ -177,12 +177,13 @@ void arcade::GfxSFML::updateMap(const arcade::IMap &map) {
 
                 } else {
                     arcade::Color c = map.at(i, j, k).getColor();
-                    if (map.at(i, j, k).getTypeEv() == TileTypeEvolution::PLAYER) {
+/*
                         sf::CircleShape circle(WIN_WIDTH / map.getWidth() / 2);
                         circle.setFillColor(sf::Color(c.rgba[0], c.rgba[1], c.rgba[2]));
                         circle.setPosition(WIN_WIDTH / map.getWidth() * k, WIN_HEIGHT / map.getHeight() * j);
                         window.draw(circle);
-                    } else {
+*/
+
                         sf::RectangleShape rectangle(
                                 sf::Vector2f(WIN_WIDTH / map.getWidth(), WIN_HEIGHT / map.getHeight()));
                         rectangle.setPosition(WIN_WIDTH / map.getWidth() * k, WIN_HEIGHT / map.getHeight() * j);
@@ -190,7 +191,6 @@ void arcade::GfxSFML::updateMap(const arcade::IMap &map) {
                         rectangle.setOutlineColor(sf::Color(sf::Color::Black));
                         rectangle.setOutlineThickness(1);
                         window.draw(rectangle);
-                    }
                 }
             }
         }

@@ -18,6 +18,7 @@ namespace arcade {
             DOWN	= 3,		// MOVE THE CHARACTER DOWN
             LEFT	= 4,		// MOVE THE CHARACTER LEFT
             RIGHT	= 5,		// MOVE THE CHARACTER RIGHT
+            FORWARD	= 6,		// MOVE THE CHARACTER RIGHT
         };
 
     protected:
@@ -37,6 +38,10 @@ namespace arcade {
         void setPosition(const std::pair<size_t, size_t> &position);
         void setPosition(size_t x, size_t y);
         std::pair<size_t, size_t> convertDirection(Direction direction);
+
+        const Sprite &getSprite() const;
+
+        void setSprite(const Sprite &sprite);
     };
 }
 

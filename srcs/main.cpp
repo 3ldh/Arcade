@@ -1,19 +1,9 @@
 #include <iostream>
 #include "../include/DLLoader.hpp"
-#include "../ArcadeInterfaces/IGfxLib.hpp"
+#include "../arcadeInterfaces/IGfxLib.hpp"
 #include "../include/Map.hpp"
 #include "../gamesSrcs/snake/SnakeGame.hpp"
 #include "../include/Core.hpp"
-
-void showMap(arcade::SnakeGame const &game)
-{
-    for (size_t i = 0; i < game.getCurrentMap().getHeight(); ++i) {
-        for (size_t j = 0; j < game.getCurrentMap().getWidth(); ++j) {
-            std::cout << (int)(game.getCurrentMap().at(0, i, j).getType());
-        }
-        std::cout << std::endl;
-    }
-}
 
 int main(int ac, char **av) {
 

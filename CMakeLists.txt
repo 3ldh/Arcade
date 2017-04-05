@@ -5,8 +5,8 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories("./gfxLibsSrcs/lapin")
 
-file(GLOB INTERFACES "ArcadeInterfaces/*.hpp"
-                     "ArcadeInterfaces/*.cpp")
+file(GLOB INTERFACES "arcadeInterfaces/*.hpp"
+                     "arcadeInterfaces/*.cpp")
 
 file(GLOB GAMES "gamesSrcs/snake/*.cpp"
                 "gamesSrcs/snake/*.hpp"

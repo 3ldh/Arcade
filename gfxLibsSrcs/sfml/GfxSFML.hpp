@@ -7,7 +7,7 @@
 
 //#include <SFML/Graphics.hpp>
 #include "SFML-2.4.2/include/SFML/Graphics.hpp"
-#include "../../ArcadeInterfaces/IGfxLib.hpp"
+#include "../../arcadeInterfaces/IGfxLib.hpp"
 
 namespace arcade {
     class GfxSFML : public IGfxLib {

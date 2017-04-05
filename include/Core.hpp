@@ -7,8 +7,8 @@
 
 #include <functional>
 #include <map>
-#include "../ArcadeInterfaces/IGfxLib.hpp"
-#include "../ArcadeInterfaces/IGame.hpp"
+#include "../arcadeInterfaces/IGfxLib.hpp"
+#include "../arcadeInterfaces/IGame.hpp"
 #include "DLLoader.hpp"
 #include "Menu.hpp"
 

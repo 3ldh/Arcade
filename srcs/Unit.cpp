@@ -67,3 +67,11 @@ std::pair<size_t, size_t> arcade::Unit::convertDirection(arcade::Unit::Direction
     return std::make_pair(0, 0);
 }
 
+const arcade::Sprite &arcade::Unit::getSprite() const {
+    return sprite;
+}
+
+void arcade::Unit::setSprite(const arcade::Sprite &sprite) {
+    Unit::sprite = sprite;
+}
+
