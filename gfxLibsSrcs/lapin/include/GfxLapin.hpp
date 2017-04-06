@@ -28,23 +28,25 @@ namespace arcade {
 		void clear() override;
 		struct				bunny_window
 		{
-			size_t			type;
-			sf::RenderWindow		*window;
-			ssize_t			width;
-			ssize_t			height;
-			const char			*window_name;
+			size_t											type;
+			sf::RenderWindow								*window;
+			ssize_t											width;
+			ssize_t											height;
+			const char										*window_name;
 		};
 	private:
-		std::map<sf::Keyboard::Key, arcade::KeyboardKey>   keyboardMap;
-		std::map<sf::Event::EventType, arcade::ActionType> actionTypeMap;
-		std::map<sf::Event::EventType, arcade::EventType > eventsTypeMap;
-		std::vector<t_bunny_sound	*>			sound;
-		size_t									windowsWidth;
-		size_t									windowsHeight;
+		t_bunny_picture										*font;
+		std::map<sf::Keyboard::Key, arcade::KeyboardKey>	keyboardMap;
+		std::map<sf::Event::EventType, arcade::ActionType>	actionTypeMap;
+		std::map<sf::Event::EventType, arcade::EventType >	eventsTypeMap;
+		std::vector<t_bunny_sound	*>						sound;
+		size_t												windowsWidth;
+		size_t												windowsHeight;
 		
 		t_bunny_window							*window;
 		t_bunny_pixelarray						*pixelarray;
 		void 									fillEvent(Event &event, ActionType type, EventType eventType, KeyboardKey key);
+		void 									printText(t_bunny_picture *font, t_bunny_buffer *pic, const t_bunny_position *p, const char *str, bool up);
 	};
 }
 

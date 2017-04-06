@@ -3,7 +3,7 @@ SRC         =   $(wildcard ./src/*.cpp)  \
 
 OBJ         = $(SRC:.cpp=.o)
 
-CXXFLAGS    = -W -Wall -Wextra --std=c++11 -Iinclude/ -fPIC \
+CXXFLAGS    = -g -W -Wall -Wextra --std=c++11 -Iinclude/ -fPIC \
 
 LIB         = -llapin -lsfml-graphics -lsfml-audio -lsfml-window \
               -lsfml-system -lstdc++ -lm -ldl -lpthread -L./LibLapin

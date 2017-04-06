@@ -160,8 +160,10 @@ bool arcade::GfxSFML::pollEvent(arcade::Event &e) {
     it_et != eventsType.end() ? e.type = (*it_et).second : e.type = ET_NONE;
     auto it_eat = eventsActionType.find(eventSFML.type);
     it_eat != eventsActionType.end() ? e.action = (*it_eat).second : e.action = AT_NONE;
-    auto it = eventsKeyboard.find(eventSFML.key.code);
-    it != eventsKeyboard.end() ? e.kb_key = (*it).second : e.kb_key = KB_NONE;
+    if (eventSFML.type == sf::Event::KeyPressed || eventSFML.type == sf::Event::KeyReleased) {
+        auto it = eventsKeyboard.find(eventSFML.key.code);
+        it != eventsKeyboard.end() ? e.kb_key = (*it).second : e.kb_key = KB_NONE;
+    }
     return (true);
 }
 

@@ -48,12 +48,12 @@ void arcade::Core::loadGfxLib(std::string const &pathToLib) {
 }
 
 void arcade::Core::loadGameLib(std::string const &pathToGame) {
-    if (gameLoader)
+	if (currentGame) {
+		delete currentGame;
+		currentGame = NULL;
+	}
+	if (gameLoader)
         delete gameLoader;
-   /* if (currentGame) {
-        delete currentGame;
-        currentGame = NULL;
-    }*/
     gameLoader = new DLLoader<IGame>(pathToGame);
     IGame *game = gameLoader->getInstance("getGame");
 
@@ -119,7 +119,7 @@ void arcade::Core::prevGfxLib() {
     gfxLibIndex = gfxLibIndex % gfxPath.size();
     if (!launched)
         menu.moveMenu(1, gfxLibIndex);
-//    loadGfxLib(gamesPath[gfxLibIndex]);
+    loadGfxLib(gfxPath[gfxLibIndex]);
 }
 
 void arcade::Core::nextGfxLib() {
@@ -128,7 +128,7 @@ void arcade::Core::nextGfxLib() {
     gfxLibIndex = gfxLibIndex % gfxPath.size();
     if (!launched)
         menu.moveMenu(1, gfxLibIndex);
-//    loadGfxLib(gamesPath[gfxLibIndex]);
+    loadGfxLib(gfxPath[gfxLibIndex]);
 }
 
 std::vector<std::string> arcade::Core::getPathToSOFilesInDir(std::string const &pathDir) {
