@@ -48,8 +48,6 @@ CC          =	g++ $(CXXFLAGS)
 # PROJECT RULES
 
 $(NAME)		: 	$(OBJS)
-		make -C gfxLibsSrcs
-		make -C gamesSrcs
 		@$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 
 compile     	:       $(OBJS)
@@ -60,7 +58,10 @@ else
 endif
 
 all         	:       $(LIB)
+		make -j 4 -C gfxLibsSrcs
+		make -j 4 -C gamesSrcs
 		@make -j 4 -s compile
+
 
 clean		:
 		@$(RM) $(OBJS)

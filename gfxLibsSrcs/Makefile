@@ -1,3 +1,3 @@
 all:
-		make -C lapin
-		make -C sfml
+		make re -C lapin
+		make re -C sfml
