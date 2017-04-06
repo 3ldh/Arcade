@@ -18,15 +18,13 @@ arcade::Menu::Menu(std::vector<std::string> gamesPath, std::vector<std::string> 
         UIComponent *component = new UIComponent(10, 50 * i, 40, 100);
         component->setText(gamesPath[i]);
         components.push_back(component);
-        if (i == 0)
-            component->setSelected(true);
+		component->setSelected(i == 0);
     }
     for (size_t i = 0; i < gfxPath.size(); ++i) {
         UIComponent *component = new UIComponent(400, 50 * i, 40, 100);
         component->setText(gfxPath[i]);
         components.push_back(component);
-        if (i == 0)
-            component->setSelected(true);
+		component->setSelected(i == 0);
     }
     updateComponents();
 }

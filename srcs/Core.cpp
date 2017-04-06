@@ -18,6 +18,8 @@ arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0), gameLibIndex(
     gfxPath = getPathToSOFilesInDir("lib");
     gameLoader = NULL;
     libLoader = NULL;
+	currentGame = NULL;
+	currentLib = NULL;
 
     loadGfxLib(pathToLib);
     loadGameLib(gamesPath[0]);
@@ -70,10 +72,12 @@ bool arcade::Core::getEvents() {
 
     events.clear();
     while (currentLib->pollEvent(event)) {
-		if (event.kb_key == KB_ESCAPE || event.type == ET_QUIT)
-            return (false);
-        if (event.kb_key == KB_ENTER)
-            launched = true;
+		if (event.type == AT_PRESSED || event.type == AT_RELEASED) {
+			if (event.kb_key == KB_ESCAPE || event.type == ET_QUIT)
+				return (false);
+			if (event.kb_key == KB_ENTER)
+				launched = true;
+		}
         events.push_back(event);
     }
     return (true);
@@ -139,6 +143,7 @@ std::vector<std::string> arcade::Core::getPathToSOFilesInDir(std::string const &
     DIR *dir = opendir(pathDir.c_str());
     dirent *r;
 
+	//TODO: HIGHLIGHT LA LIB PASSE EN PARAMETTRE, ACTUELLEMENT CA HIGHLIGHT LA PREMIERE DE LA LIB
     if (!dir)
         throw GameLibError("Lib : " + pathDir + " directory doesn't exist");
     while ((r = readdir(dir))) {

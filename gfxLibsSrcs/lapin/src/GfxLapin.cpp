@@ -211,8 +211,8 @@ void arcade::GfxLapin::updateGUI(arcade::IGUI &gui) {
 		
 		position.x = gui.at(i).getX();
 		position.y = gui.at(i).getY();
-		string = gui.at(i).getText().c_str();
-		printText(font, &pixelarray->clipable.buffer, &position, string, true);
+		//string = gui.at(i).getText().c_str();
+		//printText(font, &pixelarray->clipable.buffer, &position, string, true);
 	}
 }
 
