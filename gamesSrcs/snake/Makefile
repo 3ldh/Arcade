@@ -69,6 +69,7 @@ else
 endif
 
 all         	:       $(LIB)
+		@mkdir -p ../../games
 		@make -j 4 -s compile
 
 clean		:
