@@ -18,6 +18,7 @@ lapin:
 			@make -C LibLapin
 
 $(NAME):    $(OBJ) lapin
+			mkdir -p ../../lib
 			g++ -o $(NAME) $(OBJ) $(LIB) -shared
 
 .cpp.o:
