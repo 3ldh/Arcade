@@ -63,6 +63,8 @@ std::pair<size_t, size_t> arcade::Unit::convertDirection(arcade::Unit::Direction
             return std::make_pair(-1, 0);
         case RIGHT:
             return std::make_pair(1, 0);
+        case FORWARD:
+            return std::make_pair(0, 0);
     }
     return std::make_pair(0, 0);
 }

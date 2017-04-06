@@ -50,6 +50,9 @@ namespace arcade {
         std::vector<int> &&getSoundsToPlay() override;
         const IMap &getCurrentMap() const override;
         const Map &getMap() const;
+        void startTimer();
+        void setAccelerationRate(int accelerationRate);
+
         void process() override;
         void spawnApple();
         void takeApple(size_t x, size_t y);
