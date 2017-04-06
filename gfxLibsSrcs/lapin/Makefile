@@ -25,6 +25,6 @@ $(NAME):    $(OBJ) lapin
 			g++ $(INCLUDE) $(CXXFLAGS) -c $< -o $@
 
 clean:
-			rm $(OBJ)
+			rm -rf $(OBJ)
 
 re:         clean all
