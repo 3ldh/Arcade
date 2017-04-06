@@ -7,7 +7,7 @@
 
 #include <vector>
 #include <memory>
-#include "../ArcadeInterfaces/IMap.hpp"
+#include "../arcadeInterfaces/IMap.hpp"
 #include "Layer.hpp"
 
 namespace arcade {

@@ -23,7 +23,7 @@ ECHO	=	echo -e
 # SOURCES VARIABLES
 
 SRC		=	$(wildcard ./*.cpp) \
-        	$(wildcard ../../ArcadeInterfaces/*.cpp) \
+        	$(wildcard ../../arcadeInterfaces/*.cpp) \
             ../../srcs/Exception.cpp \
             ../../srcs/Unit.cpp \
             ../../srcs/Layer.cpp \

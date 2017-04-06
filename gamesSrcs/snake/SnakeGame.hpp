@@ -10,7 +10,7 @@
 #include <unordered_map>
 #include <chrono>
 #include "../../include/Map.hpp"
-#include "../../ArcadeInterfaces/IGame.hpp"
+#include "../../arcadeInterfaces/IGame.hpp"
 #include "SnakeUnit.hpp"
 #include "../../include/Sprite.hpp"
 #include "../../include/GUI.hpp"
@@ -18,6 +18,7 @@
 
 namespace arcade {
     class SnakeGame : public IGame {
+
         const size_t MAP_HEIGHT = 20;
         const size_t MAP_WIDTH = 20;
         Map map;
@@ -37,6 +38,8 @@ namespace arcade {
     //TODO pass it private
         virtual ~SnakeGame();
         SnakeGame();
+
+        SnakeUnit &getSnake();
         GameState getGameState() const override;
         void notifyEvent(std::vector<Event> &&events) override;
         void notifyNetwork(std::vector<NetworkPacket> &&events) override;
@@ -54,5 +57,7 @@ namespace arcade {
         void updatePlayerPos();
     };
 }
+
+extern "C" void Play();
 
 #endif //CPP_ARCADE_SNAKE_HPP

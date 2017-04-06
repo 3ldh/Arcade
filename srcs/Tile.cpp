@@ -54,3 +54,12 @@ arcade::Tile::~Tile() {
 
 arcade::Tile::Tile(TileType type) : type(type), typeEv(EMPTY), _hasSprite(false) {
 }
+
+const arcade::Sprite &arcade::Tile::getSprite() const {
+    return sprite;
+}
+
+void arcade::Tile::setSprite(const arcade::Sprite &sprite) {
+    Tile::sprite = sprite;
+    _hasSprite = true;
+}

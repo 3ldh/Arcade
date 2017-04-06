@@ -6,18 +6,16 @@
 #define CPP_ARCADE_SPRITE_HPP
 
 #include <vector>
-#include "../ArcadeInterfaces/ISprite.hpp"
+#include "../arcadeInterfaces/ISprite.hpp"
 
 namespace arcade {
 
     class Sprite : public ISprite {
-
         std::vector<char > ascii;
         std::vector<std::string > paths;
 
     public:
         virtual ~Sprite();
-
         Sprite(const std::vector<char> &ascii = std::vector<char>(), const std::vector<std::string> &paths = std::vector<std::string>());
         size_t spritesCount() const override;
         std::string getGraphicPath(size_t pos) const override;

@@ -5,7 +5,7 @@
 #ifndef CPP_ARCADE_UICOMPONENT_HPP
 #define CPP_ARCADE_UICOMPONENT_HPP
 
-#include "../ArcadeInterfaces/IComponent.hpp"
+#include "../arcadeInterfaces/IComponent.hpp"
 #include "Sprite.hpp"
 
 namespace arcade {

@@ -5,7 +5,7 @@
 #ifndef CPP_ARCADE_GUI_HPP
 #define CPP_ARCADE_GUI_HPP
 
-#include "../ArcadeInterfaces/IGUI.hpp"
+#include "../arcadeInterfaces/IGUI.hpp"
 #include "UIComponent.hpp"
 
 namespace arcade {

@@ -34,11 +34,13 @@ arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0), gameLibIndex(
 }
 
 void arcade::Core::loadGfxLib(std::string const &pathToLib) {
+    if (currentLib) {
+        delete currentLib;
+        currentLib = NULL;
+    }
     if (libLoader)
         delete libLoader;
-    /*if (currentLib)
-        delete currentLib;
-    */
+
     libLoader = new DLLoader<IGfxLib>(pathToLib);
     arcade::IGfxLib *lib = libLoader->getInstance("getLib");
 
@@ -48,12 +50,13 @@ void arcade::Core::loadGfxLib(std::string const &pathToLib) {
 }
 
 void arcade::Core::loadGameLib(std::string const &pathToGame) {
-	if (currentGame) {
-		delete currentGame;
-		currentGame = NULL;
-	}
-	if (gameLoader)
+    if (currentGame) {
+        delete currentGame;
+        currentGame = NULL;
+    }
+    if (gameLoader)
         delete gameLoader;
+
     gameLoader = new DLLoader<IGame>(pathToGame);
     IGame *game = gameLoader->getInstance("getGame");
 

@@ -3,8 +3,8 @@
 //
 
 #include <iostream>
+#include <zconf.h>
 #include "SnakeGame.hpp"
-#include "../../include/GUI.hpp"
 
 arcade::SnakeGame::~SnakeGame() {
 
@@ -113,7 +113,7 @@ void arcade::SnakeGame::process() {
 
 void arcade::SnakeGame::spawnApple() {
     if (!apple) {
-        std::vector<std::pair<size_t , size_t>> spawnablePos = getSpawnablePos();
+        std::vector<std::pair<size_t, size_t>> spawnablePos = getSpawnablePos();
         applePos = spawnablePos[rand() % spawnablePos.size()];
         apple = true;
         map[0][applePos.second][applePos.first]->setType(TileType::POWERUP);
@@ -143,10 +143,58 @@ std::vector<std::pair<size_t, size_t>> arcade::SnakeGame::getSpawnablePos() {
     return pos;
 }
 
+arcade::SnakeUnit &arcade::SnakeGame::getSnake() {
+    return snake;
+}
+
+static void cmdWhereAmI(arcade::SnakeUnit const &snake)
+{
+    arcade::WhereAmI *whereAmI;
+    whereAmI = reinterpret_cast<struct arcade::WhereAmI *>(new char[sizeof(struct arcade::WhereAmI) +
+            (sizeof(struct arcade::Position) * snake.getLength())]);
+
+    whereAmI->type = arcade::CommandType::WHERE_AM_I;
+    whereAmI->lenght = snake.getLength();
+
+    for (size_t i = 0; i < snake.getLength(); ++i) {
+        whereAmI->position[i].x = snake.getPosition().first;
+        whereAmI->position[i].y = snake.getPosition().second;
+    }
+    write(1, whereAmI, sizeof(struct arcade::WhereAmI) + (sizeof(struct arcade::Position) * snake.getLength()));
+    //delete whereAmI;
+}
+
+static void cmdGetMap(arcade::Map const &map)
+{
+    arcade::GetMap *cmdMap;
+    cmdMap = reinterpret_cast<struct arcade::GetMap*>(new char[sizeof(struct arcade::GetMap) +
+            sizeof(arcade::TileType) * (map.getWidth() * map.getHeight())]);
+
+    cmdMap->type = arcade::CommandType::GET_MAP;
+    cmdMap->width = map.getHeight();
+    cmdMap->height = map.getHeight();
+
+    for (size_t y = 0; y < map.getHeight(); y++) {
+        for (size_t x = 0; x < map.getWidth(); x++) {
+            cmdMap->tile[y * map.getHeight() + x] = map[0][y][x]->getType();
+        }
+    }
+    write(1, cmdMap, sizeof(struct arcade::GetMap) + sizeof(arcade::TileType) * (map.getWidth() * map.getHeight()));
+    //delete cmdMap;
+}
+
 extern "C" void Play() {
-/*    arcade::CommandType cmd;
-    arcade::Unit::Direction direction;
-    arcade::SnakeGame snakeGame;*/
+    arcade::CommandType cmd;
+    arcade::SnakeGame snakeGame;
+
+    while (read(0, &cmd, sizeof(arcade::CommandType))) {
+        if (cmd == arcade::CommandType::GET_MAP) {
+            cmdGetMap(snakeGame.getMap());
+        } else if (cmd == arcade::CommandType::WHERE_AM_I) {
+            cmdWhereAmI(snakeGame.getSnake());
+        } else if (cmd == arcade::CommandType::PLAY)
+            snakeGame.getSnake().move(snakeGame.getMap(), static_cast<arcade::Unit::Direction>(cmd));
+    }
 }
 
 extern "C" arcade::IGame *getGame() {
