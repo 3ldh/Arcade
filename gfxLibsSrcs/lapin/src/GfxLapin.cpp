@@ -8,13 +8,13 @@
 #include "../include/GfxLapin.hpp"
 
 arcade::GfxLapin::GfxLapin() {
-	font = bunny_load_picture("font.png");
+	font = bunny_load_pixelarray("font.png");
 	if (!font)
 		std::cerr <<  "Missing ./font.png unable to print text in LibLapin" << std::endl;
-	font->scale.x = 4;
-	font->scale.y = 4;
 	window = bunny_start(800, 800, false, "Mathieu");
 	pixelarray = bunny_new_pixelarray(800, 800);
+	windowsHeight = 800;
+	windowsWidth = 800;
 	bunny_fill(&window->buffer, BLUE);
 	keyboardMap[sf::Keyboard::Key::C] = KB_C; /// C key
 	keyboardMap[sf::Keyboard::Key::B] = KB_B; /// B key
@@ -138,9 +138,33 @@ bool arcade::GfxLapin::doesSupportSound() const {
 	return true;
 }
 
+void arcade::GfxLapin::drawSquare(t_bunny_accurate_position pos, t_bunny_accurate_position size, u_int32_t color) {
+	t_bunny_accurate_position tmpPos;
+	
+	tmpPos.x = pos.x;
+	while (tmpPos.x < pos.x + size.x) {
+		tmpPos.y = pos.y;
+		while (tmpPos.y < pos.y + size.y) {
+			tmpPos.y++;
+			tekpixel(pixelarray, &tmpPos, color);
+		}
+		tmpPos.x++;
+	}
+}
+
+t_color arcade::GfxLapin::convertArcadeColorIntoLapinColor(arcade::Color c) {
+	t_color color;
+	color.argb[ALPHA_CMP] = c.a;
+	color.argb[RED_CMP] = c.r;
+	color.argb[GREEN_CMP] = c.g;
+	color.argb[BLUE_CMP] = c.b;
+	return (color);
+}
+
 void arcade::GfxLapin::updateMap(const arcade::IMap &map) {
-	//printf("Update Map\n");
-	//bunny_fill(window->window, arcade::Color::Blue.full);
+	t_bunny_accurate_position pos;
+	t_bunny_accurate_position size;
+	
 	for (size_t i = 0; i < map.getLayerNb(); ++i) {
 		for (size_t j = 0; j < map.getHeight(); ++j) {
 			for (size_t k = 0; k < map.getWidth(); ++k) {
@@ -149,8 +173,13 @@ void arcade::GfxLapin::updateMap(const arcade::IMap &map) {
 				}
 				else {
 					arcade::Color c = map.at(i, j, k).getColor();
-					printf("%d\n", c.full);
-					
+					//printf("%u\n", c.full);
+					t_color color = convertArcadeColorIntoLapinColor(c);
+					pos.x = windowsWidth / map.getWidth() * k;
+					pos.y = windowsHeight / map.getHeight() * j;
+					size.x = windowsWidth / map.getWidth() - 1;
+					size.y = windowsHeight / map.getHeight() - 1;
+					drawSquare(pos, size, color.full);
 				}
 			}
 		}
@@ -163,7 +192,7 @@ void arcade::GfxLapin::display() {
 }
 
 void arcade::GfxLapin::clear() {
-
+	fill(pixelarray);
 }
 void arcade::GfxLapin::loadSounds(const std::vector<std::pair<std::string, arcade::SoundType>> &sounds) {
 
@@ -175,44 +204,29 @@ void arcade::GfxLapin::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>>
 
 }
 
-void arcade::GfxLapin::printText(t_bunny_picture *font, t_bunny_buffer *pic, const t_bunny_position *p, const char *str, bool up) {
-	t_bunny_position pos;
-	t_bunny_position siz;
-	int i;
-	
-	siz.x = (5 + 1) * font->scale.x;
-	siz.y = 7 * font->scale.y;
-	font->clip_y_position = 0;
-	font->clip_width = 5;
-	font->clip_height = 7;
-	pos.x = p->x;
-	pos.y = p->y;
-	for(i = 0; str[i]; ++i) {
-		if (str[i] == ' ')
-			pos.x += siz.x;
-		else {
-			font->clip_x_position = str[i] * 5;
-			bunny_blit(pic, font, &pos);
-			pos.x += siz.x;
-		}
-		if (!up)
-			pos.y += 10;
-		else
-			pos.y -= 10;
-	}
-	
-}
-
 void arcade::GfxLapin::updateGUI(arcade::IGUI &gui) {
 	for (size_t i = 0; i < gui.size(); ++i) {
-		arcade::Color c = gui.at(i).getTextColor();
-		const char 			*string;
-		t_bunny_position	position;
+		t_bunny_accurate_position	position;
 		
 		position.x = gui.at(i).getX();
 		position.y = gui.at(i).getY();
-		//string = gui.at(i).getText().c_str();
-		//printText(font, &pixelarray->clipable.buffer, &position, string, true);
+		//std::cout << gui.at(i).getText() << std::endl;
+		arcade::Color c = gui.at(i).getTextColor();
+		tektext(pixelarray, font, &position, "Mathieu", c.full);
+		
+		//printf("boulce n*%lu\n", i);
+		
+	}
+}
+void arcade::GfxLapin::fill(t_bunny_pixelarray *pPixelarray) {
+	int i = 0;
+	
+	while (i < pixelarray->clipable.clip_height * pixelarray->clipable.clip_width) {
+		t_color *color;
+		
+		color = (t_color *)pixelarray->pixels + i;
+		color->full = BLACK;
+		i++;
 	}
 }
 
