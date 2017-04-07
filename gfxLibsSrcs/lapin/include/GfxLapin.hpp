@@ -9,7 +9,7 @@
 #include <map>
 #include <SFML/Graphics.hpp>
 #include "LibLapin/include/lapin.h"
-#include "../../../ArcadeInterfaces/IGfxLib.hpp"
+#include "../../../arcadeInterfaces/IGfxLib.hpp"
 
 namespace arcade {
 	class GfxLapin : public IGfxLib {
@@ -55,6 +55,9 @@ namespace arcade {
 		void fill(t_bunny_pixelarray *pPixelarray);
 		void drawSquare(t_bunny_accurate_position pos, t_bunny_accurate_position size, u_int32_t color);
 		t_color convertArcadeColorIntoLapinColor(Color c);
+		t_bunny_position pos_(int x, int y);
+		void write_txt_next(t_bunny_position *offset, t_bunny_pixelarray *pix_ar, t_bunny_pixelarray *letter);
+		void write_txt(t_bunny_pixelarray *pix_ar, t_bunny_pixelarray *font, char *str);
 	};
 }
 

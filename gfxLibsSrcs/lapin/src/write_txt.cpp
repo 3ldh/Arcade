@@ -10,9 +10,17 @@
 
 #include <stdlib.h>
 #include <unistd.h>
-#include "libgui.h"
+#include <include/GfxLapin.hpp>
 
-void			write_txt_next(t_bunny_position *offset,
+t_bunny_position arcade::GfxLapin::pos_(int x, int y) {
+	t_bunny_position pos;
+	
+	pos.x = x;
+	pos.y = y;
+	return (pos);
+}
+
+void			arcade::GfxLapin::write_txt_next(t_bunny_position *offset,
 				       t_bunny_pixelarray *pix_ar,
 				       t_bunny_pixelarray *letter)
 {
@@ -23,7 +31,7 @@ void			write_txt_next(t_bunny_position *offset,
   bunny_delete_clipable(&letter->clipable);
 }
 
-void			write_txt(t_bunny_pixelarray *pix_ar,
+void			arcade::GfxLapin::write_txt(t_bunny_pixelarray *pix_ar,
 				  t_bunny_pixelarray *font,
 				  char *str)
 {
