@@ -123,59 +123,59 @@ cpp_arcade/fast:
 	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/build
 .PHONY : cpp_arcade/fast
 
-ArcadeInterfaces/Color.o: ArcadeInterfaces/Color.cpp.o
+arcadeInterfaces/Color.o: arcadeInterfaces/Color.cpp.o
 
-.PHONY : ArcadeInterfaces/Color.o
-
-# target to build an object file
-ArcadeInterfaces/Color.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/ArcadeInterfaces/Color.cpp.o
-.PHONY : ArcadeInterfaces/Color.cpp.o
-
-ArcadeInterfaces/Color.i: ArcadeInterfaces/Color.cpp.i
-
-.PHONY : ArcadeInterfaces/Color.i
-
-# target to preprocess a source file
-ArcadeInterfaces/Color.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/ArcadeInterfaces/Color.cpp.i
-.PHONY : ArcadeInterfaces/Color.cpp.i
-
-ArcadeInterfaces/Color.s: ArcadeInterfaces/Color.cpp.s
-
-.PHONY : ArcadeInterfaces/Color.s
-
-# target to generate assembly for a file
-ArcadeInterfaces/Color.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/ArcadeInterfaces/Color.cpp.s
-.PHONY : ArcadeInterfaces/Color.cpp.s
-
-ArcadeInterfaces/Sound.o: ArcadeInterfaces/Sound.cpp.o
-
-.PHONY : ArcadeInterfaces/Sound.o
+.PHONY : arcadeInterfaces/Color.o
 
 # target to build an object file
-ArcadeInterfaces/Sound.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/ArcadeInterfaces/Sound.cpp.o
-.PHONY : ArcadeInterfaces/Sound.cpp.o
+arcadeInterfaces/Color.cpp.o:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/arcadeInterfaces/Color.cpp.o
+.PHONY : arcadeInterfaces/Color.cpp.o
 
-ArcadeInterfaces/Sound.i: ArcadeInterfaces/Sound.cpp.i
+arcadeInterfaces/Color.i: arcadeInterfaces/Color.cpp.i
 
-.PHONY : ArcadeInterfaces/Sound.i
+.PHONY : arcadeInterfaces/Color.i
 
 # target to preprocess a source file
-ArcadeInterfaces/Sound.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/ArcadeInterfaces/Sound.cpp.i
-.PHONY : ArcadeInterfaces/Sound.cpp.i
+arcadeInterfaces/Color.cpp.i:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/arcadeInterfaces/Color.cpp.i
+.PHONY : arcadeInterfaces/Color.cpp.i
 
-ArcadeInterfaces/Sound.s: ArcadeInterfaces/Sound.cpp.s
+arcadeInterfaces/Color.s: arcadeInterfaces/Color.cpp.s
 
-.PHONY : ArcadeInterfaces/Sound.s
+.PHONY : arcadeInterfaces/Color.s
 
 # target to generate assembly for a file
-ArcadeInterfaces/Sound.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/ArcadeInterfaces/Sound.cpp.s
-.PHONY : ArcadeInterfaces/Sound.cpp.s
+arcadeInterfaces/Color.cpp.s:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/arcadeInterfaces/Color.cpp.s
+.PHONY : arcadeInterfaces/Color.cpp.s
+
+arcadeInterfaces/Sound.o: arcadeInterfaces/Sound.cpp.o
+
+.PHONY : arcadeInterfaces/Sound.o
+
+# target to build an object file
+arcadeInterfaces/Sound.cpp.o:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/arcadeInterfaces/Sound.cpp.o
+.PHONY : arcadeInterfaces/Sound.cpp.o
+
+arcadeInterfaces/Sound.i: arcadeInterfaces/Sound.cpp.i
+
+.PHONY : arcadeInterfaces/Sound.i
+
+# target to preprocess a source file
+arcadeInterfaces/Sound.cpp.i:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/arcadeInterfaces/Sound.cpp.i
+.PHONY : arcadeInterfaces/Sound.cpp.i
+
+arcadeInterfaces/Sound.s: arcadeInterfaces/Sound.cpp.s
+
+.PHONY : arcadeInterfaces/Sound.s
+
+# target to generate assembly for a file
+arcadeInterfaces/Sound.cpp.s:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/arcadeInterfaces/Sound.cpp.s
+.PHONY : arcadeInterfaces/Sound.cpp.s
 
 gamesSrcs/snake/SnakeGame.o: gamesSrcs/snake/SnakeGame.cpp.o
 
@@ -6927,6 +6927,33 @@ gfxLibsSrcs/lapin/src/GfxLapin.cpp.s:
 	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/GfxLapin.cpp.s
 .PHONY : gfxLibsSrcs/lapin/src/GfxLapin.cpp.s
 
+gfxLibsSrcs/lapin/src/tektext.o: gfxLibsSrcs/lapin/src/tektext.cpp.o
+
+.PHONY : gfxLibsSrcs/lapin/src/tektext.o
+
+# target to build an object file
+gfxLibsSrcs/lapin/src/tektext.cpp.o:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/tektext.cpp.o
+.PHONY : gfxLibsSrcs/lapin/src/tektext.cpp.o
+
+gfxLibsSrcs/lapin/src/tektext.i: gfxLibsSrcs/lapin/src/tektext.cpp.i
+
+.PHONY : gfxLibsSrcs/lapin/src/tektext.i
+
+# target to preprocess a source file
+gfxLibsSrcs/lapin/src/tektext.cpp.i:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/tektext.cpp.i
+.PHONY : gfxLibsSrcs/lapin/src/tektext.cpp.i
+
+gfxLibsSrcs/lapin/src/tektext.s: gfxLibsSrcs/lapin/src/tektext.cpp.s
+
+.PHONY : gfxLibsSrcs/lapin/src/tektext.s
+
+# target to generate assembly for a file
+gfxLibsSrcs/lapin/src/tektext.cpp.s:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/tektext.cpp.s
+.PHONY : gfxLibsSrcs/lapin/src/tektext.cpp.s
+
 gfxLibsSrcs/sfml/GfxSFML.o: gfxLibsSrcs/sfml/GfxSFML.cpp.o
 
 .PHONY : gfxLibsSrcs/sfml/GfxSFML.o
@@ -7467,6 +7494,33 @@ srcs/Map.cpp.s:
 	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/srcs/Map.cpp.s
 .PHONY : srcs/Map.cpp.s
 
+srcs/Menu.o: srcs/Menu.cpp.o
+
+.PHONY : srcs/Menu.o
+
+# target to build an object file
+srcs/Menu.cpp.o:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/srcs/Menu.cpp.o
+.PHONY : srcs/Menu.cpp.o
+
+srcs/Menu.i: srcs/Menu.cpp.i
+
+.PHONY : srcs/Menu.i
+
+# target to preprocess a source file
+srcs/Menu.cpp.i:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/srcs/Menu.cpp.i
+.PHONY : srcs/Menu.cpp.i
+
+srcs/Menu.s: srcs/Menu.cpp.s
+
+.PHONY : srcs/Menu.s
+
+# target to generate assembly for a file
+srcs/Menu.cpp.s:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/srcs/Menu.cpp.s
+.PHONY : srcs/Menu.cpp.s
+
 srcs/Sprite.o: srcs/Sprite.cpp.o
 
 .PHONY : srcs/Sprite.o
@@ -7638,12 +7692,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... cpp_arcade"
-	@echo "... ArcadeInterfaces/Color.o"
-	@echo "... ArcadeInterfaces/Color.i"
-	@echo "... ArcadeInterfaces/Color.s"
-	@echo "... ArcadeInterfaces/Sound.o"
-	@echo "... ArcadeInterfaces/Sound.i"
-	@echo "... ArcadeInterfaces/Sound.s"
+	@echo "... arcadeInterfaces/Color.o"
+	@echo "... arcadeInterfaces/Color.i"
+	@echo "... arcadeInterfaces/Color.s"
+	@echo "... arcadeInterfaces/Sound.o"
+	@echo "... arcadeInterfaces/Sound.i"
+	@echo "... arcadeInterfaces/Sound.s"
 	@echo "... gamesSrcs/snake/SnakeGame.o"
 	@echo "... gamesSrcs/snake/SnakeGame.i"
 	@echo "... gamesSrcs/snake/SnakeGame.s"
@@ -8394,6 +8448,9 @@ help:
 	@echo "... gfxLibsSrcs/lapin/src/GfxLapin.o"
 	@echo "... gfxLibsSrcs/lapin/src/GfxLapin.i"
 	@echo "... gfxLibsSrcs/lapin/src/GfxLapin.s"
+	@echo "... gfxLibsSrcs/lapin/src/tektext.o"
+	@echo "... gfxLibsSrcs/lapin/src/tektext.i"
+	@echo "... gfxLibsSrcs/lapin/src/tektext.s"
 	@echo "... gfxLibsSrcs/sfml/GfxSFML.o"
 	@echo "... gfxLibsSrcs/sfml/GfxSFML.i"
 	@echo "... gfxLibsSrcs/sfml/GfxSFML.s"
@@ -8454,6 +8511,9 @@ help:
 	@echo "... srcs/Map.o"
 	@echo "... srcs/Map.i"
 	@echo "... srcs/Map.s"
+	@echo "... srcs/Menu.o"
+	@echo "... srcs/Menu.i"
+	@echo "... srcs/Menu.s"
 	@echo "... srcs/Sprite.o"
 	@echo "... srcs/Sprite.i"
 	@echo "... srcs/Sprite.s"
