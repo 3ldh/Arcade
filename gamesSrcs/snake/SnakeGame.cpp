@@ -13,7 +13,7 @@ arcade::SnakeGame::~SnakeGame() {
 arcade::SnakeGame::SnakeGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 1)),
                                  state(arcade::GameState::INGAME), snake(SnakeUnit(MAP_WIDTH / 2, MAP_HEIGHT / 2)),
                                  sprites(std::vector<std::unique_ptr<ISprite> >()),
-                                 accelerationRate(1000), apple(false) {
+                                 accelerationRate(300), apple(false) {
 
     for (size_t i = 0; i < map.getHeight(); ++i) {
         for (size_t j = 0; j < map.getWidth(); ++j) {
@@ -147,21 +147,28 @@ arcade::SnakeUnit &arcade::SnakeGame::getSnake() {
     return snake;
 }
 
+void arcade::SnakeGame::setAccelerationRate(int accelerationRate) {
+    SnakeGame::accelerationRate = accelerationRate;
+}
+
+void arcade::SnakeGame::startTimer() {
+    timer.start();
+}
+
 static void cmdWhereAmI(arcade::SnakeUnit const &snake)
 {
     arcade::WhereAmI *whereAmI;
     whereAmI = reinterpret_cast<struct arcade::WhereAmI *>(new char[sizeof(struct arcade::WhereAmI) +
             (sizeof(struct arcade::Position) * snake.getLength())]);
-
     whereAmI->type = arcade::CommandType::WHERE_AM_I;
     whereAmI->lenght = snake.getLength();
 
     for (size_t i = 0; i < snake.getLength(); ++i) {
-        whereAmI->position[i].x = snake.getPosition().first;
-        whereAmI->position[i].y = snake.getPosition().second;
+        whereAmI->position[i].x = snake[i].getPosition().first;
+        whereAmI->position[i].y = snake[i].getPosition().second;
     }
     write(1, whereAmI, sizeof(struct arcade::WhereAmI) + (sizeof(struct arcade::Position) * snake.getLength()));
-    //delete whereAmI;
+    delete whereAmI;
 }
 
 static void cmdGetMap(arcade::Map const &map)
@@ -169,31 +176,59 @@ static void cmdGetMap(arcade::Map const &map)
     arcade::GetMap *cmdMap;
     cmdMap = reinterpret_cast<struct arcade::GetMap*>(new char[sizeof(struct arcade::GetMap) +
             sizeof(arcade::TileType) * (map.getWidth() * map.getHeight())]);
-
     cmdMap->type = arcade::CommandType::GET_MAP;
     cmdMap->width = map.getHeight();
     cmdMap->height = map.getHeight();
-
     for (size_t y = 0; y < map.getHeight(); y++) {
         for (size_t x = 0; x < map.getWidth(); x++) {
             cmdMap->tile[y * map.getHeight() + x] = map[0][y][x]->getType();
         }
     }
     write(1, cmdMap, sizeof(struct arcade::GetMap) + sizeof(arcade::TileType) * (map.getWidth() * map.getHeight()));
-    //delete cmdMap;
+    delete cmdMap;
 }
 
 extern "C" void Play() {
+
     arcade::CommandType cmd;
     arcade::SnakeGame snakeGame;
+    arcade::Unit::Direction direction = arcade::Unit::Direction::FORWARD;
 
     while (read(0, &cmd, sizeof(arcade::CommandType))) {
-        if (cmd == arcade::CommandType::GET_MAP) {
-            cmdGetMap(snakeGame.getMap());
-        } else if (cmd == arcade::CommandType::WHERE_AM_I) {
-            cmdWhereAmI(snakeGame.getSnake());
-        } else if (cmd == arcade::CommandType::PLAY)
-            snakeGame.getSnake().move(snakeGame.getMap(), static_cast<arcade::Unit::Direction>(cmd));
+        switch (cmd) {
+            case (arcade::CommandType::GET_MAP) :
+                direction = arcade::Unit::Direction::FORWARD;
+                cmdGetMap(snakeGame.getMap());
+                break;
+            case (arcade::CommandType::WHERE_AM_I) :
+                direction = arcade::Unit::Direction::FORWARD;
+                cmdWhereAmI(snakeGame.getSnake());
+                break;
+            case (arcade::CommandType::GO_UP) :
+                direction = arcade::Unit::Direction::UP;
+                break;
+            case (arcade::CommandType::GO_DOWN) :
+                direction = arcade::Unit::Direction::DOWN;
+                break;
+            case (arcade::CommandType::GO_LEFT) :
+                direction = arcade::Unit::Direction::LEFT;
+                break;
+            case (arcade::CommandType::GO_RIGHT) :
+                direction = arcade::Unit::Direction::RIGHT;
+                break;
+            case (arcade::CommandType::GO_FORWARD) :
+                direction = arcade::Unit::Direction::FORWARD;
+                break;
+            case (arcade::CommandType::PLAY) :
+                std::cerr << "play direction " << direction << std::endl;
+                if (direction != arcade::Unit::Direction::FORWARD)
+                    snakeGame.getSnake().setMovingDirection(direction);
+                snakeGame.setAccelerationRate(0);
+                snakeGame.process();
+                break;
+            case arcade::CommandType::SHOOT:break;
+            case arcade::CommandType::ILLEGAL:break;
+        }
     }
 }
 

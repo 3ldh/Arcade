@@ -22,7 +22,7 @@ bool arcade::SnakeUnit::move(const arcade::Map &map, arcade::Unit::Direction dir
 }
 
 bool arcade::SnakeUnit::move(const arcade::Map &map) {
-//    std::cout << "moveing direction : " << movingDirection << std::endl;
+    std::cerr << "moving direction : " << movingDirection << std::endl;
     return moveAllParts(map, movingDirection);
 }
 
@@ -56,6 +56,10 @@ arcade::Unit &arcade::SnakeUnit::operator[](size_t n) {
     return *parts[n];
 }
 
+arcade::Unit &arcade::SnakeUnit::operator[](size_t n) const {
+    return *parts[n];
+}
+
 size_t arcade::SnakeUnit::getLength() const {
     return parts.size();
 }
@@ -65,22 +69,17 @@ arcade::Unit::Direction arcade::SnakeUnit::getMovingDirection() const {
 }
 
 void arcade::SnakeUnit::setMovingDirection(arcade::Unit::Direction movingDirection) {
+    std::cerr << "set moving direction" << std::endl;
     SnakeUnit::movingDirection = movingDirection;
 }
 
 bool arcade::SnakeUnit::moveAllParts(Map const &map, Direction direction) {
-//    std::cout << "move head 0 x : " << parts[0]->getPosition().first << " y : " << parts[0]->getPosition().second
-//              << std::endl;
     std::pair<size_t, size_t> vector = convertDirection(direction);
     if (isBodyPart(parts[0]->getPosition().first + vector.first, parts[0]->getPosition().second + vector.second) ||
     !map.isWalkable(0, parts[0]->getPosition().first + vector.first, parts[0]->getPosition().second + vector.second))
         return false;
     for (size_t i = parts.size() - 1; i > 0; --i) {
-//            std::cout << "direction " << parts[i]->getNextMove() << std::endl;
         parts[i]->setPosition(parts[i - 1]->getPosition());
-//        std::cout << "move part " << i << " x : " << parts[i]->getPosition().first << " y : "
-//                  << parts[i]->getPosition().second << std::endl;
-//            std::cout << "next direction " << parts[i]->getNextMove() << std::endl;
     }
     parts[0]->move(map, direction);
     return true;

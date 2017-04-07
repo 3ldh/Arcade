@@ -24,6 +24,7 @@ namespace arcade {
         bool move(Map const &map);
         size_t getLength() const;
         Unit &operator[](size_t n);
+        Unit &operator[](size_t n) const;
         Direction getMovingDirection() const;
         void setMovingDirection(Direction movingDirection);
         bool grow(Map const &map);
