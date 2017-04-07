@@ -37,6 +37,7 @@ namespace arcade {
         const std::pair<size_t, size_t> &getPosition() const;
         void setPosition(const std::pair<size_t, size_t> &position);
         void setPosition(size_t x, size_t y);
+        Direction getOppositeDirection(Direction direction);
         std::pair<size_t, size_t> convertDirection(Direction direction);
         const Sprite &getSprite() const;
         void setSprite(const Sprite &sprite);

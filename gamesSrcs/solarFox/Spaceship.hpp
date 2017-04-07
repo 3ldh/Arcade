@@ -10,9 +10,17 @@
 namespace arcade {
     class Spaceship : public Unit {
 
-    public:
-        Spaceship(size_t x, size_t y);
+        Unit projectile;
+        Direction movingDirection;
 
+    public:
+        virtual ~Spaceship();
+        Spaceship(size_t x, size_t y);
+        void setMovingDirection(Direction movingDirection);
+        void chooseDirectionFromAxe(const arcade::Map &map, Spaceship const &player);
+        Direction getMovingDirection() const;
+        bool move(Map const &map);
+        void shoot();
     };
 }
 

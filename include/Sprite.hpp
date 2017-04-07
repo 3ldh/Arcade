@@ -11,12 +11,13 @@
 namespace arcade {
 
     class Sprite : public ISprite {
-        std::vector<char > ascii;
-        std::vector<std::string > paths;
+        std::vector<char> ascii;
+        std::vector<std::string> paths;
 
     public:
         virtual ~Sprite();
         Sprite(const std::vector<char> &ascii = std::vector<char>(), const std::vector<std::string> &paths = std::vector<std::string>());
+        Sprite(Sprite const &sprite);
         size_t spritesCount() const override;
         std::string getGraphicPath(size_t pos) const override;
         char getAscii(size_t pos) const override;

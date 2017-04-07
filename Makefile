@@ -57,19 +57,32 @@ else
 		@$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 endif
 
-all         	:       $(LIB)
-		make -j 4 -C gfxLibsSrcs
-		make -j 4 -C gamesSrcs
+sfml        :
+		@make re -C gfxLibsSrcs/sfml
+
+lapin       :
+		@make re -C gfxLibsSrcs/lapin
+
+gfx         : sfml lapin
+
+snake       :
+		@make re -C gamesSrcs/snake
+
+solarfox    :
+		@make re -C gamesSrcs/solarFox
+
+games       : snake solarfox
+
+all         : $(LIB)
 		@make -j 4 -s compile
 
-
-clean		:
+clean       :
 		@$(RM) $(OBJS)
 
-fclean		: 	clean
+fclean      : clean
 		@$(RM) $(NAME)
 
-re  		:	fclean all
+re          : fclean all
 
 
 .cpp.o		:

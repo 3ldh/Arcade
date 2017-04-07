@@ -1,5 +1,5 @@
 //
-// ISprite.hpp for arcade in /home/brout_m/rendu/cpp/arcadeInterfaces
+// ISprite.hpp for arcade in /home/brout_m/rendu/cpp/ArcadeInterfaces
 //
 // Made by brout_m
 // Login   <marc.brout@epitech.eu>

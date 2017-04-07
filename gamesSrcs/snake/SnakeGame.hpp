@@ -23,8 +23,8 @@ namespace arcade {
         const size_t MAP_WIDTH = 20;
         Map map;
         GameState state;
-        std::unordered_map<arcade::KeyboardKey, arcade::Unit::Direction > inputs;
-        std::vector<std::unique_ptr<ISprite> > &&sprites;
+        std::unordered_map<arcade::KeyboardKey, arcade::Unit::Direction> inputs;
+        std::vector<std::unique_ptr<arcade::Sprite>>  sprites;
         std::vector<std::pair<std::string, arcade::SoundType>> sounds;
         GUI gui;
         int accelerationRate;
@@ -44,15 +44,14 @@ namespace arcade {
         void notifyEvent(std::vector<Event> &&events) override;
         void notifyNetwork(std::vector<NetworkPacket> &&events) override;
         std::vector<NetworkPacket> &&getNetworkToSend() override;
-        std::vector<std::unique_ptr<ISprite>> &&getSpritesToLoad() const override;
+        std::vector<std::unique_ptr<ISprite>> getSpritesToLoad() const override;
         std::vector<std::pair<std::string, SoundType>> getSoundsToLoad() const override;
         IGUI &getGUI() override;
-        std::vector<int> &&getSoundsToPlay() override;
+        std::vector<Sound> getSoundsToPlay() override;
         const IMap &getCurrentMap() const override;
         const Map &getMap() const;
         void startTimer();
         void setAccelerationRate(int accelerationRate);
-
         void process() override;
         void spawnApple();
         void takeApple(size_t x, size_t y);

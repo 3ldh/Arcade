@@ -33,13 +33,13 @@ OBJS    	=	$(SRC:.cpp=.o)
 NAME	    =   ../../lib/lib_arcade_sfml.so
 
 LDFLAGS     =	-shared \
-		 -lsfml-audio \
-		-lsfml-graphics -lsfml-window -lsfml-network -lsfml-system
+		        -lsfml-audio \
+		        -lsfml-graphics -lsfml-window -lsfml-network -lsfml-system
 
 CXXFLAGS    =	-W -Wall -Wextra --std=c++14 \
                 -Iinclude/ \
-		-std=c++11 \
-		-fPIC \
+		        -std=c++11 \
+		        -fPIC \
 
 ifeq ($(DEBUG), YES)
 CXXFLAGS	+= -g

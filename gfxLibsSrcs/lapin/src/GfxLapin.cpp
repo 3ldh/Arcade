@@ -210,9 +210,9 @@ void arcade::GfxLapin::updateGUI(arcade::IGUI &gui) {
 		
 		position.x = gui.at(i).getX();
 		position.y = gui.at(i).getY();
-		//std::cout << gui.at(i).getText() << std::endl;
+//		std::cout << gui.at(i).getText() << std::endl;
 		arcade::Color c = gui.at(i).getTextColor();
-		tektext(pixelarray, font, &position, "Mathieu", c.full);
+		tektext(pixelarray, font, &position, gui.at(i).getText().c_str(), c.full);
 		
 		//printf("boulce n*%lu\n", i);
 		

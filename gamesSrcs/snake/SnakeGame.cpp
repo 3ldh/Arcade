@@ -12,8 +12,8 @@ arcade::SnakeGame::~SnakeGame() {
 
 arcade::SnakeGame::SnakeGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 1)),
                                  state(arcade::GameState::INGAME), snake(SnakeUnit(MAP_WIDTH / 2, MAP_HEIGHT / 2)),
-                                 sprites(std::vector<std::unique_ptr<ISprite> >()),
-                                 accelerationRate(300), apple(false) {
+                                 sprites(std::vector<std::unique_ptr<Sprite>>()),
+                                 accelerationRate(250), apple(false) {
 
     for (size_t i = 0; i < map.getHeight(); ++i) {
         for (size_t j = 0; j < map.getWidth(); ++j) {
@@ -42,7 +42,6 @@ void arcade::SnakeGame::notifyEvent(std::vector<arcade::Event> &&events) {
         auto it = inputs.find(events[0].kb_key);
         if (it != inputs.end())
             snake.setMovingDirection((*it).second);
-//        std::cout << snake.getMovingDirection() << std::endl;
     }
 }
 
@@ -54,17 +53,21 @@ std::vector<arcade::NetworkPacket> &&arcade::SnakeGame::getNetworkToSend() {
     return std::vector<arcade::NetworkPacket>();
 }
 
-std::vector<int> &&arcade::SnakeGame::getSoundsToPlay() {
-    return std::vector<int>();
+std::vector<std::unique_ptr<arcade::ISprite>> arcade::SnakeGame::getSpritesToLoad() const {
+    std::vector<std::unique_ptr<arcade::ISprite>> copy;
+    for (size_t i = 0; i < sprites.size(); ++i) {
+        copy.push_back(std::unique_ptr<Sprite>(new Sprite(*sprites[i])));
+    }
+    return std::move(copy);
+}
+std::vector<arcade::Sound> arcade::SnakeGame::getSoundsToPlay() {
+    return std::vector<arcade::Sound>();
 }
 
 std::vector<std::pair<std::string, arcade::SoundType>> arcade::SnakeGame::getSoundsToLoad() const {
     return sounds;
 }
 
-std::vector<std::unique_ptr<arcade::ISprite>> &&arcade::SnakeGame::getSpritesToLoad() const {
-    return std::move(sprites);
-}
 
 arcade::IGUI &arcade::SnakeGame::getGUI() {
     return gui;
@@ -220,7 +223,6 @@ extern "C" void Play() {
                 direction = arcade::Unit::Direction::FORWARD;
                 break;
             case (arcade::CommandType::PLAY) :
-                std::cerr << "play direction " << direction << std::endl;
                 if (direction != arcade::Unit::Direction::FORWARD)
                     snakeGame.getSnake().setMovingDirection(direction);
                 snakeGame.setAccelerationRate(0);

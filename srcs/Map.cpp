@@ -44,7 +44,7 @@ arcade::Map::Map(size_t width, size_t height, size_t nbLayer) : width(width), he
 }
 
 bool arcade::Map::isWalkable(size_t layer_idx, size_t x, size_t y) const {
-    return !(x > height || y > width ||
+    return !(x >= height || y >= width ||
     operator[](layer_idx)[x][y]->getType() == arcade::TileType::BLOCK ||
     operator[](layer_idx)[x][y]->getTypeEv() == arcade::TileTypeEvolution ::PLAYER);
 }

@@ -22,7 +22,6 @@ bool arcade::SnakeUnit::move(const arcade::Map &map, arcade::Unit::Direction dir
 }
 
 bool arcade::SnakeUnit::move(const arcade::Map &map) {
-    std::cerr << "moving direction : " << movingDirection << std::endl;
     return moveAllParts(map, movingDirection);
 }
 
@@ -69,8 +68,8 @@ arcade::Unit::Direction arcade::SnakeUnit::getMovingDirection() const {
 }
 
 void arcade::SnakeUnit::setMovingDirection(arcade::Unit::Direction movingDirection) {
-    std::cerr << "set moving direction" << std::endl;
-    SnakeUnit::movingDirection = movingDirection;
+    if (getOppositeDirection(SnakeUnit::movingDirection) != movingDirection)
+        SnakeUnit::movingDirection = movingDirection;
 }
 
 bool arcade::SnakeUnit::moveAllParts(Map const &map, Direction direction) {

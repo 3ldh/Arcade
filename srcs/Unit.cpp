@@ -77,3 +77,19 @@ void arcade::Unit::setSprite(const arcade::Sprite &sprite) {
     Unit::sprite = sprite;
 }
 
+arcade::Unit::Direction arcade::Unit::getOppositeDirection(arcade::Unit::Direction direction) {
+    switch (direction)
+    {
+        case UP:
+            return DOWN;
+        case DOWN:
+            return UP;
+        case LEFT:
+            return RIGHT;
+        case RIGHT:
+            return LEFT;
+        case FORWARD:
+            return FORWARD;
+    }
+    return FORWARD;
+}
