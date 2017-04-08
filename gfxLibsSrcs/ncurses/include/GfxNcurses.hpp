@@ -8,12 +8,6 @@
 #include <map>
 #include "../../../arcadeInterfaces/IGfxLib.hpp"
 
-typedef struct	position {
-public:
-	position(int x, int y) : x(x), y(y) {};
-	int x;
-	int y;
-}				position_t;
 
 namespace arcade {
 	class GfxNcurses : public IGfxLib {
@@ -32,14 +26,26 @@ namespace arcade {
 		void clear() override;
 	
 	private:
+		typedef struct	colors {
+			colors(int r, int g, int b, arcade::Color color);
+			int				rgb[3];
+			arcade::Color	color;
+		}			colors_t;
+		typedef struct	position {
+		public:
+			position(int x, int y);
+			int x;
+			int y;
+		}				position_t;
+		std::vector<colors_t> colors;
 		WINDOW	*window;
 		std::map<int, arcade::KeyboardKey> keyboardMap;
 		size_t windowHeight;
 		size_t windowWidth;
 		void drawCube(position_t pos, position_t size, arcade::Color color);
-		void createColor(size_t r, size_t g, size_t b);
+		int checkColor(size_t r, size_t g, size_t b);
 		void makeASquareOutOfPos(position_t &position);
-		void printInColor(position_t pos, char *str, Color color);
+		void printInColor(position_t pos, const char *str, Color color);
 	};
 }
 

@@ -72,7 +72,7 @@ bool arcade::Core::getEvents() {
 
     events.clear();
     while (currentLib->pollEvent(event)) {
-		if (event.action == AT_PRESSED || event.action == AT_RELEASED) {
+        if (event.action == AT_PRESSED || event.action == AT_RELEASED) {
 			if (event.kb_key == KB_ESCAPE || event.type == ET_QUIT)
 				return (false);
 			if (event.kb_key == KB_ENTER)
