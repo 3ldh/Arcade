@@ -109,14 +109,6 @@ arcade::GfxLapin::~GfxLapin() {
 	bunny_delete_clipable(&pixelarray->clipable);
 }
 
-void arcade::GfxLapin::fillEvent(arcade::Event &event, arcade::ActionType actionType, arcade::EventType eventType,
-								 arcade::KeyboardKey key) {
-	printf("i've got a key\n");
-	event.type = eventType;
-	event.action = actionType;
-	event.kb_key = key;
-}
-
 bool arcade::GfxLapin::pollEvent(arcade::Event &e) {
 	sf::Event eventSFML;
 	bunny_window *window;
@@ -140,14 +132,14 @@ bool arcade::GfxLapin::doesSupportSound() const {
 	return true;
 }
 
-void arcade::GfxLapin::tekpixel(t_bunny_pixelarray *pix,
-								t_bunny_accurate_position *pos,
+void arcade::GfxLapin::tekpixel(t_bunny_pixelarray &pix,
+								t_bunny_accurate_position &pos,
 								unsigned int col) {
 	t_color *color;
 	
-	if ((pos->x * pos->y) < (pix->clipable.clip_width *
-							 pix->clipable.clip_height)) {
-		color = (t_color *) pix->pixels + (int) pos->x + (int) pos->y * pix->clipable.clip_width;
+	if ((pos.x * pos.y) < (pix.clipable.clip_width *
+							 pix.clipable.clip_height)) {
+		color = (t_color *) pix.pixels + (int) pos.x + (int) pos.y * pix.clipable.clip_width;
 		color->full = col;
 	}
 }
@@ -155,12 +147,13 @@ void arcade::GfxLapin::tekpixel(t_bunny_pixelarray *pix,
 void arcade::GfxLapin::drawSquare(t_bunny_accurate_position pos, t_bunny_accurate_position size, u_int32_t color) {
 	t_bunny_accurate_position tmpPos;
 	
+	
 	tmpPos.x = pos.x;
 	while (tmpPos.x < pos.x + size.x) {
 		tmpPos.y = pos.y;
 		while (tmpPos.y < pos.y + size.y) {
 			tmpPos.y++;
-			tekpixel(pixelarray, &tmpPos, color);
+			tekpixel(*pixelarray, tmpPos, color);
 		}
 		tmpPos.x++;
 	}
@@ -186,13 +179,15 @@ void arcade::GfxLapin::updateMap(const arcade::IMap &map) {
 				
 				} else {
 					arcade::Color c = map.at(i, j, k).getColor();
-					//printf("%u\n", c.full);
-					t_color color = convertArcadeColorIntoLapinColor(c);
-					pos.x = windowsWidth / map.getWidth() * k;
-					pos.y = windowsHeight / map.getHeight() * j;
-					size.x = windowsWidth / map.getWidth() - 1;
-					size.y = windowsHeight / map.getHeight() - 1;
-					drawSquare(pos, size, color.full);
+					
+					if (c.full != arcade::Color::Transparent.full) {
+						t_color color = convertArcadeColorIntoLapinColor(c);
+						pos.x = windowsWidth / map.getWidth() * k;
+						pos.y = windowsHeight / map.getHeight() * j;
+						size.x = windowsWidth / map.getWidth() - 1;
+						size.y = windowsHeight / map.getHeight() - 1;
+						drawSquare(pos, size, color.full);
+					}
 				}
 			}
 		}
@@ -205,7 +200,8 @@ void arcade::GfxLapin::display() {
 }
 
 void arcade::GfxLapin::clear() {
-	fill(pixelarray);
+	bunny_fill(&window->buffer, BLACK);
+	fill(*pixelarray);
 }
 void arcade::GfxLapin::loadSounds(const std::vector<std::pair<std::string, arcade::SoundType>> &sounds) {
 
@@ -223,7 +219,6 @@ void arcade::GfxLapin::updateGUI(arcade::IGUI &gui) {
 		
 		position.x = (int) gui.at(i).getX();
 		position.y = (int) gui.at(i).getY();
-//		std::cout << gui.at(i).getText() << std::endl;
 		arcade::Color c = gui.at(i).getTextColor();
 		write_txt(pixelarray, font, (char *) gui.at(i).getText().c_str(), position);
 		
@@ -231,7 +226,7 @@ void arcade::GfxLapin::updateGUI(arcade::IGUI &gui) {
 		
 	}
 }
-void arcade::GfxLapin::fill(t_bunny_pixelarray *pPixelarray) {
+void arcade::GfxLapin::fill(t_bunny_pixelarray &pPixelarray) {
 	int i = 0;
 	
 	while (i < pixelarray->clipable.clip_height * pixelarray->clipable.clip_width) {

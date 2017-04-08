@@ -13,7 +13,6 @@ arcade::GfxNcurses::GfxNcurses() {
 	getmaxyx(window, windowHeight, windowWidth);
 	noecho();
 	keypad(window, true);
-	dprintf(2, "Lucas je te basie\n");
 	timeout(0);
 	keyboardMap['a'] = KB_A;
 	keyboardMap['b'] = KB_B;
@@ -50,7 +49,7 @@ arcade::GfxNcurses::GfxNcurses() {
 	keyboardMap['8'] = KB_8;
 	keyboardMap['9'] = KB_9;
 	keyboardMap[' '] = KB_SPACE;
-	keyboardMap['\n'] = KB_ENTER;
+	keyboardMap[KEY_ENTER] = KB_ENTER;
 	keyboardMap[KEY_UP] = KB_ARROW_UP;
 	keyboardMap[KEY_DOWN] = KB_ARROW_DOWN;
 	keyboardMap[KEY_LEFT] = KB_ARROW_LEFT;
@@ -129,8 +128,10 @@ void arcade::GfxNcurses::updateMap(const arcade::IMap &map) {
 }
 
 void arcade::GfxNcurses::updateGUI(arcade::IGUI &gui) {
+	
 	for(size_t i = 0; i < gui.size(); i++) {
-		mvwprintw(window, gui.at(i).getY(), gui.at(i).getX(), gui.at(i).getText().c_str());
+		position_t	pos((int) (windowWidth * gui.at(i).getX()), (int) (windowHeight * gui.at(i).getY()));
+		mvwprintw(window, pos.y, pos.x, gui.at(i).getText().c_str());
 	}
 }
 void arcade::GfxNcurses::display() {

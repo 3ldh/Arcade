@@ -45,8 +45,7 @@ namespace arcade {
 		t_bunny_pixelarray *font;
 		t_bunny_window *window;
 		t_bunny_pixelarray *pixelarray;
-		void fillEvent(Event &event, ActionType type, EventType eventType, KeyboardKey key);
-		void fill(t_bunny_pixelarray *pPixelarray);
+		void fill(t_bunny_pixelarray &pPixelarray);
 		void drawSquare(t_bunny_accurate_position pos, t_bunny_accurate_position size, u_int32_t color);
 		t_color convertArcadeColorIntoLapinColor(Color c);
 		t_bunny_position pos_(int x, int y);
@@ -58,7 +57,7 @@ namespace arcade {
 		t_bunny_pixelarray *get_letter(t_bunny_pixelarray *f, int index);
 		void my_blit(t_bunny_pixelarray *pix_ar, t_bunny_pixelarray *pix_ar2, t_bunny_position offset);
 		t_color blend(t_color bg, t_color fg);
-		void tekpixel(t_bunny_pixelarray *pix, t_bunny_accurate_position *pos, unsigned int col);
+		void tekpixel(t_bunny_pixelarray &pix, t_bunny_accurate_position &pos, unsigned int col);
 	};
 }
 
