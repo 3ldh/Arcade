@@ -41,6 +41,7 @@ namespace arcade {
             };
         const size_t MAP_HEIGHT = 20;
         const size_t MAP_WIDTH = 20;
+        int level[20][20];
         Map map;
         GameState state;
         Spaceship player;
@@ -55,7 +56,7 @@ namespace arcade {
         GUI gui;
         Timer timer;
         Timer timerProjectile;
-
+        Timer totalTime;
         int accelerationRate;
         void clearEnemyPos();
         void updateEnemyPos();
@@ -64,7 +65,8 @@ namespace arcade {
         void clearProjectilesPos();
         void updateProjectilesTile();
         void processProjectile();
-        void moveShipProjectiles(Spaceship &spaceship);
+        bool moveShipProjectiles(Spaceship &spaceship);
+        bool checkFinish();
 
     public:
         virtual ~SolarFoxGame();
@@ -78,7 +80,11 @@ namespace arcade {
         std::vector<std::pair<std::string, SoundType>> getSoundsToLoad() const override;
         std::vector<Sound> getSoundsToPlay() override;
         const IMap &getCurrentMap() const override;
+        const Map &getMap() const;
         IGUI &getGUI() override;
+        void setAccelerationRate(int accelerationRate);
+        Spaceship &getPlayer();
+        void restart();
     };
 }
 

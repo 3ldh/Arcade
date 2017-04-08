@@ -143,7 +143,6 @@ std::vector<std::string> arcade::Core::getPathToSOFilesInDir(std::string const &
     DIR *dir = opendir(pathDir.c_str());
     dirent *r;
 
-	//TODO: HIGHLIGHT LA LIB PASSE EN PARAMETTRE, ACTUELLEMENT CA HIGHLIGHT LA PREMIERE DE LA LIB
     if (!dir)
         throw GameLibError("Lib : " + pathDir + " directory doesn't exist");
     while ((r = readdir(dir))) {

@@ -28,6 +28,7 @@ namespace arcade {
         Direction getMovingDirection() const;
         void setMovingDirection(Direction movingDirection);
         bool grow(Map const &map);
+        void reset();
     };
 }
 

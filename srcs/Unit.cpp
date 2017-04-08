@@ -5,15 +5,11 @@
 #include <iostream>
 #include "../include/Unit.hpp"
 
-arcade::Unit::~Unit() {
+arcade::Unit::~Unit() {}
 
-}
+arcade::Unit::Unit(const std::pair<size_t , size_t > &position) : position(position) {}
 
-arcade::Unit::Unit(const std::pair<size_t , size_t > &position) : position(position), alive(true) {}
-
-arcade::Unit::Unit(size_t x, size_t y) : position(std::make_pair(x, y)) {
-
-}
+arcade::Unit::Unit(size_t x, size_t y) : initialPos(std::make_pair(x, y)), position(std::make_pair(x, y)) {}
 
 const std::pair<size_t , size_t> &arcade::Unit::getPosition() const {
     return position;
@@ -104,10 +100,8 @@ arcade::Unit::Direction arcade::Unit::getOppositeDirection(arcade::Unit::Directi
     return FORWARD;
 }
 
-bool arcade::Unit::isAlive() const {
-    return alive;
+bool arcade::Unit::cmpPos(const arcade::Unit &unit) {
+    return position.first == unit.getPosition().first && position.second == unit.getPosition().second;
 }
 
-void arcade::Unit::setAlive(bool alive) {
-    Unit::alive = alive;
-}
+

@@ -27,10 +27,10 @@ bool arcade::SpaceshipEnemy::move(const arcade::Map &map) {
 bool arcade::SpaceshipEnemy::canMove(const arcade::Map &map) {
     std::pair<int, int> vector = convertDirection(movingDirection);
 
-    return (movingDirection == UP && position.second + vector.second > 0) ||
-           (movingDirection == DOWN && position.second + vector.second < map.getHeight() - 1) ||
-           (movingDirection == LEFT && position.first + vector.first > 0) ||
-           (movingDirection == RIGHT && position.first + vector.first < map.getWidth() - 1);
+    return (movingDirection == UP && position.second + vector.second > 1) ||
+           (movingDirection == DOWN && position.second + vector.second < map.getHeight() - 2) ||
+           (movingDirection == LEFT && position.first + vector.first > 1) ||
+           (movingDirection == RIGHT && position.first + vector.first < map.getWidth() - 2);
 }
 
 std::pair<int, int> arcade::SpaceshipEnemy::posDiffWithPlayer(const arcade::Spaceship &player) {

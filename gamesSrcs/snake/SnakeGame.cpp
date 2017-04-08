@@ -13,7 +13,8 @@ arcade::SnakeGame::~SnakeGame() {
 arcade::SnakeGame::SnakeGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 1)),
                                  state(arcade::GameState::INGAME), sprites(std::vector<std::unique_ptr<Sprite>>()),
                                  netPacket(std::move(std::vector<NetworkPacket>(0))),
-                                 snake(SnakeUnit(MAP_WIDTH / 2, MAP_HEIGHT / 2)), accelerationRate(250), apple(false) {
+                                 snake(SnakeUnit(MAP_WIDTH / 2, MAP_HEIGHT / 2)), accelerationRate(250), apple(false),
+                                 score(0) {
 
     for (size_t i = 0; i < map.getHeight(); ++i) {
         for (size_t j = 0; j < map.getWidth(); ++j) {
@@ -42,6 +43,9 @@ void arcade::SnakeGame::notifyEvent(std::vector<arcade::Event> &&events) {
         auto it = inputs.find(events[0].kb_key);
         if (it != inputs.end())
             snake.setMovingDirection((*it).second);
+        else if (events[0].kb_key == KB_8 && events[0].action == AT_PRESSED) {
+            restart();
+        }
     }
 }
 
@@ -106,7 +110,9 @@ void arcade::SnakeGame::process() {
         clearPlayerPos();
         if (!snake.move(map)) {
             //TODO GameOver
+            std::cerr << "you scored " << score << std::endl;
             std::cerr << "GameOver : the Snake has lost his head" << std::endl;
+            restart();
         }
         takeApple(snake[0].getPosition().first, snake[0].getPosition().second);
         updatePlayerPos();
@@ -116,6 +122,7 @@ void arcade::SnakeGame::process() {
 
 void arcade::SnakeGame::spawnApple() {
     if (!apple) {
+        appleTimer.start();
         std::vector<std::pair<size_t, size_t>> spawnablePos = getSpawnablePos();
         applePos = spawnablePos[rand() % spawnablePos.size()];
         apple = true;
@@ -127,6 +134,7 @@ void arcade::SnakeGame::spawnApple() {
 
 void arcade::SnakeGame::takeApple(size_t x, size_t y) {
     if (x == applePos.first && y == applePos.second) {
+        score += 10 / appleTimer.timeElapsedSeconds();
         apple = false;
         if (!snake.grow(map))
             std::cerr << "GameOver : the Snake can't grow" << std::endl;
@@ -154,7 +162,15 @@ void arcade::SnakeGame::setAccelerationRate(int accelerationRate) {
     SnakeGame::accelerationRate = accelerationRate;
 }
 
-void arcade::SnakeGame::startTimer() {
+void arcade::SnakeGame::restart() {
+
+    clearPlayerPos();
+    map[0][applePos.second][applePos.first]->setColor(Color::Black);
+    map[0][applePos.second][applePos.first]->setTypeEv(TileTypeEvolution::EMPTY);
+    map[0][applePos.second][applePos.first]->setType(TileType::EMPTY);
+    apple = false;
+    score = 0;
+    snake.reset();
     timer.start();
 }
 
