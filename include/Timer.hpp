@@ -17,6 +17,8 @@ public:
     Timer();
     void start();
     std::chrono::steady_clock::duration timeElapsed() const;
+    long timeElapsedMilliseconds() const;
+    long timeElapsedSeconds() const;
     bool isTimeOverMilliseconds(double milliseconds);
     bool isTimeOverSeconds(double seconds);
 };

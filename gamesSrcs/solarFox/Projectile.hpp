@@ -19,7 +19,7 @@ namespace arcade {
         virtual ~Projectile();
         Projectile(size_t x, size_t y, Direction direction, int maxRange);
         bool doesCollide(Unit const &unit) const;
-        bool move(Map const &map);
+        bool move(Map const &map, Unit const &unit);
     };
 }
 

@@ -12,9 +12,9 @@ arcade::Projectile::~Projectile() {
 arcade::Projectile::Projectile(size_t x, size_t y, Direction direction, int maxRange) : Unit(x, y), initialPosition(
         std::make_pair(x, y)), direction(direction), maxRange(maxRange) {}
 
-bool arcade::Projectile::move(const arcade::Map &map) {
+bool arcade::Projectile::move(const arcade::Map &map, Unit const &unit) {
     if (abs((int) (initialPosition.first - position.first)) > maxRange ||
-        abs((int) (initialPosition.second - position.second)) > maxRange)
+        abs((int) (initialPosition.second - position.second)) > maxRange || cmpPos(unit))
         return (false);
     return Unit::move(map, direction);
 }

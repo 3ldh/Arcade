@@ -12,8 +12,6 @@ arcade::SnakeUnit::~SnakeUnit() {
 arcade::SnakeUnit::SnakeUnit(size_t x, size_t y) : Unit(x, y), movingDirection(RIGHT) {
     for (int i = 0; i < NB_STARTING_PARTS; ++i) {
         parts.push_back(new Unit(x - i, y));
-//        std::cout << "move part " << i << " x : " << parts[i]->getPosition().first << " y : "
-//                  << parts[i]->getPosition().second << std::endl;
     }
 }
 
@@ -82,6 +80,17 @@ bool arcade::SnakeUnit::moveAllParts(Map const &map, Direction direction) {
     }
     parts[0]->move(map, direction);
     return true;
+}
+
+void arcade::SnakeUnit::reset() {
+    for (size_t i = 0; i < parts.size(); ++i) {
+        delete parts[i];
+    }
+    parts.clear();
+    for (int i = 0; i < NB_STARTING_PARTS; ++i) {
+        parts.push_back(new Unit(initialPos.first - i, initialPos.second));
+    }
+    movingDirection = RIGHT;
 }
 
 

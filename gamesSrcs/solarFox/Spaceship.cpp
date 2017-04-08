@@ -80,3 +80,11 @@ bool arcade::Spaceship::doesProjectilesCollide(Map &map, std::vector<arcade::Pro
     return (false);
 }
 
+void arcade::Spaceship::reset() {
+    for (size_t i = 0; i < projectiles.size(); ++i) {
+        delete projectiles[i];
+    }
+    projectiles.clear();
+    position = initialPos;
+}
+

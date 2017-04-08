@@ -28,4 +28,10 @@ bool Timer::isTimeOverSeconds(double seconds) {
     return std::chrono::duration_cast<std::chrono::seconds>(timeElapsed()).count() >= seconds;
 }
 
+long Timer::timeElapsedSeconds() const {
+    return std::chrono::duration_cast<std::chrono::seconds>(timeElapsed()).count();
+}
 
+long Timer::timeElapsedMilliseconds() const {
+    return std::chrono::duration_cast<std::chrono::milliseconds>(timeElapsed()).count();
+}

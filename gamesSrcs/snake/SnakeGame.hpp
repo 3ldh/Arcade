@@ -29,18 +29,18 @@ namespace arcade {
         std::vector<arcade::NetworkPacket> &&netPacket;
         GUI gui;
         Timer timer;
+        Timer appleTimer;
         std::pair<size_t, size_t > applePos;
         SnakeUnit snake;
         int accelerationRate;
         bool apple;
-
         std::vector<std::pair<size_t, size_t>> getSpawnablePos();
+        int score;
 
     public:
     //TODO pass it private
         virtual ~SnakeGame();
         SnakeGame();
-
         SnakeUnit &getSnake();
         GameState getGameState() const override;
         void notifyEvent(std::vector<Event> &&events) override;
@@ -52,13 +52,13 @@ namespace arcade {
         std::vector<Sound> getSoundsToPlay() override;
         const IMap &getCurrentMap() const override;
         const Map &getMap() const;
-        void startTimer();
         void setAccelerationRate(int accelerationRate);
         void process() override;
         void spawnApple();
         void takeApple(size_t x, size_t y);
         void clearPlayerPos();
         void updatePlayerPos();
+        void restart();
     };
 }
 
