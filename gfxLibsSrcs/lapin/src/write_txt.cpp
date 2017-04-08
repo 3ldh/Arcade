@@ -20,42 +20,33 @@ t_bunny_position arcade::GfxLapin::pos_(int x, int y) {
 	return (pos);
 }
 
-void			arcade::GfxLapin::write_txt_next(t_bunny_position *offset,
-				       t_bunny_pixelarray *pix_ar,
-				       t_bunny_pixelarray *letter)
-{
-  if (offset->x > pix_ar->clipable.clip_width - 5)
-    *offset = pos_(0, offset->y + 9);
-  my_blit(pix_ar, letter, *offset);
-  offset->x += 8;
-  bunny_delete_clipable(&letter->clipable);
+void arcade::GfxLapin::write_txt_next(t_bunny_position *offset,
+									  t_bunny_pixelarray *pix_ar,
+									  t_bunny_pixelarray *letter) {
+	if (offset->x > pix_ar->clipable.clip_width - 5)
+		*offset = pos_(0, offset->y + 9);
+	my_blit(pix_ar, letter, *offset);
+	offset->x += 8;
+	bunny_delete_clipable(&letter->clipable);
 }
 
-void			arcade::GfxLapin::write_txt(t_bunny_pixelarray *pix_ar,
-				  t_bunny_pixelarray *font,
-				  char *str)
-{
-  t_bunny_pixelarray	*letter;
-  t_bunny_position	offset;
-
-  if (!str)
-    return ;
-  offset = pos_(0, 0);
-  while (*str)
-    {
-      if (*str != '\n')
-	{
-	  if ((letter = get_letter(font, *str++)) == NULL)
-	    {
-	      write(1, "can't find letter\n", 18);
-	      break;
-	    }
-	  write_txt_next(&offset, pix_ar, letter);
+void arcade::GfxLapin::write_txt(t_bunny_pixelarray *pix_ar,
+								 t_bunny_pixelarray *font,
+								 char *str, t_bunny_position offset) {
+	t_bunny_pixelarray *letter;
+	
+	if (!str)
+		return;
+	while (*str) {
+		if (*str != '\n') {
+			if ((letter = get_letter(font, *str++)) == NULL) {
+				write(1, "can't find letter\n", 18);
+				break;
+			}
+			write_txt_next(&offset, pix_ar, letter);
+		} else {
+			(void) *str++;
+			offset = pos_(0, offset.y + 9);
+		}
 	}
-      else
-	{
-	  (void)*str++;
-	  offset = pos_(0, offset.y + 9);
-	}
-    }
 }

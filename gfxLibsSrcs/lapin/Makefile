@@ -1,5 +1,5 @@
 SRC         =   $(wildcard ./src/*.cpp)  \
-				$(wildcard ../../arcadeInterfaces/*.cpp)
+		$(wildcard ../../arcadeInterfaces/*.cpp)
 
 OBJ         = $(SRC:.cpp=.o)
 

@@ -5,7 +5,18 @@
 #ifndef CPP_ARCADE_GFXNCURSES_H
 #define CPP_ARCADE_GFXNCURSES_H
 
+#include <map>
 #include "../../../arcadeInterfaces/IGfxLib.hpp"
+
+ty			attron(COLOR_PAIR(1));
+			mvprintw(tmpPos.y, tmpPos.x, ";");
+			attroff(COLOR_PAIR(1));
+pedef struct	position {
+public:
+	position(int x, int y) : x(x), y(y) {};
+	int x;
+	int y;
+}				position_t;
 
 namespace arcade {
 	class GfxNcurses : public IGfxLib {
@@ -25,8 +36,13 @@ namespace arcade {
 	
 	private:
 		WINDOW	*window;
-		
-		bool multipleKeyInput(arcade::Event &e);
+		std::map<int, arcade::KeyboardKey> keyboardMap;
+		size_t windowHeight;
+		size_t windowWidth;
+		void drawCube(position_t pos, position_t size, arcade::Color color);
+		void createColor(size_t r, size_t g, size_t b);
+		void makeASquareOutOfPos(position_t &position);
+		void printInColor(position_t pos, char *str, Color color);
 	};
 }
 
