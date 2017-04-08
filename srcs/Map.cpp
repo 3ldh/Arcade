@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include "../include/Map.hpp"
-#include "../include/Layer.hpp"
+#include "../include/Unit.hpp"
 
 arcade::Layer &arcade::Map::operator[](size_t n) {
     return (*layer[n]);
@@ -49,4 +49,15 @@ bool arcade::Map::isWalkable(size_t layer_idx, size_t x, size_t y) const {
     operator[](layer_idx)[x][y]->getTypeEv() == arcade::TileTypeEvolution ::PLAYER);
 }
 
+bool arcade::Map::isWalkableOffset(size_t layer_idx, size_t x, size_t y, size_t offset) const {
+    return !(x >= height - offset || y >= width - offset || x < offset || y < offset ||
+             operator[](layer_idx)[x][y]->getType() == arcade::TileType::BLOCK ||
+             operator[](layer_idx)[x][y]->getTypeEv() == arcade::TileTypeEvolution ::PLAYER);
+}
 
+void arcade::Map::updateMapTileForUnit(arcade::Unit const &unit, size_t layer, Color color,
+                                         TileType tileType, TileTypeEvolution typeEvolution) {
+    operator[](layer)[unit.getPosition().second][unit.getPosition().first]->setType(tileType);
+    operator[](layer)[unit.getPosition().second][unit.getPosition().first]->setTypeEv(typeEvolution);
+    operator[](layer)[unit.getPosition().second][unit.getPosition().first]->setColor(color);
+}

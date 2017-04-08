@@ -9,12 +9,13 @@ arcade::SolarFoxGame::~SolarFoxGame() {
 
 }
 
-arcade::SolarFoxGame::SolarFoxGame():  map(Map(MAP_WIDTH, MAP_HEIGHT, 1)),
-                                       state(arcade::GameState::INGAME), player(Spaceship(MAP_WIDTH / 2, MAP_HEIGHT / 2)),
-                                       enemyLeft(Spaceship(0, MAP_HEIGHT / 2)),
-                                       enemyRight(Spaceship(MAP_WIDTH - 1, MAP_HEIGHT / 2)),
-                                       enemyUp(Spaceship(MAP_WIDTH / 2, 0)),
-                                       enemyDown(Spaceship(MAP_WIDTH / 2, MAP_HEIGHT - 1)),
+arcade::SolarFoxGame::SolarFoxGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 2)),
+                                       state(arcade::GameState::INGAME),
+                                       player(Spaceship(MAP_WIDTH / 2, MAP_HEIGHT / 2, 1)),
+                                       enemyLeft(SpaceshipEnemy(0, MAP_HEIGHT / 2, MAP_WIDTH - 1)),
+                                       enemyRight(SpaceshipEnemy(MAP_WIDTH - 1, MAP_HEIGHT / 2, MAP_WIDTH - 1)),
+                                       enemyUp(SpaceshipEnemy(MAP_WIDTH / 2, 0, MAP_HEIGHT - 1)),
+                                       enemyDown(SpaceshipEnemy(MAP_WIDTH / 2, MAP_HEIGHT - 1, MAP_HEIGHT - 1)),
                                        sprites(std::vector<std::unique_ptr<Sprite>>()), accelerationRate(250) {
 
     enemyDown.setMovingDirection(arcade::Unit::Direction::LEFT);
@@ -25,21 +26,24 @@ arcade::SolarFoxGame::SolarFoxGame():  map(Map(MAP_WIDTH, MAP_HEIGHT, 1)),
         for (size_t x = 0; x < map.getWidth(); ++x) {
             if (level0[y][x] == 0) {
                 map[0][y][x]->setType(TileType::EMPTY);
-                map[0][y][x]->setTypeEv(TileTypeEvolution ::EMPTY);
+                map[0][y][x]->setTypeEv(TileTypeEvolution::EMPTY);
                 map[0][y][x]->setColor(Color::Black);
             } else {
                 map[0][y][x]->setType(TileType::POWERUP);
-                map[0][y][x]->setTypeEv(TileTypeEvolution ::POWERUP);
+                map[0][y][x]->setTypeEv(TileTypeEvolution::POWERUP);
                 map[0][y][x]->setColor(Color::White);
             }
+            map[1][y][x]->setType(TileType::EMPTY);
+            map[1][y][x]->setTypeEv(TileTypeEvolution::EMPTY);
+            map[1][y][x]->setColor(Color::Transparent);
         }
     }
-
     inputs[KeyboardKey::KB_ARROW_UP] = Unit::Direction::UP;
     inputs[KeyboardKey::KB_ARROW_DOWN] = Unit::Direction::DOWN;
     inputs[KeyboardKey::KB_ARROW_LEFT] = Unit::Direction::LEFT;
     inputs[KeyboardKey::KB_ARROW_RIGHT] = Unit::Direction::RIGHT;
     timer.start();
+    timerProjectile.start();
 }
 
 arcade::GameState arcade::SolarFoxGame::getGameState() const {
@@ -47,35 +51,78 @@ arcade::GameState arcade::SolarFoxGame::getGameState() const {
 }
 
 void arcade::SolarFoxGame::notifyEvent(std::vector<arcade::Event> &&events) {
-    if (events.size() > 0 && inputs.find(events[0].kb_key) != inputs.end()) {
-        player.setMovingDirection(inputs[events[0].kb_key]);
+    if (events.size() > 0) {
+        if (inputs.find(events[0].kb_key) != inputs.end())
+            player.setMovingDirection(inputs[events[0].kb_key]);
+        else if (events[0].kb_key == KB_SPACE && events[0].action == AT_PRESSED) {
+            player.shoot();
+        }
     }
 }
 
 void arcade::SolarFoxGame::notifyNetwork(std::vector<arcade::NetworkPacket> &&events) {
-    (void)events;
+    (void) events;
 }
 
 std::vector<arcade::NetworkPacket> &&arcade::SolarFoxGame::getNetworkToSend() {
     return std::vector<arcade::NetworkPacket>();
 }
 
+
+void arcade::SolarFoxGame::moveShipProjectiles(arcade::Spaceship &spaceship) {
+    auto it = spaceship.getProjectiles().begin();
+
+    for (int i = 0; it != spaceship.getProjectiles().end();) {
+        if (!spaceship.getProjectiles()[i]->move(map)) {
+            delete *it;
+            it = spaceship.getProjectiles().erase(it);
+        } else {
+            ++it;
+            ++i;
+        }
+    }
+}
+
+void arcade::SolarFoxGame::processProjectile() {
+    if (timerProjectile.isTimeOverMilliseconds(accelerationRate / 2)) {
+        clearProjectilesPos();
+        moveShipProjectiles(player);
+        moveShipProjectiles(enemyDown);
+        moveShipProjectiles(enemyUp);
+        moveShipProjectiles(enemyLeft);
+        moveShipProjectiles(enemyRight);
+        if (enemyDown.doesProjectilesCollide(map, player) || enemyUp.doesProjectilesCollide(map, player) ||
+        enemyLeft.doesProjectilesCollide(map, player) || enemyRight.doesProjectilesCollide(map, player)) {
+            std::cerr << "BOOM YOU DEAD GAME OVER" << std::endl;
+            player.setAlive(false);
+        }
+        if (player.doesProjectilesCollide(map, enemyDown.getProjectiles()) ||
+                player.doesProjectilesCollide(map, enemyRight.getProjectiles()) ||
+                player.doesProjectilesCollide(map, enemyLeft.getProjectiles()) ||
+                player.doesProjectilesCollide(map, enemyUp.getProjectiles()))
+            std::cerr << "CONGRATZ YOU KILLED A MISSILE" << std::endl;
+
+        updateProjectilesTile();
+        timerProjectile.start();
+    }
+}
+
 void arcade::SolarFoxGame::process() {
+    processProjectile();
     if (timer.isTimeOverMilliseconds(accelerationRate)) {
         cleaPlayerPos();
         clearEnemyPos();
-        enemyDown.chooseDirectionFromAxe(map, player);
-        enemyUp.chooseDirectionFromAxe(map, player);
-        enemyLeft.chooseDirectionFromAxe(map, player);
-        enemyRight.chooseDirectionFromAxe(map, player);
         enemyDown.move(map);
         enemyUp.move(map);
         enemyLeft.move(map);
         enemyRight.move(map);
-        if (!player.move(map)) {
+        enemyDown.chooseToShoot(map, player);
+        enemyUp.chooseToShoot(map, player);
+        enemyLeft.chooseToShoot(map, player);
+        enemyRight.chooseToShoot(map, player);
+        if (!player.move(map, 1)) {
             std::cout << "can't move" << std::endl;
         }
-
         updatePlayerPos();
         updateEnemyPos();
         timer.start();
@@ -106,42 +153,42 @@ arcade::IGUI &arcade::SolarFoxGame::getGUI() {
     return gui;
 }
 
-void arcade::SolarFoxGame::clearPos(const arcade::Spaceship &ship) {
-    map[0][ship.getPosition().second][ship.getPosition().first]->setType(TileType::EMPTY);
-    map[0][ship.getPosition().second][ship.getPosition().first]->setTypeEv(TileTypeEvolution::EMPTY);
-    map[0][ship.getPosition().second][ship.getPosition().first]->setColor(Color::Black);
-}
-
-void arcade::SolarFoxGame::updatePos(const arcade::Spaceship &ship, Color const &color) {
-    map[0][ship.getPosition().second][ship.getPosition().first]->setType(TileType::OTHER);
-    map[0][ship.getPosition().second][ship.getPosition().first]->setTypeEv(TileTypeEvolution::PLAYER);
-    map[0][ship.getPosition().second][ship.getPosition().first]->setColor(color);
-}
-
 void arcade::SolarFoxGame::cleaPlayerPos() {
-    clearPos(player);
+    map.updateMapTileForUnit(player, 0, Color::Black, TileType::EMPTY, TileTypeEvolution::EMPTY);
 }
 
 void arcade::SolarFoxGame::updatePlayerPos() {
-    updatePos(player, Color::Blue);
+    map.updateMapTileForUnit(player, 0, Color::Blue, TileType::OTHER, TileTypeEvolution::PLAYER);
 }
 
 void arcade::SolarFoxGame::clearEnemyPos() {
-    clearPos(enemyDown);
-    clearPos(enemyUp);
-    clearPos(enemyLeft);
-    clearPos(enemyRight);
+    map.updateMapTileForUnit(enemyDown, 0, Color::Black, TileType::EMPTY, TileTypeEvolution::EMPTY);
+    map.updateMapTileForUnit(enemyUp, 0, Color::Black, TileType::EMPTY, TileTypeEvolution::EMPTY);
+    map.updateMapTileForUnit(enemyLeft, 0, Color::Black, TileType::EMPTY, TileTypeEvolution::EMPTY);
+    map.updateMapTileForUnit(enemyRight, 0, Color::Black, TileType::EMPTY, TileTypeEvolution::EMPTY);
 }
 
 void arcade::SolarFoxGame::updateEnemyPos() {
-    updatePos(enemyDown, Color::Red);
-    updatePos(enemyUp, Color::Red);
-    updatePos(enemyLeft, Color::Red);
-    updatePos(enemyRight, Color::Red);
+    map.updateMapTileForUnit(enemyDown, 0, Color::Red, TileType::EVIL_DUDE, TileTypeEvolution::ENEMY);
+    map.updateMapTileForUnit(enemyUp, 0, Color::Red, TileType::EVIL_DUDE, TileTypeEvolution::ENEMY);
+    map.updateMapTileForUnit(enemyLeft, 0, Color::Red, TileType::EVIL_DUDE, TileTypeEvolution::ENEMY);
+    map.updateMapTileForUnit(enemyRight, 0, Color::Red, TileType::EVIL_DUDE, TileTypeEvolution::ENEMY);
 }
 
-void arcade::SolarFoxGame::canMove() {
+void arcade::SolarFoxGame::clearProjectilesPos() {
+    player.clearMapForProjectile(map);
+    enemyDown.clearMapForProjectile(map);
+    enemyUp.clearMapForProjectile(map);
+    enemyLeft.clearMapForProjectile(map);
+    enemyRight.clearMapForProjectile(map);
+}
 
+void arcade::SolarFoxGame::updateProjectilesTile() {
+    player.updateMapForProjectile(map, Color::Magenta);
+    enemyDown.updateMapForProjectile(map);
+    enemyUp.updateMapForProjectile(map);
+    enemyLeft.updateMapForProjectile(map);
+    enemyRight.updateMapForProjectile(map);
 }
 
 extern "C" void Play() {

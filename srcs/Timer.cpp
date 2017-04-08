@@ -20,11 +20,11 @@ std::chrono::steady_clock::duration Timer::timeElapsed() const {
     return std::chrono::steady_clock::now() - epoch;
 }
 
-bool Timer::isTimeOverMilliseconds(int milliseconds) {
+bool Timer::isTimeOverMilliseconds(double milliseconds) {
     return std::chrono::duration_cast<std::chrono::milliseconds>(timeElapsed()).count() >= milliseconds;
 }
 
-bool Timer::isTimeOverSeconds(int seconds) {
+bool Timer::isTimeOverSeconds(double seconds) {
     return std::chrono::duration_cast<std::chrono::seconds>(timeElapsed()).count() >= seconds;
 }
 

@@ -12,6 +12,7 @@
 #include "../../include/Map.hpp"
 #include "../../include/Unit.hpp"
 #include "Spaceship.hpp"
+#include "SpaceshipEnemy.hpp"
 
 namespace arcade {
 
@@ -43,23 +44,26 @@ namespace arcade {
         Map map;
         GameState state;
         Spaceship player;
-        Spaceship enemyLeft;
-        Spaceship enemyRight;
-        Spaceship enemyUp;
-        Spaceship enemyDown;
+        SpaceshipEnemy enemyLeft;
+        SpaceshipEnemy enemyRight;
+        SpaceshipEnemy enemyUp;
+        SpaceshipEnemy enemyDown;
         std::unordered_map<arcade::KeyboardKey, arcade::Unit::Direction> inputs;
         std::vector<std::unique_ptr<Sprite>> sprites;
         std::vector<std::pair<std::string, arcade::SoundType>> sounds;
         GUI gui;
         Timer timer;
+        Timer timerProjectile;
+
         int accelerationRate;
-        void clearPos(Spaceship const &ship);
-        void updatePos(Spaceship const &ship, Color const &color);
         void clearEnemyPos();
         void updateEnemyPos();
         void cleaPlayerPos();
         void updatePlayerPos();
-        void canMove();
+        void clearProjectilesPos();
+        void updateProjectilesTile();
+        void processProjectile();
+        void moveShipProjectiles(Spaceship &spaceship);
 
     public:
         virtual ~SolarFoxGame();

@@ -86,7 +86,6 @@ bool arcade::Core::getEvents() {
 void arcade::Core::coreLoop() {
     while (true) {
         currentLib->clear();
-//      currentLib->updateGUI(currentGame->getGUI());
         if (!getEvents())
             break;
         if (events.size() > 0 && events[0].action == AT_PRESSED && input.find(events[0].kb_key) != input.end())
@@ -95,6 +94,7 @@ void arcade::Core::coreLoop() {
             currentGame->notifyEvent(std::move(events));
             currentGame->process();
             currentLib->updateMap(currentGame->getCurrentMap());
+            currentLib->updateGUI(currentGame->getGUI());
         } else {
             currentLib->updateGUI(menu);
         }

@@ -67,8 +67,6 @@ arcade::GfxSFML::GfxSFML() {
     eventsKeyboard[sf::Keyboard::Key::RAlt] = KB_RALT; /// Right Alt key
     eventsKeyboard[sf::Keyboard::Key::LShift] = KB_LSHIFT; /// Left Shift key
     eventsKeyboard[sf::Keyboard::Key::RShift] = KB_RSHIFT; /// Right Shift key
-    //TODO capslock
-    //eventsKeyboard[sf::Keyboard::Key::] = KB_CAPSLOCK; /// CapsLock key
     eventsKeyboard[sf::Keyboard::Key::Tab] = KB_TAB; /// Tabulation key
     eventsKeyboard[sf::Keyboard::Key::Escape] = KB_ESCAPE; /// Escape key
     eventsKeyboard[sf::Keyboard::Key::PageUp] = KB_PAGEUP; /// Page up key
@@ -90,59 +88,20 @@ arcade::GfxSFML::GfxSFML() {
     eventsKeyboard[sf::Keyboard::Key::Comma] = KB_COMMA; /// Comma key (,)
     eventsKeyboard[sf::Keyboard::Key::Period] = KB_DOT; /// Dot (period) key (.)
     eventsKeyboard[sf::Keyboard::Key::Slash] = KB_SLASH; /// Slash key (/)
-    /*= KB_INFERIOR; /// Inferior symbol key (<)
-    KB_SUPERIOR; /// Superior symbol key (>)
-    KB_QUESTION; /// Question mark key (?)*/
     eventsKeyboard[sf::Keyboard::Key::SemiColon] = KB_SEMICOLON; /// Semicolon key (;)
-    // = KB_COLON; /// Colon key (:)
     eventsKeyboard[sf::Keyboard::Key::Quote] = KB_SIMPLEQUOTE; /// Simple quote key (')
-    // KB_DOUBLEQUOTE; /// Double quote key (")
-    //KB_LEFTBRACE; /// Left brace key ({)
-    //KB_RIGHTBRACE; /// Right brace key (})
     eventsKeyboard[sf::Keyboard::Key::LBracket] = KB_LEFTBRACKET; /// Left bracket key ([)
     eventsKeyboard[sf::Keyboard::Key::RBracket] = KB_RIGHTBRACKET;/// Right bracker key (])
-    //KB_LEFTPAREN; /// Left parenthesis key (()
-    //KB_RIGHTPAREN; /// Right parenthesis key ())
     eventsKeyboard[sf::Keyboard::Key::BackSlash] = KB_BACKSLASH; /// Backslash key (\)
-//    KB_VERTICALBAR; /// Vertical bar key (|)
-//    KB_EXCLAMATION; /// Exclamation mark key (!)
-//    KB_ATSYMBOL; /// At symbol key (@)
-//    KB_HASHTAG; /// Hash key (#)
-//    KB_DOLLAR; /// Dollar key ($)
-//  KB_PERCENT; /// Percent symbol key (%)
-    //KB_CIRCUMFLEX; /// Circumflex symbol key (^)
-    //KB_AMPERSAND; /// Ampersand key (&)
     eventsKeyboard[sf::Keyboard::Key::Multiply] = KB_ASTERISK; /// Asterisk key (*)
-    //KB_UNDERSCORE; /// Underscore key (_)
     eventsKeyboard[sf::Keyboard::Key::Subtract] = KB_MINUS; /// Minus symbol key (-)
     eventsKeyboard[sf::Keyboard::Key::Add] = KB_PLUS; /// Plus symbol key (+)
     eventsKeyboard[sf::Keyboard::Key::Equal] = KB_EQUALS;
     eventsKeyboard[sf::Keyboard::Key::Delete] = KB_DELETE;
 
     eventsActionType[sf::Event::KeyPressed] = AT_PRESSED;
-    eventsActionType[sf::Event::KeyReleased] = AT_RELEASED;/*
-            Resized,                ///< The window was resized (data in event.size)
-            LostFocus,              ///< The window lost the focus (no data)
-            GainedFocus,            ///< The window gained the focus (no data)
-            TextEntered,            ///< A character was entered (data in event.text)
-            KeyPressed,             ///< A key was pressed (data in event.key)
-            KeyReleased,            ///< A key was released (data in event.key)
-            MouseWheelMoved,        ///< The mouse wheel was scrolled (data in event.mouseWheel) (deprecated)
-            MouseWheelScrolled,     ///< The mouse wheel was scrolled (data in event.mouseWheelScroll)
-            MouseButtonPressed,     ///< A mouse button was pressed (data in event.mouseButton)
-            MouseButtonReleased,    ///< A mouse button was released (data in event.mouseButton)
-            MouseMoved,             ///< The mouse cursor moved (data in event.mouseMove)
-            MouseEntered,           ///< The mouse cursor entered the area of the window (no data)
-            MouseLeft,              ///< The mouse cursor left the area of the window (no data)
-            JoystickButtonPressed,  ///< A joystick button was pressed (data in event.joystickButton)
-            JoystickButtonReleased, ///< A joystick button was released (data in event.joystickButton)
-            JoystickMoved,          ///< The joystick moved along an axis (data in event.joystickMove)
-            JoystickConnected,      ///< A joystick was connected (data in event.joystickConnect)
-            JoystickDisconnected,   ///< A joystick was disconnected (data in event.joystickConnect)
-            TouchBegan,             ///< A touch event began (data in event.touch)
-            TouchMoved,             ///< A touch moved (data in event.touch)
-            TouchEnded,             ///< A touch event ended (data in event.touch)
-            SensorChanged,*/
+    eventsActionType[sf::Event::KeyReleased] = AT_RELEASED;
+
     eventsType[sf::Event::Closed] = ET_QUIT;
     eventsType[sf::Event::KeyPressed] = ET_KEYBOARD;
     eventsType[sf::Event::KeyReleased] = ET_KEYBOARD;
@@ -189,7 +148,7 @@ void arcade::GfxSFML::updateMap(const arcade::IMap &map) {
                         sf::RectangleShape rectangle(
                                 sf::Vector2f(WIN_WIDTH / map.getWidth(), WIN_HEIGHT / map.getHeight()));
                         rectangle.setPosition(WIN_WIDTH / map.getWidth() * k, WIN_HEIGHT / map.getHeight() * j);
-                        rectangle.setFillColor(sf::Color(c.rgba[0], c.rgba[1], c.rgba[2]));
+                        rectangle.setFillColor(sf::Color(c.rgba[0], c.rgba[1], c.rgba[2], c.rgba[3]));
                         rectangle.setOutlineColor(sf::Color(sf::Color::Black));
                         rectangle.setOutlineThickness(1);
                         window.draw(rectangle);

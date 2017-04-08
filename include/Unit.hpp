@@ -11,6 +11,7 @@
 #include "Sprite.hpp"
 
 namespace arcade {
+
     class Unit {
     public:
         enum Direction {
@@ -24,12 +25,14 @@ namespace arcade {
     protected:
         std::pair<size_t , size_t> position;
         Sprite sprite;
+        bool alive;
 
     public:
         virtual ~Unit();
         Unit(const std::pair<size_t, size_t> &position);
         Unit(size_t x, size_t y);
         virtual bool move(Map const &map, Direction direction);
+        bool move(const Map &map, Direction direction, size_t offsetMapBorder);
         virtual void moveUp();
         virtual void moveDown();
         virtual void moveLeft();
@@ -38,9 +41,13 @@ namespace arcade {
         void setPosition(const std::pair<size_t, size_t> &position);
         void setPosition(size_t x, size_t y);
         Direction getOppositeDirection(Direction direction);
-        std::pair<size_t, size_t> convertDirection(Direction direction);
+        std::pair<int, int> convertDirection(Direction direction);
         const Sprite &getSprite() const;
         void setSprite(const Sprite &sprite);
+
+        bool isAlive() const;
+
+        void setAlive(bool alive);
     };
 }
 
