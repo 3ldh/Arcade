@@ -80,7 +80,7 @@ void arcade::GfxNcurses::drawCube(position_t pos, position_t size, arcade::Color
 
 	for (tmpPos.x = pos.x; tmpPos.x < pos.x + size.x; tmpPos.x++) {
 		for (tmpPos.y = pos.y; tmpPos.y < pos.y + size.y; tmpPos.y++) {
-			printInColor(tmpPos, ";", )
+			//printInColor(tmpPos, ";", )
 		}
 	}
 }

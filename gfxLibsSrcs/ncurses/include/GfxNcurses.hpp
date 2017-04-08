@@ -8,10 +8,7 @@
 #include <map>
 #include "../../../arcadeInterfaces/IGfxLib.hpp"
 
-ty			attron(COLOR_PAIR(1));
-			mvprintw(tmpPos.y, tmpPos.x, ";");
-			attroff(COLOR_PAIR(1));
-pedef struct	position {
+typedef struct	position {
 public:
 	position(int x, int y) : x(x), y(y) {};
 	int x;
