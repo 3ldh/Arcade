@@ -11,6 +11,9 @@
 #include "Layer.hpp"
 
 namespace arcade {
+
+    class Unit;
+
     class Map : public IMap {
         size_t width;
         size_t height;
@@ -26,6 +29,8 @@ namespace arcade {
         size_t getWidth() const override;
         size_t getHeight() const override;
         bool isWalkable(size_t layer_idx, size_t x, size_t y) const;
+        bool isWalkableOffset(size_t layer_idx, size_t x, size_t y, size_t offset) const;
+        void updateMapTileForUnit(arcade::Unit const &unit, size_t layer, Color color, TileType tileType, TileTypeEvolution typeEvolution);
     };
 }
 

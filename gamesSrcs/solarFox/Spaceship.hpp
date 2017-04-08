@@ -6,21 +6,28 @@
 #define CPP_ARCADE_SPACESHIP_HPP
 
 #include "../../include/Unit.hpp"
+#include "Projectile.hpp"
 
 namespace arcade {
     class Spaceship : public Unit {
 
-        Unit projectile;
+    protected:
+        std::vector<Projectile *> projectiles;
         Direction movingDirection;
+        int shootingRange;
 
     public:
         virtual ~Spaceship();
-        Spaceship(size_t x, size_t y);
+        Spaceship(size_t x, size_t y, int shootingRange);
         void setMovingDirection(Direction movingDirection);
-        void chooseDirectionFromAxe(const arcade::Map &map, Spaceship const &player);
         Direction getMovingDirection() const;
-        bool move(Map const &map);
-        void shoot();
+        std::vector<Projectile*> &getProjectiles();
+        virtual bool doesProjectilesCollide(Map &map, Unit &unit);
+        virtual bool move(const Map &map, size_t offsetMapBorder);
+        virtual void shoot();
+        virtual void clearMapForProjectile(Map &map);
+        virtual void updateMapForProjectile(Map &map, Color color);
+        bool doesProjectilesCollide(Map &map, std::vector<arcade::Projectile*> &units);
     };
 }
 

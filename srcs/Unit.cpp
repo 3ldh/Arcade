@@ -9,7 +9,7 @@ arcade::Unit::~Unit() {
 
 }
 
-arcade::Unit::Unit(const std::pair<size_t , size_t > &position) : position(position) {}
+arcade::Unit::Unit(const std::pair<size_t , size_t > &position) : position(position), alive(true) {}
 
 arcade::Unit::Unit(size_t x, size_t y) : position(std::make_pair(x, y)) {
 
@@ -28,9 +28,19 @@ void arcade::Unit::setPosition(size_t x, size_t y) {
 }
 
 bool arcade::Unit::move(Map const &map, arcade::Unit::Direction direction) {
-    std::pair<size_t, size_t > vector = convertDirection(direction);
+    std::pair<int, int> vector = convertDirection(direction);
 
     if (map.isWalkable(0, position.first + vector.first, position.second + vector.second)) {
+        setPosition(position.first + vector.first, position.second + vector.second);
+        return true;
+    }
+    return false;
+}
+
+bool arcade::Unit::move(Map const &map, arcade::Unit::Direction direction, size_t offsetMapBorder) {
+    std::pair<int, int> vector = convertDirection(direction);
+
+    if (map.isWalkableOffset(0, position.first + vector.first, position.second + vector.second, offsetMapBorder)) {
         setPosition(position.first + vector.first, position.second + vector.second);
         return true;
     }
@@ -53,7 +63,7 @@ void arcade::Unit::moveRight() {
     setPosition(position.first + 1, position.second);
 }
 
-std::pair<size_t, size_t> arcade::Unit::convertDirection(arcade::Unit::Direction direction) {
+std::pair<int, int> arcade::Unit::convertDirection(arcade::Unit::Direction direction) {
     switch (direction) {
         case UP:
             return std::make_pair(0, -1);
@@ -92,4 +102,12 @@ arcade::Unit::Direction arcade::Unit::getOppositeDirection(arcade::Unit::Directi
             return FORWARD;
     }
     return FORWARD;
+}
+
+bool arcade::Unit::isAlive() const {
+    return alive;
+}
+
+void arcade::Unit::setAlive(bool alive) {
+    Unit::alive = alive;
 }

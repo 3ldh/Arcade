@@ -73,7 +73,7 @@ void arcade::SnakeUnit::setMovingDirection(arcade::Unit::Direction movingDirecti
 }
 
 bool arcade::SnakeUnit::moveAllParts(Map const &map, Direction direction) {
-    std::pair<size_t, size_t> vector = convertDirection(direction);
+    std::pair<int, int> vector = convertDirection(direction);
     if (isBodyPart(parts[0]->getPosition().first + vector.first, parts[0]->getPosition().second + vector.second) ||
     !map.isWalkable(0, parts[0]->getPosition().first + vector.first, parts[0]->getPosition().second + vector.second))
         return false;
