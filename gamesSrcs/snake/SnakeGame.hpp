@@ -26,13 +26,15 @@ namespace arcade {
         std::unordered_map<arcade::KeyboardKey, arcade::Unit::Direction> inputs;
         std::vector<std::unique_ptr<arcade::Sprite>>  sprites;
         std::vector<std::pair<std::string, arcade::SoundType>> sounds;
+        std::vector<arcade::NetworkPacket> &&netPacket;
         GUI gui;
-        int accelerationRate;
         Timer timer;
-        bool apple;
         std::pair<size_t, size_t > applePos;
-        std::vector<std::pair<size_t, size_t>> getSpawnablePos();
         SnakeUnit snake;
+        int accelerationRate;
+        bool apple;
+
+        std::vector<std::pair<size_t, size_t>> getSpawnablePos();
 
     public:
     //TODO pass it private

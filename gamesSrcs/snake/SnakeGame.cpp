@@ -11,9 +11,9 @@ arcade::SnakeGame::~SnakeGame() {
 }
 
 arcade::SnakeGame::SnakeGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 1)),
-                                 state(arcade::GameState::INGAME), snake(SnakeUnit(MAP_WIDTH / 2, MAP_HEIGHT / 2)),
-                                 sprites(std::vector<std::unique_ptr<Sprite>>()),
-                                 accelerationRate(250), apple(false) {
+                                 state(arcade::GameState::INGAME), sprites(std::vector<std::unique_ptr<Sprite>>()),
+                                 netPacket(std::move(std::vector<NetworkPacket>(0))),
+                                 snake(SnakeUnit(MAP_WIDTH / 2, MAP_HEIGHT / 2)), accelerationRate(250), apple(false) {
 
     for (size_t i = 0; i < map.getHeight(); ++i) {
         for (size_t j = 0; j < map.getWidth(); ++j) {
@@ -50,7 +50,7 @@ void arcade::SnakeGame::notifyNetwork(std::vector<arcade::NetworkPacket> &&event
 }
 
 std::vector<arcade::NetworkPacket> &&arcade::SnakeGame::getNetworkToSend() {
-    return std::vector<arcade::NetworkPacket>();
+    return std::move(netPacket);
 }
 
 std::vector<std::unique_ptr<arcade::ISprite>> arcade::SnakeGame::getSpritesToLoad() const {
@@ -60,6 +60,7 @@ std::vector<std::unique_ptr<arcade::ISprite>> arcade::SnakeGame::getSpritesToLoa
     }
     return std::move(copy);
 }
+
 std::vector<arcade::Sound> arcade::SnakeGame::getSoundsToPlay() {
     return std::vector<arcade::Sound>();
 }
@@ -67,7 +68,6 @@ std::vector<arcade::Sound> arcade::SnakeGame::getSoundsToPlay() {
 std::vector<std::pair<std::string, arcade::SoundType>> arcade::SnakeGame::getSoundsToLoad() const {
     return sounds;
 }
-
 
 arcade::IGUI &arcade::SnakeGame::getGUI() {
     return gui;
@@ -158,11 +158,11 @@ void arcade::SnakeGame::startTimer() {
     timer.start();
 }
 
-static void cmdWhereAmI(arcade::SnakeUnit const &snake)
-{
+static void cmdWhereAmI(arcade::SnakeUnit const &snake) {
     arcade::WhereAmI *whereAmI;
     whereAmI = reinterpret_cast<struct arcade::WhereAmI *>(new char[sizeof(struct arcade::WhereAmI) +
-            (sizeof(struct arcade::Position) * snake.getLength())]);
+                                                                    (sizeof(struct arcade::Position) *
+                                                                     snake.getLength())]);
     whereAmI->type = arcade::CommandType::WHERE_AM_I;
     whereAmI->lenght = snake.getLength();
 
@@ -174,11 +174,11 @@ static void cmdWhereAmI(arcade::SnakeUnit const &snake)
     delete whereAmI;
 }
 
-static void cmdGetMap(arcade::Map const &map)
-{
+static void cmdGetMap(arcade::Map const &map) {
     arcade::GetMap *cmdMap;
-    cmdMap = reinterpret_cast<struct arcade::GetMap*>(new char[sizeof(struct arcade::GetMap) +
-            sizeof(arcade::TileType) * (map.getWidth() * map.getHeight())]);
+    cmdMap = reinterpret_cast<struct arcade::GetMap *>(new char[sizeof(struct arcade::GetMap) +
+                                                                sizeof(arcade::TileType) *
+                                                                (map.getWidth() * map.getHeight())]);
     cmdMap->type = arcade::CommandType::GET_MAP;
     cmdMap->width = map.getHeight();
     cmdMap->height = map.getHeight();
@@ -228,8 +228,10 @@ extern "C" void Play() {
                 snakeGame.setAccelerationRate(0);
                 snakeGame.process();
                 break;
-            case arcade::CommandType::SHOOT:break;
-            case arcade::CommandType::ILLEGAL:break;
+            case arcade::CommandType::SHOOT:
+                break;
+            case arcade::CommandType::ILLEGAL:
+                break;
         }
     }
 }

@@ -16,7 +16,8 @@ arcade::SolarFoxGame::SolarFoxGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 2)),
                                        enemyRight(SpaceshipEnemy(MAP_WIDTH - 1, MAP_HEIGHT / 2, MAP_WIDTH - 1)),
                                        enemyUp(SpaceshipEnemy(MAP_WIDTH / 2, 0, MAP_HEIGHT - 1)),
                                        enemyDown(SpaceshipEnemy(MAP_WIDTH / 2, MAP_HEIGHT - 1, MAP_HEIGHT - 1)),
-                                       sprites(std::vector<std::unique_ptr<Sprite>>()), accelerationRate(250) {
+                                       sprites(std::vector<std::unique_ptr<Sprite>>()),
+                                       netPacket(std::move(std::vector<NetworkPacket>(0))), accelerationRate(250){
 
     enemyDown.setMovingDirection(arcade::Unit::Direction::LEFT);
     enemyUp.setMovingDirection(arcade::Unit::Direction::RIGHT);
@@ -65,7 +66,7 @@ void arcade::SolarFoxGame::notifyNetwork(std::vector<arcade::NetworkPacket> &&ev
 }
 
 std::vector<arcade::NetworkPacket> &&arcade::SolarFoxGame::getNetworkToSend() {
-    return std::vector<arcade::NetworkPacket>();
+    return std::move(netPacket);
 }
 
 

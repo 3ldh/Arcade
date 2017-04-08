@@ -51,6 +51,7 @@ namespace arcade {
         std::unordered_map<arcade::KeyboardKey, arcade::Unit::Direction> inputs;
         std::vector<std::unique_ptr<Sprite>> sprites;
         std::vector<std::pair<std::string, arcade::SoundType>> sounds;
+        std::vector<arcade::NetworkPacket> &&netPacket;
         GUI gui;
         Timer timer;
         Timer timerProjectile;

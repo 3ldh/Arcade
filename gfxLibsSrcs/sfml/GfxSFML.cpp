@@ -167,15 +167,15 @@ void arcade::GfxSFML::clear() {
 }
 
 void arcade::GfxSFML::loadSounds(const std::vector<std::pair<std::string, arcade::SoundType>> &sounds) {
-
+    (void)sounds;
 }
 
 void arcade::GfxSFML::soundControl(const arcade::Sound &sound) {
-
+    (void)sound;
 }
 
 void arcade::GfxSFML::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites) {
-
+    (void)sprites;
 }
 
 void arcade::GfxSFML::updateGUI(arcade::IGUI &gui) {
