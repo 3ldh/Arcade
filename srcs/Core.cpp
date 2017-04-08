@@ -12,7 +12,7 @@ arcade::Core::~Core() {
 }
 
 arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0), gameLibIndex(0),
-                                                   events(std::vector<arcade::Event>(0)) {
+                                                   events(std::move(std::vector<arcade::Event>(0))) {
 
     gamesPath = getPathToSOFilesInDir("games");
     gfxPath = getPathToSOFilesInDir("lib");

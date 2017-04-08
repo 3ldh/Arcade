@@ -50,6 +50,7 @@ void arcade::Spaceship::clearMapForProjectile(arcade::Map &map) {
 bool arcade::Spaceship::doesProjectilesCollide(Map &map, arcade::Unit &unit) {
     for (auto it = projectiles.begin(); it != projectiles.end();) {
         if ((*it)->doesCollide(unit)) {
+            map.updateMapTileForUnit(*(*it), 1, Color::Transparent, TileType::EMPTY, TileTypeEvolution::EMPTY);
             delete *it;
             it = projectiles.erase(it);
             return (true);
@@ -64,6 +65,8 @@ bool arcade::Spaceship::doesProjectilesCollide(Map &map, std::vector<arcade::Pro
     for (auto it = projectiles.begin(); it != projectiles.end(); ++it) {
         for (auto it2 = otherProjectiles.begin(); it2 != otherProjectiles.end(); ++it2) {
             if ((*it)->doesCollide(*(*it2))) {
+                map.updateMapTileForUnit(*(*it), 1, Color::Transparent, TileType::EMPTY, TileTypeEvolution::EMPTY);
+                map.updateMapTileForUnit(*(*it2), 1, Color::Transparent, TileType::EMPTY, TileTypeEvolution::EMPTY);
                 delete *it;
                 delete *it2;
                 it = projectiles.erase(it);
