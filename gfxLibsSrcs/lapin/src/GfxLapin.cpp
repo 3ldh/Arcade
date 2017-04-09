@@ -129,7 +129,7 @@ bool arcade::GfxLapin::pollEvent(arcade::Event &e) {
 }
 
 bool arcade::GfxLapin::doesSupportSound() const {
-	return true;
+	return false;
 }
 
 void arcade::GfxLapin::tekpixel(t_bunny_pixelarray &pix,
@@ -200,19 +200,10 @@ void arcade::GfxLapin::clear() {
 	fillPixelarrayWithBlack();
 }
 void arcade::GfxLapin::loadSounds(const std::vector<std::pair<std::string, arcade::SoundType>> &sounds) {
-	for(auto it = sounds.begin(); it < sounds.end(); it++) {
-		t_bunny_music *music = bunny_load_music(it->first.c_str());
-		if (music)
-			sound.push_back(music);
-	}
+	(void) sounds;
 }
 void arcade::GfxLapin::soundControl(const arcade::Sound &sound) {
-	try {
-		bunny_sound_play(&this->sound.at(sound.id)->sound);
-	}
-	catch (std::out_of_range e) {
-		std::cerr << "The sound you tried to play is not correctly indexed" << std::endl;
-	}
+	(void) sound;
 }
 void arcade::GfxLapin::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites) {
 	(void) sprites;
