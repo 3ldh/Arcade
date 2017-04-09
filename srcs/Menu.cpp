@@ -32,7 +32,7 @@ arcade::Menu::Menu(std::vector<std::string> gamesPath, std::vector<std::string> 
 }
 
 void arcade::Menu::moveMenu(int menu, size_t component) {
-    if (!menu) {
+	if (!menu) {
         components[indexGame]->toogle();
         indexGame = component;
         components[component]->toogle();

@@ -9,6 +9,7 @@ arcade::GfxNcurses::GfxNcurses() {
 	
 	//TODO: check max size with map;
 	window = initscr();
+	curs_set(0);
 	start_color();
 	getmaxyx(window, windowHeight, windowWidth);
 	noecho();
@@ -63,18 +64,19 @@ arcade::GfxNcurses::GfxNcurses() {
 	colors.push_back(colors_t(255, 0, 255, 5));
 	//colors.push_back(colors_t(0, 255, 255, 6));
 	colors.push_back(colors_t(255, 255, 255, 7));
-	for (short i = 0; i < 7; ++i) {
+	for(short i = 0; i < 7; ++i) {
 		init_pair(i, COLOR_BLACK, i);
 	}
 }
 
 arcade::GfxNcurses::~GfxNcurses() {
+	curs_set(1);
 	endwin();
 }
 
 int arcade::GfxNcurses::checkColor(size_t r, size_t g, size_t b) {
 	int i = 0;
-	for (auto it = colors.begin(); it < colors.end(); it++) {
+	for(auto it = colors.begin(); it < colors.end(); it++) {
 		if (it->rgb[0] == r && it->rgb[1] == g && it->rgb[2] == b)
 			return (i);
 		i++;
@@ -87,13 +89,14 @@ void arcade::GfxNcurses::printInColor(position_t pos, const char *str, arcade::C
 	attron(COLOR_PAIR(color));
 	mvprintw(pos.y, pos.x, "%s", str);
 	attroff(COLOR_PAIR(color));
+	mvcur(0, 0, 0, 0);
 }
 
 void arcade::GfxNcurses::drawCube(position_t pos, position_t size, arcade::Color color) {
-	position_t	tmpPos(pos.x, pos.y);
-
-	for (tmpPos.x = pos.x; tmpPos.x < pos.x + size.x; tmpPos.x++) {
-		for (tmpPos.y = pos.y; tmpPos.y < pos.y + size.y; tmpPos.y++) {
+	position_t tmpPos(pos.x, pos.y);
+	
+	for(tmpPos.x = pos.x; tmpPos.x < pos.x + size.x; tmpPos.x++) {
+		for(tmpPos.y = pos.y; tmpPos.y < pos.y + size.y; tmpPos.y++) {
 			printInColor(tmpPos, " ", color);
 		}
 	}
@@ -121,45 +124,37 @@ void arcade::GfxNcurses::soundControl(const arcade::Sound &sound) {}
 
 void arcade::GfxNcurses::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites) {}
 
-void arcade::GfxNcurses::makeASquareOutOfPos(position_t &position) {
-	int max = (position.x > position.y ? position.x	: position.y);
-	
-	position.x = max;
-	position.y = max;
-}
-
 void arcade::GfxNcurses::updateMap(const arcade::IMap &map) {
-	
-	for (size_t i = 0; i < map.getLayerNb(); i++) {
-		for (size_t j = 0; j < map.getHeight(); j++) {
-			for (size_t k = 0; k < map.getWidth(); k++) {
+	wclear(window);
+	for(size_t i = 0; i < map.getLayerNb(); i++) {
+		for(size_t j = 0; j < map.getHeight(); j++) {
+			for(size_t k = 0; k < map.getWidth(); k++) {
 				position_t size(windowWidth / map.getWidth(), windowHeight / map.getHeight());
-				makeASquareOutOfPos(size);
 				position_t pos(windowWidth / map.getWidth() * k, windowHeight / map.getHeight() * j);
-				drawCube(pos, size, map.at(i, j, k).getColor());
+				if (map.at(i, j, k).getColor().full != 0)
+					drawCube(pos, size, map.at(i, j, k).getColor());
 			}
 		}
 	}
 }
 
 void arcade::GfxNcurses::updateGUI(arcade::IGUI &gui) {
-	
 	for(size_t i = 0; i < gui.size(); i++) {
-		position_t	pos((int) (windowWidth * gui.at(i).getX()), (int) (windowHeight * gui.at(i).getY()));
-		printInColor(pos, (char *)gui.at(i).getText().c_str(), gui.at(i).getTextColor());
+		position_t pos((int) (windowWidth * gui.at(i).getX()), (int) (windowHeight * gui.at(i).getY()));
+		printInColor(pos, (char *) gui.at(i).getText().c_str(), gui.at(i).getTextColor());
 	}
 }
+
 void arcade::GfxNcurses::display() {
 	refresh();
 }
 
 void arcade::GfxNcurses::clear() {
-//	wclear(window);
 }
 
 extern "C" arcade::GfxNcurses *getLib() {
 	return new arcade::GfxNcurses();
 }
-arcade::GfxNcurses::colors::colors(int r, int g, int b, arcade::Color color) : rgb({r,g,b}), color(color) {}
+arcade::GfxNcurses::colors::colors(int r, int g, int b, arcade::Color color) : rgb({r, g, b}), color(color) {}
 
 arcade::GfxNcurses::position::position(int x, int y) : x(x), y(y) {}
