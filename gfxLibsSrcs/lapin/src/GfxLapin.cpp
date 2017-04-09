@@ -9,9 +9,9 @@
 
 arcade::GfxLapin::GfxLapin() {
 	bunny_enable_full_blit(true);
-	font = bunny_load_pixelarray("font.png");
+	font = bunny_load_pixelarray("assets/font.png");
 	if (!font)
-		std::cerr << "Missing ./font.png unable to print text in LibLapin" << std::endl;
+		std::cerr << "Missing ./assets/font.png unable to print text in LibLapin" << std::endl;
 	window = bunny_start(800, 800, false, "Mathieu");
 	pixelarray = bunny_new_pixelarray(800, 800);
 	windowsHeight = 800;

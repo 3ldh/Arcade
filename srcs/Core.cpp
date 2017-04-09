@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include <dirent.h>
-#include <zconf.h>
+#include <algorithm>
 #include "../include/Core.hpp"
 #include "../include/Exception.hpp"
 
@@ -12,7 +12,7 @@ arcade::Core::~Core() {
 
 }
 
-arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0), gameLibIndex(0),
+arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0),
 												   events(std::move(std::vector<arcade::Event>(0))) {
 	
 	gamesPath = getPathToSOFilesInDir("games");
@@ -23,8 +23,11 @@ arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0), gameLibIndex(
 	currentLib = NULL;
 	
 	loadGfxLib(pathToLib);
+	auto it = std::find(gfxPath.begin(), gfxPath.end(), pathToLib);
+
 	loadGameLib(gamesPath[0]);
-	menu = Menu(gamesPath, gfxPath);
+	gfxLibIndex = (it - gfxPath.begin());
+	menu = Menu(gamesPath, gfxPath, static_cast<size_t>(it - gfxPath.begin()));
 	
 	input[KB_2] = std::bind(&Core::prevGfxLib, this);
 	input[KB_3] = std::bind(&Core::nextGfxLib, this);

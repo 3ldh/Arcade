@@ -17,7 +17,7 @@ namespace arcade {
     public:
         virtual ~Menu();
         Menu();
-        Menu(std::vector<std::string> gamesPath, std::vector<std::string> gfxPath);
+        Menu(std::vector<std::string> gamesPath, std::vector<std::string> gfxPath, size_t gfxId);
         void moveMenu(int menu, size_t component);
         void updateComponents() override;
     };
