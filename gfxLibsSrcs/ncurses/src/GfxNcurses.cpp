@@ -70,6 +70,8 @@ arcade::GfxNcurses::GfxNcurses() {
 }
 
 arcade::GfxNcurses::~GfxNcurses() {
+	wclear(window);
+	refresh();
 	curs_set(1);
 	endwin();
 }
