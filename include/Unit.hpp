@@ -25,7 +25,6 @@ namespace arcade {
     protected:
         std::pair<size_t, size_t> initialPos;
         std::pair<size_t , size_t> position;
-        Sprite sprite;
 
     public:
         virtual ~Unit();
@@ -42,8 +41,6 @@ namespace arcade {
         void setPosition(size_t x, size_t y);
         Direction getOppositeDirection(Direction direction);
         std::pair<int, int> convertDirection(Direction direction);
-        const Sprite &getSprite() const;
-        void setSprite(const Sprite &sprite);
         bool cmpPos(Unit const &unit);
     };
 }

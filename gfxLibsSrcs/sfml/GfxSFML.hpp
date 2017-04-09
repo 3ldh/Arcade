@@ -18,6 +18,7 @@ namespace arcade {
         std::map<sf::Keyboard::Key, arcade::KeyboardKey> eventsKeyboard;
         std::map<sf::Event::EventType, arcade::ActionType> eventsActionType;
         std::map<sf::Event::EventType, arcade::EventType > eventsType;
+        std::map<std::string, sf::Texture> textures;
 
     public:
         virtual ~GfxSFML();

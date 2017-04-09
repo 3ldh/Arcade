@@ -11,6 +11,7 @@ arcade::Unit::Unit(const std::pair<size_t , size_t > &position) : position(posit
 
 arcade::Unit::Unit(size_t x, size_t y) : initialPos(std::make_pair(x, y)), position(std::make_pair(x, y)) {}
 
+
 const std::pair<size_t , size_t> &arcade::Unit::getPosition() const {
     return position;
 }
@@ -75,14 +76,6 @@ std::pair<int, int> arcade::Unit::convertDirection(arcade::Unit::Direction direc
     return std::make_pair(0, 0);
 }
 
-const arcade::Sprite &arcade::Unit::getSprite() const {
-    return sprite;
-}
-
-void arcade::Unit::setSprite(const arcade::Sprite &sprite) {
-    Unit::sprite = sprite;
-}
-
 arcade::Unit::Direction arcade::Unit::getOppositeDirection(arcade::Unit::Direction direction) {
     switch (direction)
     {
@@ -103,5 +96,7 @@ arcade::Unit::Direction arcade::Unit::getOppositeDirection(arcade::Unit::Directi
 bool arcade::Unit::cmpPos(const arcade::Unit &unit) {
     return position.first == unit.getPosition().first && position.second == unit.getPosition().second;
 }
+
+
 
 

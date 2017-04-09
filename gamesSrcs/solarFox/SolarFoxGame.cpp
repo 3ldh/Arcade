@@ -20,6 +20,17 @@ arcade::SolarFoxGame::SolarFoxGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 2)),
                                        sprites(std::vector<std::unique_ptr<Sprite>>()),
                                        netPacket(std::move(std::vector<NetworkPacket>(0))), accelerationRate(250) {
 
+
+    std::vector<std::string> pathToSprite;
+    pathToSprite.push_back("./Textures/spaceShip2.png");
+    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
+    pathToSprite.clear();
+    pathToSprite.push_back("./Textures/spaceShip1.png");
+    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
+    pathToSprite.clear();
+    pathToSprite.push_back("./Textures/bonus.png");
+    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
+
     enemyDown.setMovingDirection(arcade::Unit::Direction::LEFT);
     enemyUp.setMovingDirection(arcade::Unit::Direction::RIGHT);
     enemyLeft.setMovingDirection(arcade::Unit::Direction::UP);
@@ -34,6 +45,7 @@ arcade::SolarFoxGame::SolarFoxGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 2)),
                 map[0][y][x]->setType(TileType::POWERUP);
                 map[0][y][x]->setTypeEv(TileTypeEvolution::POWERUP);
                 map[0][y][x]->setColor(Color::White);
+                map[0][y][x]->setSprite(3);
             }
             map[1][y][x]->setType(TileType::EMPTY);
             map[1][y][x]->setTypeEv(TileTypeEvolution::EMPTY);

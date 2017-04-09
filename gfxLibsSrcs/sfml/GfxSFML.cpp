@@ -175,7 +175,14 @@ void arcade::GfxSFML::soundControl(const arcade::Sound &sound) {
 }
 
 void arcade::GfxSFML::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites) {
-    (void)sprites;
+    for (size_t i = 0; i < sprites.size(); ++i) {
+        sf::Texture texture;
+
+        texture.setSmooth(true);
+        if (!texture.loadFromFile(sprites[i]->getGraphicPath(0)))
+            throw GfxLibError("Can't load texture" + sprites[i]->getGraphicPath(0));
+        textures[sprites[i]->getGraphicPath(0)] = texture;
+    }
 }
 
 void arcade::GfxSFML::updateGUI(arcade::IGUI &gui) {

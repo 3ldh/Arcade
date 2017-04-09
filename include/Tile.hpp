@@ -12,8 +12,8 @@ namespace arcade {
     class Tile : public ITile {
         TileType type;
         TileTypeEvolution typeEv;
+        int spriteID;
         Color color;
-        Sprite sprite;
         bool _hasSprite;
 
     private:
@@ -33,8 +33,8 @@ namespace arcade {
         bool hasSprite() const override;
         double getShiftX() const override;
         double getShiftY() const override;
-        const Sprite &getSprite() const;
-        void setSprite(const Sprite &sprite);
+        void setSprite(int id);
+        void removeSprite();
     };
 }
 

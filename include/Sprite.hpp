@@ -16,7 +16,7 @@ namespace arcade {
 
     public:
         virtual ~Sprite();
-        Sprite(const std::vector<char> &ascii = std::vector<char>(), const std::vector<std::string> &paths = std::vector<std::string>());
+        Sprite(const std::vector<std::string> &paths = std::vector<std::string>(), const std::vector<char> &ascii = std::vector<char>());
         Sprite(Sprite const &sprite);
         size_t spritesCount() const override;
         std::string getGraphicPath(size_t pos) const override;

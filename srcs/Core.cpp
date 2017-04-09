@@ -21,8 +21,8 @@ arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0), gameLibIndex(
 	currentGame = NULL;
 	currentLib = NULL;
 
-    loadGfxLib(pathToLib);
     loadGameLib(gamesPath[0]);
+    loadGfxLib(pathToLib);
     menu = Menu(gamesPath, gfxPath);
 
     input[KB_2] = std::bind(&Core::prevGfxLib, this);
@@ -127,6 +127,10 @@ void arcade::Core::prevGfxLib() {
     if (!launched)
         menu.moveMenu(1, gfxLibIndex);
     loadGfxLib(gfxPath[gfxLibIndex]);
+    if (currentLib && currentGame) {
+        currentLib->loadSounds(currentGame->getSoundsToLoad());
+        currentLib->loadSprites(currentGame->getSpritesToLoad());
+    }
 }
 
 void arcade::Core::nextGfxLib() {
@@ -136,6 +140,10 @@ void arcade::Core::nextGfxLib() {
     if (!launched)
         menu.moveMenu(1, gfxLibIndex);
     loadGfxLib(gfxPath[gfxLibIndex]);
+    if (currentLib && currentGame) {
+        currentLib->loadSounds(currentGame->getSoundsToLoad());
+        currentLib->loadSprites(currentGame->getSpritesToLoad());
+    }
 }
 
 std::vector<std::string> arcade::Core::getPathToSOFilesInDir(std::string const &pathDir) {
