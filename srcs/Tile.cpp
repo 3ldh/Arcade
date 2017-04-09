@@ -29,7 +29,7 @@ void arcade::Tile::setColor(arcade::Color color) {
 }
 
 size_t arcade::Tile::getSpriteId() const {
-    return 0;
+    return spriteID;
 }
 
 size_t arcade::Tile::getSpritePos() const {

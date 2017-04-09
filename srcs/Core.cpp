@@ -21,19 +21,6 @@ arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0), gameLibIndex(
 	currentGame = NULL;
 	currentLib = NULL;
 
-	loadGfxLib(pathToLib);
-	loadGameLib(gamesPath[0]);
-	menu = Menu(gamesPath, gfxPath);
-
-	input[KB_2] = std::bind(&Core::prevGfxLib, this);
-	input[KB_3] = std::bind(&Core::nextGfxLib, this);
-	input[KB_4] = std::bind(&Core::prevGame, this);
-	input[KB_5] = std::bind(&Core::nextGame, this);
-	input[KB_8] = std::bind(&Core::restartGame, this);
-	input[KB_9] = std::bind(&Core::backToMenu, this);
-	launched = false;
-	coreLoop();
-
     loadGameLib(gamesPath[0]);
     loadGfxLib(pathToLib);
     menu = Menu(gamesPath, gfxPath);
@@ -62,6 +49,10 @@ void arcade::Core::loadGfxLib(std::string const &pathToLib) {
 	if (!lib)
 		throw GfxLibError("Can't load GFX Library");
 	currentLib = lib;
+    if (currentLib && currentGame) {
+        currentLib->loadSounds(currentGame->getSoundsToLoad());
+        currentLib->loadSprites(currentGame->getSpritesToLoad());
+    }
 }
 
 void arcade::Core::loadGameLib(std::string const &pathToGame) {
@@ -78,6 +69,10 @@ void arcade::Core::loadGameLib(std::string const &pathToGame) {
 	if (!game)
 		throw GameLibError("Can't load Game Library");
 	currentGame = game;
+    if (currentLib && currentGame) {
+        currentLib->loadSounds(currentGame->getSoundsToLoad());
+        currentLib->loadSprites(currentGame->getSpritesToLoad());
+    }
 }
 
 bool arcade::Core::getEvents() {
@@ -143,10 +138,6 @@ void arcade::Core::prevGfxLib() {
 	if (!launched)
 		menu.moveMenu(1, gfxLibIndex);
 	loadGfxLib(gfxPath[gfxLibIndex]);
-    if (currentLib && currentGame) {
-        currentLib->loadSounds(currentGame->getSoundsToLoad());
-        currentLib->loadSprites(currentGame->getSpritesToLoad());
-    }
 }
 
 void arcade::Core::nextGfxLib() {
@@ -155,10 +146,6 @@ void arcade::Core::nextGfxLib() {
 	if (!launched)
 		menu.moveMenu(1, gfxLibIndex);
 	loadGfxLib(gfxPath[gfxLibIndex]);
-    if (currentLib && currentGame) {
-        currentLib->loadSounds(currentGame->getSoundsToLoad());
-        currentLib->loadSprites(currentGame->getSpritesToLoad());
-    }
 }
 
 std::vector<std::string> arcade::Core::getPathToSOFilesInDir(std::string const &pathDir) {

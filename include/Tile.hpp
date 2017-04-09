@@ -12,7 +12,7 @@ namespace arcade {
     class Tile : public ITile {
         TileType type;
         TileTypeEvolution typeEv;
-        int spriteID;
+        size_t spriteID;
         Color color;
         bool _hasSprite;
 

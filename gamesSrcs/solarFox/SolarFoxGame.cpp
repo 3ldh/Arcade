@@ -20,17 +20,56 @@ arcade::SolarFoxGame::SolarFoxGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 2)),
                                        sprites(std::vector<std::unique_ptr<Sprite>>()),
                                        netPacket(std::move(std::vector<NetworkPacket>(0))), accelerationRate(250) {
 
-
     std::vector<std::string> pathToSprite;
     pathToSprite.push_back("./Textures/spaceShip2.png");
+    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
+    pathToSprite.clear();
+    pathToSprite.push_back("./Textures/spaceShip2_left.png");
+    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
+    pathToSprite.clear();
+    pathToSprite.push_back("./Textures/spaceShip2_down.png");
+    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
+    pathToSprite.clear();
+    pathToSprite.push_back("./Textures/spaceShip2_right.png");
     sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
     pathToSprite.clear();
     pathToSprite.push_back("./Textures/spaceShip1.png");
     sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
     pathToSprite.clear();
+    pathToSprite.push_back("./Textures/spaceShip1_left.png");
+    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
+    pathToSprite.clear();
+    pathToSprite.push_back("./Textures/spaceShip1_down.png");
+    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
+    pathToSprite.clear();
+    pathToSprite.push_back("./Textures/spaceShip1_right.png");
+    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
+    pathToSprite.clear();
     pathToSprite.push_back("./Textures/bonus.png");
     sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
+    pathToSprite.clear();
+    pathToSprite.push_back("./Textures/laser.png");
+    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
+    pathToSprite.clear();
+    pathToSprite.push_back("./Textures/laser_left.png");
+    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
+    pathToSprite.clear();
+    pathToSprite.push_back("./Textures/laser_down.png");
+    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
+    pathToSprite.clear();
+    pathToSprite.push_back("./Textures/laser_right.png");
+    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
 
+
+    inputs[KeyboardKey::KB_ARROW_UP] = Unit::Direction::UP;
+    inputs[KeyboardKey::KB_ARROW_DOWN] = Unit::Direction::DOWN;
+    inputs[KeyboardKey::KB_ARROW_LEFT] = Unit::Direction::LEFT;
+    inputs[KeyboardKey::KB_ARROW_RIGHT] = Unit::Direction::RIGHT;
+    init();
+}
+
+
+void arcade::SolarFoxGame::init() {
     enemyDown.setMovingDirection(arcade::Unit::Direction::LEFT);
     enemyUp.setMovingDirection(arcade::Unit::Direction::RIGHT);
     enemyLeft.setMovingDirection(arcade::Unit::Direction::UP);
@@ -45,17 +84,13 @@ arcade::SolarFoxGame::SolarFoxGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 2)),
                 map[0][y][x]->setType(TileType::POWERUP);
                 map[0][y][x]->setTypeEv(TileTypeEvolution::POWERUP);
                 map[0][y][x]->setColor(Color::White);
-                map[0][y][x]->setSprite(3);
+                map[0][y][x]->setSprite(9);
             }
             map[1][y][x]->setType(TileType::EMPTY);
             map[1][y][x]->setTypeEv(TileTypeEvolution::EMPTY);
             map[1][y][x]->setColor(Color::Transparent);
         }
     }
-    inputs[KeyboardKey::KB_ARROW_UP] = Unit::Direction::UP;
-    inputs[KeyboardKey::KB_ARROW_DOWN] = Unit::Direction::DOWN;
-    inputs[KeyboardKey::KB_ARROW_LEFT] = Unit::Direction::LEFT;
-    inputs[KeyboardKey::KB_ARROW_RIGHT] = Unit::Direction::RIGHT;
     timer.start();
     timerProjectile.start();
     totalTime.start();
@@ -67,14 +102,17 @@ arcade::GameState arcade::SolarFoxGame::getGameState() const {
 
 void arcade::SolarFoxGame::notifyEvent(std::vector<arcade::Event> &&events) {
     if (events.size() > 0) {
-        if (inputs.find(events[0].kb_key) != inputs.end())
-            player.setMovingDirection(inputs[events[0].kb_key]);
-        else if (events[0].action == AT_PRESSED) {
-            if (events[0].kb_key == KB_SPACE)
+        if (events[0].action == AT_PRESSED) {
+            if (events[0].kb_key == KB_SPACE) {
                 player.shoot();
+                player.updateMapForProjectile(map, Color::Magenta);
+            }
             else if (events[0].kb_key == KB_8)
                 restart();
         }
+        else if (inputs.find(events[0].kb_key) != inputs.end())
+            player.setMovingDirection(inputs[events[0].kb_key]);
+
     }
 }
 
@@ -171,25 +209,26 @@ arcade::IGUI &arcade::SolarFoxGame::getGUI() {
 }
 
 void arcade::SolarFoxGame::cleaPlayerPos() {
-    map.updateMapTileForUnit(player, 0, Color::Black, TileType::EMPTY, TileTypeEvolution::EMPTY);
+    map.updateMapTileForUnit(player, 0, Color::Black, TileType::EMPTY, TileTypeEvolution::EMPTY, 0);
+    map.updateMapTileForUnit(player, 1, Color::Black, TileType::EMPTY, TileTypeEvolution::EMPTY, 0);
 }
 
 void arcade::SolarFoxGame::updatePlayerPos() {
-    map.updateMapTileForUnit(player, 0, Color::Blue, TileType::OTHER, TileTypeEvolution::PLAYER);
+    map.updateMapTileForUnit(player, 1, Color::Blue, TileType::OTHER, TileTypeEvolution::PLAYER, playerDirectionToSpriteId(player.getMovingDirection()));
 }
 
 void arcade::SolarFoxGame::clearEnemyPos() {
-    map.updateMapTileForUnit(enemyDown, 0, Color::Black, TileType::EMPTY, TileTypeEvolution::EMPTY);
-    map.updateMapTileForUnit(enemyUp, 0, Color::Black, TileType::EMPTY, TileTypeEvolution::EMPTY);
-    map.updateMapTileForUnit(enemyLeft, 0, Color::Black, TileType::EMPTY, TileTypeEvolution::EMPTY);
-    map.updateMapTileForUnit(enemyRight, 0, Color::Black, TileType::EMPTY, TileTypeEvolution::EMPTY);
+    map.updateMapTileForUnit(enemyDown, 0, Color::Black, TileType::EMPTY, TileTypeEvolution::EMPTY, 0);
+    map.updateMapTileForUnit(enemyUp, 0, Color::Black, TileType::EMPTY, TileTypeEvolution::EMPTY, 0);
+    map.updateMapTileForUnit(enemyLeft, 0, Color::Black, TileType::EMPTY, TileTypeEvolution::EMPTY, 0);
+    map.updateMapTileForUnit(enemyRight, 0, Color::Black, TileType::EMPTY, TileTypeEvolution::EMPTY, 0);
 }
 
 void arcade::SolarFoxGame::updateEnemyPos() {
-    map.updateMapTileForUnit(enemyDown, 0, Color::Red, TileType::EVIL_DUDE, TileTypeEvolution::ENEMY);
-    map.updateMapTileForUnit(enemyUp, 0, Color::Red, TileType::EVIL_DUDE, TileTypeEvolution::ENEMY);
-    map.updateMapTileForUnit(enemyLeft, 0, Color::Red, TileType::EVIL_DUDE, TileTypeEvolution::ENEMY);
-    map.updateMapTileForUnit(enemyRight, 0, Color::Red, TileType::EVIL_DUDE, TileTypeEvolution::ENEMY);
+    map.updateMapTileForUnit(enemyDown, 0, Color::Red, TileType::EVIL_DUDE, TileTypeEvolution::ENEMY, 5);
+    map.updateMapTileForUnit(enemyUp, 0, Color::Red, TileType::EVIL_DUDE, TileTypeEvolution::ENEMY, 7);
+    map.updateMapTileForUnit(enemyLeft, 0, Color::Red, TileType::EVIL_DUDE, TileTypeEvolution::ENEMY, 6);
+    map.updateMapTileForUnit(enemyRight, 0, Color::Red, TileType::EVIL_DUDE, TileTypeEvolution::ENEMY, 8);
 }
 
 void arcade::SolarFoxGame::clearProjectilesPos() {
@@ -209,34 +248,15 @@ void arcade::SolarFoxGame::updateProjectilesTile() {
 }
 
 void arcade::SolarFoxGame::restart() {
+    cleaPlayerPos();
+    clearProjectilesPos();
+    clearEnemyPos();
     player.reset();
     enemyDown.reset();
     enemyUp.reset();
     enemyLeft.reset();
     enemyRight.reset();
-    enemyDown.setMovingDirection(arcade::Unit::Direction::LEFT);
-    enemyUp.setMovingDirection(arcade::Unit::Direction::RIGHT);
-    enemyLeft.setMovingDirection(arcade::Unit::Direction::UP);
-    enemyRight.setMovingDirection(arcade::Unit::Direction::DOWN);
-    for (size_t y = 0; y < map.getHeight(); ++y) {
-        for (size_t x = 0; x < map.getWidth(); ++x) {
-            if (level0[y][x] == 0) {
-                map[0][y][x]->setType(TileType::EMPTY);
-                map[0][y][x]->setTypeEv(TileTypeEvolution::EMPTY);
-                map[0][y][x]->setColor(Color::Black);
-            } else {
-                map[0][y][x]->setType(TileType::POWERUP);
-                map[0][y][x]->setTypeEv(TileTypeEvolution::POWERUP);
-                map[0][y][x]->setColor(Color::White);
-            }
-            map[1][y][x]->setType(TileType::EMPTY);
-            map[1][y][x]->setTypeEv(TileTypeEvolution::EMPTY);
-            map[1][y][x]->setColor(Color::Transparent);
-        }
-    }
-    timer.start();
-    timerProjectile.start();
-    totalTime.start();
+    init();
 }
 
 const arcade::Map &arcade::SolarFoxGame::getMap() const {
@@ -249,6 +269,23 @@ arcade::Spaceship &arcade::SolarFoxGame::getPlayer() {
 
 void arcade::SolarFoxGame::setAccelerationRate(int accelerationRate) {
     SolarFoxGame::accelerationRate = accelerationRate;
+}
+
+int arcade::SolarFoxGame::playerDirectionToSpriteId(arcade::Unit::Direction direction) {
+
+    switch (direction) {
+        case arcade::Unit::Direction::UP:
+            return 1;
+        case arcade::Unit::Direction::DOWN:
+            return 3;
+        case arcade::Unit::Direction::LEFT:
+            return 4;
+        case arcade::Unit::Direction::RIGHT:
+            return 2;
+        case arcade::Unit::Direction::FORWARD:
+            return 0;
+    }
+    return 1;
 }
 
 static void cmdWhereAmI(arcade::Spaceship const &spaceship) {

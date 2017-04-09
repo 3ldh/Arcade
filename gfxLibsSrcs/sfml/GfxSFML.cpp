@@ -134,24 +134,21 @@ void arcade::GfxSFML::updateMap(const arcade::IMap &map) {
     for (size_t i = 0; i < map.getLayerNb(); ++i) {
         for (size_t j = 0; j < map.getHeight(); ++j) {
             for (size_t k = 0; k < map.getWidth(); ++k) {
-                if (map.at(i, j, k).hasSprite()) {
+                if (map.at(i, j, k).hasSprite() && map.at(i, j, k).getSpriteId() <= textures.size()) {
 
+                    sf::Sprite sprite;
+                    sprite.setTexture(textures[map.at(i, j, k).getSpriteId() - 1]);
+                    sprite.setPosition(sf::Vector2f(WIN_WIDTH / map.getWidth() * k, WIN_HEIGHT / map.getHeight() * j));
+                    window.draw(sprite);
                 } else {
                     arcade::Color c = map.at(i, j, k).getColor();
-/*
-                        sf::CircleShape circle(WIN_WIDTH / map.getWidth() / 2);
-                        circle.setFillColor(sf::Color(c.rgba[0], c.rgba[1], c.rgba[2]));
-                        circle.setPosition(WIN_WIDTH / map.getWidth() * k, WIN_HEIGHT / map.getHeight() * j);
-                        window.draw(circle);
-*/
-
-                        sf::RectangleShape rectangle(
-                                sf::Vector2f(WIN_WIDTH / map.getWidth(), WIN_HEIGHT / map.getHeight()));
-                        rectangle.setPosition(WIN_WIDTH / map.getWidth() * k, WIN_HEIGHT / map.getHeight() * j);
-                        rectangle.setFillColor(sf::Color(c.rgba[0], c.rgba[1], c.rgba[2], c.rgba[3]));
-                        rectangle.setOutlineColor(sf::Color(sf::Color::Black));
-                        rectangle.setOutlineThickness(1);
-                        window.draw(rectangle);
+                    sf::RectangleShape rectangle(
+                            sf::Vector2f(WIN_WIDTH / map.getWidth(), WIN_HEIGHT / map.getHeight()));
+                    rectangle.setPosition(WIN_WIDTH / map.getWidth() * k, WIN_HEIGHT / map.getHeight() * j);
+                    rectangle.setFillColor(sf::Color(c.rgba[0], c.rgba[1], c.rgba[2], c.rgba[3]));
+                    rectangle.setOutlineColor(sf::Color(sf::Color::Black));
+                    rectangle.setOutlineThickness(1);
+                    window.draw(rectangle);
                 }
             }
         }
@@ -167,21 +164,20 @@ void arcade::GfxSFML::clear() {
 }
 
 void arcade::GfxSFML::loadSounds(const std::vector<std::pair<std::string, arcade::SoundType>> &sounds) {
-    (void)sounds;
+    (void) sounds;
 }
 
 void arcade::GfxSFML::soundControl(const arcade::Sound &sound) {
-    (void)sound;
+    (void) sound;
 }
 
 void arcade::GfxSFML::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites) {
     for (size_t i = 0; i < sprites.size(); ++i) {
         sf::Texture texture;
-
         texture.setSmooth(true);
         if (!texture.loadFromFile(sprites[i]->getGraphicPath(0)))
             throw GfxLibError("Can't load texture" + sprites[i]->getGraphicPath(0));
-        textures[sprites[i]->getGraphicPath(0)] = texture;
+        textures.push_back(texture);
     }
 }
 
@@ -195,7 +191,7 @@ void arcade::GfxSFML::updateGUI(arcade::IGUI &gui) {
         text.setFont(font);
         text.setCharacterSize(16);
         text.setString(gui.at(i).getText());
-        text.setPosition((int)(WIN_WIDTH * gui.at(i).getX()), (int) (WIN_HEIGHT * gui.at(i).getY()));
+        text.setPosition((int) (WIN_WIDTH * gui.at(i).getX()), (int) (WIN_HEIGHT * gui.at(i).getY()));
         text.setColor(sf::Color(c.rgba[0], c.rgba[1], c.rgba[2]));
         window.draw(text);
     }

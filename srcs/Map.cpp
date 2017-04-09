@@ -56,8 +56,12 @@ bool arcade::Map::isWalkableOffset(size_t layer_idx, size_t x, size_t y, size_t 
 }
 
 void arcade::Map::updateMapTileForUnit(arcade::Unit const &unit, size_t layer, Color color,
-                                         TileType tileType, TileTypeEvolution typeEvolution) {
+                                         TileType tileType, TileTypeEvolution typeEvolution, int spriteId) {
     operator[](layer)[unit.getPosition().second][unit.getPosition().first]->setType(tileType);
     operator[](layer)[unit.getPosition().second][unit.getPosition().first]->setTypeEv(typeEvolution);
     operator[](layer)[unit.getPosition().second][unit.getPosition().first]->setColor(color);
+    if (spriteId)
+        operator[](layer)[unit.getPosition().second][unit.getPosition().first]->setSprite(spriteId);
+    else
+        operator[](layer)[unit.getPosition().second][unit.getPosition().first]->removeSprite();
 }

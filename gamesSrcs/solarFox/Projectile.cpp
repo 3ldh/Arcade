@@ -23,3 +23,7 @@ bool arcade::Projectile::doesCollide(const arcade::Unit &unit) const {
     return position.first == unit.getPosition().first && position.second == unit.getPosition().second;
 }
 
+arcade::Unit::Direction arcade::Projectile::getDirection() const {
+    return direction;
+}
+
