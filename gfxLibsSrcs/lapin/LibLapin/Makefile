@@ -34,7 +34,6 @@
   CONFIG	=	-W -Wall -fPIC						\
 			-Wno-unused-result					\
 			-DBUNNY_ALLOCATOR_DEACTIVATED				\
-			-DBUNNY_DEBUG -DBUNNY_LOG
 
   DEBUG		=	-O0 -g -g3 -ggdb
 #  OPTIM		=	-O2

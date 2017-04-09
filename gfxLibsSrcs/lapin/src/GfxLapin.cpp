@@ -12,7 +12,7 @@ arcade::GfxLapin::GfxLapin() {
 	font = bunny_load_pixelarray("assets/font.png");
 	if (!font)
 		std::cerr << "Missing ./assets/font.png unable to print text in LibLapin" << std::endl;
-	window = bunny_start(800, 800, false, "Mathieu");
+	window = bunny_start(800, 800, false, "Lapin - Arcade");
 	pixelarray = bunny_new_pixelarray(800, 800);
 	windowsHeight = 800;
 	windowsWidth = 800;

@@ -27,7 +27,11 @@ arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0),
 	
 	loadGfxLib(pathToLib);
 	auto it = std::find(gfxPath.begin(), gfxPath.end(), pathToLib);
-
+	
+	if (gamesPath.empty()) {
+		std::cerr << "Please make sure you have games compiled in the ./games directory.\nOtherwise type \"make 42re\" or \"make games\"" << std::endl;
+		abort();
+	}
 	loadGameLib(gamesPath[0]);
 	gfxLibIndex = (size_t)(it - gfxPath.begin());
 	menu = Menu(gamesPath, gfxPath, static_cast<size_t>(it - gfxPath.begin()));
@@ -69,7 +73,6 @@ void arcade::Core::loadGameLib(std::string const &pathToGame) {
 	}
 	if (gameLoader)
 		delete gameLoader;
-
 	gameLoader = new DLLoader<IGame>(pathToGame);
 	IGame *game = gameLoader->getInstance("getGame");
 
@@ -118,8 +121,8 @@ void arcade::Core::coreLoop() {
 }
 
 void arcade::Core::prevGame() {
-	if (gameLibIndex  == 0)
-		gameLibIndex = gamesPath.size();
+	if (gameLibIndex == 0)
+		gameLibIndex = gamesPath.size() - 1;
 	else
 		--gameLibIndex;
 	gameLibIndex = gameLibIndex % gamesPath.size();
@@ -137,8 +140,8 @@ void arcade::Core::nextGame() {
 }
 
 void arcade::Core::prevGfxLib() {
-	if (gfxLibIndex  == 0)
-		gfxLibIndex = gamesPath.size();
+	if (gfxLibIndex == 0)
+		gfxLibIndex = gfxPath.size() - 1;
 	else
 		--gfxLibIndex;
 	gfxLibIndex = gfxLibIndex % gfxPath.size();
