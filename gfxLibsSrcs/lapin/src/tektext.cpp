@@ -11,21 +11,6 @@
 #include "LibLapin/include/lapin.h"
 #include "../include/GfxLapin.hpp"
 
-int arcade::GfxLapin::test_color(t_color *color) {
-	int r;
-	int g;
-	int b;
-	
-	r = color->full & 0xFF;
-	g = (color->full >> 8) & 0xFF;
-	b = (color->full >> 16) & 0xFF;
-	
-	if (r == 1 && b == 1 && g == 1)
-		return (1);
-	else
-		return (0);
-}
-
 void arcade::GfxLapin::tekpixel(t_bunny_pixelarray &pix,
 								t_bunny_position pos,
 								unsigned int col) {
