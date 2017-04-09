@@ -17,8 +17,7 @@ arcade::SolarFoxGame::SolarFoxGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 2)),
                                        enemyRight(SpaceshipEnemy(MAP_WIDTH - 1, MAP_HEIGHT / 2, MAP_WIDTH - 1)),
                                        enemyUp(SpaceshipEnemy(MAP_WIDTH / 2, 0, MAP_HEIGHT - 1)),
                                        enemyDown(SpaceshipEnemy(MAP_WIDTH / 2, MAP_HEIGHT - 1, MAP_HEIGHT - 1)),
-                                       sprites(std::vector<std::unique_ptr<Sprite>>()),
-                                       netPacket(std::move(std::vector<NetworkPacket>(0))), accelerationRate(250) {
+                                       sprites(std::vector<std::unique_ptr<Sprite>>()), accelerationRate(250) {
 
     std::vector<std::string> pathToSprite;
     pathToSprite.push_back("./Textures/spaceShip2.png");
@@ -120,9 +119,8 @@ void arcade::SolarFoxGame::notifyNetwork(std::vector<arcade::NetworkPacket> &&ev
     (void) events;
 }
 
-std::vector<arcade::NetworkPacket> &&arcade::SolarFoxGame::getNetworkToSend() {
-    return std::move(netPacket);
-}
+
+
 
 bool arcade::SolarFoxGame::moveShipProjectiles(arcade::Spaceship &spaceship) {
     auto it = spaceship.getProjectiles().begin();
@@ -286,6 +284,14 @@ int arcade::SolarFoxGame::playerDirectionToSpriteId(arcade::Unit::Direction dire
             return 0;
     }
     return 1;
+}
+
+bool arcade::SolarFoxGame::hasNetwork() const {
+    return false;
+}
+
+std::vector<arcade::NetworkPacket> arcade::SolarFoxGame::getNetworkToSend() {
+    return netPacket;
 }
 
 static void cmdWhereAmI(arcade::Spaceship const &spaceship) {

@@ -53,9 +53,6 @@ void arcade::SnakeGame::notifyNetwork(std::vector<arcade::NetworkPacket> &&event
     (void) events;
 }
 
-std::vector<arcade::NetworkPacket> &&arcade::SnakeGame::getNetworkToSend() {
-    return std::move(netPacket);
-}
 
 std::vector<std::unique_ptr<arcade::ISprite>> arcade::SnakeGame::getSpritesToLoad() const {
     std::vector<std::unique_ptr<arcade::ISprite>> copy;
@@ -173,6 +170,14 @@ void arcade::SnakeGame::restart() {
     score = 0;
     snake.reset();
     timer.start();
+}
+
+bool arcade::SnakeGame::hasNetwork() const {
+    return false;
+}
+
+std::vector<arcade::NetworkPacket> arcade::SnakeGame::getNetworkToSend() {
+    return netPacket;
 }
 
 static void cmdWhereAmI(arcade::SnakeUnit const &snake) {
