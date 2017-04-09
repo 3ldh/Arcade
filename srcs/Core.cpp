@@ -26,7 +26,7 @@ arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0),
 	auto it = std::find(gfxPath.begin(), gfxPath.end(), pathToLib);
 
 	loadGameLib(gamesPath[0]);
-	gfxLibIndex = (it - gfxPath.begin());
+	gfxLibIndex = (size_t)(it - gfxPath.begin());
 	menu = Menu(gamesPath, gfxPath, static_cast<size_t>(it - gfxPath.begin()));
 	
 	input[KB_2] = std::bind(&Core::prevGfxLib, this);

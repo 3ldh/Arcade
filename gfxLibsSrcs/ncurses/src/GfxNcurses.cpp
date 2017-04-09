@@ -77,7 +77,7 @@ arcade::GfxNcurses::~GfxNcurses() {
 int arcade::GfxNcurses::checkColor(size_t r, size_t g, size_t b) {
 	int i = 0;
 	for(auto it = colors.begin(); it < colors.end(); it++) {
-		if (it->rgb[0] == r && it->rgb[1] == g && it->rgb[2] == b)
+		if (it->rgb[0] == (int)r && it->rgb[1] == (int)g && it->rgb[2] == (int)b)
 			return (i);
 		i++;
 	}
@@ -118,11 +118,17 @@ bool arcade::GfxNcurses::doesSupportSound() const {
 	return false;
 }
 
-void arcade::GfxNcurses::loadSounds(const std::vector<std::pair<std::string, arcade::SoundType>> &sounds) {}
+void arcade::GfxNcurses::loadSounds(const std::vector<std::pair<std::string, arcade::SoundType>> &sounds) {
+	(void)sounds;
+}
 
-void arcade::GfxNcurses::soundControl(const arcade::Sound &sound) {}
+void arcade::GfxNcurses::soundControl(const arcade::Sound &sound) {
+	(void)sound;
+}
 
-void arcade::GfxNcurses::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites) {}
+void arcade::GfxNcurses::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites) {
+	(void)sprites;
+}
 
 void arcade::GfxNcurses::updateMap(const arcade::IMap &map) {
 	wclear(window);
@@ -155,6 +161,6 @@ void arcade::GfxNcurses::clear() {
 extern "C" arcade::GfxNcurses *getLib() {
 	return new arcade::GfxNcurses();
 }
-arcade::GfxNcurses::colors::colors(int r, int g, int b, arcade::Color color) : rgb({r, g, b}), color(color) {}
+arcade::GfxNcurses::colors::colors(int r, int g, int b, arcade::Color colore) : rgb{r, g, b}, color(colore) {}
 
 arcade::GfxNcurses::position::position(int x, int y) : x(x), y(y) {}

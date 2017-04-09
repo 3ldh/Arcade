@@ -46,7 +46,6 @@ namespace arcade {
 		t_bunny_window *window;
 		t_bunny_pixelarray *pixelarray;
 		
-		void fill(t_bunny_pixelarray &pPixelarray);
 		void drawSquare(t_bunny_accurate_position pos, t_bunny_accurate_position size, u_int32_t color);
 		t_color convertArcadeColorIntoLapinColor(Color c);
 		void tekpixel(t_bunny_pixelarray &pix, t_bunny_accurate_position pos, unsigned int col);
@@ -55,6 +54,7 @@ namespace arcade {
 		void pixel_cpy(t_bunny_pixelarray *out, t_bunny_pixelarray *fontpng, t_bunny_position new_pos,
 							   u_int32_t i);
 		void tektext(t_bunny_pixelarray *out, t_bunny_pixelarray *fontpng, const t_bunny_position *pos, const char *str, u_int32_t color);
+		void fillPixelarrayWithBlack();
 	};
 }
 

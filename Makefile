@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ##
 ## Started on  Wed Jan  4 12:28:45 2017 bougon_p
-## Last update Fri Apr 07 19:34:08 2017
+## Last update Sun Apr 09 17:23:21 2017 
 ##
 
 # USEFUL VARIABLES
@@ -58,28 +58,36 @@ else
 endif
 
 ncurse		:
-		@make re -C gfxLibsSrcs/ncurses
+		@make -j4 -C gfxLibsSrcs/ncurses || make re -C gfxLibsSrcs/ncurses
 
 sfml        :
-		@make re -C gfxLibsSrcs/sfml
+		@make -j4 -C gfxLibsSrcs/sfml || make re -C gfxLibsSrcs/sfml
 
 lapin       :
-		@make re -C gfxLibsSrcs/lapin
+		@make -j4 -C gfxLibsSrcs/lapin || make re -C gfxLibsSrcs/lapin
 
-gfx         : sfml lapin ncurse
+gfx         :
+		@make -j4 -C gfxLibsSrcs || make re -C gfxLibsSrcs
 
 snake       :
-		@make re -C gamesSrcs/snake
+		@make -j4 -C gamesSrcs/snake || make re -C gamesSrcs/snake
 
 solarfox    :
-		@make re -C gamesSrcs/solarFox
+		@make -j4 -C gamesSrcs/solarFox || make re -C gamesSrcs/solarFox
 
-games       : snake solarfox
+games       : 
+		@make -j4 -C gamesSrcs || make re -C gamesSrcs
 
-42          : all games gfx
+42          : $(NAME) games gfx
+
+42re	    : 42fclean 42
+
+42fclean:
+		@make fclean -C gamesSrcs
+		@make fclean -C gfxLibsSrcs
 
 all         : $(LIB)
-		@make -j 4 -s compile
+		@make -j4 -s compile
 
 clean       :
 		@$(RM) $(OBJS)

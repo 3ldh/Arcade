@@ -5,7 +5,7 @@
 ## Login   <mathieu.sauvau@epitech.eu>
 ##
 ## Started on  Fri Mar 17 15:12:36 2017 Sauvau Mathieu
-## Last update Mon Mar 20 13:39:30 2017
+## Last update Sun Apr 09 15:59:12 2017 
 ##
 
 # USEFUL VARIABLES
@@ -40,6 +40,7 @@ CXXFLAGS    =	-W -Wall -Wextra --std=c++14 \
                 -Iinclude/ \
 		        -std=c++11 \
 		        -fPIC \
+		        -DSFML_NO_DEPRECATED_WARNINGS
 
 ifeq ($(DEBUG), YES)
 CXXFLAGS	+= -g
@@ -51,7 +52,7 @@ CC          =	g++ $(CXXFLAGS)
 
 # PROJECT RULES
 
-$(NAME)		: 	createFolder $(OBJS)
+$(NAME)		: 	$(OBJS)
 			@$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 
 createFolder:
@@ -64,8 +65,8 @@ else
 		@$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 endif
 
-all         	:       $(LIB)
-		@make -j 4 -s compile
+all         	:       $(LIB) createFolder
+			@make -j 4 -s compile
 
 clean		:
 		@$(RM) $(OBJS)
