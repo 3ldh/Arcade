@@ -106,7 +106,6 @@ void arcade::SnakeGame::clearPlayerPos() {
 
 void arcade::SnakeGame::process() {
     if (timer.isTimeOverMilliseconds(accelerationRate)) {
-        spawnApple();
         clearPlayerPos();
         if (!snake.move(map)) {
             //TODO GameOver
@@ -116,6 +115,7 @@ void arcade::SnakeGame::process() {
         }
         takeApple(snake[0].getPosition().first, snake[0].getPosition().second);
         updatePlayerPos();
+        spawnApple();
         timer.start();
     }
 }
@@ -134,6 +134,7 @@ void arcade::SnakeGame::spawnApple() {
 
 void arcade::SnakeGame::takeApple(size_t x, size_t y) {
     if (x == applePos.first && y == applePos.second) {
+        if (appleTimer.timeElapsedSeconds() != 0)
         score += 10 / appleTimer.timeElapsedSeconds();
         apple = false;
         if (!snake.grow(map))
