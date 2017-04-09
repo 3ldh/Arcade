@@ -6,8 +6,6 @@
 #include "../include/GfxNcurses.hpp"
 
 arcade::GfxNcurses::GfxNcurses() {
-	
-	//TODO: check max size with map;
 	window = initscr();
 	curs_set(0);
 	start_color();
@@ -76,7 +74,7 @@ arcade::GfxNcurses::~GfxNcurses() {
 	endwin();
 }
 
-int arcade::GfxNcurses::checkColor(size_t r, size_t g, size_t b) {
+int arcade::GfxNcurses::checkColor(size_t r, size_t g, size_t b) const {
 	int i = 0;
 	for(auto it = colors.begin(); it < colors.end(); it++) {
 		if (it->rgb[0] == (int)r && it->rgb[1] == (int)g && it->rgb[2] == (int)b)
@@ -86,7 +84,7 @@ int arcade::GfxNcurses::checkColor(size_t r, size_t g, size_t b) {
 	return (7);
 }
 
-void arcade::GfxNcurses::printInColor(position_t pos, const char *str, arcade::Color Color) {
+void arcade::GfxNcurses::printInColor(position_t pos, const char *str, arcade::Color Color) const {
 	int color = checkColor(Color.r, Color.g, Color.b);
 	attron(COLOR_PAIR(color));
 	mvprintw(pos.y, pos.x, "%s", str);
@@ -94,7 +92,7 @@ void arcade::GfxNcurses::printInColor(position_t pos, const char *str, arcade::C
 	mvcur(0, 0, 0, 0);
 }
 
-void arcade::GfxNcurses::drawCube(position_t pos, position_t size, arcade::Color color) {
+void arcade::GfxNcurses::drawCube(position_t pos, position_t size, arcade::Color color) const {
 	position_t tmpPos(pos.x, pos.y);
 	
 	for(tmpPos.x = pos.x; tmpPos.x < pos.x + size.x; tmpPos.x++) {
@@ -157,8 +155,7 @@ void arcade::GfxNcurses::display() {
 	refresh();
 }
 
-void arcade::GfxNcurses::clear() {
-}
+void arcade::GfxNcurses::clear() {}
 
 extern "C" arcade::GfxNcurses *getLib() {
 	return new arcade::GfxNcurses();

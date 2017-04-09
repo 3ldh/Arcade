@@ -159,7 +159,7 @@ void arcade::GfxLapin::drawSquare(t_bunny_accurate_position pos, t_bunny_accurat
 	}
 }
 
-t_color arcade::GfxLapin::convertArcadeColorIntoLapinColor(arcade::Color c) {
+t_color arcade::GfxLapin::convertArcadeColorIntoLapinColor(arcade::Color c) const {
 	t_color color;
 	color.argb[ALPHA_CMP] = c.a;
 	color.argb[RED_CMP] = c.r;

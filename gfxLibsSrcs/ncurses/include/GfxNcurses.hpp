@@ -42,10 +42,9 @@ namespace arcade {
 		std::map<int, arcade::KeyboardKey> keyboardMap;
 		size_t windowHeight;
 		size_t windowWidth;
-		void drawCube(position_t pos, position_t size, arcade::Color color);
-		int checkColor(size_t r, size_t g, size_t b);
-		void makeASquareOutOfPos(position_t &position);
-		void printInColor(position_t pos, const char *str, Color color);
+		void drawCube(position_t pos, position_t size, arcade::Color color) const;
+		int checkColor(size_t r, size_t g, size_t b) const;
+		void printInColor(position_t pos, const char *str, Color color) const;
 	};
 }
 

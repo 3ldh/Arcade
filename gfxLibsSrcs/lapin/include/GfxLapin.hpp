@@ -47,10 +47,9 @@ namespace arcade {
 		t_bunny_pixelarray *pixelarray;
 		
 		void drawSquare(t_bunny_accurate_position pos, t_bunny_accurate_position size, u_int32_t color);
-		t_color convertArcadeColorIntoLapinColor(Color c);
+		t_color convertArcadeColorIntoLapinColor(Color c) const;
 		void tekpixel(t_bunny_pixelarray &pix, t_bunny_accurate_position pos, unsigned int col);
 		void tekpixel(t_bunny_pixelarray &array, t_bunny_position pos, u_int32_t);
-		int test_color(t_color *color);
 		void pixel_cpy(t_bunny_pixelarray *out, t_bunny_pixelarray *fontpng, t_bunny_position new_pos,
 							   u_int32_t i);
 		void tektext(t_bunny_pixelarray *out, t_bunny_pixelarray *fontpng, const t_bunny_position *pos, const char *str, u_int32_t color);
