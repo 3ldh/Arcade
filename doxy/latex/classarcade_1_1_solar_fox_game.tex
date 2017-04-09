@@ -1,0 +1,251 @@
+\hypertarget{classarcade_1_1_solar_fox_game}{}\section{arcade\+:\+:Solar\+Fox\+Game Class Reference}
+\label{classarcade_1_1_solar_fox_game}\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+
+
+{\ttfamily \#include $<$Solar\+Fox\+Game.\+hpp$>$}
+
+Inheritance diagram for arcade\+:\+:Solar\+Fox\+Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classarcade_1_1_solar_fox_game}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classarcade_1_1_solar_fox_game_ab392eb5aaea9402b947efae9e08147dc}{$\sim$\+Solar\+Fox\+Game} ()
+\item 
+\hyperlink{classarcade_1_1_solar_fox_game_a8ff7ea5338af65ad2b0f6f038b89b697}{Solar\+Fox\+Game} ()
+\item 
+\hyperlink{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7}{Game\+State} \hyperlink{classarcade_1_1_solar_fox_game_a71122936c223e672058280755f24a98a}{get\+Game\+State} () const override
+\begin{DoxyCompactList}\small\item\em Ask the current game state to the game. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_solar_fox_game_a12b4c225cad3913bb441a1b208c84bd7}{notify\+Event} (std\+::vector$<$ \hyperlink{structarcade_1_1_event}{Event} $>$ \&\&events) override
+\begin{DoxyCompactList}\small\item\em Send events (keyboard, mouse, etc) to the game. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_solar_fox_game_ada83eb3dae2a14130fca4376f9274e5a}{notify\+Network} (std\+::vector$<$ \hyperlink{structarcade_1_1_network_packet}{Network\+Packet} $>$ \&\&events) override
+\begin{DoxyCompactList}\small\item\em Send network packets to the game. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{structarcade_1_1_network_packet}{Network\+Packet} $>$ \hyperlink{classarcade_1_1_solar_fox_game_a54b56444f83661b4330de868024671d6}{get\+Network\+To\+Send} () override
+\begin{DoxyCompactList}\small\item\em Get the network packet to send from the game to the server. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_solar_fox_game_a12ff0eeb750910455e2dcc1954cdac86}{process} () override
+\begin{DoxyCompactList}\small\item\em Make the game process a game loop. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classarcade_1_1_i_sprite}{I\+Sprite} $>$ $>$ \hyperlink{classarcade_1_1_solar_fox_game_afa9d714001212c869f616bd265dd9371}{get\+Sprites\+To\+Load} () const override
+\begin{DoxyCompactList}\small\item\em get the list of sprites to load for this game \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ std\+::string, \hyperlink{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5}{Sound\+Type} $>$ $>$ \hyperlink{classarcade_1_1_solar_fox_game_aed75a8fdc63d9162359ada5332b44331}{get\+Sounds\+To\+Load} () const override
+\begin{DoxyCompactList}\small\item\em get the list of sound files to load for this game \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{structarcade_1_1_sound}{Sound} $>$ \hyperlink{classarcade_1_1_solar_fox_game_a96f41df94a733d0c06f8a7d48e620d58}{get\+Sounds\+To\+Play} () override
+\begin{DoxyCompactList}\small\item\em Get the sounds to play You should return by std\+::move to not copy your vector and to clear it at the same time. \end{DoxyCompactList}\item 
+const \hyperlink{classarcade_1_1_i_map}{I\+Map} \& \hyperlink{classarcade_1_1_solar_fox_game_a8bb422466d4367320e90c6f9c6b754ed}{get\+Current\+Map} () const override
+\begin{DoxyCompactList}\small\item\em Get the current version of the map. \end{DoxyCompactList}\item 
+const \hyperlink{classarcade_1_1_map}{Map} \& \hyperlink{classarcade_1_1_solar_fox_game_a89c8912a012a8283f8509e243c4d5b0b}{get\+Map} () const
+\item 
+\hyperlink{classarcade_1_1_i_g_u_i}{I\+G\+UI} \& \hyperlink{classarcade_1_1_solar_fox_game_aba8a5d93b17231c5d2cbbb51cc1d05b9}{get\+G\+UI} () override
+\begin{DoxyCompactList}\small\item\em Get the current version of the \hyperlink{classarcade_1_1_g_u_i}{G\+UI} to display. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_solar_fox_game_a6e846bc8d6fbd3752c5342bfb682e9cb}{set\+Acceleration\+Rate} (int acceleration\+Rate)
+\item 
+\hyperlink{classarcade_1_1_spaceship}{Spaceship} \& \hyperlink{classarcade_1_1_solar_fox_game_a75c60a8ae25175073200318d3d2072fd}{get\+Player} ()
+\item 
+void \hyperlink{classarcade_1_1_solar_fox_game_a60c1aad9687dea93c752717672ae31fc}{restart} ()
+\item 
+bool \hyperlink{classarcade_1_1_solar_fox_game_a4142a002e8b141216c67638ba7a118d3}{has\+Network} () const override
+\begin{DoxyCompactList}\small\item\em Does this game support network ? \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_ab392eb5aaea9402b947efae9e08147dc}\label{classarcade_1_1_solar_fox_game_ab392eb5aaea9402b947efae9e08147dc}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!````~Solar\+Fox\+Game@{$\sim$\+Solar\+Fox\+Game}}
+\index{````~Solar\+Fox\+Game@{$\sim$\+Solar\+Fox\+Game}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{$\sim$\+Solar\+Fox\+Game()}{~SolarFoxGame()}}
+{\footnotesize\ttfamily arcade\+::\+Solar\+Fox\+Game\+::$\sim$\+Solar\+Fox\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_a8ff7ea5338af65ad2b0f6f038b89b697}\label{classarcade_1_1_solar_fox_game_a8ff7ea5338af65ad2b0f6f038b89b697}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!Solar\+Fox\+Game@{Solar\+Fox\+Game}}
+\index{Solar\+Fox\+Game@{Solar\+Fox\+Game}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{Solar\+Fox\+Game()}{SolarFoxGame()}}
+{\footnotesize\ttfamily arcade\+::\+Solar\+Fox\+Game\+::\+Solar\+Fox\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_a8bb422466d4367320e90c6f9c6b754ed}\label{classarcade_1_1_solar_fox_game_a8bb422466d4367320e90c6f9c6b754ed}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!get\+Current\+Map@{get\+Current\+Map}}
+\index{get\+Current\+Map@{get\+Current\+Map}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{get\+Current\+Map()}{getCurrentMap()}}
+{\footnotesize\ttfamily const \hyperlink{classarcade_1_1_i_map}{arcade\+::\+I\+Map} \& arcade\+::\+Solar\+Fox\+Game\+::get\+Current\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the current version of the map. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_a2e1791071bf65ee35e249e409ee29044}{arcade\+::\+I\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_a71122936c223e672058280755f24a98a}\label{classarcade_1_1_solar_fox_game_a71122936c223e672058280755f24a98a}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!get\+Game\+State@{get\+Game\+State}}
+\index{get\+Game\+State@{get\+Game\+State}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{get\+Game\+State()}{getGameState()}}
+{\footnotesize\ttfamily \hyperlink{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7}{arcade\+::\+Game\+State} arcade\+::\+Solar\+Fox\+Game\+::get\+Game\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Ask the current game state to the game. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_a75083f0465c0ccbdbbb38c689b4a694c}{arcade\+::\+I\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_aba8a5d93b17231c5d2cbbb51cc1d05b9}\label{classarcade_1_1_solar_fox_game_aba8a5d93b17231c5d2cbbb51cc1d05b9}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!get\+G\+UI@{get\+G\+UI}}
+\index{get\+G\+UI@{get\+G\+UI}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{get\+G\+U\+I()}{getGUI()}}
+{\footnotesize\ttfamily \hyperlink{classarcade_1_1_i_g_u_i}{arcade\+::\+I\+G\+UI} \& arcade\+::\+Solar\+Fox\+Game\+::get\+G\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the current version of the \hyperlink{classarcade_1_1_g_u_i}{G\+UI} to display. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_abe849a6ed370a18de51bc8cb7a2329ba}{arcade\+::\+I\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_a89c8912a012a8283f8509e243c4d5b0b}\label{classarcade_1_1_solar_fox_game_a89c8912a012a8283f8509e243c4d5b0b}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!get\+Map@{get\+Map}}
+\index{get\+Map@{get\+Map}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{get\+Map()}{getMap()}}
+{\footnotesize\ttfamily const \hyperlink{classarcade_1_1_map}{arcade\+::\+Map} \& arcade\+::\+Solar\+Fox\+Game\+::get\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_a54b56444f83661b4330de868024671d6}\label{classarcade_1_1_solar_fox_game_a54b56444f83661b4330de868024671d6}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!get\+Network\+To\+Send@{get\+Network\+To\+Send}}
+\index{get\+Network\+To\+Send@{get\+Network\+To\+Send}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{get\+Network\+To\+Send()}{getNetworkToSend()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{structarcade_1_1_network_packet}{arcade\+::\+Network\+Packet} $>$ arcade\+::\+Solar\+Fox\+Game\+::get\+Network\+To\+Send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the network packet to send from the game to the server. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_a5aa80dfdb3c1881fbc749e3d53efc6f8}{arcade\+::\+I\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_a75c60a8ae25175073200318d3d2072fd}\label{classarcade_1_1_solar_fox_game_a75c60a8ae25175073200318d3d2072fd}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!get\+Player@{get\+Player}}
+\index{get\+Player@{get\+Player}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{get\+Player()}{getPlayer()}}
+{\footnotesize\ttfamily \hyperlink{classarcade_1_1_spaceship}{arcade\+::\+Spaceship} \& arcade\+::\+Solar\+Fox\+Game\+::get\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_aed75a8fdc63d9162359ada5332b44331}\label{classarcade_1_1_solar_fox_game_aed75a8fdc63d9162359ada5332b44331}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!get\+Sounds\+To\+Load@{get\+Sounds\+To\+Load}}
+\index{get\+Sounds\+To\+Load@{get\+Sounds\+To\+Load}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{get\+Sounds\+To\+Load()}{getSoundsToLoad()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ std\+::string, \hyperlink{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5}{arcade\+::\+Sound\+Type} $>$ $>$ arcade\+::\+Solar\+Fox\+Game\+::get\+Sounds\+To\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get the list of sound files to load for this game 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_a0b66cd9ef3b5cd0dff95debb7e4f594e}{arcade\+::\+I\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_a96f41df94a733d0c06f8a7d48e620d58}\label{classarcade_1_1_solar_fox_game_a96f41df94a733d0c06f8a7d48e620d58}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!get\+Sounds\+To\+Play@{get\+Sounds\+To\+Play}}
+\index{get\+Sounds\+To\+Play@{get\+Sounds\+To\+Play}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{get\+Sounds\+To\+Play()}{getSoundsToPlay()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{structarcade_1_1_sound}{arcade\+::\+Sound} $>$ arcade\+::\+Solar\+Fox\+Game\+::get\+Sounds\+To\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the sounds to play You should return by std\+::move to not copy your vector and to clear it at the same time. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_a88b3c7efb13780cdbbdf5b879a18ed4d}{arcade\+::\+I\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_afa9d714001212c869f616bd265dd9371}\label{classarcade_1_1_solar_fox_game_afa9d714001212c869f616bd265dd9371}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!get\+Sprites\+To\+Load@{get\+Sprites\+To\+Load}}
+\index{get\+Sprites\+To\+Load@{get\+Sprites\+To\+Load}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{get\+Sprites\+To\+Load()}{getSpritesToLoad()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classarcade_1_1_i_sprite}{arcade\+::\+I\+Sprite} $>$ $>$ arcade\+::\+Solar\+Fox\+Game\+::get\+Sprites\+To\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get the list of sprites to load for this game 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_a2d0dc7c78a68c4dd0359911775993f68}{arcade\+::\+I\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_a4142a002e8b141216c67638ba7a118d3}\label{classarcade_1_1_solar_fox_game_a4142a002e8b141216c67638ba7a118d3}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!has\+Network@{has\+Network}}
+\index{has\+Network@{has\+Network}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{has\+Network()}{hasNetwork()}}
+{\footnotesize\ttfamily bool arcade\+::\+Solar\+Fox\+Game\+::has\+Network (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Does this game support network ? 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_ae66bf253e252f43ce17d9e94f08a1d1c}{arcade\+::\+I\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_a12b4c225cad3913bb441a1b208c84bd7}\label{classarcade_1_1_solar_fox_game_a12b4c225cad3913bb441a1b208c84bd7}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!notify\+Event@{notify\+Event}}
+\index{notify\+Event@{notify\+Event}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{notify\+Event()}{notifyEvent()}}
+{\footnotesize\ttfamily void arcade\+::\+Solar\+Fox\+Game\+::notify\+Event (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{structarcade_1_1_event}{Event} $>$ \&\&}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Send events (keyboard, mouse, etc) to the game. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_a37d164b4052fa3c28256fb0bf0002876}{arcade\+::\+I\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_ada83eb3dae2a14130fca4376f9274e5a}\label{classarcade_1_1_solar_fox_game_ada83eb3dae2a14130fca4376f9274e5a}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!notify\+Network@{notify\+Network}}
+\index{notify\+Network@{notify\+Network}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{notify\+Network()}{notifyNetwork()}}
+{\footnotesize\ttfamily void arcade\+::\+Solar\+Fox\+Game\+::notify\+Network (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{structarcade_1_1_network_packet}{Network\+Packet} $>$ \&\&}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Send network packets to the game. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_aaf375290947abf3db32d966facbfacf3}{arcade\+::\+I\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_a12ff0eeb750910455e2dcc1954cdac86}\label{classarcade_1_1_solar_fox_game_a12ff0eeb750910455e2dcc1954cdac86}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!process@{process}}
+\index{process@{process}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily void arcade\+::\+Solar\+Fox\+Game\+::process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Make the game process a game loop. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_af0111a41083f38a1af1a7f94287e6e77}{arcade\+::\+I\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_a60c1aad9687dea93c752717672ae31fc}\label{classarcade_1_1_solar_fox_game_a60c1aad9687dea93c752717672ae31fc}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!restart@{restart}}
+\index{restart@{restart}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{restart()}{restart()}}
+{\footnotesize\ttfamily void arcade\+::\+Solar\+Fox\+Game\+::restart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_solar_fox_game_a6e846bc8d6fbd3752c5342bfb682e9cb}\label{classarcade_1_1_solar_fox_game_a6e846bc8d6fbd3752c5342bfb682e9cb}} 
+\index{arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}!set\+Acceleration\+Rate@{set\+Acceleration\+Rate}}
+\index{set\+Acceleration\+Rate@{set\+Acceleration\+Rate}!arcade\+::\+Solar\+Fox\+Game@{arcade\+::\+Solar\+Fox\+Game}}
+\subsubsection{\texorpdfstring{set\+Acceleration\+Rate()}{setAccelerationRate()}}
+{\footnotesize\ttfamily void arcade\+::\+Solar\+Fox\+Game\+::set\+Acceleration\+Rate (\begin{DoxyParamCaption}\item[{int}]{acceleration\+Rate }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+games\+Srcs/solar\+Fox/\hyperlink{_solar_fox_game_8hpp}{Solar\+Fox\+Game.\+hpp}\item 
+games\+Srcs/solar\+Fox/\hyperlink{_solar_fox_game_8cpp}{Solar\+Fox\+Game.\+cpp}\end{DoxyCompactItemize}

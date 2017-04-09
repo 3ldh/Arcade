@@ -1,0 +1,94 @@
+\hypertarget{classarcade_1_1_i_sprite}{}\section{arcade\+:\+:I\+Sprite Class Reference}
+\label{classarcade_1_1_i_sprite}\index{arcade\+::\+I\+Sprite@{arcade\+::\+I\+Sprite}}
+
+
+Interface to use in order to generate the sprite loading list.  
+
+
+
+
+{\ttfamily \#include $<$I\+Sprite.\+hpp$>$}
+
+Inheritance diagram for arcade\+:\+:I\+Sprite\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classarcade_1_1_i_sprite}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classarcade_1_1_i_sprite_aa52abc5d79f3afa9ae82696d3bf9d3d3}{$\sim$\+I\+Sprite} ()
+\begin{DoxyCompactList}\small\item\em virtual destructor \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{classarcade_1_1_i_sprite_aa417a93a06968e42db16f8cbd2680c89}{sprites\+Count} () const =0
+\begin{DoxyCompactList}\small\item\em returns the numbers of sprites \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classarcade_1_1_i_sprite_ad47b6c128695746cd59e4b87435a7f09}{get\+Graphic\+Path} (size\+\_\+t pos) const =0
+\begin{DoxyCompactList}\small\item\em generates on-\/the-\/fly the path to the sprite at position pos to load \end{DoxyCompactList}\item 
+virtual char \hyperlink{classarcade_1_1_i_sprite_aa3ab1b0c35f865d38e82b6fb0abce20a}{get\+Ascii} (size\+\_\+t pos) const =0
+\begin{DoxyCompactList}\small\item\em returns the ascii character at position pos from the animation sequence \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface to use in order to generate the sprite loading list. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classarcade_1_1_i_sprite_aa52abc5d79f3afa9ae82696d3bf9d3d3}\label{classarcade_1_1_i_sprite_aa52abc5d79f3afa9ae82696d3bf9d3d3}} 
+\index{arcade\+::\+I\+Sprite@{arcade\+::\+I\+Sprite}!````~I\+Sprite@{$\sim$\+I\+Sprite}}
+\index{````~I\+Sprite@{$\sim$\+I\+Sprite}!arcade\+::\+I\+Sprite@{arcade\+::\+I\+Sprite}}
+\subsubsection{\texorpdfstring{$\sim$\+I\+Sprite()}{~ISprite()}}
+{\footnotesize\ttfamily arcade\+::\+I\+Sprite\+::$\sim$\+I\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+virtual destructor 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1_i_sprite_aa3ab1b0c35f865d38e82b6fb0abce20a}\label{classarcade_1_1_i_sprite_aa3ab1b0c35f865d38e82b6fb0abce20a}} 
+\index{arcade\+::\+I\+Sprite@{arcade\+::\+I\+Sprite}!get\+Ascii@{get\+Ascii}}
+\index{get\+Ascii@{get\+Ascii}!arcade\+::\+I\+Sprite@{arcade\+::\+I\+Sprite}}
+\subsubsection{\texorpdfstring{get\+Ascii()}{getAscii()}}
+{\footnotesize\ttfamily std\+::string const  \& arcade\+::\+I\+Sprite\+::get\+Ascii (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+returns the ascii character at position pos from the animation sequence 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_sprite_a168a7f537e0fc6d2d4596cab449fde2c}{arcade\+::\+Sprite}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_sprite_ad47b6c128695746cd59e4b87435a7f09}\label{classarcade_1_1_i_sprite_ad47b6c128695746cd59e4b87435a7f09}} 
+\index{arcade\+::\+I\+Sprite@{arcade\+::\+I\+Sprite}!get\+Graphic\+Path@{get\+Graphic\+Path}}
+\index{get\+Graphic\+Path@{get\+Graphic\+Path}!arcade\+::\+I\+Sprite@{arcade\+::\+I\+Sprite}}
+\subsubsection{\texorpdfstring{get\+Graphic\+Path()}{getGraphicPath()}}
+{\footnotesize\ttfamily std\+::string arcade\+::\+I\+Sprite\+::get\+Graphic\+Path (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+generates on-\/the-\/fly the path to the sprite at position pos to load 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_sprite_ad8f344724f99ad369c8c552274fface7}{arcade\+::\+Sprite}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_sprite_aa417a93a06968e42db16f8cbd2680c89}\label{classarcade_1_1_i_sprite_aa417a93a06968e42db16f8cbd2680c89}} 
+\index{arcade\+::\+I\+Sprite@{arcade\+::\+I\+Sprite}!sprites\+Count@{sprites\+Count}}
+\index{sprites\+Count@{sprites\+Count}!arcade\+::\+I\+Sprite@{arcade\+::\+I\+Sprite}}
+\subsubsection{\texorpdfstring{sprites\+Count()}{spritesCount()}}
+{\footnotesize\ttfamily size\+\_\+t arcade\+::\+I\+Sprite\+::sprites\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+returns the numbers of sprites 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_sprite_a99cc47358f32492ea89659b6b92f4d4c}{arcade\+::\+Sprite}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+arcade\+Interfaces/\hyperlink{_i_sprite_8hpp}{I\+Sprite.\+hpp}\end{DoxyCompactItemize}

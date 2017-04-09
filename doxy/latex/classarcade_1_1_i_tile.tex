@@ -1,0 +1,144 @@
+\hypertarget{classarcade_1_1_i_tile}{}\section{arcade\+:\+:I\+Tile Class Reference}
+\label{classarcade_1_1_i_tile}\index{arcade\+::\+I\+Tile@{arcade\+::\+I\+Tile}}
+
+
+Interface representing a tile.  
+
+
+
+
+{\ttfamily \#include $<$I\+Tile.\+hpp$>$}
+
+Inheritance diagram for arcade\+:\+:I\+Tile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classarcade_1_1_i_tile}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classarcade_1_1_i_tile_a45fb2120945fbddafb4b963d969a5b80}{$\sim$\+I\+Tile} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor of the interface. \end{DoxyCompactList}\item 
+virtual \hyperlink{unionarcade_1_1_color}{Color} \hyperlink{classarcade_1_1_i_tile_adb20cb553bc2ce17dc23125eb70b8329}{get\+Color} () const =0
+\begin{DoxyCompactList}\small\item\em Get the color of the tile. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classarcade_1_1_i_tile_ab2d6a5f8d4cfc6c606b8ad13d8dd88a4}{has\+Sprite} () const =0
+\begin{DoxyCompactList}\small\item\em Returns if the \hyperlink{classarcade_1_1_tile}{Tile} has a sprite affected, if not, use \hyperlink{classarcade_1_1_i_tile_adb20cb553bc2ce17dc23125eb70b8329}{get\+Color()} \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{classarcade_1_1_i_tile_a4c09e2ac12d75fe12e3d4d1ca4e08150}{get\+Sprite\+Id} () const =0
+\begin{DoxyCompactList}\small\item\em Get the sprite ID (0 if none) \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{classarcade_1_1_i_tile_a3e5cec4407ef6afb7e10d82fb1c93f5e}{get\+Sprite\+Pos} () const =0
+\begin{DoxyCompactList}\small\item\em Get the sprite position in it\textquotesingle{}s animation. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classarcade_1_1_i_tile_aaa83bd96759c2c9f369be4b00b8a72d2}{get\+ShiftX} () const =0
+\begin{DoxyCompactList}\small\item\em Get the tile position shift on x. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classarcade_1_1_i_tile_af7ca3cfb598eda00ac5b5f15f096e32f}{get\+ShiftY} () const =0
+\begin{DoxyCompactList}\small\item\em Get the tile position shift on y. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface representing a tile. 
+
+A tile is a \char`\"{}block\char`\"{} of the map. It can be a wall, a empty block, a player, etc. It can be described with a type, a color and/or a sprite. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classarcade_1_1_i_tile_a45fb2120945fbddafb4b963d969a5b80}\label{classarcade_1_1_i_tile_a45fb2120945fbddafb4b963d969a5b80}} 
+\index{arcade\+::\+I\+Tile@{arcade\+::\+I\+Tile}!````~I\+Tile@{$\sim$\+I\+Tile}}
+\index{````~I\+Tile@{$\sim$\+I\+Tile}!arcade\+::\+I\+Tile@{arcade\+::\+I\+Tile}}
+\subsubsection{\texorpdfstring{$\sim$\+I\+Tile()}{~ITile()}}
+{\footnotesize\ttfamily arcade\+::\+I\+Tile\+::$\sim$\+I\+Tile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual destructor of the interface. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1_i_tile_adb20cb553bc2ce17dc23125eb70b8329}\label{classarcade_1_1_i_tile_adb20cb553bc2ce17dc23125eb70b8329}} 
+\index{arcade\+::\+I\+Tile@{arcade\+::\+I\+Tile}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!arcade\+::\+I\+Tile@{arcade\+::\+I\+Tile}}
+\subsubsection{\texorpdfstring{get\+Color()}{getColor()}}
+{\footnotesize\ttfamily \hyperlink{unionarcade_1_1_color}{Color} arcade\+::\+I\+Tile\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the color of the tile. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_tile_a33f158dcb0b991ca565562a41ede70ba}{arcade\+::\+Tile}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_tile_aaa83bd96759c2c9f369be4b00b8a72d2}\label{classarcade_1_1_i_tile_aaa83bd96759c2c9f369be4b00b8a72d2}} 
+\index{arcade\+::\+I\+Tile@{arcade\+::\+I\+Tile}!get\+ShiftX@{get\+ShiftX}}
+\index{get\+ShiftX@{get\+ShiftX}!arcade\+::\+I\+Tile@{arcade\+::\+I\+Tile}}
+\subsubsection{\texorpdfstring{get\+Shift\+X()}{getShiftX()}}
+{\footnotesize\ttfamily double arcade\+::\+I\+Tile\+::get\+ShiftX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the tile position shift on x. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_tile_a0db817dd3b7e0872e90d703bfea16005}{arcade\+::\+Tile}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_tile_af7ca3cfb598eda00ac5b5f15f096e32f}\label{classarcade_1_1_i_tile_af7ca3cfb598eda00ac5b5f15f096e32f}} 
+\index{arcade\+::\+I\+Tile@{arcade\+::\+I\+Tile}!get\+ShiftY@{get\+ShiftY}}
+\index{get\+ShiftY@{get\+ShiftY}!arcade\+::\+I\+Tile@{arcade\+::\+I\+Tile}}
+\subsubsection{\texorpdfstring{get\+Shift\+Y()}{getShiftY()}}
+{\footnotesize\ttfamily size\+\_\+t arcade\+::\+I\+Tile\+::get\+ShiftY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the tile position shift on y. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_tile_aa28fe418563d90bd65e1c58510d28eef}{arcade\+::\+Tile}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_tile_a4c09e2ac12d75fe12e3d4d1ca4e08150}\label{classarcade_1_1_i_tile_a4c09e2ac12d75fe12e3d4d1ca4e08150}} 
+\index{arcade\+::\+I\+Tile@{arcade\+::\+I\+Tile}!get\+Sprite\+Id@{get\+Sprite\+Id}}
+\index{get\+Sprite\+Id@{get\+Sprite\+Id}!arcade\+::\+I\+Tile@{arcade\+::\+I\+Tile}}
+\subsubsection{\texorpdfstring{get\+Sprite\+Id()}{getSpriteId()}}
+{\footnotesize\ttfamily size\+\_\+t arcade\+::\+I\+Tile\+::get\+Sprite\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the sprite ID (0 if none) 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_tile_afe2b3e7b4a6880b03772c240a2122d16}{arcade\+::\+Tile}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_tile_a3e5cec4407ef6afb7e10d82fb1c93f5e}\label{classarcade_1_1_i_tile_a3e5cec4407ef6afb7e10d82fb1c93f5e}} 
+\index{arcade\+::\+I\+Tile@{arcade\+::\+I\+Tile}!get\+Sprite\+Pos@{get\+Sprite\+Pos}}
+\index{get\+Sprite\+Pos@{get\+Sprite\+Pos}!arcade\+::\+I\+Tile@{arcade\+::\+I\+Tile}}
+\subsubsection{\texorpdfstring{get\+Sprite\+Pos()}{getSpritePos()}}
+{\footnotesize\ttfamily size\+\_\+t arcade\+::\+I\+Tile\+::get\+Sprite\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the sprite position in it\textquotesingle{}s animation. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_tile_a0dfe91e5896b8cfc3afac522d901be0a}{arcade\+::\+Tile}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_tile_ab2d6a5f8d4cfc6c606b8ad13d8dd88a4}\label{classarcade_1_1_i_tile_ab2d6a5f8d4cfc6c606b8ad13d8dd88a4}} 
+\index{arcade\+::\+I\+Tile@{arcade\+::\+I\+Tile}!has\+Sprite@{has\+Sprite}}
+\index{has\+Sprite@{has\+Sprite}!arcade\+::\+I\+Tile@{arcade\+::\+I\+Tile}}
+\subsubsection{\texorpdfstring{has\+Sprite()}{hasSprite()}}
+{\footnotesize\ttfamily bool arcade\+::\+I\+Tile\+::has\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns if the \hyperlink{classarcade_1_1_tile}{Tile} has a sprite affected, if not, use \hyperlink{classarcade_1_1_i_tile_adb20cb553bc2ce17dc23125eb70b8329}{get\+Color()} 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_tile_abb9bfea961e713a36213627d0787aae2}{arcade\+::\+Tile}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+arcade\+Interfaces/\hyperlink{_i_tile_8hpp}{I\+Tile.\+hpp}\end{DoxyCompactItemize}

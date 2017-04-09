@@ -1,0 +1,104 @@
+\hypertarget{classarcade_1_1_spaceship_enemy}{}\section{arcade\+:\+:Spaceship\+Enemy Class Reference}
+\label{classarcade_1_1_spaceship_enemy}\index{arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}}
+
+
+{\ttfamily \#include $<$Spaceship\+Enemy.\+hpp$>$}
+
+Inheritance diagram for arcade\+:\+:Spaceship\+Enemy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classarcade_1_1_spaceship_enemy}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classarcade_1_1_spaceship_enemy_a7fbb57ede71bf8dde9af2bffc6239bc4}{$\sim$\+Spaceship\+Enemy} ()
+\item 
+\hyperlink{classarcade_1_1_spaceship_enemy_a1eb27431e53257166ff2c90c8dcf1bc4}{Spaceship\+Enemy} (size\+\_\+t \hyperlink{include_2_protocol_8hpp_a4dde988b1b2adba65ae3efa69f65d960}{x}, size\+\_\+t \hyperlink{include_2_protocol_8hpp_ab0580f504a7428539be299fa71565f30}{y}, int \hyperlink{classarcade_1_1_spaceship_a414281f267135317527aeb86e170d892}{shooting\+Range})
+\item 
+bool \hyperlink{classarcade_1_1_spaceship_enemy_a62c4ee2725fd8d7496d433bb2ea86603}{move} (const \hyperlink{classarcade_1_1_map}{Map} \&map)
+\item 
+std\+::pair$<$ int, int $>$ \hyperlink{classarcade_1_1_spaceship_enemy_a6a6b1e32ef2618727bfe01e828a8e4e8}{pos\+Diff\+With\+Player} (\hyperlink{classarcade_1_1_spaceship}{Spaceship} const \&player)
+\item 
+void \hyperlink{classarcade_1_1_spaceship_enemy_a5b01b4ab0dc3602a1a6f2d93aba67cdd}{choose\+To\+Shoot} (const \hyperlink{classarcade_1_1_map}{Map} \&map, \hyperlink{classarcade_1_1_spaceship}{Spaceship} const \&player)
+\item 
+bool \hyperlink{classarcade_1_1_spaceship_enemy_a19e3a1d5430307540fba8a649eb06007}{can\+Move} (const \hyperlink{classarcade_1_1_map}{Map} \&map)
+\item 
+void \hyperlink{classarcade_1_1_spaceship_enemy_ad4963ac1857b42c2497774f77a6d0d05}{shoot} (const \hyperlink{classarcade_1_1_map}{Map} \&map)
+\item 
+virtual void \hyperlink{classarcade_1_1_spaceship_enemy_a76ad6511c8dba9850fb70a1633f8cc87}{clear\+Map\+For\+Projectile} (\hyperlink{classarcade_1_1_map}{Map} \&map)
+\item 
+virtual void \hyperlink{classarcade_1_1_spaceship_enemy_acdf6714050c6622c4f67473ec1866404}{update\+Map\+For\+Projectile} (\hyperlink{classarcade_1_1_map}{Map} \&map)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classarcade_1_1_spaceship_enemy_a7fbb57ede71bf8dde9af2bffc6239bc4}\label{classarcade_1_1_spaceship_enemy_a7fbb57ede71bf8dde9af2bffc6239bc4}} 
+\index{arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}!````~Spaceship\+Enemy@{$\sim$\+Spaceship\+Enemy}}
+\index{````~Spaceship\+Enemy@{$\sim$\+Spaceship\+Enemy}!arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}}
+\subsubsection{\texorpdfstring{$\sim$\+Spaceship\+Enemy()}{~SpaceshipEnemy()}}
+{\footnotesize\ttfamily arcade\+::\+Spaceship\+Enemy\+::$\sim$\+Spaceship\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classarcade_1_1_spaceship_enemy_a1eb27431e53257166ff2c90c8dcf1bc4}\label{classarcade_1_1_spaceship_enemy_a1eb27431e53257166ff2c90c8dcf1bc4}} 
+\index{arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}!Spaceship\+Enemy@{Spaceship\+Enemy}}
+\index{Spaceship\+Enemy@{Spaceship\+Enemy}!arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}}
+\subsubsection{\texorpdfstring{Spaceship\+Enemy()}{SpaceshipEnemy()}}
+{\footnotesize\ttfamily arcade\+::\+Spaceship\+Enemy\+::\+Spaceship\+Enemy (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{x,  }\item[{size\+\_\+t}]{y,  }\item[{int}]{shooting\+Range }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1_spaceship_enemy_a19e3a1d5430307540fba8a649eb06007}\label{classarcade_1_1_spaceship_enemy_a19e3a1d5430307540fba8a649eb06007}} 
+\index{arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}!can\+Move@{can\+Move}}
+\index{can\+Move@{can\+Move}!arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}}
+\subsubsection{\texorpdfstring{can\+Move()}{canMove()}}
+{\footnotesize\ttfamily bool arcade\+::\+Spaceship\+Enemy\+::can\+Move (\begin{DoxyParamCaption}\item[{const \hyperlink{classarcade_1_1_map}{Map} \&}]{map }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_spaceship_enemy_a5b01b4ab0dc3602a1a6f2d93aba67cdd}\label{classarcade_1_1_spaceship_enemy_a5b01b4ab0dc3602a1a6f2d93aba67cdd}} 
+\index{arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}!choose\+To\+Shoot@{choose\+To\+Shoot}}
+\index{choose\+To\+Shoot@{choose\+To\+Shoot}!arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}}
+\subsubsection{\texorpdfstring{choose\+To\+Shoot()}{chooseToShoot()}}
+{\footnotesize\ttfamily void arcade\+::\+Spaceship\+Enemy\+::choose\+To\+Shoot (\begin{DoxyParamCaption}\item[{const \hyperlink{classarcade_1_1_map}{Map} \&}]{map,  }\item[{\hyperlink{classarcade_1_1_spaceship}{Spaceship} const \&}]{player }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_spaceship_enemy_a76ad6511c8dba9850fb70a1633f8cc87}\label{classarcade_1_1_spaceship_enemy_a76ad6511c8dba9850fb70a1633f8cc87}} 
+\index{arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}!clear\+Map\+For\+Projectile@{clear\+Map\+For\+Projectile}}
+\index{clear\+Map\+For\+Projectile@{clear\+Map\+For\+Projectile}!arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}}
+\subsubsection{\texorpdfstring{clear\+Map\+For\+Projectile()}{clearMapForProjectile()}}
+{\footnotesize\ttfamily void arcade\+::\+Spaceship\+Enemy\+::clear\+Map\+For\+Projectile (\begin{DoxyParamCaption}\item[{\hyperlink{classarcade_1_1_map}{arcade\+::\+Map} \&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \hyperlink{classarcade_1_1_spaceship_aa6a5b59bdb64be086b212847e752b02c}{arcade\+::\+Spaceship}.
+
+\mbox{\Hypertarget{classarcade_1_1_spaceship_enemy_a62c4ee2725fd8d7496d433bb2ea86603}\label{classarcade_1_1_spaceship_enemy_a62c4ee2725fd8d7496d433bb2ea86603}} 
+\index{arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}!move@{move}}
+\index{move@{move}!arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily bool arcade\+::\+Spaceship\+Enemy\+::move (\begin{DoxyParamCaption}\item[{const \hyperlink{classarcade_1_1_map}{Map} \&}]{map }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_spaceship_enemy_a6a6b1e32ef2618727bfe01e828a8e4e8}\label{classarcade_1_1_spaceship_enemy_a6a6b1e32ef2618727bfe01e828a8e4e8}} 
+\index{arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}!pos\+Diff\+With\+Player@{pos\+Diff\+With\+Player}}
+\index{pos\+Diff\+With\+Player@{pos\+Diff\+With\+Player}!arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}}
+\subsubsection{\texorpdfstring{pos\+Diff\+With\+Player()}{posDiffWithPlayer()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ arcade\+::\+Spaceship\+Enemy\+::pos\+Diff\+With\+Player (\begin{DoxyParamCaption}\item[{\hyperlink{classarcade_1_1_spaceship}{Spaceship} const \&}]{player }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_spaceship_enemy_ad4963ac1857b42c2497774f77a6d0d05}\label{classarcade_1_1_spaceship_enemy_ad4963ac1857b42c2497774f77a6d0d05}} 
+\index{arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}!shoot@{shoot}}
+\index{shoot@{shoot}!arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}}
+\subsubsection{\texorpdfstring{shoot()}{shoot()}}
+{\footnotesize\ttfamily void arcade\+::\+Spaceship\+Enemy\+::shoot (\begin{DoxyParamCaption}\item[{const \hyperlink{classarcade_1_1_map}{Map} \&}]{map }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_spaceship_enemy_acdf6714050c6622c4f67473ec1866404}\label{classarcade_1_1_spaceship_enemy_acdf6714050c6622c4f67473ec1866404}} 
+\index{arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}!update\+Map\+For\+Projectile@{update\+Map\+For\+Projectile}}
+\index{update\+Map\+For\+Projectile@{update\+Map\+For\+Projectile}!arcade\+::\+Spaceship\+Enemy@{arcade\+::\+Spaceship\+Enemy}}
+\subsubsection{\texorpdfstring{update\+Map\+For\+Projectile()}{updateMapForProjectile()}}
+{\footnotesize\ttfamily void arcade\+::\+Spaceship\+Enemy\+::update\+Map\+For\+Projectile (\begin{DoxyParamCaption}\item[{\hyperlink{classarcade_1_1_map}{arcade\+::\+Map} \&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+games\+Srcs/solar\+Fox/\hyperlink{_spaceship_enemy_8hpp}{Spaceship\+Enemy.\+hpp}\item 
+games\+Srcs/solar\+Fox/\hyperlink{_spaceship_enemy_8cpp}{Spaceship\+Enemy.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,350 @@
+\hypertarget{classarcade_1_1_gfx_lapin}{}\section{arcade\+:\+:Gfx\+Lapin Class Reference}
+\label{classarcade_1_1_gfx_lapin}\index{arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}}
+
+
+{\ttfamily \#include $<$Gfx\+Lapin.\+hpp$>$}
+
+Inheritance diagram for arcade\+:\+:Gfx\+Lapin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classarcade_1_1_gfx_lapin}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structarcade_1_1_gfx_lapin_1_1bunny__window}{bunny\+\_\+window}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classarcade_1_1_gfx_lapin_a87275ed29f549db04dc3888ace3fc73e}{$\sim$\+Gfx\+Lapin} ()
+\item 
+\hyperlink{classarcade_1_1_gfx_lapin_a23c348cc21e8b935c1922bc68b1950fb}{Gfx\+Lapin} ()
+\item 
+bool \hyperlink{classarcade_1_1_gfx_lapin_a80f4cae576f05ddc8ab94d5a348226c5}{poll\+Event} (\hyperlink{structarcade_1_1_event}{Event} \&e) override
+\begin{DoxyCompactList}\small\item\em Function to poll events from the graphic lib. \end{DoxyCompactList}\item 
+bool \hyperlink{classarcade_1_1_gfx_lapin_ae84337d3ae5e24a61f160d3ac99d4e10}{does\+Support\+Sound} () const override
+\begin{DoxyCompactList}\small\item\em Ask if the library support sound. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_gfx_lapin_a54039353c2da52bb45b233d4b8839551}{load\+Sounds} (std\+::vector$<$ std\+::pair$<$ std\+::string, \hyperlink{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5}{Sound\+Type} $>$ $>$ const \&sounds) override
+\begin{DoxyCompactList}\small\item\em Ask the lib to remove and load new sounds. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_gfx_lapin_ad0f1a1014b88cf7f51ea85ab99e0c87b}{sound\+Control} (const \hyperlink{structarcade_1_1_sound}{Sound} \&sound) override
+\begin{DoxyCompactList}\small\item\em Ask the lib to play a sound. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_gfx_lapin_a164a694063507041dbd78415898d5157}{load\+Sprites} (std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classarcade_1_1_i_sprite}{I\+Sprite} $>$$>$ \&\&sprites) override
+\begin{DoxyCompactList}\small\item\em Load sprites in the lib from the paths given by the game. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_gfx_lapin_a06f4eb48bd1ea7749d81870211115a46}{update\+Map} (\hyperlink{classarcade_1_1_i_map}{I\+Map} const \&map) override
+\begin{DoxyCompactList}\small\item\em Update the map displayed. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_gfx_lapin_a6b226d0278ba5d43e956eb28557124ef}{update\+G\+UI} (\hyperlink{classarcade_1_1_i_g_u_i}{I\+G\+UI} \&gui) override
+\begin{DoxyCompactList}\small\item\em Update the \hyperlink{classarcade_1_1_g_u_i}{G\+UI} displayed. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_gfx_lapin_ac7c96886eb54a7d2f18e528e8f0c7ba1}{display} () override
+\begin{DoxyCompactList}\small\item\em Display the map and \hyperlink{classarcade_1_1_g_u_i}{G\+UI}. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_gfx_lapin_a42dd719cbf1cd88c3abf70d16f02fd92}{clear} () override
+\begin{DoxyCompactList}\small\item\em Ask the lib to clear the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classarcade_1_1_gfx_lapin_a87275ed29f549db04dc3888ace3fc73e}\label{classarcade_1_1_gfx_lapin_a87275ed29f549db04dc3888ace3fc73e}} 
+\index{arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}!````~Gfx\+Lapin@{$\sim$\+Gfx\+Lapin}}
+\index{````~Gfx\+Lapin@{$\sim$\+Gfx\+Lapin}!arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}}
+\subsubsection{\texorpdfstring{$\sim$\+Gfx\+Lapin()}{~GfxLapin()}}
+{\footnotesize\ttfamily arcade\+::\+Gfx\+Lapin\+::$\sim$\+Gfx\+Lapin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classarcade_1_1_gfx_lapin_a23c348cc21e8b935c1922bc68b1950fb}\label{classarcade_1_1_gfx_lapin_a23c348cc21e8b935c1922bc68b1950fb}} 
+\index{arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}!Gfx\+Lapin@{Gfx\+Lapin}}
+\index{Gfx\+Lapin@{Gfx\+Lapin}!arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}}
+\subsubsection{\texorpdfstring{Gfx\+Lapin()}{GfxLapin()}}
+{\footnotesize\ttfamily arcade\+::\+Gfx\+Lapin\+::\+Gfx\+Lapin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A key
+
+B key
+
+C key
+
+D key
+
+E key
+
+F key
+
+G key
+
+H key
+
+I key
+
+J key
+
+K key
+
+L key
+
+M key
+
+N key
+
+O key
+
+P key
+
+Q key
+
+R key
+
+S key
+
+T key
+
+U key
+
+V key
+
+X key
+
+Y key
+
+Z key
+
+0 key
+
+1 key
+
+2 key
+
+3 key
+
+4 key
+
+5 key
+
+6 key
+
+7 key
+
+8 key
+
+9 key
+
+Left arrow key
+
+Right arrow key
+
+Up arrow key
+
+Down arrow key
+
+Space key
+
+Enter/\+Carriage return key
+
+Backspace key
+
+Left Control key
+
+Right Control key
+
+Left Alt key
+
+Right Alt key
+
+Left Shift key
+
+Right Shift key
+
+Tabulation key
+
+Escape key
+
+Page up key
+
+Page down
+
+Home key
+
+End key
+
+Function key 1 (F1)
+
+Function key 2 (F2)
+
+Function key 3 (F3)
+
+Function key 4 (F4)
+
+Function key 5 (F5)
+
+Function key 6 (F6)
+
+Function key 7 (F7)
+
+Function key 8 (F8)
+
+Function key 9 (F9)
+
+Function key 10 (F10)
+
+Function key 11 (F11)
+
+Function key 12 (F12)
+
+Comma key (,)
+
+Dot (period) key (.)
+
+Slash key (/)
+
+Semicolon key (;)
+
+Simple quote key (\textquotesingle{})
+
+Left bracket key (\mbox{[})
+
+Right bracker key (\mbox{]})
+
+Backslash key ()
+
+Asterisk key ($\ast$)
+
+Minus symbol key (-\/)
+
+Plus symbol key (+) 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1_gfx_lapin_a42dd719cbf1cd88c3abf70d16f02fd92}\label{classarcade_1_1_gfx_lapin_a42dd719cbf1cd88c3abf70d16f02fd92}} 
+\index{arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}!clear@{clear}}
+\index{clear@{clear}!arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void arcade\+::\+Gfx\+Lapin\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Ask the lib to clear the screen. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a4116b3d4f503c4a795539b584f77a73d}{arcade\+::\+I\+Gfx\+Lib}.
+
+\mbox{\Hypertarget{classarcade_1_1_gfx_lapin_ac7c96886eb54a7d2f18e528e8f0c7ba1}\label{classarcade_1_1_gfx_lapin_ac7c96886eb54a7d2f18e528e8f0c7ba1}} 
+\index{arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}!display@{display}}
+\index{display@{display}!arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}}
+\subsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void arcade\+::\+Gfx\+Lapin\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Display the map and \hyperlink{classarcade_1_1_g_u_i}{G\+UI}. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a7f280525c718a44c1e05cfe0ba5304c3}{arcade\+::\+I\+Gfx\+Lib}.
+
+\mbox{\Hypertarget{classarcade_1_1_gfx_lapin_ae84337d3ae5e24a61f160d3ac99d4e10}\label{classarcade_1_1_gfx_lapin_ae84337d3ae5e24a61f160d3ac99d4e10}} 
+\index{arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}!does\+Support\+Sound@{does\+Support\+Sound}}
+\index{does\+Support\+Sound@{does\+Support\+Sound}!arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}}
+\subsubsection{\texorpdfstring{does\+Support\+Sound()}{doesSupportSound()}}
+{\footnotesize\ttfamily bool arcade\+::\+Gfx\+Lapin\+::does\+Support\+Sound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Ask if the library support sound. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a68cfbc987dfecca5b1405e36e00157b2}{arcade\+::\+I\+Gfx\+Lib}.
+
+\mbox{\Hypertarget{classarcade_1_1_gfx_lapin_a54039353c2da52bb45b233d4b8839551}\label{classarcade_1_1_gfx_lapin_a54039353c2da52bb45b233d4b8839551}} 
+\index{arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}!load\+Sounds@{load\+Sounds}}
+\index{load\+Sounds@{load\+Sounds}!arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}}
+\subsubsection{\texorpdfstring{load\+Sounds()}{loadSounds()}}
+{\footnotesize\ttfamily void arcade\+::\+Gfx\+Lapin\+::load\+Sounds (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::pair$<$ std\+::string, \hyperlink{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5}{Sound\+Type} $>$ $>$ const \&}]{sounds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Ask the lib to remove and load new sounds. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a725faf0722d284d15eb389b0a1891a27}{arcade\+::\+I\+Gfx\+Lib}.
+
+\mbox{\Hypertarget{classarcade_1_1_gfx_lapin_a164a694063507041dbd78415898d5157}\label{classarcade_1_1_gfx_lapin_a164a694063507041dbd78415898d5157}} 
+\index{arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}!load\+Sprites@{load\+Sprites}}
+\index{load\+Sprites@{load\+Sprites}!arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}}
+\subsubsection{\texorpdfstring{load\+Sprites()}{loadSprites()}}
+{\footnotesize\ttfamily void arcade\+::\+Gfx\+Lapin\+::load\+Sprites (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classarcade_1_1_i_sprite}{I\+Sprite} $>$$>$ \&\&}]{sprites }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Load sprites in the lib from the paths given by the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprites} & to pass the path of your sprites to give your lib the way to search your assets \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_ad5b301c8ff56c428971a2a006514b709}{arcade\+::\+I\+Gfx\+Lib}.
+
+\mbox{\Hypertarget{classarcade_1_1_gfx_lapin_a80f4cae576f05ddc8ab94d5a348226c5}\label{classarcade_1_1_gfx_lapin_a80f4cae576f05ddc8ab94d5a348226c5}} 
+\index{arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}!poll\+Event@{poll\+Event}}
+\index{poll\+Event@{poll\+Event}!arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}}
+\subsubsection{\texorpdfstring{poll\+Event()}{pollEvent()}}
+{\footnotesize\ttfamily bool arcade\+::\+Gfx\+Lapin\+::poll\+Event (\begin{DoxyParamCaption}\item[{\hyperlink{structarcade_1_1_event}{arcade\+::\+Event} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Function to poll events from the graphic lib. 
+
+If there is an event to poll, e is filled and true is returned. If not, false is returned. 
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a82cdd82f168ca898ef81edf82ca6147a}{arcade\+::\+I\+Gfx\+Lib}.
+
+\mbox{\Hypertarget{classarcade_1_1_gfx_lapin_ad0f1a1014b88cf7f51ea85ab99e0c87b}\label{classarcade_1_1_gfx_lapin_ad0f1a1014b88cf7f51ea85ab99e0c87b}} 
+\index{arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}!sound\+Control@{sound\+Control}}
+\index{sound\+Control@{sound\+Control}!arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}}
+\subsubsection{\texorpdfstring{sound\+Control()}{soundControl()}}
+{\footnotesize\ttfamily void arcade\+::\+Gfx\+Lapin\+::sound\+Control (\begin{DoxyParamCaption}\item[{const \hyperlink{structarcade_1_1_sound}{Sound} \&}]{sound }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Ask the lib to play a sound. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a0b965ed555739ef366b27583799d794c}{arcade\+::\+I\+Gfx\+Lib}.
+
+\mbox{\Hypertarget{classarcade_1_1_gfx_lapin_a6b226d0278ba5d43e956eb28557124ef}\label{classarcade_1_1_gfx_lapin_a6b226d0278ba5d43e956eb28557124ef}} 
+\index{arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}!update\+G\+UI@{update\+G\+UI}}
+\index{update\+G\+UI@{update\+G\+UI}!arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}}
+\subsubsection{\texorpdfstring{update\+G\+U\+I()}{updateGUI()}}
+{\footnotesize\ttfamily void arcade\+::\+Gfx\+Lapin\+::update\+G\+UI (\begin{DoxyParamCaption}\item[{\hyperlink{classarcade_1_1_i_g_u_i}{I\+G\+UI} \&}]{gui }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the \hyperlink{classarcade_1_1_g_u_i}{G\+UI} displayed. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_ae3f443cc341512433815e8bf2dee3e0d}{arcade\+::\+I\+Gfx\+Lib}.
+
+\mbox{\Hypertarget{classarcade_1_1_gfx_lapin_a06f4eb48bd1ea7749d81870211115a46}\label{classarcade_1_1_gfx_lapin_a06f4eb48bd1ea7749d81870211115a46}} 
+\index{arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}!update\+Map@{update\+Map}}
+\index{update\+Map@{update\+Map}!arcade\+::\+Gfx\+Lapin@{arcade\+::\+Gfx\+Lapin}}
+\subsubsection{\texorpdfstring{update\+Map()}{updateMap()}}
+{\footnotesize\ttfamily void arcade\+::\+Gfx\+Lapin\+::update\+Map (\begin{DoxyParamCaption}\item[{\hyperlink{classarcade_1_1_i_map}{I\+Map} const \&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the map displayed. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_addc883f69b75e6ec4927027aad94f5b5}{arcade\+::\+I\+Gfx\+Lib}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gfx\+Libs\+Srcs/lapin/include/\hyperlink{_gfx_lapin_8hpp}{Gfx\+Lapin.\+hpp}\item 
+gfx\+Libs\+Srcs/lapin/src/\hyperlink{_gfx_lapin_8cpp}{Gfx\+Lapin.\+cpp}\item 
+gfx\+Libs\+Srcs/lapin/src/\hyperlink{tektext_8cpp}{tektext.\+cpp}\end{DoxyCompactItemize}

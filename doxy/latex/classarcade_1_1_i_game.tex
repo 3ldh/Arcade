@@ -1,0 +1,224 @@
+\hypertarget{classarcade_1_1_i_game}{}\section{arcade\+:\+:I\+Game Class Reference}
+\label{classarcade_1_1_i_game}\index{arcade\+::\+I\+Game@{arcade\+::\+I\+Game}}
+
+
+Interface of a game for the \hyperlink{classarcade_1_1_core}{Core} program.  
+
+
+
+
+{\ttfamily \#include $<$I\+Game.\+hpp$>$}
+
+Inheritance diagram for arcade\+:\+:I\+Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classarcade_1_1_i_game}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classarcade_1_1_i_game_a89114f708822e3d0db5b58901c1e2354}{$\sim$\+I\+Game} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor of the interface. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7}{Game\+State} \hyperlink{classarcade_1_1_i_game_a75083f0465c0ccbdbbb38c689b4a694c}{get\+Game\+State} () const =0
+\begin{DoxyCompactList}\small\item\em Ask the current game state to the game. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classarcade_1_1_i_game_a37d164b4052fa3c28256fb0bf0002876}{notify\+Event} (std\+::vector$<$ \hyperlink{structarcade_1_1_event}{Event} $>$ \&\&events)=0
+\begin{DoxyCompactList}\small\item\em Send events (keyboard, mouse, etc) to the game. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classarcade_1_1_i_game_aaf375290947abf3db32d966facbfacf3}{notify\+Network} (std\+::vector$<$ \hyperlink{structarcade_1_1_network_packet}{Network\+Packet} $>$ \&\&events)=0
+\begin{DoxyCompactList}\small\item\em Send network packets to the game. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \hyperlink{structarcade_1_1_network_packet}{Network\+Packet} $>$ \hyperlink{classarcade_1_1_i_game_a5aa80dfdb3c1881fbc749e3d53efc6f8}{get\+Network\+To\+Send} ()=0
+\begin{DoxyCompactList}\small\item\em Get the network packet to send from the game to the server. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classarcade_1_1_i_game_ae66bf253e252f43ce17d9e94f08a1d1c}{has\+Network} () const =0
+\begin{DoxyCompactList}\small\item\em Does this game support network ? \end{DoxyCompactList}\item 
+virtual void \hyperlink{classarcade_1_1_i_game_af0111a41083f38a1af1a7f94287e6e77}{process} ()=0
+\begin{DoxyCompactList}\small\item\em Make the game process a game loop. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classarcade_1_1_i_sprite}{I\+Sprite} $>$ $>$ \hyperlink{classarcade_1_1_i_game_a2d0dc7c78a68c4dd0359911775993f68}{get\+Sprites\+To\+Load} () const =0
+\begin{DoxyCompactList}\small\item\em get the list of sprites to load for this game \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::pair$<$ std\+::string, \hyperlink{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5}{Sound\+Type} $>$ $>$ \hyperlink{classarcade_1_1_i_game_a0b66cd9ef3b5cd0dff95debb7e4f594e}{get\+Sounds\+To\+Load} () const =0
+\begin{DoxyCompactList}\small\item\em get the list of sound files to load for this game \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \hyperlink{structarcade_1_1_sound}{Sound} $>$ \hyperlink{classarcade_1_1_i_game_a88b3c7efb13780cdbbdf5b879a18ed4d}{get\+Sounds\+To\+Play} ()=0
+\begin{DoxyCompactList}\small\item\em Get the sounds to play You should return by std\+::move to not copy your vector and to clear it at the same time. \end{DoxyCompactList}\item 
+virtual \hyperlink{classarcade_1_1_i_map}{I\+Map} const  \& \hyperlink{classarcade_1_1_i_game_a2e1791071bf65ee35e249e409ee29044}{get\+Current\+Map} () const =0
+\begin{DoxyCompactList}\small\item\em Get the current version of the map. \end{DoxyCompactList}\item 
+virtual \hyperlink{classarcade_1_1_i_g_u_i}{I\+G\+UI} \& \hyperlink{classarcade_1_1_i_game_abe849a6ed370a18de51bc8cb7a2329ba}{get\+G\+UI} ()=0
+\begin{DoxyCompactList}\small\item\em Get the current version of the \hyperlink{classarcade_1_1_g_u_i}{G\+UI} to display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface of a game for the \hyperlink{classarcade_1_1_core}{Core} program. 
+
+This interface will be used by the \hyperlink{classarcade_1_1_core}{Core} program to manipulate a game without knowing any detail about it The \hyperlink{classarcade_1_1_core}{Core} will always do \char`\"{}request\char`\"{} to the game, to get information or ask for processing a game loop, for example. The \hyperlink{classarcade_1_1_i_game}{I\+Game} will never have a reference to the \hyperlink{classarcade_1_1_core}{Core}, or communicate directly with it. Never. Ever. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classarcade_1_1_i_game_a89114f708822e3d0db5b58901c1e2354}\label{classarcade_1_1_i_game_a89114f708822e3d0db5b58901c1e2354}} 
+\index{arcade\+::\+I\+Game@{arcade\+::\+I\+Game}!````~I\+Game@{$\sim$\+I\+Game}}
+\index{````~I\+Game@{$\sim$\+I\+Game}!arcade\+::\+I\+Game@{arcade\+::\+I\+Game}}
+\subsubsection{\texorpdfstring{$\sim$\+I\+Game()}{~IGame()}}
+{\footnotesize\ttfamily arcade\+::\+I\+Game\+::$\sim$\+I\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual destructor of the interface. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1_i_game_a2e1791071bf65ee35e249e409ee29044}\label{classarcade_1_1_i_game_a2e1791071bf65ee35e249e409ee29044}} 
+\index{arcade\+::\+I\+Game@{arcade\+::\+I\+Game}!get\+Current\+Map@{get\+Current\+Map}}
+\index{get\+Current\+Map@{get\+Current\+Map}!arcade\+::\+I\+Game@{arcade\+::\+I\+Game}}
+\subsubsection{\texorpdfstring{get\+Current\+Map()}{getCurrentMap()}}
+{\footnotesize\ttfamily \hyperlink{classarcade_1_1_i_map}{I\+Map} const  \& arcade\+::\+I\+Game\+::get\+Current\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the current version of the map. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_solar_fox_game_a8bb422466d4367320e90c6f9c6b754ed}{arcade\+::\+Solar\+Fox\+Game}, and \hyperlink{classarcade_1_1_snake_game_abc3fe4beaa1d2b7df8573f3375cbd4cb}{arcade\+::\+Snake\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_game_a75083f0465c0ccbdbbb38c689b4a694c}\label{classarcade_1_1_i_game_a75083f0465c0ccbdbbb38c689b4a694c}} 
+\index{arcade\+::\+I\+Game@{arcade\+::\+I\+Game}!get\+Game\+State@{get\+Game\+State}}
+\index{get\+Game\+State@{get\+Game\+State}!arcade\+::\+I\+Game@{arcade\+::\+I\+Game}}
+\subsubsection{\texorpdfstring{get\+Game\+State()}{getGameState()}}
+{\footnotesize\ttfamily \hyperlink{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7}{Game\+State} arcade\+::\+I\+Game\+::get\+Game\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Ask the current game state to the game. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_solar_fox_game_a71122936c223e672058280755f24a98a}{arcade\+::\+Solar\+Fox\+Game}, and \hyperlink{classarcade_1_1_snake_game_afcd7d113f2187cd34396022af4e9e10c}{arcade\+::\+Snake\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_game_abe849a6ed370a18de51bc8cb7a2329ba}\label{classarcade_1_1_i_game_abe849a6ed370a18de51bc8cb7a2329ba}} 
+\index{arcade\+::\+I\+Game@{arcade\+::\+I\+Game}!get\+G\+UI@{get\+G\+UI}}
+\index{get\+G\+UI@{get\+G\+UI}!arcade\+::\+I\+Game@{arcade\+::\+I\+Game}}
+\subsubsection{\texorpdfstring{get\+G\+U\+I()}{getGUI()}}
+{\footnotesize\ttfamily \hyperlink{classarcade_1_1_i_g_u_i}{I\+G\+UI} \& arcade\+::\+I\+Game\+::get\+G\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the current version of the \hyperlink{classarcade_1_1_g_u_i}{G\+UI} to display. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_solar_fox_game_aba8a5d93b17231c5d2cbbb51cc1d05b9}{arcade\+::\+Solar\+Fox\+Game}, and \hyperlink{classarcade_1_1_snake_game_ab586312d56bab5be7e1506fa513fea44}{arcade\+::\+Snake\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_game_a5aa80dfdb3c1881fbc749e3d53efc6f8}\label{classarcade_1_1_i_game_a5aa80dfdb3c1881fbc749e3d53efc6f8}} 
+\index{arcade\+::\+I\+Game@{arcade\+::\+I\+Game}!get\+Network\+To\+Send@{get\+Network\+To\+Send}}
+\index{get\+Network\+To\+Send@{get\+Network\+To\+Send}!arcade\+::\+I\+Game@{arcade\+::\+I\+Game}}
+\subsubsection{\texorpdfstring{get\+Network\+To\+Send()}{getNetworkToSend()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{structarcade_1_1_network_packet}{Network\+Packet} $>$ \&\& arcade\+::\+I\+Game\+::get\+Network\+To\+Send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the network packet to send from the game to the server. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_solar_fox_game_a54b56444f83661b4330de868024671d6}{arcade\+::\+Solar\+Fox\+Game}, and \hyperlink{classarcade_1_1_snake_game_a8666c3ad148b7140658b52a262bfab73}{arcade\+::\+Snake\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_game_a0b66cd9ef3b5cd0dff95debb7e4f594e}\label{classarcade_1_1_i_game_a0b66cd9ef3b5cd0dff95debb7e4f594e}} 
+\index{arcade\+::\+I\+Game@{arcade\+::\+I\+Game}!get\+Sounds\+To\+Load@{get\+Sounds\+To\+Load}}
+\index{get\+Sounds\+To\+Load@{get\+Sounds\+To\+Load}!arcade\+::\+I\+Game@{arcade\+::\+I\+Game}}
+\subsubsection{\texorpdfstring{get\+Sounds\+To\+Load()}{getSoundsToLoad()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ arcade\+::\+I\+Game\+::get\+Sounds\+To\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get the list of sound files to load for this game 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_solar_fox_game_aed75a8fdc63d9162359ada5332b44331}{arcade\+::\+Solar\+Fox\+Game}, and \hyperlink{classarcade_1_1_snake_game_a2d8ca7114ab012187da99658a221fab9}{arcade\+::\+Snake\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_game_a88b3c7efb13780cdbbdf5b879a18ed4d}\label{classarcade_1_1_i_game_a88b3c7efb13780cdbbdf5b879a18ed4d}} 
+\index{arcade\+::\+I\+Game@{arcade\+::\+I\+Game}!get\+Sounds\+To\+Play@{get\+Sounds\+To\+Play}}
+\index{get\+Sounds\+To\+Play@{get\+Sounds\+To\+Play}!arcade\+::\+I\+Game@{arcade\+::\+I\+Game}}
+\subsubsection{\texorpdfstring{get\+Sounds\+To\+Play()}{getSoundsToPlay()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{structarcade_1_1_sound}{Sound} $>$ arcade\+::\+I\+Game\+::get\+Sounds\+To\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the sounds to play You should return by std\+::move to not copy your vector and to clear it at the same time. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_solar_fox_game_a96f41df94a733d0c06f8a7d48e620d58}{arcade\+::\+Solar\+Fox\+Game}, and \hyperlink{classarcade_1_1_snake_game_aab993e72ca1b68914c37209781a68835}{arcade\+::\+Snake\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_game_a2d0dc7c78a68c4dd0359911775993f68}\label{classarcade_1_1_i_game_a2d0dc7c78a68c4dd0359911775993f68}} 
+\index{arcade\+::\+I\+Game@{arcade\+::\+I\+Game}!get\+Sprites\+To\+Load@{get\+Sprites\+To\+Load}}
+\index{get\+Sprites\+To\+Load@{get\+Sprites\+To\+Load}!arcade\+::\+I\+Game@{arcade\+::\+I\+Game}}
+\subsubsection{\texorpdfstring{get\+Sprites\+To\+Load()}{getSpritesToLoad()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ arcade\+::\+I\+Game\+::get\+Sprites\+To\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get the list of sprites to load for this game 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_solar_fox_game_afa9d714001212c869f616bd265dd9371}{arcade\+::\+Solar\+Fox\+Game}, and \hyperlink{classarcade_1_1_snake_game_aac167f01d2da5121b2f34dd3ca258a45}{arcade\+::\+Snake\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_game_ae66bf253e252f43ce17d9e94f08a1d1c}\label{classarcade_1_1_i_game_ae66bf253e252f43ce17d9e94f08a1d1c}} 
+\index{arcade\+::\+I\+Game@{arcade\+::\+I\+Game}!has\+Network@{has\+Network}}
+\index{has\+Network@{has\+Network}!arcade\+::\+I\+Game@{arcade\+::\+I\+Game}}
+\subsubsection{\texorpdfstring{has\+Network()}{hasNetwork()}}
+{\footnotesize\ttfamily bool arcade\+::\+I\+Game\+::has\+Network (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Does this game support network ? 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_solar_fox_game_a4142a002e8b141216c67638ba7a118d3}{arcade\+::\+Solar\+Fox\+Game}, and \hyperlink{classarcade_1_1_snake_game_aa93dbf6b52cb70629abbf646ed33374f}{arcade\+::\+Snake\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_game_a37d164b4052fa3c28256fb0bf0002876}\label{classarcade_1_1_i_game_a37d164b4052fa3c28256fb0bf0002876}} 
+\index{arcade\+::\+I\+Game@{arcade\+::\+I\+Game}!notify\+Event@{notify\+Event}}
+\index{notify\+Event@{notify\+Event}!arcade\+::\+I\+Game@{arcade\+::\+I\+Game}}
+\subsubsection{\texorpdfstring{notify\+Event()}{notifyEvent()}}
+{\footnotesize\ttfamily void arcade\+::\+I\+Game\+::notify\+Event (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{structarcade_1_1_event}{Event} $>$ \&\&}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Send events (keyboard, mouse, etc) to the game. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_solar_fox_game_a12b4c225cad3913bb441a1b208c84bd7}{arcade\+::\+Solar\+Fox\+Game}, and \hyperlink{classarcade_1_1_snake_game_a93016697def74ebd53a76e33fbb0e583}{arcade\+::\+Snake\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_game_aaf375290947abf3db32d966facbfacf3}\label{classarcade_1_1_i_game_aaf375290947abf3db32d966facbfacf3}} 
+\index{arcade\+::\+I\+Game@{arcade\+::\+I\+Game}!notify\+Network@{notify\+Network}}
+\index{notify\+Network@{notify\+Network}!arcade\+::\+I\+Game@{arcade\+::\+I\+Game}}
+\subsubsection{\texorpdfstring{notify\+Network()}{notifyNetwork()}}
+{\footnotesize\ttfamily void arcade\+::\+I\+Game\+::notify\+Network (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{structarcade_1_1_network_packet}{Network\+Packet} $>$ \&\&}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Send network packets to the game. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_solar_fox_game_ada83eb3dae2a14130fca4376f9274e5a}{arcade\+::\+Solar\+Fox\+Game}, and \hyperlink{classarcade_1_1_snake_game_a8b4a36ff6ce940d86894433e88bb50f5}{arcade\+::\+Snake\+Game}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_game_af0111a41083f38a1af1a7f94287e6e77}\label{classarcade_1_1_i_game_af0111a41083f38a1af1a7f94287e6e77}} 
+\index{arcade\+::\+I\+Game@{arcade\+::\+I\+Game}!process@{process}}
+\index{process@{process}!arcade\+::\+I\+Game@{arcade\+::\+I\+Game}}
+\subsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily void arcade\+::\+I\+Game\+::process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Make the game process a game loop. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_solar_fox_game_a12ff0eeb750910455e2dcc1954cdac86}{arcade\+::\+Solar\+Fox\+Game}, and \hyperlink{classarcade_1_1_snake_game_a8a04d76c02f814a01a27f394775ea2f7}{arcade\+::\+Snake\+Game}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+arcade\+Interfaces/\hyperlink{_i_game_8hpp}{I\+Game.\+hpp}\end{DoxyCompactItemize}

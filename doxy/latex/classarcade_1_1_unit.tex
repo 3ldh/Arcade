@@ -1,0 +1,216 @@
+\hypertarget{classarcade_1_1_unit}{}\section{arcade\+:\+:Unit Class Reference}
+\label{classarcade_1_1_unit}\index{arcade\+::\+Unit@{arcade\+::\+Unit}}
+
+
+{\ttfamily \#include $<$Unit.\+hpp$>$}
+
+Inheritance diagram for arcade\+:\+:Unit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classarcade_1_1_unit}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{Direction} \{ \newline
+\hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dda01d1f45d2a1f46111e0a7a4bb9bd5555}{UP} = 2, 
+\hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dda5f32d341b3496680d6f76b2e27a5038b}{D\+O\+WN} = 3, 
+\hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215ddafb9de8c64a904e3e78e9a62907de7f6f}{L\+E\+FT} = 4, 
+\hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215ddab94e0ec58f3e9b07b9f65e3001e64171}{R\+I\+G\+HT} = 5, 
+\newline
+\hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dda5a33eaa50fc5e4fda0befda90cf68c60}{F\+O\+R\+W\+A\+RD} = 6
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classarcade_1_1_unit_a44236fd92c37b80c2fda5356d8b6ec81}{$\sim$\+Unit} ()
+\item 
+\hyperlink{classarcade_1_1_unit_a34cb0964152e5039495031ec7be15613}{Unit} (const std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ \&\hyperlink{classarcade_1_1_unit_ab56f7df422277f97e7738cb4807fd62d}{position})
+\item 
+\hyperlink{classarcade_1_1_unit_abf639f95e434f9920cb6a342784e8d4e}{Unit} (size\+\_\+t \hyperlink{include_2_protocol_8hpp_a4dde988b1b2adba65ae3efa69f65d960}{x}, size\+\_\+t \hyperlink{include_2_protocol_8hpp_ab0580f504a7428539be299fa71565f30}{y})
+\item 
+virtual bool \hyperlink{classarcade_1_1_unit_a2a6a6feacea0fce220062be1115207b1}{move} (\hyperlink{classarcade_1_1_map}{Map} const \&map, \hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{Direction} direction)
+\item 
+bool \hyperlink{classarcade_1_1_unit_a4a108f0a801a245f048366f787dcbe15}{move} (const \hyperlink{classarcade_1_1_map}{Map} \&map, \hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{Direction} direction, size\+\_\+t offset\+Map\+Border)
+\item 
+virtual void \hyperlink{classarcade_1_1_unit_a59e206c30ea40c75f0a4e7165e510717}{move\+Up} ()
+\item 
+virtual void \hyperlink{classarcade_1_1_unit_a2c308fe563d0851f2a275694c9b0dc6c}{move\+Down} ()
+\item 
+virtual void \hyperlink{classarcade_1_1_unit_a17f28a5a98e7c24e8c1ea13897220d89}{move\+Left} ()
+\item 
+virtual void \hyperlink{classarcade_1_1_unit_a58ef633f19e9fe137006e8cdd3fb7d29}{move\+Right} ()
+\item 
+const std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ \& \hyperlink{classarcade_1_1_unit_a6ab43e77e961dc4192687ea730dd7712}{get\+Position} () const
+\item 
+void \hyperlink{classarcade_1_1_unit_ab53d6d5f92e49bfe5f500307e299599d}{set\+Position} (const std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ \&\hyperlink{classarcade_1_1_unit_ab56f7df422277f97e7738cb4807fd62d}{position})
+\item 
+void \hyperlink{classarcade_1_1_unit_a5b6beb5c96e174caf0ba0f0d14ccde8b}{set\+Position} (size\+\_\+t \hyperlink{include_2_protocol_8hpp_a4dde988b1b2adba65ae3efa69f65d960}{x}, size\+\_\+t \hyperlink{include_2_protocol_8hpp_ab0580f504a7428539be299fa71565f30}{y})
+\item 
+\hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{Direction} \hyperlink{classarcade_1_1_unit_aa1a289e46e53c2c9bf7d80ef5571d08f}{get\+Opposite\+Direction} (\hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{Direction} direction)
+\item 
+std\+::pair$<$ int, int $>$ \hyperlink{classarcade_1_1_unit_ada89038fcb7152ea19e2639e1bbc58ea}{convert\+Direction} (\hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{Direction} direction)
+\item 
+bool \hyperlink{classarcade_1_1_unit_ab79c51d02d31cc6578cc25b202e4292d}{cmp\+Pos} (\hyperlink{classarcade_1_1_unit}{Unit} const \&unit)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ \hyperlink{classarcade_1_1_unit_ac9e7559836ec4e3b3bdcde00d3e3bb97}{initial\+Pos}
+\item 
+std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ \hyperlink{classarcade_1_1_unit_ab56f7df422277f97e7738cb4807fd62d}{position}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}\label{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!Direction@{Direction}}
+\index{Direction@{Direction}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily enum \hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{arcade\+::\+Unit\+::\+Direction}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UP@{UP}!arcade\+::\+Unit@{arcade\+::\+Unit}}\index{arcade\+::\+Unit@{arcade\+::\+Unit}!UP@{UP}}}\mbox{\Hypertarget{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dda01d1f45d2a1f46111e0a7a4bb9bd5555}\label{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dda01d1f45d2a1f46111e0a7a4bb9bd5555}} 
+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+O\+WN@{D\+O\+WN}!arcade\+::\+Unit@{arcade\+::\+Unit}}\index{arcade\+::\+Unit@{arcade\+::\+Unit}!D\+O\+WN@{D\+O\+WN}}}\mbox{\Hypertarget{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dda5f32d341b3496680d6f76b2e27a5038b}\label{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dda5f32d341b3496680d6f76b2e27a5038b}} 
+D\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+E\+FT@{L\+E\+FT}!arcade\+::\+Unit@{arcade\+::\+Unit}}\index{arcade\+::\+Unit@{arcade\+::\+Unit}!L\+E\+FT@{L\+E\+FT}}}\mbox{\Hypertarget{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215ddafb9de8c64a904e3e78e9a62907de7f6f}\label{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215ddafb9de8c64a904e3e78e9a62907de7f6f}} 
+L\+E\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+I\+G\+HT@{R\+I\+G\+HT}!arcade\+::\+Unit@{arcade\+::\+Unit}}\index{arcade\+::\+Unit@{arcade\+::\+Unit}!R\+I\+G\+HT@{R\+I\+G\+HT}}}\mbox{\Hypertarget{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215ddab94e0ec58f3e9b07b9f65e3001e64171}\label{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215ddab94e0ec58f3e9b07b9f65e3001e64171}} 
+R\+I\+G\+HT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+O\+R\+W\+A\+RD@{F\+O\+R\+W\+A\+RD}!arcade\+::\+Unit@{arcade\+::\+Unit}}\index{arcade\+::\+Unit@{arcade\+::\+Unit}!F\+O\+R\+W\+A\+RD@{F\+O\+R\+W\+A\+RD}}}\mbox{\Hypertarget{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dda5a33eaa50fc5e4fda0befda90cf68c60}\label{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dda5a33eaa50fc5e4fda0befda90cf68c60}} 
+F\+O\+R\+W\+A\+RD&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classarcade_1_1_unit_a44236fd92c37b80c2fda5356d8b6ec81}\label{classarcade_1_1_unit_a44236fd92c37b80c2fda5356d8b6ec81}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!````~Unit@{$\sim$\+Unit}}
+\index{````~Unit@{$\sim$\+Unit}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{$\sim$\+Unit()}{~Unit()}}
+{\footnotesize\ttfamily arcade\+::\+Unit\+::$\sim$\+Unit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classarcade_1_1_unit_a34cb0964152e5039495031ec7be15613}\label{classarcade_1_1_unit_a34cb0964152e5039495031ec7be15613}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!Unit@{Unit}}
+\index{Unit@{Unit}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{Unit()}{Unit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily arcade\+::\+Unit\+::\+Unit (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ \&}]{position }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_unit_abf639f95e434f9920cb6a342784e8d4e}\label{classarcade_1_1_unit_abf639f95e434f9920cb6a342784e8d4e}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!Unit@{Unit}}
+\index{Unit@{Unit}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{Unit()}{Unit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily arcade\+::\+Unit\+::\+Unit (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{x,  }\item[{size\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1_unit_ab79c51d02d31cc6578cc25b202e4292d}\label{classarcade_1_1_unit_ab79c51d02d31cc6578cc25b202e4292d}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!cmp\+Pos@{cmp\+Pos}}
+\index{cmp\+Pos@{cmp\+Pos}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{cmp\+Pos()}{cmpPos()}}
+{\footnotesize\ttfamily bool arcade\+::\+Unit\+::cmp\+Pos (\begin{DoxyParamCaption}\item[{\hyperlink{classarcade_1_1_unit}{Unit} const \&}]{unit }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_unit_ada89038fcb7152ea19e2639e1bbc58ea}\label{classarcade_1_1_unit_ada89038fcb7152ea19e2639e1bbc58ea}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!convert\+Direction@{convert\+Direction}}
+\index{convert\+Direction@{convert\+Direction}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{convert\+Direction()}{convertDirection()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ arcade\+::\+Unit\+::convert\+Direction (\begin{DoxyParamCaption}\item[{\hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{Direction}}]{direction }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_unit_aa1a289e46e53c2c9bf7d80ef5571d08f}\label{classarcade_1_1_unit_aa1a289e46e53c2c9bf7d80ef5571d08f}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!get\+Opposite\+Direction@{get\+Opposite\+Direction}}
+\index{get\+Opposite\+Direction@{get\+Opposite\+Direction}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{get\+Opposite\+Direction()}{getOppositeDirection()}}
+{\footnotesize\ttfamily \hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{arcade\+::\+Unit\+::\+Direction} arcade\+::\+Unit\+::get\+Opposite\+Direction (\begin{DoxyParamCaption}\item[{\hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{Direction}}]{direction }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_unit_a6ab43e77e961dc4192687ea730dd7712}\label{classarcade_1_1_unit_a6ab43e77e961dc4192687ea730dd7712}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{get\+Position()}{getPosition()}}
+{\footnotesize\ttfamily const std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ \& arcade\+::\+Unit\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classarcade_1_1_unit_a2a6a6feacea0fce220062be1115207b1}\label{classarcade_1_1_unit_a2a6a6feacea0fce220062be1115207b1}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!move@{move}}
+\index{move@{move}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{move()}{move()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool arcade\+::\+Unit\+::move (\begin{DoxyParamCaption}\item[{\hyperlink{classarcade_1_1_map}{Map} const \&}]{map,  }\item[{\hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{Direction}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{classarcade_1_1_snake_unit_ac291cd07b71f42589e29157fdcf52416}{arcade\+::\+Snake\+Unit}.
+
+\mbox{\Hypertarget{classarcade_1_1_unit_a4a108f0a801a245f048366f787dcbe15}\label{classarcade_1_1_unit_a4a108f0a801a245f048366f787dcbe15}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!move@{move}}
+\index{move@{move}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{move()}{move()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool arcade\+::\+Unit\+::move (\begin{DoxyParamCaption}\item[{const \hyperlink{classarcade_1_1_map}{Map} \&}]{map,  }\item[{\hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{Direction}}]{direction,  }\item[{size\+\_\+t}]{offset\+Map\+Border }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_unit_a2c308fe563d0851f2a275694c9b0dc6c}\label{classarcade_1_1_unit_a2c308fe563d0851f2a275694c9b0dc6c}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!move\+Down@{move\+Down}}
+\index{move\+Down@{move\+Down}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{move\+Down()}{moveDown()}}
+{\footnotesize\ttfamily void arcade\+::\+Unit\+::move\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classarcade_1_1_unit_a17f28a5a98e7c24e8c1ea13897220d89}\label{classarcade_1_1_unit_a17f28a5a98e7c24e8c1ea13897220d89}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!move\+Left@{move\+Left}}
+\index{move\+Left@{move\+Left}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{move\+Left()}{moveLeft()}}
+{\footnotesize\ttfamily void arcade\+::\+Unit\+::move\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classarcade_1_1_unit_a58ef633f19e9fe137006e8cdd3fb7d29}\label{classarcade_1_1_unit_a58ef633f19e9fe137006e8cdd3fb7d29}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!move\+Right@{move\+Right}}
+\index{move\+Right@{move\+Right}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{move\+Right()}{moveRight()}}
+{\footnotesize\ttfamily void arcade\+::\+Unit\+::move\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classarcade_1_1_unit_a59e206c30ea40c75f0a4e7165e510717}\label{classarcade_1_1_unit_a59e206c30ea40c75f0a4e7165e510717}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!move\+Up@{move\+Up}}
+\index{move\+Up@{move\+Up}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{move\+Up()}{moveUp()}}
+{\footnotesize\ttfamily void arcade\+::\+Unit\+::move\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classarcade_1_1_unit_ab53d6d5f92e49bfe5f500307e299599d}\label{classarcade_1_1_unit_ab53d6d5f92e49bfe5f500307e299599d}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void arcade\+::\+Unit\+::set\+Position (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ \&}]{position }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_unit_a5b6beb5c96e174caf0ba0f0d14ccde8b}\label{classarcade_1_1_unit_a5b6beb5c96e174caf0ba0f0d14ccde8b}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void arcade\+::\+Unit\+::set\+Position (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{x,  }\item[{size\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classarcade_1_1_unit_ac9e7559836ec4e3b3bdcde00d3e3bb97}\label{classarcade_1_1_unit_ac9e7559836ec4e3b3bdcde00d3e3bb97}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!initial\+Pos@{initial\+Pos}}
+\index{initial\+Pos@{initial\+Pos}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{initial\+Pos}{initialPos}}
+{\footnotesize\ttfamily std\+::pair$<$size\+\_\+t, size\+\_\+t$>$ arcade\+::\+Unit\+::initial\+Pos\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classarcade_1_1_unit_ab56f7df422277f97e7738cb4807fd62d}\label{classarcade_1_1_unit_ab56f7df422277f97e7738cb4807fd62d}} 
+\index{arcade\+::\+Unit@{arcade\+::\+Unit}!position@{position}}
+\index{position@{position}!arcade\+::\+Unit@{arcade\+::\+Unit}}
+\subsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily std\+::pair$<$size\+\_\+t , size\+\_\+t$>$ arcade\+::\+Unit\+::position\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_unit_8hpp}{Unit.\+hpp}\item 
+srcs/\hyperlink{_unit_8cpp}{Unit.\+cpp}\end{DoxyCompactItemize}

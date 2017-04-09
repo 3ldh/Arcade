@@ -1,0 +1,120 @@
+\hypertarget{classarcade_1_1_snake_unit}{}\section{arcade\+:\+:Snake\+Unit Class Reference}
+\label{classarcade_1_1_snake_unit}\index{arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}}
+
+
+{\ttfamily \#include $<$Snake\+Unit.\+hpp$>$}
+
+Inheritance diagram for arcade\+:\+:Snake\+Unit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classarcade_1_1_snake_unit}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classarcade_1_1_snake_unit_a797151ca359cb8b6798c24feed6fba45}{$\sim$\+Snake\+Unit} ()
+\item 
+\hyperlink{classarcade_1_1_snake_unit_a66cb5100f926b000b3931c5fb6dfbfad}{Snake\+Unit} (size\+\_\+t \hyperlink{include_2_protocol_8hpp_a4dde988b1b2adba65ae3efa69f65d960}{x}, size\+\_\+t \hyperlink{include_2_protocol_8hpp_ab0580f504a7428539be299fa71565f30}{y})
+\item 
+bool \hyperlink{classarcade_1_1_snake_unit_ac291cd07b71f42589e29157fdcf52416}{move} (\hyperlink{classarcade_1_1_map}{Map} const \&map, \hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{Direction} direction) override
+\item 
+bool \hyperlink{classarcade_1_1_snake_unit_a2a0c1cf1880b9c595706dc0b4202e46a}{move} (\hyperlink{classarcade_1_1_map}{Map} const \&map)
+\item 
+size\+\_\+t \hyperlink{classarcade_1_1_snake_unit_a7449a250cc1e8c2027e660af40b5454a}{get\+Length} () const
+\item 
+\hyperlink{classarcade_1_1_unit}{Unit} \& \hyperlink{classarcade_1_1_snake_unit_a29fba4415dc5202deb2b543ea9bcafec}{operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t n)
+\item 
+\hyperlink{classarcade_1_1_unit}{Unit} \& \hyperlink{classarcade_1_1_snake_unit_a364db276d19b00961a8e445bca7a2d55}{operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t n) const
+\item 
+\hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{Direction} \hyperlink{classarcade_1_1_snake_unit_a26e52c313c70b4dbc62f0a00f1d29b01}{get\+Moving\+Direction} () const
+\item 
+void \hyperlink{classarcade_1_1_snake_unit_abc2d43a7920a1bdba452aa888a7e00d1}{set\+Moving\+Direction} (\hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{Direction} moving\+Direction)
+\item 
+bool \hyperlink{classarcade_1_1_snake_unit_a66b1ed720c9934352f2b23c29ad12b35}{grow} (\hyperlink{classarcade_1_1_map}{Map} const \&map)
+\item 
+void \hyperlink{classarcade_1_1_snake_unit_aad0f18af64879c5ec44d9f14517abee6}{reset} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classarcade_1_1_snake_unit_a797151ca359cb8b6798c24feed6fba45}\label{classarcade_1_1_snake_unit_a797151ca359cb8b6798c24feed6fba45}} 
+\index{arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}!````~Snake\+Unit@{$\sim$\+Snake\+Unit}}
+\index{````~Snake\+Unit@{$\sim$\+Snake\+Unit}!arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}}
+\subsubsection{\texorpdfstring{$\sim$\+Snake\+Unit()}{~SnakeUnit()}}
+{\footnotesize\ttfamily arcade\+::\+Snake\+Unit\+::$\sim$\+Snake\+Unit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classarcade_1_1_snake_unit_a66cb5100f926b000b3931c5fb6dfbfad}\label{classarcade_1_1_snake_unit_a66cb5100f926b000b3931c5fb6dfbfad}} 
+\index{arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}!Snake\+Unit@{Snake\+Unit}}
+\index{Snake\+Unit@{Snake\+Unit}!arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}}
+\subsubsection{\texorpdfstring{Snake\+Unit()}{SnakeUnit()}}
+{\footnotesize\ttfamily arcade\+::\+Snake\+Unit\+::\+Snake\+Unit (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{x,  }\item[{size\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1_snake_unit_a7449a250cc1e8c2027e660af40b5454a}\label{classarcade_1_1_snake_unit_a7449a250cc1e8c2027e660af40b5454a}} 
+\index{arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}!get\+Length@{get\+Length}}
+\index{get\+Length@{get\+Length}!arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}}
+\subsubsection{\texorpdfstring{get\+Length()}{getLength()}}
+{\footnotesize\ttfamily size\+\_\+t arcade\+::\+Snake\+Unit\+::get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classarcade_1_1_snake_unit_a26e52c313c70b4dbc62f0a00f1d29b01}\label{classarcade_1_1_snake_unit_a26e52c313c70b4dbc62f0a00f1d29b01}} 
+\index{arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}!get\+Moving\+Direction@{get\+Moving\+Direction}}
+\index{get\+Moving\+Direction@{get\+Moving\+Direction}!arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}}
+\subsubsection{\texorpdfstring{get\+Moving\+Direction()}{getMovingDirection()}}
+{\footnotesize\ttfamily \hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{arcade\+::\+Unit\+::\+Direction} arcade\+::\+Snake\+Unit\+::get\+Moving\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classarcade_1_1_snake_unit_a66b1ed720c9934352f2b23c29ad12b35}\label{classarcade_1_1_snake_unit_a66b1ed720c9934352f2b23c29ad12b35}} 
+\index{arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}!grow@{grow}}
+\index{grow@{grow}!arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}}
+\subsubsection{\texorpdfstring{grow()}{grow()}}
+{\footnotesize\ttfamily bool arcade\+::\+Snake\+Unit\+::grow (\begin{DoxyParamCaption}\item[{\hyperlink{classarcade_1_1_map}{Map} const \&}]{map }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_snake_unit_ac291cd07b71f42589e29157fdcf52416}\label{classarcade_1_1_snake_unit_ac291cd07b71f42589e29157fdcf52416}} 
+\index{arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}!move@{move}}
+\index{move@{move}!arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}}
+\subsubsection{\texorpdfstring{move()}{move()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool arcade\+::\+Snake\+Unit\+::move (\begin{DoxyParamCaption}\item[{\hyperlink{classarcade_1_1_map}{Map} const \&}]{map,  }\item[{\hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{Direction}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \hyperlink{classarcade_1_1_unit_a2a6a6feacea0fce220062be1115207b1}{arcade\+::\+Unit}.
+
+\mbox{\Hypertarget{classarcade_1_1_snake_unit_a2a0c1cf1880b9c595706dc0b4202e46a}\label{classarcade_1_1_snake_unit_a2a0c1cf1880b9c595706dc0b4202e46a}} 
+\index{arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}!move@{move}}
+\index{move@{move}!arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}}
+\subsubsection{\texorpdfstring{move()}{move()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool arcade\+::\+Snake\+Unit\+::move (\begin{DoxyParamCaption}\item[{\hyperlink{classarcade_1_1_map}{Map} const \&}]{map }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_snake_unit_a29fba4415dc5202deb2b543ea9bcafec}\label{classarcade_1_1_snake_unit_a29fba4415dc5202deb2b543ea9bcafec}} 
+\index{arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classarcade_1_1_unit}{arcade\+::\+Unit} \& arcade\+::\+Snake\+Unit\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_snake_unit_a364db276d19b00961a8e445bca7a2d55}\label{classarcade_1_1_snake_unit_a364db276d19b00961a8e445bca7a2d55}} 
+\index{arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classarcade_1_1_unit}{arcade\+::\+Unit} \& arcade\+::\+Snake\+Unit\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{n }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classarcade_1_1_snake_unit_aad0f18af64879c5ec44d9f14517abee6}\label{classarcade_1_1_snake_unit_aad0f18af64879c5ec44d9f14517abee6}} 
+\index{arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}!reset@{reset}}
+\index{reset@{reset}!arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void arcade\+::\+Snake\+Unit\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_snake_unit_abc2d43a7920a1bdba452aa888a7e00d1}\label{classarcade_1_1_snake_unit_abc2d43a7920a1bdba452aa888a7e00d1}} 
+\index{arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}!set\+Moving\+Direction@{set\+Moving\+Direction}}
+\index{set\+Moving\+Direction@{set\+Moving\+Direction}!arcade\+::\+Snake\+Unit@{arcade\+::\+Snake\+Unit}}
+\subsubsection{\texorpdfstring{set\+Moving\+Direction()}{setMovingDirection()}}
+{\footnotesize\ttfamily void arcade\+::\+Snake\+Unit\+::set\+Moving\+Direction (\begin{DoxyParamCaption}\item[{\hyperlink{classarcade_1_1_unit_af418afeaba1f7fd5934b6ae1343215dd}{Direction}}]{moving\+Direction }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+games\+Srcs/snake/\hyperlink{_snake_unit_8hpp}{Snake\+Unit.\+hpp}\item 
+games\+Srcs/snake/\hyperlink{_snake_unit_8cpp}{Snake\+Unit.\+cpp}\end{DoxyCompactItemize}

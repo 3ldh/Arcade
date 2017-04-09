@@ -1,0 +1,109 @@
+\hypertarget{classarcade_1_1_g_u_i}{}\section{arcade\+:\+:G\+UI Class Reference}
+\label{classarcade_1_1_g_u_i}\index{arcade\+::\+G\+UI@{arcade\+::\+G\+UI}}
+
+
+{\ttfamily \#include $<$G\+U\+I.\+hpp$>$}
+
+Inheritance diagram for arcade\+:\+:G\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classarcade_1_1_g_u_i}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classarcade_1_1_g_u_i_a303ab9f358e535d6e08bcf63a7175a96}{$\sim$\+G\+UI} ()
+\item 
+\hyperlink{classarcade_1_1_g_u_i_a320bdccbea68b4485ec98667735009d2}{G\+UI} ()
+\item 
+size\+\_\+t \hyperlink{classarcade_1_1_g_u_i_aa38b306ad674a221e0815cb600409598}{size} () const override
+\begin{DoxyCompactList}\small\item\em Return the number of elements. \end{DoxyCompactList}\item 
+\hyperlink{classarcade_1_1_i_component}{I\+Component} \& \hyperlink{classarcade_1_1_g_u_i_ab94910ea11fc43430227bfc716fd8c80}{at} (std\+::size\+\_\+t n) override
+\begin{DoxyCompactList}\small\item\em Access to the n element. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_g_u_i_aa6d6547eb12710f098d1a328f5eee7d4}{add\+Component} (\hyperlink{classarcade_1_1_u_i_component}{U\+I\+Component} $\ast$component)
+\item 
+virtual void \hyperlink{classarcade_1_1_g_u_i_abdf6ff80e7176b8a0e9c4561c5bfbf10}{update\+Components} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{classarcade_1_1_u_i_component}{U\+I\+Component} $\ast$ $>$ \hyperlink{classarcade_1_1_g_u_i_a190c384b099301972698f9bb410474de}{components}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classarcade_1_1_g_u_i_a303ab9f358e535d6e08bcf63a7175a96}\label{classarcade_1_1_g_u_i_a303ab9f358e535d6e08bcf63a7175a96}} 
+\index{arcade\+::\+G\+UI@{arcade\+::\+G\+UI}!````~G\+UI@{$\sim$\+G\+UI}}
+\index{````~G\+UI@{$\sim$\+G\+UI}!arcade\+::\+G\+UI@{arcade\+::\+G\+UI}}
+\subsubsection{\texorpdfstring{$\sim$\+G\+U\+I()}{~GUI()}}
+{\footnotesize\ttfamily arcade\+::\+G\+U\+I\+::$\sim$\+G\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classarcade_1_1_g_u_i_a320bdccbea68b4485ec98667735009d2}\label{classarcade_1_1_g_u_i_a320bdccbea68b4485ec98667735009d2}} 
+\index{arcade\+::\+G\+UI@{arcade\+::\+G\+UI}!G\+UI@{G\+UI}}
+\index{G\+UI@{G\+UI}!arcade\+::\+G\+UI@{arcade\+::\+G\+UI}}
+\subsubsection{\texorpdfstring{G\+U\+I()}{GUI()}}
+{\footnotesize\ttfamily arcade\+::\+G\+U\+I\+::\+G\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1_g_u_i_aa6d6547eb12710f098d1a328f5eee7d4}\label{classarcade_1_1_g_u_i_aa6d6547eb12710f098d1a328f5eee7d4}} 
+\index{arcade\+::\+G\+UI@{arcade\+::\+G\+UI}!add\+Component@{add\+Component}}
+\index{add\+Component@{add\+Component}!arcade\+::\+G\+UI@{arcade\+::\+G\+UI}}
+\subsubsection{\texorpdfstring{add\+Component()}{addComponent()}}
+{\footnotesize\ttfamily void arcade\+::\+G\+U\+I\+::add\+Component (\begin{DoxyParamCaption}\item[{\hyperlink{classarcade_1_1_u_i_component}{arcade\+::\+U\+I\+Component} $\ast$}]{component }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classarcade_1_1_g_u_i_ab94910ea11fc43430227bfc716fd8c80}\label{classarcade_1_1_g_u_i_ab94910ea11fc43430227bfc716fd8c80}} 
+\index{arcade\+::\+G\+UI@{arcade\+::\+G\+UI}!at@{at}}
+\index{at@{at}!arcade\+::\+G\+UI@{arcade\+::\+G\+UI}}
+\subsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily \hyperlink{classarcade_1_1_i_component}{arcade\+::\+I\+Component} \& arcade\+::\+G\+U\+I\+::at (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Access to the n element. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_g_u_i_aafde8788a75c98d0dfc1161e42e13558}{arcade\+::\+I\+G\+UI}.
+
+\mbox{\Hypertarget{classarcade_1_1_g_u_i_aa38b306ad674a221e0815cb600409598}\label{classarcade_1_1_g_u_i_aa38b306ad674a221e0815cb600409598}} 
+\index{arcade\+::\+G\+UI@{arcade\+::\+G\+UI}!size@{size}}
+\index{size@{size}!arcade\+::\+G\+UI@{arcade\+::\+G\+UI}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t arcade\+::\+G\+U\+I\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the number of elements. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_g_u_i_a5e9b36772c4affcc58243880e6d51d62}{arcade\+::\+I\+G\+UI}.
+
+\mbox{\Hypertarget{classarcade_1_1_g_u_i_abdf6ff80e7176b8a0e9c4561c5bfbf10}\label{classarcade_1_1_g_u_i_abdf6ff80e7176b8a0e9c4561c5bfbf10}} 
+\index{arcade\+::\+G\+UI@{arcade\+::\+G\+UI}!update\+Components@{update\+Components}}
+\index{update\+Components@{update\+Components}!arcade\+::\+G\+UI@{arcade\+::\+G\+UI}}
+\subsubsection{\texorpdfstring{update\+Components()}{updateComponents()}}
+{\footnotesize\ttfamily void arcade\+::\+G\+U\+I\+::update\+Components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{classarcade_1_1_menu_a63906aaba91a3be7b0f4f8dcc46e87f4}{arcade\+::\+Menu}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classarcade_1_1_g_u_i_a190c384b099301972698f9bb410474de}\label{classarcade_1_1_g_u_i_a190c384b099301972698f9bb410474de}} 
+\index{arcade\+::\+G\+UI@{arcade\+::\+G\+UI}!components@{components}}
+\index{components@{components}!arcade\+::\+G\+UI@{arcade\+::\+G\+UI}}
+\subsubsection{\texorpdfstring{components}{components}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classarcade_1_1_u_i_component}{U\+I\+Component} $\ast$$>$ arcade\+::\+G\+U\+I\+::components\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_g_u_i_8hpp}{G\+U\+I.\+hpp}\item 
+srcs/\hyperlink{_g_u_i_8cpp}{G\+U\+I.\+cpp}\end{DoxyCompactItemize}

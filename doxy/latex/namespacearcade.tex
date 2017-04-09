@@ -1,0 +1,1572 @@
+\hypertarget{namespacearcade}{}\section{arcade Namespace Reference}
+\label{namespacearcade}\index{arcade@{arcade}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classarcade_1_1_arcade_error}{Arcade\+Error}
+\item 
+union \hyperlink{unionarcade_1_1_color}{Color}
+\begin{DoxyCompactList}\small\item\em Union to store R\+G\+Ba color. \end{DoxyCompactList}\item 
+class \hyperlink{classarcade_1_1_core}{Core}
+\item 
+class \hyperlink{classarcade_1_1_d_l_loader_error}{D\+L\+Loader\+Error}
+\item 
+struct \hyperlink{structarcade_1_1_event}{Event}
+\begin{DoxyCompactList}\small\item\em Description of an event. \end{DoxyCompactList}\item 
+class \hyperlink{classarcade_1_1_game_lib_error}{Game\+Lib\+Error}
+\item 
+struct \hyperlink{structarcade_1_1_get_map}{Get\+Map}
+\begin{DoxyCompactList}\small\item\em The format is width, height, and width $\ast$ height $\ast$ sizeof(\+Tile\+Type) quantity of Tile\+Type. \end{DoxyCompactList}\item 
+class \hyperlink{classarcade_1_1_gfx_lapin}{Gfx\+Lapin}
+\item 
+class \hyperlink{classarcade_1_1_gfx_lib_error}{Gfx\+Lib\+Error}
+\item 
+class \hyperlink{classarcade_1_1_gfx_ncurses}{Gfx\+Ncurses}
+\item 
+class \hyperlink{classarcade_1_1_gfx_s_f_m_l}{Gfx\+S\+F\+ML}
+\item 
+class \hyperlink{classarcade_1_1_g_u_i}{G\+UI}
+\item 
+class \hyperlink{classarcade_1_1_i_component}{I\+Component}
+\begin{DoxyCompactList}\small\item\em Interface used to manage \hyperlink{classarcade_1_1_g_u_i}{G\+UI} components. \end{DoxyCompactList}\item 
+class \hyperlink{classarcade_1_1_i_game}{I\+Game}
+\begin{DoxyCompactList}\small\item\em Interface of a game for the \hyperlink{classarcade_1_1_core}{Core} program. \end{DoxyCompactList}\item 
+class \hyperlink{classarcade_1_1_i_gfx_lib}{I\+Gfx\+Lib}
+\begin{DoxyCompactList}\small\item\em Interface of a graphic lib for the \hyperlink{classarcade_1_1_core}{Core} program. \end{DoxyCompactList}\item 
+class \hyperlink{classarcade_1_1_i_g_u_i}{I\+G\+UI}
+\begin{DoxyCompactList}\small\item\em Interface representing a \hyperlink{classarcade_1_1_g_u_i}{G\+UI}. \end{DoxyCompactList}\item 
+class \hyperlink{classarcade_1_1_i_map}{I\+Map}
+\begin{DoxyCompactList}\small\item\em Interface representing a \hyperlink{classarcade_1_1_map}{Map}. \end{DoxyCompactList}\item 
+class \hyperlink{classarcade_1_1_i_sprite}{I\+Sprite}
+\begin{DoxyCompactList}\small\item\em Interface to use in order to generate the sprite loading list. \end{DoxyCompactList}\item 
+class \hyperlink{classarcade_1_1_i_stat}{I\+Stat}
+\begin{DoxyCompactList}\small\item\em Interface representing a player stat. \end{DoxyCompactList}\item 
+class \hyperlink{classarcade_1_1_i_tile}{I\+Tile}
+\begin{DoxyCompactList}\small\item\em Interface representing a tile. \end{DoxyCompactList}\item 
+class \hyperlink{classarcade_1_1_layer}{Layer}
+\item 
+class \hyperlink{classarcade_1_1_map}{Map}
+\item 
+class \hyperlink{classarcade_1_1_menu}{Menu}
+\item 
+struct \hyperlink{structarcade_1_1_mouse_pos}{Mouse\+Pos}
+\begin{DoxyCompactList}\small\item\em Mouse position (on the scale map) \end{DoxyCompactList}\item 
+struct \hyperlink{structarcade_1_1_network_packet}{Network\+Packet}
+\begin{DoxyCompactList}\small\item\em Network packet. \end{DoxyCompactList}\item 
+struct \hyperlink{structarcade_1_1_network_packet_header}{Network\+Packet\+Header}
+\begin{DoxyCompactList}\small\item\em Network packet header. \end{DoxyCompactList}\item 
+struct \hyperlink{structarcade_1_1_position}{Position}
+\begin{DoxyCompactList}\small\item\em The format is length, length $\ast$ \hyperlink{structarcade_1_1_position}{Position} quantity of Tile\+Type. \end{DoxyCompactList}\item 
+class \hyperlink{classarcade_1_1_projectile}{Projectile}
+\item 
+class \hyperlink{classarcade_1_1_snake_game}{Snake\+Game}
+\item 
+class \hyperlink{classarcade_1_1_snake_unit}{Snake\+Unit}
+\item 
+class \hyperlink{classarcade_1_1_solar_fox_game}{Solar\+Fox\+Game}
+\item 
+struct \hyperlink{structarcade_1_1_sound}{Sound}
+\item 
+class \hyperlink{classarcade_1_1_spaceship}{Spaceship}
+\item 
+class \hyperlink{classarcade_1_1_spaceship_enemy}{Spaceship\+Enemy}
+\item 
+class \hyperlink{classarcade_1_1_sprite}{Sprite}
+\item 
+class \hyperlink{classarcade_1_1_tile}{Tile}
+\item 
+class \hyperlink{classarcade_1_1_u_i_component}{U\+I\+Component}
+\item 
+class \hyperlink{classarcade_1_1_unit}{Unit}
+\item 
+struct \hyperlink{structarcade_1_1_where_am_i}{Where\+AmI}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacearcade_a608583b2070905ecc26e957409bb4f93}{Event\+Type} \{ \newline
+\hyperlink{namespacearcade_a608583b2070905ecc26e957409bb4f93a1145fba0ebe09714077bf1f354414a35}{E\+T\+\_\+\+N\+O\+NE} = -\/1, 
+\hyperlink{namespacearcade_a608583b2070905ecc26e957409bb4f93a47b5732315dd08e58ac45c37b376959a}{E\+T\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}, 
+\hyperlink{namespacearcade_a608583b2070905ecc26e957409bb4f93a2e94482647f6c5cf2ff95e092799c180}{E\+T\+\_\+\+M\+O\+U\+SE}, 
+\hyperlink{namespacearcade_a608583b2070905ecc26e957409bb4f93ad137ec8c2a95fffda902f81bd0d98a31}{E\+T\+\_\+\+B\+U\+T\+T\+ON}, 
+\newline
+\hyperlink{namespacearcade_a608583b2070905ecc26e957409bb4f93a1518d56271dbaa90f6ba57a710473f14}{E\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+CK}, 
+\hyperlink{namespacearcade_a608583b2070905ecc26e957409bb4f93a34fbadb208ad07f25a8f30c8465a84bb}{E\+T\+\_\+\+Q\+U\+IT}, 
+\hyperlink{namespacearcade_a608583b2070905ecc26e957409bb4f93ae818f5c6d611ac4ca126b0b7fd328b15}{N\+B\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+PE}
+ \}\begin{DoxyCompactList}\small\item\em General event type. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacearcade_a1b6c05b243c7e94d71fb328705e619bd}{Action\+Type} \{ \newline
+\hyperlink{namespacearcade_a1b6c05b243c7e94d71fb328705e619bdaac3c7c13e932f57d116c97d454019c5d}{A\+T\+\_\+\+N\+O\+NE} = -\/1, 
+\hyperlink{namespacearcade_a1b6c05b243c7e94d71fb328705e619bda64dc691d8dfa7dc0571d226b42dfea6e}{A\+T\+\_\+\+P\+R\+E\+S\+S\+ED}, 
+\hyperlink{namespacearcade_a1b6c05b243c7e94d71fb328705e619bda8e0c4a910dc5fc07e5231bad0052ddec}{A\+T\+\_\+\+R\+E\+L\+E\+A\+S\+ED}, 
+\hyperlink{namespacearcade_a1b6c05b243c7e94d71fb328705e619bdaa2d5c4829c8962e701fbe019c829a3df}{A\+T\+\_\+\+M\+O\+V\+ED}, 
+\newline
+\hyperlink{namespacearcade_a1b6c05b243c7e94d71fb328705e619bda757f0462f88c882a093d7b66cf48bb90}{A\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+ED}, 
+\hyperlink{namespacearcade_a1b6c05b243c7e94d71fb328705e619bda0cd465f408a5f63b67856d4f71fe4fe5}{A\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED}, 
+\hyperlink{namespacearcade_a1b6c05b243c7e94d71fb328705e619bdac98b0e1cf89751f47ff6dda67f210c4e}{N\+B\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE}
+ \}\begin{DoxyCompactList}\small\item\em General action type. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80e}{Keyboard\+Key} \{ \newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea7e50ad14d5bdcaacd8efec4a0dd76cb4}{K\+B\+\_\+\+N\+O\+NE} = -\/1, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea505f15ad3d5f7c3165ded3446e95adca}{K\+B\+\_\+A}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea4764dccda37fb50788b91d20685f050e}{K\+B\+\_\+B}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eab34b9cc5aba82a8e276569fea108a868}{K\+B\+\_\+C}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea182eea2e706a783af701322b1f0cc306}{K\+B\+\_\+D}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eaa898e8ea3ae807a5a27ec94461227e35}{K\+B\+\_\+E}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eac3703f943026cc3ab8e5bbc23ab17c55}{K\+B\+\_\+F}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eaa95e02508e28fb8a0a36b62313fef0c4}{K\+B\+\_\+G}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea1b4e1c015905a2a3bbf4f0d58f11a3cf}{K\+B\+\_\+H}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea12cdc4e55071f238c01bdc0bbcfc9a83}{K\+B\+\_\+I}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eae91b8c12be1a2cab1ff6782395fe6032}{K\+B\+\_\+J}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea37b75418f8e8fa87d5c9c25925d8000b}{K\+B\+\_\+K}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea8552339890c72f5dc81339f3ac545976}{K\+B\+\_\+L}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ead8ea4df324a0977d9f0c22eb265e1376}{K\+B\+\_\+M}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eaaaecb69237e2f8df568ab83b673a3d3b}{K\+B\+\_\+N}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea2ae9c121c20d02db9861b5362da2f526}{K\+B\+\_\+O}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea1d9f81f6e9b4850f3d51074319f40167}{K\+B\+\_\+P}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea3a264e82a71bd547a4608ccbe63d572c}{K\+B\+\_\+Q}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eac105ce9cc677445b8ae4a50f2fd31b91}{K\+B\+\_\+R}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea934a27a34f63249459efaf87836d5209}{K\+B\+\_\+S}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea6927932508deb69e16d030e750587dc6}{K\+B\+\_\+T}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eafba8e94b47c459533026a492e3ff818f}{K\+B\+\_\+U}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eac231564808bf288004adbc3e57dcbd51}{K\+B\+\_\+V}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eab5c1bbef9cc3116be7842f29f714e333}{K\+B\+\_\+W}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea30ef88e6cca8cd52d229af52144667e4}{K\+B\+\_\+X}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea9ef652a6a08f4a589285e54290e6f3b9}{K\+B\+\_\+Y}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea6bcddfe2b157ccbc3dd81cc1f0d6b313}{K\+B\+\_\+Z}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eabb2fa1524c90159128c864935087b2b0}{K\+B\+\_\+0}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eab674af590fc2261a7b9b8f5bb8a13f58}{K\+B\+\_\+1}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea66a791790c422d52e420d5a78e664f15}{K\+B\+\_\+2}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eacace6038d1284f630f2808e39ff048fb}{K\+B\+\_\+3}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea5867e6c5ec0d784a10d164458efc13bb}{K\+B\+\_\+4}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eaf1a2ef7803e123c1f6ee5f37b504d516}{K\+B\+\_\+5}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea0ee857f52a615bc4082a939d2d123d0a}{K\+B\+\_\+6}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea83200f9f3759451a8e93923f3c3558fb}{K\+B\+\_\+7}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea6a9bc51970df8bad5bcc52a160bf832f}{K\+B\+\_\+8}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea22e0ef6bf481c5775bc08319ed1a29cb}{K\+B\+\_\+9}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eab451e10c664e4910b93db2495ff3b89c}{K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+L\+E\+FT}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea03d7fc107a30c35437d31965a1c0c217}{K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+R\+I\+G\+HT}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea1417060d82a532b2ddd28a903071ca11}{K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+UP}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea45584980d376ad7b6e3b3825fb80a4d6}{K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+D\+O\+WN}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea5ddc9b7df97f07fd252cf19389258dd8}{K\+B\+\_\+\+S\+P\+A\+CE}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea2580ddb2709167f0023b40d9c0deb378}{K\+B\+\_\+\+E\+N\+T\+ER}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea15794d5c1ac0898c0c2e4e98d37e3857}{K\+B\+\_\+\+B\+A\+C\+K\+S\+P\+A\+CE}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea2d6a8932ee3191b0aa9a146afec40c46}{K\+B\+\_\+\+L\+C\+T\+RL}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea5de5b3b0fe89850f39a10dd3bca918cb}{K\+B\+\_\+\+R\+C\+T\+RL}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eafdc71fbb454596e9518726ea821c24d1}{K\+B\+\_\+\+L\+A\+LT}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea72b77d9cc20b5735e14670aef9274645}{K\+B\+\_\+\+R\+A\+LT}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea0eb88f38a01e761e7261c473a5ba11f8}{K\+B\+\_\+\+L\+S\+H\+I\+FT}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea396d5e142ef21bc3cda13431e9fa24c0}{K\+B\+\_\+\+R\+S\+H\+I\+FT}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea8742e736d70c460576c4cebe40ffb89f}{K\+B\+\_\+\+C\+A\+P\+S\+L\+O\+CK}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eae9879e6a709ead9a4a9f35e148b486b1}{K\+B\+\_\+\+T\+AB}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eab99011f38f2af81c272dc654c5ea406a}{K\+B\+\_\+\+E\+S\+C\+A\+PE}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea673b42fd73696cf21fa529161241f991}{K\+B\+\_\+\+P\+A\+G\+E\+UP}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea6b65b30768ade9382504190406fc4dc3}{K\+B\+\_\+\+P\+A\+G\+E\+D\+O\+WN}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea04a05eb2f1301c3baffe8c7137fb06dc}{K\+B\+\_\+\+H\+O\+ME}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea7a15e19dadaff3e156bbd72a00738fe8}{K\+B\+\_\+\+E\+ND}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea75d48628972e9758781eda5e6d4e2eb4}{K\+B\+\_\+\+F\+N1}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea0a85073270d11b51f542be97e43b4d19}{K\+B\+\_\+\+F\+N2}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea0b95bd1641d79c3186dfdd7c0e30b8e0}{K\+B\+\_\+\+F\+N3}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea43b7323fda1dc41c9ab0847cda9e734a}{K\+B\+\_\+\+F\+N4}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea823211a5d68e66b4f626a232e0f93877}{K\+B\+\_\+\+F\+N5}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea16ddf267a9d6b464562c3e3d4ade8bee}{K\+B\+\_\+\+F\+N6}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eab2f3f370ae5a0c69acf0ef039d2af3a1}{K\+B\+\_\+\+F\+N7}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eac53e73cb2648c9a3c1a7064a699b16ef}{K\+B\+\_\+\+F\+N8}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eaa11b588576bf36d8d4196eaa53ce0ba2}{K\+B\+\_\+\+F\+N9}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea42e633880b1f7f2aa680af765a493129}{K\+B\+\_\+\+F\+N10}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea2d97bbb2def613489d124763db3122e8}{K\+B\+\_\+\+F\+N11}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea9111ee038a53429265950d9b804a6924}{K\+B\+\_\+\+F\+N12}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eac14f14d5974343df42c51ff9077e4608}{K\+B\+\_\+\+C\+O\+M\+MA}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea76d6ae297e7e894b9fe9f207f3554887}{K\+B\+\_\+\+D\+OT}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea158a96f344bce722acdbec3cc929468b}{K\+B\+\_\+\+S\+L\+A\+SH}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eacf2cd3609a488585897a14256730a33a}{K\+B\+\_\+\+I\+N\+F\+E\+R\+I\+OR}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea15767e6cbaf8b78d1eb42b355f816c61}{K\+B\+\_\+\+S\+U\+P\+E\+R\+I\+OR}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea60dccaebd08351992b1e92e65a4e3533}{K\+B\+\_\+\+Q\+U\+E\+S\+T\+I\+ON}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea939a88f10493ec89f8d41c9397dc44b7}{K\+B\+\_\+\+S\+E\+M\+I\+C\+O\+L\+ON}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea0adde44293346394a688436a67e04633}{K\+B\+\_\+\+C\+O\+L\+ON}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea76a6219eef24df6f69c9c49bc43560ee}{K\+B\+\_\+\+S\+I\+M\+P\+L\+E\+Q\+U\+O\+TE}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea3f773bb8bcbcd73292dcfaad3b0b90ea}{K\+B\+\_\+\+D\+O\+U\+B\+L\+E\+Q\+U\+O\+TE}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eae2f3c46d71cd0f0dacdd598f09cb1718}{K\+B\+\_\+\+L\+E\+F\+T\+B\+R\+A\+CE}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea6b9a875877d5fe5ab50b2ffa38db20be}{K\+B\+\_\+\+R\+I\+G\+H\+T\+B\+R\+A\+CE}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea8bcd0be6537486775e9025148903d346}{K\+B\+\_\+\+L\+E\+F\+T\+B\+R\+A\+C\+K\+ET}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea9c75b4de4cb3ef786d3b4ab3a5a07511}{K\+B\+\_\+\+R\+I\+G\+H\+T\+B\+R\+A\+C\+K\+ET}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eaf0a906f50d130a3335a63ac480994710}{K\+B\+\_\+\+L\+E\+F\+T\+P\+A\+R\+EN}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea9dcd2a623be9411235b7879458810cf9}{K\+B\+\_\+\+R\+I\+G\+H\+T\+P\+A\+R\+EN}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eacf11e7cc80ec696fa05c1b339a020995}{K\+B\+\_\+\+B\+A\+C\+K\+S\+L\+A\+SH}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eafa053222bafb910d7a0e1f114e1ed0c9}{K\+B\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+B\+AR}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea906b40548cc6113c9d8c2f7b5481b13c}{K\+B\+\_\+\+E\+X\+C\+L\+A\+M\+A\+T\+I\+ON}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea14cf7afb33d05e90ba7a0c053a4a7e81}{K\+B\+\_\+\+A\+T\+S\+Y\+M\+B\+OL}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eab2661ab89070346d6d4e320bc7cfb799}{K\+B\+\_\+\+H\+A\+S\+H\+T\+AG}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea37a32fb5cb993a48b602d555e7bc9e2f}{K\+B\+\_\+\+D\+O\+L\+L\+AR}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea160c8c6e8d6b67c30e43c462d69b26df}{K\+B\+\_\+\+P\+E\+R\+C\+E\+NT}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea8f375b35b02eacd740c051ea943ef8e4}{K\+B\+\_\+\+C\+I\+R\+C\+U\+M\+F\+L\+EX}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea651f68ff2cc76d96130083261865a8f1}{K\+B\+\_\+\+A\+M\+P\+E\+R\+S\+A\+ND}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eab2c2612f919800f0343a4f3fbf48e989}{K\+B\+\_\+\+A\+S\+T\+E\+R\+I\+SK}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eaf17f8cf56aab21c19db22d9094179e99}{K\+B\+\_\+\+U\+N\+D\+E\+R\+S\+C\+O\+RE}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eaaee640f7de93992be6a22d7950e2f59f}{K\+B\+\_\+\+M\+I\+N\+US}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea700ed87915dc8a99064ad33498ddc9a6}{K\+B\+\_\+\+P\+L\+US}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ea7810fb4ea4fb7943c7dc9616305ac472}{K\+B\+\_\+\+E\+Q\+U\+A\+LS}, 
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80ead477e3c7d899002dd64876ae6a0cff2a}{K\+B\+\_\+\+D\+E\+L\+E\+TE}, 
+\newline
+\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80eaa1c3de811b5803a1a65b6ae0e45cc0b1}{N\+B\+\_\+\+K\+E\+Y\+B\+O\+A\+R\+D\+\_\+\+K\+EY}
+ \}\begin{DoxyCompactList}\small\item\em Common keyboard keys. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bf}{Mouse\+Key} \{ \newline
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa91c72d27e507baddb57e88eed37e2f2f}{M\+\_\+\+N\+O\+NE} = -\/1, 
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfac1daae4d5f7b313ca00cb5fe383f343a}{M\+\_\+\+L\+E\+F\+T\+\_\+\+C\+L\+I\+CK}, 
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa72602a4642a4aff4128b701b17623806}{M\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+L\+I\+CK}, 
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfabcc3fea48c87e2a1f4786260104c7106}{M\+\_\+\+M\+I\+D\+D\+L\+E\+\_\+\+C\+L\+I\+CK}, 
+\newline
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa6d93c3604c3778ac9aeb9249193ce2e2}{M\+\_\+\+S\+C\+R\+O\+L\+L\+\_\+\+UP}, 
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa0ef545aca48798c75ea921a90bf763df}{M\+\_\+\+S\+C\+R\+O\+L\+L\+\_\+\+D\+O\+WN}, 
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa2f33f0f811dbc434a032019ba9fb9a59}{M\+\_\+\+B\+T0}, 
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa26c806f39133da7426933190c0c4e97b}{M\+\_\+\+B\+T1}, 
+\newline
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfaf8fee919e8dc5d7eac244526b9358c89}{M\+\_\+\+B\+T2}, 
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa75085062db55a2e0d77b290463e4f6e9}{M\+\_\+\+B\+T3}, 
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa1b98d7b9b0493ec5fb3f9fad1ed8e297}{M\+\_\+\+B\+T4}, 
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa08c38a1c3e02d4ec3027534ac38ede1b}{M\+\_\+\+B\+T5}, 
+\newline
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfab45d1d9f9c8099304a38aab8b04102b5}{M\+\_\+\+B\+T6}, 
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfae0cc2448d6367308923865396100c089}{M\+\_\+\+B\+T7}, 
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfacf34629bf429980b0a0750dd309027bc}{M\+\_\+\+B\+T8}, 
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa9a35ff4a55b0a513fb992ea8979c9cd0}{M\+\_\+\+B\+T9}, 
+\newline
+\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bfae614aa4e235624c62b2fd71593ab711d}{N\+B\+\_\+\+M\+O\+U\+S\+E\+\_\+\+K\+EY}
+ \}\begin{DoxyCompactList}\small\item\em Common mouse keys. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacearcade_a4281850c2b4199c96efad8ba85f8aa21}{Controller\+Key} \{ \hyperlink{namespacearcade_a4281850c2b4199c96efad8ba85f8aa21acfcf046358333e389465ed0c140bae30}{C\+\_\+\+N\+O\+NE} = -\/1, 
+\hyperlink{namespacearcade_a4281850c2b4199c96efad8ba85f8aa21a8f6a3cbe8494541cbdbec345d0885a01}{N\+B\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+K\+EY}
+ \}\begin{DoxyCompactList}\small\item\em Common controller keys. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7}{Game\+State} \{ \newline
+\hyperlink{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7a5b39bcf8f6b63d13235acb792626ac86}{N\+O\+NE} = -\/1, 
+\hyperlink{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7ab01abc5a722b76bf5d58e2222c0bbb47}{L\+O\+A\+D\+I\+NG}, 
+\hyperlink{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7a166c2147c053cf4d559e2b0523f27aab}{I\+N\+G\+A\+ME}, 
+\hyperlink{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7a3b05fb118b02b52c4ca3985e444b4a07}{M\+E\+NU}, 
+\newline
+\hyperlink{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7afd476b9f26a353509f4d9bb3850cc268}{Q\+U\+IT}, 
+\hyperlink{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7ab5eddfc711a2e35508d51c1ce010ad6f}{N\+B\+\_\+\+G\+A\+M\+E\+\_\+\+S\+T\+A\+TE}
+ \}\begin{DoxyCompactList}\small\item\em Describe current game state. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4}{Tile\+Type\+Evolution} \{ \newline
+\hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4a2b0cc51eb307f5d5a6f831654e07633b}{E\+M\+P\+TY} = 0, 
+\hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4ac4c5eb9b720499a30df9f4f0976195c2}{B\+L\+O\+CK}, 
+\hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4a5d6877372bf42760246448b1c6dd69e8}{O\+B\+S\+T\+A\+C\+LE}, 
+\hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4aa051caea1f9628559c824ff1942a46a0}{E\+N\+E\+MY}, 
+\newline
+\hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4acdb71daa77a17c95ae771d6d951017e7}{S\+H\+O\+T\+\_\+\+E\+N\+E\+MY}, 
+\hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4a5442845df87c9e577da49e800646b1ef}{S\+H\+O\+T\+\_\+\+P\+L\+A\+Y\+ER}, 
+\hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4a2079d54be597e9cc9c26345dc170222f}{P\+O\+W\+E\+R\+UP}, 
+\hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4a10956309855c9a7fd7eb724a307a5129}{P\+L\+A\+Y\+ER}, 
+\newline
+\hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4aa3c88c626f5aced21ad0eb05ffc37ca9}{F\+O\+OD}
+ \}\begin{DoxyCompactList}\small\item\em Type of map tile. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aa}{Network\+Games} \{ \newline
+\hyperlink{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaa7dbb2f4f98a0608b1ebf611c7fcebd9a}{N\+O\+\_\+\+G\+A\+ME} = 0x0, 
+\hyperlink{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaa7a0524f20d7447c2819a8d63564edcf1}{S\+N\+A\+KE}, 
+\hyperlink{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaa81f8c584c981bbb107cc792b88719e08}{C\+E\+N\+T\+I\+P\+E\+DE}, 
+\hyperlink{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaa19cf598dbde0eb212e4e7432a3a55c73}{S\+O\+L\+A\+R\+\_\+\+F\+OX}, 
+\newline
+\hyperlink{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaa6a694a93e4b7e1e6c948a038c5e1defd}{P\+A\+C\+M\+AN}, 
+\hyperlink{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaaa19c798c9d00737a823b0ec6bd66b696}{P\+O\+NG}
+ \}
+\item 
+enum \hyperlink{namespacearcade_acdbeb7cbb97bf2e5169a4c76456e7278}{Network\+Action} \{ \hyperlink{namespacearcade_acdbeb7cbb97bf2e5169a4c76456e7278ad914edbe84129686257d376ff5108ca8}{H\+E\+L\+L\+O\+\_\+\+E\+V\+E\+NT} = 0x0, 
+\hyperlink{namespacearcade_acdbeb7cbb97bf2e5169a4c76456e7278a0a70a63c6b8a329d09da2deaee3abae7}{P\+L\+A\+Y\+E\+R\+\_\+\+E\+V\+E\+NT}, 
+\hyperlink{namespacearcade_acdbeb7cbb97bf2e5169a4c76456e7278a7db2d78b0114f25d2289d61d02451210}{G\+A\+M\+E\+\_\+\+E\+V\+E\+NT}, 
+\hyperlink{namespacearcade_acdbeb7cbb97bf2e5169a4c76456e7278aef2457828be9708eb822fe3b8c262ebc}{E\+N\+T\+I\+T\+Y\+\_\+\+E\+V\+E\+NT}
+ \}
+\item 
+enum \hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffd}{Command\+Type} \+: uint16\+\_\+t \{ \newline
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda3daa88f7882543d7fb5109415981b7a7}{Command\+Type\+::\+W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I} = 0, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda1421a869f1b215a40fc938eb484dca0d}{Command\+Type\+::\+G\+E\+T\+\_\+\+M\+AP} = 1, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdac31ea13f4cfe654aef8340e9f59fedec}{Command\+Type\+::\+G\+O\+\_\+\+UP} = 2, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdaf3292546b8481948d9036201d523d420}{Command\+Type\+::\+G\+O\+\_\+\+D\+O\+WN} = 3, 
+\newline
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda921a92f0ac56f20e2fa0705e28063e05}{Command\+Type\+::\+G\+O\+\_\+\+L\+E\+FT} = 4, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda4cb52e557c1ddf2e76801b0c39e44771}{Command\+Type\+::\+G\+O\+\_\+\+R\+I\+G\+HT} = 5, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda2a98be63c767757c20736472d2ee71b6}{Command\+Type\+::\+G\+O\+\_\+\+F\+O\+R\+W\+A\+RD} = 6, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda0504ea30baff7b670a10cb44f8e5cca2}{Command\+Type\+::\+S\+H\+O\+OT} = 7, 
+\newline
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda19b6dd9cf8414bce98a4f0b86c3258ec}{Command\+Type\+::\+I\+L\+L\+E\+G\+AL} = 8, 
+\hyperlink{namespacearcade_a31ef30225775697d1aeaf59819ac5051a6a216efc529825c60a4a4c0bc99ad77f}{P\+L\+AY} = 9, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda3daa88f7882543d7fb5109415981b7a7}{Command\+Type\+::\+W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I} = 0, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda1421a869f1b215a40fc938eb484dca0d}{Command\+Type\+::\+G\+E\+T\+\_\+\+M\+AP} = 1, 
+\newline
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdac31ea13f4cfe654aef8340e9f59fedec}{Command\+Type\+::\+G\+O\+\_\+\+UP} = 2, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdaf3292546b8481948d9036201d523d420}{Command\+Type\+::\+G\+O\+\_\+\+D\+O\+WN} = 3, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda921a92f0ac56f20e2fa0705e28063e05}{Command\+Type\+::\+G\+O\+\_\+\+L\+E\+FT} = 4, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda4cb52e557c1ddf2e76801b0c39e44771}{Command\+Type\+::\+G\+O\+\_\+\+R\+I\+G\+HT} = 5, 
+\newline
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda2a98be63c767757c20736472d2ee71b6}{Command\+Type\+::\+G\+O\+\_\+\+F\+O\+R\+W\+A\+RD} = 6, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda0504ea30baff7b670a10cb44f8e5cca2}{Command\+Type\+::\+S\+H\+O\+OT} = 7, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda19b6dd9cf8414bce98a4f0b86c3258ec}{Command\+Type\+::\+I\+L\+L\+E\+G\+AL} = 8, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda6a216efc529825c60a4a4c0bc99ad77f}{Command\+Type\+::\+P\+L\+AY} = 9
+ \}
+\item 
+enum \hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}{Tile\+Type} \+: uint16\+\_\+t \{ \newline
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caaba2b45bdc11e2a4a6e86aab2ac693cbb}{Tile\+Type\+::\+E\+M\+P\+TY} = 0, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa4d34f53389ed7f28ca91fc31ea360a66}{Tile\+Type\+::\+B\+L\+O\+CK} = 1, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa2399122c182da0d5946e2937bb73edf2}{Tile\+Type\+::\+O\+B\+S\+T\+A\+C\+LE} = 2, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa366a47a002b9d67086cc0270f93a9935}{Tile\+Type\+::\+E\+V\+I\+L\+\_\+\+D\+U\+DE} = 3, 
+\newline
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caadf38741063d3fef112980173ad06a8ba}{Tile\+Type\+::\+E\+V\+I\+L\+\_\+\+S\+H\+O\+OT} = 4, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa3b569c5ec0ad688b75b17cd17eba5ae0}{Tile\+Type\+::\+M\+Y\+\_\+\+S\+H\+O\+OT} = 5, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caab3e172b7afeb285bddcec5aee2be298e}{Tile\+Type\+::\+P\+O\+W\+E\+R\+UP} = 6, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa03570470bad94692ce93e32700d2e1cb}{Tile\+Type\+::\+O\+T\+H\+ER} = 7, 
+\newline
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caaba2b45bdc11e2a4a6e86aab2ac693cbb}{Tile\+Type\+::\+E\+M\+P\+TY} = 0, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa4d34f53389ed7f28ca91fc31ea360a66}{Tile\+Type\+::\+B\+L\+O\+CK} = 1, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa2399122c182da0d5946e2937bb73edf2}{Tile\+Type\+::\+O\+B\+S\+T\+A\+C\+LE} = 2, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa366a47a002b9d67086cc0270f93a9935}{Tile\+Type\+::\+E\+V\+I\+L\+\_\+\+D\+U\+DE} = 3, 
+\newline
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caadf38741063d3fef112980173ad06a8ba}{Tile\+Type\+::\+E\+V\+I\+L\+\_\+\+S\+H\+O\+OT} = 4, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa3b569c5ec0ad688b75b17cd17eba5ae0}{Tile\+Type\+::\+M\+Y\+\_\+\+S\+H\+O\+OT} = 5, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caab3e172b7afeb285bddcec5aee2be298e}{Tile\+Type\+::\+P\+O\+W\+E\+R\+UP} = 6, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa03570470bad94692ce93e32700d2e1cb}{Tile\+Type\+::\+O\+T\+H\+ER} = 7
+ \}
+\item 
+enum \hyperlink{namespacearcade_a31ef30225775697d1aeaf59819ac5051}{Sound\+Action} \{ \newline
+\hyperlink{namespacearcade_a31ef30225775697d1aeaf59819ac5051a0dcacdf4484296a70e9bb6fabe7e3b8a}{U\+N\+I\+Q\+UE}, 
+\hyperlink{namespacearcade_a31ef30225775697d1aeaf59819ac5051ab19f406ef6d6a98bf432ca847cb55f69}{R\+E\+P\+E\+AT}, 
+\hyperlink{namespacearcade_a31ef30225775697d1aeaf59819ac5051a54b01dde0e60c6d93b4fe6effacc8c6d}{V\+O\+L\+U\+ME}, 
+\hyperlink{namespacearcade_a31ef30225775697d1aeaf59819ac5051aaffec5e59f45f53273c815889e9c11c4}{P\+L\+AY}, 
+\newline
+\hyperlink{namespacearcade_a31ef30225775697d1aeaf59819ac5051a6a216efc529825c60a4a4c0bc99ad77f}{P\+L\+AY} = 9, 
+\hyperlink{namespacearcade_a31ef30225775697d1aeaf59819ac5051a6a216efc529825c60a4a4c0bc99ad77f}{P\+L\+AY} = 9, 
+\hyperlink{namespacearcade_a31ef30225775697d1aeaf59819ac5051aa0e7aaf91c664414477709b595513f44}{P\+A\+U\+SE}, 
+\hyperlink{namespacearcade_a31ef30225775697d1aeaf59819ac5051aa20791f727f3fda515c60d07eab5c54f}{R\+E\+S\+U\+ME}, 
+\newline
+\hyperlink{namespacearcade_a31ef30225775697d1aeaf59819ac5051aab3ad1f71d947ba49406609ac00a904e}{S\+T\+OP}
+ \}
+\item 
+enum \hyperlink{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5}{Sound\+Type} \{ \hyperlink{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5a5a4967c8f21ad70ba0e0459a0add50f0}{M\+U\+S\+IC}, 
+\hyperlink{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5a37f1d8b7897a8b789c2dd953b53416ef}{S\+O\+U\+ND}
+ \}\begin{DoxyCompactList}\small\item\em Used to differenciate the sound type. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffd}{Command\+Type} \+: uint16\+\_\+t \{ \newline
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda3daa88f7882543d7fb5109415981b7a7}{Command\+Type\+::\+W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I} = 0, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda1421a869f1b215a40fc938eb484dca0d}{Command\+Type\+::\+G\+E\+T\+\_\+\+M\+AP} = 1, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdac31ea13f4cfe654aef8340e9f59fedec}{Command\+Type\+::\+G\+O\+\_\+\+UP} = 2, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdaf3292546b8481948d9036201d523d420}{Command\+Type\+::\+G\+O\+\_\+\+D\+O\+WN} = 3, 
+\newline
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda921a92f0ac56f20e2fa0705e28063e05}{Command\+Type\+::\+G\+O\+\_\+\+L\+E\+FT} = 4, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda4cb52e557c1ddf2e76801b0c39e44771}{Command\+Type\+::\+G\+O\+\_\+\+R\+I\+G\+HT} = 5, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda2a98be63c767757c20736472d2ee71b6}{Command\+Type\+::\+G\+O\+\_\+\+F\+O\+R\+W\+A\+RD} = 6, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda0504ea30baff7b670a10cb44f8e5cca2}{Command\+Type\+::\+S\+H\+O\+OT} = 7, 
+\newline
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda19b6dd9cf8414bce98a4f0b86c3258ec}{Command\+Type\+::\+I\+L\+L\+E\+G\+AL} = 8, 
+\hyperlink{namespacearcade_a31ef30225775697d1aeaf59819ac5051a6a216efc529825c60a4a4c0bc99ad77f}{P\+L\+AY} = 9, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda3daa88f7882543d7fb5109415981b7a7}{Command\+Type\+::\+W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I} = 0, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda1421a869f1b215a40fc938eb484dca0d}{Command\+Type\+::\+G\+E\+T\+\_\+\+M\+AP} = 1, 
+\newline
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdac31ea13f4cfe654aef8340e9f59fedec}{Command\+Type\+::\+G\+O\+\_\+\+UP} = 2, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdaf3292546b8481948d9036201d523d420}{Command\+Type\+::\+G\+O\+\_\+\+D\+O\+WN} = 3, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda921a92f0ac56f20e2fa0705e28063e05}{Command\+Type\+::\+G\+O\+\_\+\+L\+E\+FT} = 4, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda4cb52e557c1ddf2e76801b0c39e44771}{Command\+Type\+::\+G\+O\+\_\+\+R\+I\+G\+HT} = 5, 
+\newline
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda2a98be63c767757c20736472d2ee71b6}{Command\+Type\+::\+G\+O\+\_\+\+F\+O\+R\+W\+A\+RD} = 6, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda0504ea30baff7b670a10cb44f8e5cca2}{Command\+Type\+::\+S\+H\+O\+OT} = 7, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda19b6dd9cf8414bce98a4f0b86c3258ec}{Command\+Type\+::\+I\+L\+L\+E\+G\+AL} = 8, 
+\hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda6a216efc529825c60a4a4c0bc99ad77f}{Command\+Type\+::\+P\+L\+AY} = 9
+ \}
+\item 
+enum \hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}{Tile\+Type} \+: uint16\+\_\+t \{ \newline
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caaba2b45bdc11e2a4a6e86aab2ac693cbb}{Tile\+Type\+::\+E\+M\+P\+TY} = 0, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa4d34f53389ed7f28ca91fc31ea360a66}{Tile\+Type\+::\+B\+L\+O\+CK} = 1, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa2399122c182da0d5946e2937bb73edf2}{Tile\+Type\+::\+O\+B\+S\+T\+A\+C\+LE} = 2, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa366a47a002b9d67086cc0270f93a9935}{Tile\+Type\+::\+E\+V\+I\+L\+\_\+\+D\+U\+DE} = 3, 
+\newline
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caadf38741063d3fef112980173ad06a8ba}{Tile\+Type\+::\+E\+V\+I\+L\+\_\+\+S\+H\+O\+OT} = 4, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa3b569c5ec0ad688b75b17cd17eba5ae0}{Tile\+Type\+::\+M\+Y\+\_\+\+S\+H\+O\+OT} = 5, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caab3e172b7afeb285bddcec5aee2be298e}{Tile\+Type\+::\+P\+O\+W\+E\+R\+UP} = 6, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa03570470bad94692ce93e32700d2e1cb}{Tile\+Type\+::\+O\+T\+H\+ER} = 7, 
+\newline
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caaba2b45bdc11e2a4a6e86aab2ac693cbb}{Tile\+Type\+::\+E\+M\+P\+TY} = 0, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa4d34f53389ed7f28ca91fc31ea360a66}{Tile\+Type\+::\+B\+L\+O\+CK} = 1, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa2399122c182da0d5946e2937bb73edf2}{Tile\+Type\+::\+O\+B\+S\+T\+A\+C\+LE} = 2, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa366a47a002b9d67086cc0270f93a9935}{Tile\+Type\+::\+E\+V\+I\+L\+\_\+\+D\+U\+DE} = 3, 
+\newline
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caadf38741063d3fef112980173ad06a8ba}{Tile\+Type\+::\+E\+V\+I\+L\+\_\+\+S\+H\+O\+OT} = 4, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa3b569c5ec0ad688b75b17cd17eba5ae0}{Tile\+Type\+::\+M\+Y\+\_\+\+S\+H\+O\+OT} = 5, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caab3e172b7afeb285bddcec5aee2be298e}{Tile\+Type\+::\+P\+O\+W\+E\+R\+UP} = 6, 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408caa03570470bad94692ce93e32700d2e1cb}{Tile\+Type\+::\+O\+T\+H\+ER} = 7
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structarcade_1_1_get_map}{arcade\+::\+Get\+Map} \hyperlink{namespacearcade_a09ff62ff66b3d7e845d329683e977d9a}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((packed))
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classarcade_1_1_sprite}{arcade\+::\+Sprite} \hyperlink{namespacearcade_ae0cdeb3398b5a1f9385b6f19de1466c4}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacearcade_a1b6c05b243c7e94d71fb328705e619bd}\label{namespacearcade_a1b6c05b243c7e94d71fb328705e619bd}} 
+\index{arcade@{arcade}!Action\+Type@{Action\+Type}}
+\index{Action\+Type@{Action\+Type}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{Action\+Type}{ActionType}}
+{\footnotesize\ttfamily enum \hyperlink{namespacearcade_a1b6c05b243c7e94d71fb328705e619bd}{arcade\+::\+Action\+Type}}
+
+
+
+General action type. 
+
+Indicate the action that was done \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+N\+O\+NE@{A\+T\+\_\+\+N\+O\+NE}!arcade@{arcade}}\index{arcade@{arcade}!A\+T\+\_\+\+N\+O\+NE@{A\+T\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{namespacearcade_a1b6c05b243c7e94d71fb328705e619bdaac3c7c13e932f57d116c97d454019c5d}\label{namespacearcade_a1b6c05b243c7e94d71fb328705e619bdaac3c7c13e932f57d116c97d454019c5d}} 
+A\+T\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+P\+R\+E\+S\+S\+ED@{A\+T\+\_\+\+P\+R\+E\+S\+S\+ED}!arcade@{arcade}}\index{arcade@{arcade}!A\+T\+\_\+\+P\+R\+E\+S\+S\+ED@{A\+T\+\_\+\+P\+R\+E\+S\+S\+ED}}}\mbox{\Hypertarget{namespacearcade_a1b6c05b243c7e94d71fb328705e619bda64dc691d8dfa7dc0571d226b42dfea6e}\label{namespacearcade_a1b6c05b243c7e94d71fb328705e619bda64dc691d8dfa7dc0571d226b42dfea6e}} 
+A\+T\+\_\+\+P\+R\+E\+S\+S\+ED&Unknown action. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+R\+E\+L\+E\+A\+S\+ED@{A\+T\+\_\+\+R\+E\+L\+E\+A\+S\+ED}!arcade@{arcade}}\index{arcade@{arcade}!A\+T\+\_\+\+R\+E\+L\+E\+A\+S\+ED@{A\+T\+\_\+\+R\+E\+L\+E\+A\+S\+ED}}}\mbox{\Hypertarget{namespacearcade_a1b6c05b243c7e94d71fb328705e619bda8e0c4a910dc5fc07e5231bad0052ddec}\label{namespacearcade_a1b6c05b243c7e94d71fb328705e619bda8e0c4a910dc5fc07e5231bad0052ddec}} 
+A\+T\+\_\+\+R\+E\+L\+E\+A\+S\+ED&Button/\+Key pressed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+M\+O\+V\+ED@{A\+T\+\_\+\+M\+O\+V\+ED}!arcade@{arcade}}\index{arcade@{arcade}!A\+T\+\_\+\+M\+O\+V\+ED@{A\+T\+\_\+\+M\+O\+V\+ED}}}\mbox{\Hypertarget{namespacearcade_a1b6c05b243c7e94d71fb328705e619bdaa2d5c4829c8962e701fbe019c829a3df}\label{namespacearcade_a1b6c05b243c7e94d71fb328705e619bdaa2d5c4829c8962e701fbe019c829a3df}} 
+A\+T\+\_\+\+M\+O\+V\+ED&Button/\+Key pressed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+ED@{A\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+ED}!arcade@{arcade}}\index{arcade@{arcade}!A\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+ED@{A\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+ED}}}\mbox{\Hypertarget{namespacearcade_a1b6c05b243c7e94d71fb328705e619bda757f0462f88c882a093d7b66cf48bb90}\label{namespacearcade_a1b6c05b243c7e94d71fb328705e619bda757f0462f88c882a093d7b66cf48bb90}} 
+A\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+ED&Mouse/\+Joystick moved. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED@{A\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED}!arcade@{arcade}}\index{arcade@{arcade}!A\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED@{A\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED}}}\mbox{\Hypertarget{namespacearcade_a1b6c05b243c7e94d71fb328705e619bda0cd465f408a5f63b67856d4f71fe4fe5}\label{namespacearcade_a1b6c05b243c7e94d71fb328705e619bda0cd465f408a5f63b67856d4f71fe4fe5}} 
+A\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED&Device connected. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+B\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE@{N\+B\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE}!arcade@{arcade}}\index{arcade@{arcade}!N\+B\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE@{N\+B\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE}}}\mbox{\Hypertarget{namespacearcade_a1b6c05b243c7e94d71fb328705e619bdac98b0e1cf89751f47ff6dda67f210c4e}\label{namespacearcade_a1b6c05b243c7e94d71fb328705e619bdac98b0e1cf89751f47ff6dda67f210c4e}} 
+N\+B\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE&Device disconnected. Number of action types \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffd}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffd}} 
+\index{arcade@{arcade}!Command\+Type@{Command\+Type}}
+\index{Command\+Type@{Command\+Type}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{Command\+Type}{CommandType}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffd}{arcade\+::\+Command\+Type} \+: uint16\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I@{W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I}!arcade@{arcade}}\index{arcade@{arcade}!W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I@{W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda3daa88f7882543d7fb5109415981b7a7}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda3daa88f7882543d7fb5109415981b7a7}} 
+W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+T\+\_\+\+M\+AP@{G\+E\+T\+\_\+\+M\+AP}!arcade@{arcade}}\index{arcade@{arcade}!G\+E\+T\+\_\+\+M\+AP@{G\+E\+T\+\_\+\+M\+AP}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda1421a869f1b215a40fc938eb484dca0d}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda1421a869f1b215a40fc938eb484dca0d}} 
+G\+E\+T\+\_\+\+M\+AP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+UP@{G\+O\+\_\+\+UP}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+UP@{G\+O\+\_\+\+UP}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdac31ea13f4cfe654aef8340e9f59fedec}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdac31ea13f4cfe654aef8340e9f59fedec}} 
+G\+O\+\_\+\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+D\+O\+WN@{G\+O\+\_\+\+D\+O\+WN}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+D\+O\+WN@{G\+O\+\_\+\+D\+O\+WN}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdaf3292546b8481948d9036201d523d420}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdaf3292546b8481948d9036201d523d420}} 
+G\+O\+\_\+\+D\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+L\+E\+FT@{G\+O\+\_\+\+L\+E\+FT}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+L\+E\+FT@{G\+O\+\_\+\+L\+E\+FT}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda921a92f0ac56f20e2fa0705e28063e05}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda921a92f0ac56f20e2fa0705e28063e05}} 
+G\+O\+\_\+\+L\+E\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+R\+I\+G\+HT@{G\+O\+\_\+\+R\+I\+G\+HT}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+R\+I\+G\+HT@{G\+O\+\_\+\+R\+I\+G\+HT}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda4cb52e557c1ddf2e76801b0c39e44771}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda4cb52e557c1ddf2e76801b0c39e44771}} 
+G\+O\+\_\+\+R\+I\+G\+HT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+F\+O\+R\+W\+A\+RD@{G\+O\+\_\+\+F\+O\+R\+W\+A\+RD}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+F\+O\+R\+W\+A\+RD@{G\+O\+\_\+\+F\+O\+R\+W\+A\+RD}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda2a98be63c767757c20736472d2ee71b6}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda2a98be63c767757c20736472d2ee71b6}} 
+G\+O\+\_\+\+F\+O\+R\+W\+A\+RD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+H\+O\+OT@{S\+H\+O\+OT}!arcade@{arcade}}\index{arcade@{arcade}!S\+H\+O\+OT@{S\+H\+O\+OT}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda0504ea30baff7b670a10cb44f8e5cca2}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda0504ea30baff7b670a10cb44f8e5cca2}} 
+S\+H\+O\+OT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+L\+L\+E\+G\+AL@{I\+L\+L\+E\+G\+AL}!arcade@{arcade}}\index{arcade@{arcade}!I\+L\+L\+E\+G\+AL@{I\+L\+L\+E\+G\+AL}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda19b6dd9cf8414bce98a4f0b86c3258ec}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda19b6dd9cf8414bce98a4f0b86c3258ec}} 
+I\+L\+L\+E\+G\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+L\+AY@{P\+L\+AY}!arcade@{arcade}}\index{arcade@{arcade}!P\+L\+AY@{P\+L\+AY}}}\mbox{\Hypertarget{namespacearcade_a31ef30225775697d1aeaf59819ac5051a6a216efc529825c60a4a4c0bc99ad77f}\label{namespacearcade_a31ef30225775697d1aeaf59819ac5051a6a216efc529825c60a4a4c0bc99ad77f}} 
+P\+L\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I@{W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I}!arcade@{arcade}}\index{arcade@{arcade}!W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I@{W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda3daa88f7882543d7fb5109415981b7a7}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda3daa88f7882543d7fb5109415981b7a7}} 
+W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+T\+\_\+\+M\+AP@{G\+E\+T\+\_\+\+M\+AP}!arcade@{arcade}}\index{arcade@{arcade}!G\+E\+T\+\_\+\+M\+AP@{G\+E\+T\+\_\+\+M\+AP}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda1421a869f1b215a40fc938eb484dca0d}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda1421a869f1b215a40fc938eb484dca0d}} 
+G\+E\+T\+\_\+\+M\+AP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+UP@{G\+O\+\_\+\+UP}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+UP@{G\+O\+\_\+\+UP}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdac31ea13f4cfe654aef8340e9f59fedec}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdac31ea13f4cfe654aef8340e9f59fedec}} 
+G\+O\+\_\+\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+D\+O\+WN@{G\+O\+\_\+\+D\+O\+WN}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+D\+O\+WN@{G\+O\+\_\+\+D\+O\+WN}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdaf3292546b8481948d9036201d523d420}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdaf3292546b8481948d9036201d523d420}} 
+G\+O\+\_\+\+D\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+L\+E\+FT@{G\+O\+\_\+\+L\+E\+FT}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+L\+E\+FT@{G\+O\+\_\+\+L\+E\+FT}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda921a92f0ac56f20e2fa0705e28063e05}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda921a92f0ac56f20e2fa0705e28063e05}} 
+G\+O\+\_\+\+L\+E\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+R\+I\+G\+HT@{G\+O\+\_\+\+R\+I\+G\+HT}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+R\+I\+G\+HT@{G\+O\+\_\+\+R\+I\+G\+HT}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda4cb52e557c1ddf2e76801b0c39e44771}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda4cb52e557c1ddf2e76801b0c39e44771}} 
+G\+O\+\_\+\+R\+I\+G\+HT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+F\+O\+R\+W\+A\+RD@{G\+O\+\_\+\+F\+O\+R\+W\+A\+RD}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+F\+O\+R\+W\+A\+RD@{G\+O\+\_\+\+F\+O\+R\+W\+A\+RD}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda2a98be63c767757c20736472d2ee71b6}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda2a98be63c767757c20736472d2ee71b6}} 
+G\+O\+\_\+\+F\+O\+R\+W\+A\+RD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+H\+O\+OT@{S\+H\+O\+OT}!arcade@{arcade}}\index{arcade@{arcade}!S\+H\+O\+OT@{S\+H\+O\+OT}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda0504ea30baff7b670a10cb44f8e5cca2}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda0504ea30baff7b670a10cb44f8e5cca2}} 
+S\+H\+O\+OT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+L\+L\+E\+G\+AL@{I\+L\+L\+E\+G\+AL}!arcade@{arcade}}\index{arcade@{arcade}!I\+L\+L\+E\+G\+AL@{I\+L\+L\+E\+G\+AL}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda19b6dd9cf8414bce98a4f0b86c3258ec}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda19b6dd9cf8414bce98a4f0b86c3258ec}} 
+I\+L\+L\+E\+G\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+L\+AY@{P\+L\+AY}!arcade@{arcade}}\index{arcade@{arcade}!P\+L\+AY@{P\+L\+AY}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda6a216efc529825c60a4a4c0bc99ad77f}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda6a216efc529825c60a4a4c0bc99ad77f}} 
+P\+L\+AY&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffd}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffd}} 
+\index{arcade@{arcade}!Command\+Type@{Command\+Type}}
+\index{Command\+Type@{Command\+Type}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{Command\+Type}{CommandType}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \hyperlink{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffd}{arcade\+::\+Command\+Type} \+: uint16\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I@{W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I}!arcade@{arcade}}\index{arcade@{arcade}!W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I@{W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda3daa88f7882543d7fb5109415981b7a7}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda3daa88f7882543d7fb5109415981b7a7}} 
+W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+T\+\_\+\+M\+AP@{G\+E\+T\+\_\+\+M\+AP}!arcade@{arcade}}\index{arcade@{arcade}!G\+E\+T\+\_\+\+M\+AP@{G\+E\+T\+\_\+\+M\+AP}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda1421a869f1b215a40fc938eb484dca0d}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda1421a869f1b215a40fc938eb484dca0d}} 
+G\+E\+T\+\_\+\+M\+AP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+UP@{G\+O\+\_\+\+UP}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+UP@{G\+O\+\_\+\+UP}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdac31ea13f4cfe654aef8340e9f59fedec}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdac31ea13f4cfe654aef8340e9f59fedec}} 
+G\+O\+\_\+\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+D\+O\+WN@{G\+O\+\_\+\+D\+O\+WN}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+D\+O\+WN@{G\+O\+\_\+\+D\+O\+WN}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdaf3292546b8481948d9036201d523d420}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdaf3292546b8481948d9036201d523d420}} 
+G\+O\+\_\+\+D\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+L\+E\+FT@{G\+O\+\_\+\+L\+E\+FT}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+L\+E\+FT@{G\+O\+\_\+\+L\+E\+FT}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda921a92f0ac56f20e2fa0705e28063e05}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda921a92f0ac56f20e2fa0705e28063e05}} 
+G\+O\+\_\+\+L\+E\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+R\+I\+G\+HT@{G\+O\+\_\+\+R\+I\+G\+HT}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+R\+I\+G\+HT@{G\+O\+\_\+\+R\+I\+G\+HT}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda4cb52e557c1ddf2e76801b0c39e44771}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda4cb52e557c1ddf2e76801b0c39e44771}} 
+G\+O\+\_\+\+R\+I\+G\+HT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+F\+O\+R\+W\+A\+RD@{G\+O\+\_\+\+F\+O\+R\+W\+A\+RD}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+F\+O\+R\+W\+A\+RD@{G\+O\+\_\+\+F\+O\+R\+W\+A\+RD}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda2a98be63c767757c20736472d2ee71b6}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda2a98be63c767757c20736472d2ee71b6}} 
+G\+O\+\_\+\+F\+O\+R\+W\+A\+RD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+H\+O\+OT@{S\+H\+O\+OT}!arcade@{arcade}}\index{arcade@{arcade}!S\+H\+O\+OT@{S\+H\+O\+OT}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda0504ea30baff7b670a10cb44f8e5cca2}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda0504ea30baff7b670a10cb44f8e5cca2}} 
+S\+H\+O\+OT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+L\+L\+E\+G\+AL@{I\+L\+L\+E\+G\+AL}!arcade@{arcade}}\index{arcade@{arcade}!I\+L\+L\+E\+G\+AL@{I\+L\+L\+E\+G\+AL}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda19b6dd9cf8414bce98a4f0b86c3258ec}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda19b6dd9cf8414bce98a4f0b86c3258ec}} 
+I\+L\+L\+E\+G\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+L\+AY@{P\+L\+AY}!arcade@{arcade}}\index{arcade@{arcade}!P\+L\+AY@{P\+L\+AY}}}\mbox{\Hypertarget{namespacearcade_a31ef30225775697d1aeaf59819ac5051a6a216efc529825c60a4a4c0bc99ad77f}\label{namespacearcade_a31ef30225775697d1aeaf59819ac5051a6a216efc529825c60a4a4c0bc99ad77f}} 
+P\+L\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I@{W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I}!arcade@{arcade}}\index{arcade@{arcade}!W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I@{W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda3daa88f7882543d7fb5109415981b7a7}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda3daa88f7882543d7fb5109415981b7a7}} 
+W\+H\+E\+R\+E\+\_\+\+A\+M\+\_\+I&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+T\+\_\+\+M\+AP@{G\+E\+T\+\_\+\+M\+AP}!arcade@{arcade}}\index{arcade@{arcade}!G\+E\+T\+\_\+\+M\+AP@{G\+E\+T\+\_\+\+M\+AP}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda1421a869f1b215a40fc938eb484dca0d}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda1421a869f1b215a40fc938eb484dca0d}} 
+G\+E\+T\+\_\+\+M\+AP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+UP@{G\+O\+\_\+\+UP}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+UP@{G\+O\+\_\+\+UP}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdac31ea13f4cfe654aef8340e9f59fedec}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdac31ea13f4cfe654aef8340e9f59fedec}} 
+G\+O\+\_\+\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+D\+O\+WN@{G\+O\+\_\+\+D\+O\+WN}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+D\+O\+WN@{G\+O\+\_\+\+D\+O\+WN}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdaf3292546b8481948d9036201d523d420}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffdaf3292546b8481948d9036201d523d420}} 
+G\+O\+\_\+\+D\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+L\+E\+FT@{G\+O\+\_\+\+L\+E\+FT}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+L\+E\+FT@{G\+O\+\_\+\+L\+E\+FT}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda921a92f0ac56f20e2fa0705e28063e05}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda921a92f0ac56f20e2fa0705e28063e05}} 
+G\+O\+\_\+\+L\+E\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+R\+I\+G\+HT@{G\+O\+\_\+\+R\+I\+G\+HT}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+R\+I\+G\+HT@{G\+O\+\_\+\+R\+I\+G\+HT}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda4cb52e557c1ddf2e76801b0c39e44771}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda4cb52e557c1ddf2e76801b0c39e44771}} 
+G\+O\+\_\+\+R\+I\+G\+HT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+O\+\_\+\+F\+O\+R\+W\+A\+RD@{G\+O\+\_\+\+F\+O\+R\+W\+A\+RD}!arcade@{arcade}}\index{arcade@{arcade}!G\+O\+\_\+\+F\+O\+R\+W\+A\+RD@{G\+O\+\_\+\+F\+O\+R\+W\+A\+RD}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda2a98be63c767757c20736472d2ee71b6}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda2a98be63c767757c20736472d2ee71b6}} 
+G\+O\+\_\+\+F\+O\+R\+W\+A\+RD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+H\+O\+OT@{S\+H\+O\+OT}!arcade@{arcade}}\index{arcade@{arcade}!S\+H\+O\+OT@{S\+H\+O\+OT}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda0504ea30baff7b670a10cb44f8e5cca2}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda0504ea30baff7b670a10cb44f8e5cca2}} 
+S\+H\+O\+OT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+L\+L\+E\+G\+AL@{I\+L\+L\+E\+G\+AL}!arcade@{arcade}}\index{arcade@{arcade}!I\+L\+L\+E\+G\+AL@{I\+L\+L\+E\+G\+AL}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda19b6dd9cf8414bce98a4f0b86c3258ec}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda19b6dd9cf8414bce98a4f0b86c3258ec}} 
+I\+L\+L\+E\+G\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+L\+AY@{P\+L\+AY}!arcade@{arcade}}\index{arcade@{arcade}!P\+L\+AY@{P\+L\+AY}}}\mbox{\Hypertarget{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda6a216efc529825c60a4a4c0bc99ad77f}\label{namespacearcade_a23d58aed7310b22b59e2b8f8ff8a5ffda6a216efc529825c60a4a4c0bc99ad77f}} 
+P\+L\+AY&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacearcade_a4281850c2b4199c96efad8ba85f8aa21}\label{namespacearcade_a4281850c2b4199c96efad8ba85f8aa21}} 
+\index{arcade@{arcade}!Controller\+Key@{Controller\+Key}}
+\index{Controller\+Key@{Controller\+Key}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{Controller\+Key}{ControllerKey}}
+{\footnotesize\ttfamily enum \hyperlink{namespacearcade_a4281850c2b4199c96efad8ba85f8aa21}{arcade\+::\+Controller\+Key}}
+
+
+
+Common controller keys. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+\_\+\+N\+O\+NE@{C\+\_\+\+N\+O\+NE}!arcade@{arcade}}\index{arcade@{arcade}!C\+\_\+\+N\+O\+NE@{C\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{namespacearcade_a4281850c2b4199c96efad8ba85f8aa21acfcf046358333e389465ed0c140bae30}\label{namespacearcade_a4281850c2b4199c96efad8ba85f8aa21acfcf046358333e389465ed0c140bae30}} 
+C\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+B\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+K\+EY@{N\+B\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+K\+EY}!arcade@{arcade}}\index{arcade@{arcade}!N\+B\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+K\+EY@{N\+B\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+K\+EY}}}\mbox{\Hypertarget{namespacearcade_a4281850c2b4199c96efad8ba85f8aa21a8f6a3cbe8494541cbdbec345d0885a01}\label{namespacearcade_a4281850c2b4199c96efad8ba85f8aa21a8f6a3cbe8494541cbdbec345d0885a01}} 
+N\+B\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+K\+EY&Unknown key. Number of controller keys \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacearcade_a608583b2070905ecc26e957409bb4f93}\label{namespacearcade_a608583b2070905ecc26e957409bb4f93}} 
+\index{arcade@{arcade}!Event\+Type@{Event\+Type}}
+\index{Event\+Type@{Event\+Type}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{Event\+Type}{EventType}}
+{\footnotesize\ttfamily enum \hyperlink{namespacearcade_a608583b2070905ecc26e957409bb4f93}{arcade\+::\+Event\+Type}}
+
+
+
+General event type. 
+
+Indicate the device of the current event or quit signal \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+T\+\_\+\+N\+O\+NE@{E\+T\+\_\+\+N\+O\+NE}!arcade@{arcade}}\index{arcade@{arcade}!E\+T\+\_\+\+N\+O\+NE@{E\+T\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{namespacearcade_a608583b2070905ecc26e957409bb4f93a1145fba0ebe09714077bf1f354414a35}\label{namespacearcade_a608583b2070905ecc26e957409bb4f93a1145fba0ebe09714077bf1f354414a35}} 
+E\+T\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+T\+\_\+\+K\+E\+Y\+B\+O\+A\+RD@{E\+T\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}!arcade@{arcade}}\index{arcade@{arcade}!E\+T\+\_\+\+K\+E\+Y\+B\+O\+A\+RD@{E\+T\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}}}\mbox{\Hypertarget{namespacearcade_a608583b2070905ecc26e957409bb4f93a47b5732315dd08e58ac45c37b376959a}\label{namespacearcade_a608583b2070905ecc26e957409bb4f93a47b5732315dd08e58ac45c37b376959a}} 
+E\+T\+\_\+\+K\+E\+Y\+B\+O\+A\+RD&Unknown event. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+T\+\_\+\+M\+O\+U\+SE@{E\+T\+\_\+\+M\+O\+U\+SE}!arcade@{arcade}}\index{arcade@{arcade}!E\+T\+\_\+\+M\+O\+U\+SE@{E\+T\+\_\+\+M\+O\+U\+SE}}}\mbox{\Hypertarget{namespacearcade_a608583b2070905ecc26e957409bb4f93a2e94482647f6c5cf2ff95e092799c180}\label{namespacearcade_a608583b2070905ecc26e957409bb4f93a2e94482647f6c5cf2ff95e092799c180}} 
+E\+T\+\_\+\+M\+O\+U\+SE&Keyboard event. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+T\+\_\+\+B\+U\+T\+T\+ON@{E\+T\+\_\+\+B\+U\+T\+T\+ON}!arcade@{arcade}}\index{arcade@{arcade}!E\+T\+\_\+\+B\+U\+T\+T\+ON@{E\+T\+\_\+\+B\+U\+T\+T\+ON}}}\mbox{\Hypertarget{namespacearcade_a608583b2070905ecc26e957409bb4f93ad137ec8c2a95fffda902f81bd0d98a31}\label{namespacearcade_a608583b2070905ecc26e957409bb4f93ad137ec8c2a95fffda902f81bd0d98a31}} 
+E\+T\+\_\+\+B\+U\+T\+T\+ON&Mouse event. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+CK@{E\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+CK}!arcade@{arcade}}\index{arcade@{arcade}!E\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+CK@{E\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+CK}}}\mbox{\Hypertarget{namespacearcade_a608583b2070905ecc26e957409bb4f93a1518d56271dbaa90f6ba57a710473f14}\label{namespacearcade_a608583b2070905ecc26e957409bb4f93a1518d56271dbaa90f6ba57a710473f14}} 
+E\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+CK&Controller button event. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+T\+\_\+\+Q\+U\+IT@{E\+T\+\_\+\+Q\+U\+IT}!arcade@{arcade}}\index{arcade@{arcade}!E\+T\+\_\+\+Q\+U\+IT@{E\+T\+\_\+\+Q\+U\+IT}}}\mbox{\Hypertarget{namespacearcade_a608583b2070905ecc26e957409bb4f93a34fbadb208ad07f25a8f30c8465a84bb}\label{namespacearcade_a608583b2070905ecc26e957409bb4f93a34fbadb208ad07f25a8f30c8465a84bb}} 
+E\+T\+\_\+\+Q\+U\+IT&Controller joystick event. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+B\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+PE@{N\+B\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+PE}!arcade@{arcade}}\index{arcade@{arcade}!N\+B\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+PE@{N\+B\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+PE}}}\mbox{\Hypertarget{namespacearcade_a608583b2070905ecc26e957409bb4f93ae818f5c6d611ac4ca126b0b7fd328b15}\label{namespacearcade_a608583b2070905ecc26e957409bb4f93ae818f5c6d611ac4ca126b0b7fd328b15}} 
+N\+B\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+PE&The lib \char`\"{}ask\char`\"{} to quit. Number of event types \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7}\label{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7}} 
+\index{arcade@{arcade}!Game\+State@{Game\+State}}
+\index{Game\+State@{Game\+State}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{Game\+State}{GameState}}
+{\footnotesize\ttfamily enum \hyperlink{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7}{arcade\+::\+Game\+State}}
+
+
+
+Describe current game state. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!arcade@{arcade}}\index{arcade@{arcade}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7a5b39bcf8f6b63d13235acb792626ac86}\label{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7a5b39bcf8f6b63d13235acb792626ac86}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+O\+A\+D\+I\+NG@{L\+O\+A\+D\+I\+NG}!arcade@{arcade}}\index{arcade@{arcade}!L\+O\+A\+D\+I\+NG@{L\+O\+A\+D\+I\+NG}}}\mbox{\Hypertarget{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7ab01abc5a722b76bf5d58e2222c0bbb47}\label{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7ab01abc5a722b76bf5d58e2222c0bbb47}} 
+L\+O\+A\+D\+I\+NG&Unknown game state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+N\+G\+A\+ME@{I\+N\+G\+A\+ME}!arcade@{arcade}}\index{arcade@{arcade}!I\+N\+G\+A\+ME@{I\+N\+G\+A\+ME}}}\mbox{\Hypertarget{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7a166c2147c053cf4d559e2b0523f27aab}\label{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7a166c2147c053cf4d559e2b0523f27aab}} 
+I\+N\+G\+A\+ME&The game was just loaded (need to load sounds and sprites) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+E\+NU@{M\+E\+NU}!arcade@{arcade}}\index{arcade@{arcade}!M\+E\+NU@{M\+E\+NU}}}\mbox{\Hypertarget{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7a3b05fb118b02b52c4ca3985e444b4a07}\label{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7a3b05fb118b02b52c4ca3985e444b4a07}} 
+M\+E\+NU&In game. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Q\+U\+IT@{Q\+U\+IT}!arcade@{arcade}}\index{arcade@{arcade}!Q\+U\+IT@{Q\+U\+IT}}}\mbox{\Hypertarget{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7afd476b9f26a353509f4d9bb3850cc268}\label{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7afd476b9f26a353509f4d9bb3850cc268}} 
+Q\+U\+IT&In menu. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+B\+\_\+\+G\+A\+M\+E\+\_\+\+S\+T\+A\+TE@{N\+B\+\_\+\+G\+A\+M\+E\+\_\+\+S\+T\+A\+TE}!arcade@{arcade}}\index{arcade@{arcade}!N\+B\+\_\+\+G\+A\+M\+E\+\_\+\+S\+T\+A\+TE@{N\+B\+\_\+\+G\+A\+M\+E\+\_\+\+S\+T\+A\+TE}}}\mbox{\Hypertarget{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7ab5eddfc711a2e35508d51c1ce010ad6f}\label{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7ab5eddfc711a2e35508d51c1ce010ad6f}} 
+N\+B\+\_\+\+G\+A\+M\+E\+\_\+\+S\+T\+A\+TE&Quitting. Number of game states \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80e}\label{namespacearcade_a347918e3b31df21087660f19962ff80e}} 
+\index{arcade@{arcade}!Keyboard\+Key@{Keyboard\+Key}}
+\index{Keyboard\+Key@{Keyboard\+Key}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{Keyboard\+Key}{KeyboardKey}}
+{\footnotesize\ttfamily enum \hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80e}{arcade\+::\+Keyboard\+Key}}
+
+
+
+Common keyboard keys. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+N\+O\+NE@{K\+B\+\_\+\+N\+O\+NE}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+N\+O\+NE@{K\+B\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea7e50ad14d5bdcaacd8efec4a0dd76cb4}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea7e50ad14d5bdcaacd8efec4a0dd76cb4}} 
+K\+B\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+A@{K\+B\+\_\+A}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+A@{K\+B\+\_\+A}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea505f15ad3d5f7c3165ded3446e95adca}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea505f15ad3d5f7c3165ded3446e95adca}} 
+K\+B\+\_\+A&Unkwown key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+B@{K\+B\+\_\+B}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+B@{K\+B\+\_\+B}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea4764dccda37fb50788b91d20685f050e}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea4764dccda37fb50788b91d20685f050e}} 
+K\+B\+\_\+B&A key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+C@{K\+B\+\_\+C}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+C@{K\+B\+\_\+C}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eab34b9cc5aba82a8e276569fea108a868}\label{namespacearcade_a347918e3b31df21087660f19962ff80eab34b9cc5aba82a8e276569fea108a868}} 
+K\+B\+\_\+C&B key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+D@{K\+B\+\_\+D}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+D@{K\+B\+\_\+D}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea182eea2e706a783af701322b1f0cc306}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea182eea2e706a783af701322b1f0cc306}} 
+K\+B\+\_\+D&C key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+E@{K\+B\+\_\+E}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+E@{K\+B\+\_\+E}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eaa898e8ea3ae807a5a27ec94461227e35}\label{namespacearcade_a347918e3b31df21087660f19962ff80eaa898e8ea3ae807a5a27ec94461227e35}} 
+K\+B\+\_\+E&D key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+F@{K\+B\+\_\+F}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+F@{K\+B\+\_\+F}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eac3703f943026cc3ab8e5bbc23ab17c55}\label{namespacearcade_a347918e3b31df21087660f19962ff80eac3703f943026cc3ab8e5bbc23ab17c55}} 
+K\+B\+\_\+F&E key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+G@{K\+B\+\_\+G}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+G@{K\+B\+\_\+G}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eaa95e02508e28fb8a0a36b62313fef0c4}\label{namespacearcade_a347918e3b31df21087660f19962ff80eaa95e02508e28fb8a0a36b62313fef0c4}} 
+K\+B\+\_\+G&F key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+H@{K\+B\+\_\+H}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+H@{K\+B\+\_\+H}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea1b4e1c015905a2a3bbf4f0d58f11a3cf}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea1b4e1c015905a2a3bbf4f0d58f11a3cf}} 
+K\+B\+\_\+H&G key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+I@{K\+B\+\_\+I}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+I@{K\+B\+\_\+I}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea12cdc4e55071f238c01bdc0bbcfc9a83}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea12cdc4e55071f238c01bdc0bbcfc9a83}} 
+K\+B\+\_\+I&H key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+J@{K\+B\+\_\+J}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+J@{K\+B\+\_\+J}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eae91b8c12be1a2cab1ff6782395fe6032}\label{namespacearcade_a347918e3b31df21087660f19962ff80eae91b8c12be1a2cab1ff6782395fe6032}} 
+K\+B\+\_\+J&I key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+K@{K\+B\+\_\+K}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+K@{K\+B\+\_\+K}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea37b75418f8e8fa87d5c9c25925d8000b}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea37b75418f8e8fa87d5c9c25925d8000b}} 
+K\+B\+\_\+K&J key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+L@{K\+B\+\_\+L}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+L@{K\+B\+\_\+L}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea8552339890c72f5dc81339f3ac545976}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea8552339890c72f5dc81339f3ac545976}} 
+K\+B\+\_\+L&K key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+M@{K\+B\+\_\+M}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+M@{K\+B\+\_\+M}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ead8ea4df324a0977d9f0c22eb265e1376}\label{namespacearcade_a347918e3b31df21087660f19962ff80ead8ea4df324a0977d9f0c22eb265e1376}} 
+K\+B\+\_\+M&L key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+N@{K\+B\+\_\+N}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+N@{K\+B\+\_\+N}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eaaaecb69237e2f8df568ab83b673a3d3b}\label{namespacearcade_a347918e3b31df21087660f19962ff80eaaaecb69237e2f8df568ab83b673a3d3b}} 
+K\+B\+\_\+N&M key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+O@{K\+B\+\_\+O}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+O@{K\+B\+\_\+O}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea2ae9c121c20d02db9861b5362da2f526}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea2ae9c121c20d02db9861b5362da2f526}} 
+K\+B\+\_\+O&N key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+P@{K\+B\+\_\+P}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+P@{K\+B\+\_\+P}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea1d9f81f6e9b4850f3d51074319f40167}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea1d9f81f6e9b4850f3d51074319f40167}} 
+K\+B\+\_\+P&O key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+Q@{K\+B\+\_\+Q}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+Q@{K\+B\+\_\+Q}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea3a264e82a71bd547a4608ccbe63d572c}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea3a264e82a71bd547a4608ccbe63d572c}} 
+K\+B\+\_\+Q&P key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+R@{K\+B\+\_\+R}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+R@{K\+B\+\_\+R}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eac105ce9cc677445b8ae4a50f2fd31b91}\label{namespacearcade_a347918e3b31df21087660f19962ff80eac105ce9cc677445b8ae4a50f2fd31b91}} 
+K\+B\+\_\+R&Q key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+S@{K\+B\+\_\+S}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+S@{K\+B\+\_\+S}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea934a27a34f63249459efaf87836d5209}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea934a27a34f63249459efaf87836d5209}} 
+K\+B\+\_\+S&R key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+T@{K\+B\+\_\+T}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+T@{K\+B\+\_\+T}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea6927932508deb69e16d030e750587dc6}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea6927932508deb69e16d030e750587dc6}} 
+K\+B\+\_\+T&S key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+U@{K\+B\+\_\+U}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+U@{K\+B\+\_\+U}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eafba8e94b47c459533026a492e3ff818f}\label{namespacearcade_a347918e3b31df21087660f19962ff80eafba8e94b47c459533026a492e3ff818f}} 
+K\+B\+\_\+U&T key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+V@{K\+B\+\_\+V}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+V@{K\+B\+\_\+V}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eac231564808bf288004adbc3e57dcbd51}\label{namespacearcade_a347918e3b31df21087660f19962ff80eac231564808bf288004adbc3e57dcbd51}} 
+K\+B\+\_\+V&U key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+W@{K\+B\+\_\+W}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+W@{K\+B\+\_\+W}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eab5c1bbef9cc3116be7842f29f714e333}\label{namespacearcade_a347918e3b31df21087660f19962ff80eab5c1bbef9cc3116be7842f29f714e333}} 
+K\+B\+\_\+W&V key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+X@{K\+B\+\_\+X}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+X@{K\+B\+\_\+X}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea30ef88e6cca8cd52d229af52144667e4}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea30ef88e6cca8cd52d229af52144667e4}} 
+K\+B\+\_\+X&W key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+Y@{K\+B\+\_\+Y}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+Y@{K\+B\+\_\+Y}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea9ef652a6a08f4a589285e54290e6f3b9}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea9ef652a6a08f4a589285e54290e6f3b9}} 
+K\+B\+\_\+Y&X key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+Z@{K\+B\+\_\+Z}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+Z@{K\+B\+\_\+Z}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea6bcddfe2b157ccbc3dd81cc1f0d6b313}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea6bcddfe2b157ccbc3dd81cc1f0d6b313}} 
+K\+B\+\_\+Z&Y key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+0@{K\+B\+\_\+0}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+0@{K\+B\+\_\+0}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eabb2fa1524c90159128c864935087b2b0}\label{namespacearcade_a347918e3b31df21087660f19962ff80eabb2fa1524c90159128c864935087b2b0}} 
+K\+B\+\_\+0&Z key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+1@{K\+B\+\_\+1}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+1@{K\+B\+\_\+1}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eab674af590fc2261a7b9b8f5bb8a13f58}\label{namespacearcade_a347918e3b31df21087660f19962ff80eab674af590fc2261a7b9b8f5bb8a13f58}} 
+K\+B\+\_\+1&0 key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+2@{K\+B\+\_\+2}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+2@{K\+B\+\_\+2}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea66a791790c422d52e420d5a78e664f15}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea66a791790c422d52e420d5a78e664f15}} 
+K\+B\+\_\+2&1 key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+3@{K\+B\+\_\+3}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+3@{K\+B\+\_\+3}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eacace6038d1284f630f2808e39ff048fb}\label{namespacearcade_a347918e3b31df21087660f19962ff80eacace6038d1284f630f2808e39ff048fb}} 
+K\+B\+\_\+3&2 key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+4@{K\+B\+\_\+4}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+4@{K\+B\+\_\+4}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea5867e6c5ec0d784a10d164458efc13bb}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea5867e6c5ec0d784a10d164458efc13bb}} 
+K\+B\+\_\+4&3 key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+5@{K\+B\+\_\+5}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+5@{K\+B\+\_\+5}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eaf1a2ef7803e123c1f6ee5f37b504d516}\label{namespacearcade_a347918e3b31df21087660f19962ff80eaf1a2ef7803e123c1f6ee5f37b504d516}} 
+K\+B\+\_\+5&4 key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+6@{K\+B\+\_\+6}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+6@{K\+B\+\_\+6}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea0ee857f52a615bc4082a939d2d123d0a}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea0ee857f52a615bc4082a939d2d123d0a}} 
+K\+B\+\_\+6&5 key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+7@{K\+B\+\_\+7}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+7@{K\+B\+\_\+7}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea83200f9f3759451a8e93923f3c3558fb}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea83200f9f3759451a8e93923f3c3558fb}} 
+K\+B\+\_\+7&6 key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+8@{K\+B\+\_\+8}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+8@{K\+B\+\_\+8}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea6a9bc51970df8bad5bcc52a160bf832f}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea6a9bc51970df8bad5bcc52a160bf832f}} 
+K\+B\+\_\+8&7 key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+9@{K\+B\+\_\+9}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+9@{K\+B\+\_\+9}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea22e0ef6bf481c5775bc08319ed1a29cb}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea22e0ef6bf481c5775bc08319ed1a29cb}} 
+K\+B\+\_\+9&8 key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+L\+E\+FT@{K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+L\+E\+FT}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+L\+E\+FT@{K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+L\+E\+FT}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eab451e10c664e4910b93db2495ff3b89c}\label{namespacearcade_a347918e3b31df21087660f19962ff80eab451e10c664e4910b93db2495ff3b89c}} 
+K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+L\+E\+FT&9 key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+R\+I\+G\+HT@{K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+R\+I\+G\+HT}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+R\+I\+G\+HT@{K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+R\+I\+G\+HT}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea03d7fc107a30c35437d31965a1c0c217}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea03d7fc107a30c35437d31965a1c0c217}} 
+K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+R\+I\+G\+HT&Left arrow key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+UP@{K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+UP}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+UP@{K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+UP}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea1417060d82a532b2ddd28a903071ca11}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea1417060d82a532b2ddd28a903071ca11}} 
+K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+UP&Right arrow key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+D\+O\+WN@{K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+D\+O\+WN}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+D\+O\+WN@{K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+D\+O\+WN}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea45584980d376ad7b6e3b3825fb80a4d6}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea45584980d376ad7b6e3b3825fb80a4d6}} 
+K\+B\+\_\+\+A\+R\+R\+O\+W\+\_\+\+D\+O\+WN&Up arrow key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+S\+P\+A\+CE@{K\+B\+\_\+\+S\+P\+A\+CE}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+S\+P\+A\+CE@{K\+B\+\_\+\+S\+P\+A\+CE}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea5ddc9b7df97f07fd252cf19389258dd8}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea5ddc9b7df97f07fd252cf19389258dd8}} 
+K\+B\+\_\+\+S\+P\+A\+CE&Down arrow key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+E\+N\+T\+ER@{K\+B\+\_\+\+E\+N\+T\+ER}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+E\+N\+T\+ER@{K\+B\+\_\+\+E\+N\+T\+ER}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea2580ddb2709167f0023b40d9c0deb378}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea2580ddb2709167f0023b40d9c0deb378}} 
+K\+B\+\_\+\+E\+N\+T\+ER&Space key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+B\+A\+C\+K\+S\+P\+A\+CE@{K\+B\+\_\+\+B\+A\+C\+K\+S\+P\+A\+CE}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+B\+A\+C\+K\+S\+P\+A\+CE@{K\+B\+\_\+\+B\+A\+C\+K\+S\+P\+A\+CE}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea15794d5c1ac0898c0c2e4e98d37e3857}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea15794d5c1ac0898c0c2e4e98d37e3857}} 
+K\+B\+\_\+\+B\+A\+C\+K\+S\+P\+A\+CE&Enter/\+Carriage return key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+L\+C\+T\+RL@{K\+B\+\_\+\+L\+C\+T\+RL}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+L\+C\+T\+RL@{K\+B\+\_\+\+L\+C\+T\+RL}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea2d6a8932ee3191b0aa9a146afec40c46}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea2d6a8932ee3191b0aa9a146afec40c46}} 
+K\+B\+\_\+\+L\+C\+T\+RL&Backspace key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+R\+C\+T\+RL@{K\+B\+\_\+\+R\+C\+T\+RL}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+R\+C\+T\+RL@{K\+B\+\_\+\+R\+C\+T\+RL}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea5de5b3b0fe89850f39a10dd3bca918cb}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea5de5b3b0fe89850f39a10dd3bca918cb}} 
+K\+B\+\_\+\+R\+C\+T\+RL&Left Control key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+L\+A\+LT@{K\+B\+\_\+\+L\+A\+LT}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+L\+A\+LT@{K\+B\+\_\+\+L\+A\+LT}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eafdc71fbb454596e9518726ea821c24d1}\label{namespacearcade_a347918e3b31df21087660f19962ff80eafdc71fbb454596e9518726ea821c24d1}} 
+K\+B\+\_\+\+L\+A\+LT&Right Control key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+R\+A\+LT@{K\+B\+\_\+\+R\+A\+LT}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+R\+A\+LT@{K\+B\+\_\+\+R\+A\+LT}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea72b77d9cc20b5735e14670aef9274645}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea72b77d9cc20b5735e14670aef9274645}} 
+K\+B\+\_\+\+R\+A\+LT&Left Alt key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+L\+S\+H\+I\+FT@{K\+B\+\_\+\+L\+S\+H\+I\+FT}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+L\+S\+H\+I\+FT@{K\+B\+\_\+\+L\+S\+H\+I\+FT}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea0eb88f38a01e761e7261c473a5ba11f8}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea0eb88f38a01e761e7261c473a5ba11f8}} 
+K\+B\+\_\+\+L\+S\+H\+I\+FT&Right Alt key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+R\+S\+H\+I\+FT@{K\+B\+\_\+\+R\+S\+H\+I\+FT}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+R\+S\+H\+I\+FT@{K\+B\+\_\+\+R\+S\+H\+I\+FT}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea396d5e142ef21bc3cda13431e9fa24c0}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea396d5e142ef21bc3cda13431e9fa24c0}} 
+K\+B\+\_\+\+R\+S\+H\+I\+FT&Left Shift key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+C\+A\+P\+S\+L\+O\+CK@{K\+B\+\_\+\+C\+A\+P\+S\+L\+O\+CK}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+C\+A\+P\+S\+L\+O\+CK@{K\+B\+\_\+\+C\+A\+P\+S\+L\+O\+CK}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea8742e736d70c460576c4cebe40ffb89f}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea8742e736d70c460576c4cebe40ffb89f}} 
+K\+B\+\_\+\+C\+A\+P\+S\+L\+O\+CK&Right Shift key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+T\+AB@{K\+B\+\_\+\+T\+AB}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+T\+AB@{K\+B\+\_\+\+T\+AB}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eae9879e6a709ead9a4a9f35e148b486b1}\label{namespacearcade_a347918e3b31df21087660f19962ff80eae9879e6a709ead9a4a9f35e148b486b1}} 
+K\+B\+\_\+\+T\+AB&Caps\+Lock key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+E\+S\+C\+A\+PE@{K\+B\+\_\+\+E\+S\+C\+A\+PE}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+E\+S\+C\+A\+PE@{K\+B\+\_\+\+E\+S\+C\+A\+PE}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eab99011f38f2af81c272dc654c5ea406a}\label{namespacearcade_a347918e3b31df21087660f19962ff80eab99011f38f2af81c272dc654c5ea406a}} 
+K\+B\+\_\+\+E\+S\+C\+A\+PE&Tabulation key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+P\+A\+G\+E\+UP@{K\+B\+\_\+\+P\+A\+G\+E\+UP}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+P\+A\+G\+E\+UP@{K\+B\+\_\+\+P\+A\+G\+E\+UP}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea673b42fd73696cf21fa529161241f991}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea673b42fd73696cf21fa529161241f991}} 
+K\+B\+\_\+\+P\+A\+G\+E\+UP&Escape key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+P\+A\+G\+E\+D\+O\+WN@{K\+B\+\_\+\+P\+A\+G\+E\+D\+O\+WN}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+P\+A\+G\+E\+D\+O\+WN@{K\+B\+\_\+\+P\+A\+G\+E\+D\+O\+WN}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea6b65b30768ade9382504190406fc4dc3}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea6b65b30768ade9382504190406fc4dc3}} 
+K\+B\+\_\+\+P\+A\+G\+E\+D\+O\+WN&Page up key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+H\+O\+ME@{K\+B\+\_\+\+H\+O\+ME}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+H\+O\+ME@{K\+B\+\_\+\+H\+O\+ME}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea04a05eb2f1301c3baffe8c7137fb06dc}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea04a05eb2f1301c3baffe8c7137fb06dc}} 
+K\+B\+\_\+\+H\+O\+ME&Page down. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+E\+ND@{K\+B\+\_\+\+E\+ND}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+E\+ND@{K\+B\+\_\+\+E\+ND}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea7a15e19dadaff3e156bbd72a00738fe8}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea7a15e19dadaff3e156bbd72a00738fe8}} 
+K\+B\+\_\+\+E\+ND&Home key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+F\+N1@{K\+B\+\_\+\+F\+N1}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+F\+N1@{K\+B\+\_\+\+F\+N1}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea75d48628972e9758781eda5e6d4e2eb4}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea75d48628972e9758781eda5e6d4e2eb4}} 
+K\+B\+\_\+\+F\+N1&End key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+F\+N2@{K\+B\+\_\+\+F\+N2}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+F\+N2@{K\+B\+\_\+\+F\+N2}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea0a85073270d11b51f542be97e43b4d19}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea0a85073270d11b51f542be97e43b4d19}} 
+K\+B\+\_\+\+F\+N2&Function key 1 (F1) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+F\+N3@{K\+B\+\_\+\+F\+N3}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+F\+N3@{K\+B\+\_\+\+F\+N3}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea0b95bd1641d79c3186dfdd7c0e30b8e0}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea0b95bd1641d79c3186dfdd7c0e30b8e0}} 
+K\+B\+\_\+\+F\+N3&Function key 2 (F2) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+F\+N4@{K\+B\+\_\+\+F\+N4}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+F\+N4@{K\+B\+\_\+\+F\+N4}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea43b7323fda1dc41c9ab0847cda9e734a}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea43b7323fda1dc41c9ab0847cda9e734a}} 
+K\+B\+\_\+\+F\+N4&Function key 3 (F3) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+F\+N5@{K\+B\+\_\+\+F\+N5}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+F\+N5@{K\+B\+\_\+\+F\+N5}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea823211a5d68e66b4f626a232e0f93877}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea823211a5d68e66b4f626a232e0f93877}} 
+K\+B\+\_\+\+F\+N5&Function key 4 (F4) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+F\+N6@{K\+B\+\_\+\+F\+N6}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+F\+N6@{K\+B\+\_\+\+F\+N6}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea16ddf267a9d6b464562c3e3d4ade8bee}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea16ddf267a9d6b464562c3e3d4ade8bee}} 
+K\+B\+\_\+\+F\+N6&Function key 5 (F5) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+F\+N7@{K\+B\+\_\+\+F\+N7}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+F\+N7@{K\+B\+\_\+\+F\+N7}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eab2f3f370ae5a0c69acf0ef039d2af3a1}\label{namespacearcade_a347918e3b31df21087660f19962ff80eab2f3f370ae5a0c69acf0ef039d2af3a1}} 
+K\+B\+\_\+\+F\+N7&Function key 6 (F6) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+F\+N8@{K\+B\+\_\+\+F\+N8}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+F\+N8@{K\+B\+\_\+\+F\+N8}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eac53e73cb2648c9a3c1a7064a699b16ef}\label{namespacearcade_a347918e3b31df21087660f19962ff80eac53e73cb2648c9a3c1a7064a699b16ef}} 
+K\+B\+\_\+\+F\+N8&Function key 7 (F7) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+F\+N9@{K\+B\+\_\+\+F\+N9}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+F\+N9@{K\+B\+\_\+\+F\+N9}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eaa11b588576bf36d8d4196eaa53ce0ba2}\label{namespacearcade_a347918e3b31df21087660f19962ff80eaa11b588576bf36d8d4196eaa53ce0ba2}} 
+K\+B\+\_\+\+F\+N9&Function key 8 (F8) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+F\+N10@{K\+B\+\_\+\+F\+N10}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+F\+N10@{K\+B\+\_\+\+F\+N10}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea42e633880b1f7f2aa680af765a493129}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea42e633880b1f7f2aa680af765a493129}} 
+K\+B\+\_\+\+F\+N10&Function key 9 (F9) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+F\+N11@{K\+B\+\_\+\+F\+N11}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+F\+N11@{K\+B\+\_\+\+F\+N11}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea2d97bbb2def613489d124763db3122e8}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea2d97bbb2def613489d124763db3122e8}} 
+K\+B\+\_\+\+F\+N11&Function key 10 (F10) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+F\+N12@{K\+B\+\_\+\+F\+N12}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+F\+N12@{K\+B\+\_\+\+F\+N12}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea9111ee038a53429265950d9b804a6924}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea9111ee038a53429265950d9b804a6924}} 
+K\+B\+\_\+\+F\+N12&Function key 11 (F11) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+C\+O\+M\+MA@{K\+B\+\_\+\+C\+O\+M\+MA}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+C\+O\+M\+MA@{K\+B\+\_\+\+C\+O\+M\+MA}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eac14f14d5974343df42c51ff9077e4608}\label{namespacearcade_a347918e3b31df21087660f19962ff80eac14f14d5974343df42c51ff9077e4608}} 
+K\+B\+\_\+\+C\+O\+M\+MA&Function key 12 (F12) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+D\+OT@{K\+B\+\_\+\+D\+OT}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+D\+OT@{K\+B\+\_\+\+D\+OT}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea76d6ae297e7e894b9fe9f207f3554887}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea76d6ae297e7e894b9fe9f207f3554887}} 
+K\+B\+\_\+\+D\+OT&Comma key (,) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+S\+L\+A\+SH@{K\+B\+\_\+\+S\+L\+A\+SH}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+S\+L\+A\+SH@{K\+B\+\_\+\+S\+L\+A\+SH}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea158a96f344bce722acdbec3cc929468b}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea158a96f344bce722acdbec3cc929468b}} 
+K\+B\+\_\+\+S\+L\+A\+SH&Dot (period) key (.) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+I\+N\+F\+E\+R\+I\+OR@{K\+B\+\_\+\+I\+N\+F\+E\+R\+I\+OR}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+I\+N\+F\+E\+R\+I\+OR@{K\+B\+\_\+\+I\+N\+F\+E\+R\+I\+OR}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eacf2cd3609a488585897a14256730a33a}\label{namespacearcade_a347918e3b31df21087660f19962ff80eacf2cd3609a488585897a14256730a33a}} 
+K\+B\+\_\+\+I\+N\+F\+E\+R\+I\+OR&Slash key (/) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+S\+U\+P\+E\+R\+I\+OR@{K\+B\+\_\+\+S\+U\+P\+E\+R\+I\+OR}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+S\+U\+P\+E\+R\+I\+OR@{K\+B\+\_\+\+S\+U\+P\+E\+R\+I\+OR}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea15767e6cbaf8b78d1eb42b355f816c61}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea15767e6cbaf8b78d1eb42b355f816c61}} 
+K\+B\+\_\+\+S\+U\+P\+E\+R\+I\+OR&Inferior symbol key ($<$) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+Q\+U\+E\+S\+T\+I\+ON@{K\+B\+\_\+\+Q\+U\+E\+S\+T\+I\+ON}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+Q\+U\+E\+S\+T\+I\+ON@{K\+B\+\_\+\+Q\+U\+E\+S\+T\+I\+ON}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea60dccaebd08351992b1e92e65a4e3533}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea60dccaebd08351992b1e92e65a4e3533}} 
+K\+B\+\_\+\+Q\+U\+E\+S\+T\+I\+ON&Superior symbol key ($>$) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+S\+E\+M\+I\+C\+O\+L\+ON@{K\+B\+\_\+\+S\+E\+M\+I\+C\+O\+L\+ON}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+S\+E\+M\+I\+C\+O\+L\+ON@{K\+B\+\_\+\+S\+E\+M\+I\+C\+O\+L\+ON}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea939a88f10493ec89f8d41c9397dc44b7}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea939a88f10493ec89f8d41c9397dc44b7}} 
+K\+B\+\_\+\+S\+E\+M\+I\+C\+O\+L\+ON&Question mark key (?) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+C\+O\+L\+ON@{K\+B\+\_\+\+C\+O\+L\+ON}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+C\+O\+L\+ON@{K\+B\+\_\+\+C\+O\+L\+ON}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea0adde44293346394a688436a67e04633}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea0adde44293346394a688436a67e04633}} 
+K\+B\+\_\+\+C\+O\+L\+ON&Semicolon key (;) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+S\+I\+M\+P\+L\+E\+Q\+U\+O\+TE@{K\+B\+\_\+\+S\+I\+M\+P\+L\+E\+Q\+U\+O\+TE}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+S\+I\+M\+P\+L\+E\+Q\+U\+O\+TE@{K\+B\+\_\+\+S\+I\+M\+P\+L\+E\+Q\+U\+O\+TE}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea76a6219eef24df6f69c9c49bc43560ee}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea76a6219eef24df6f69c9c49bc43560ee}} 
+K\+B\+\_\+\+S\+I\+M\+P\+L\+E\+Q\+U\+O\+TE&Colon key (\+:) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+D\+O\+U\+B\+L\+E\+Q\+U\+O\+TE@{K\+B\+\_\+\+D\+O\+U\+B\+L\+E\+Q\+U\+O\+TE}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+D\+O\+U\+B\+L\+E\+Q\+U\+O\+TE@{K\+B\+\_\+\+D\+O\+U\+B\+L\+E\+Q\+U\+O\+TE}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea3f773bb8bcbcd73292dcfaad3b0b90ea}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea3f773bb8bcbcd73292dcfaad3b0b90ea}} 
+K\+B\+\_\+\+D\+O\+U\+B\+L\+E\+Q\+U\+O\+TE&Simple quote key (\textquotesingle{}) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+L\+E\+F\+T\+B\+R\+A\+CE@{K\+B\+\_\+\+L\+E\+F\+T\+B\+R\+A\+CE}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+L\+E\+F\+T\+B\+R\+A\+CE@{K\+B\+\_\+\+L\+E\+F\+T\+B\+R\+A\+CE}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eae2f3c46d71cd0f0dacdd598f09cb1718}\label{namespacearcade_a347918e3b31df21087660f19962ff80eae2f3c46d71cd0f0dacdd598f09cb1718}} 
+K\+B\+\_\+\+L\+E\+F\+T\+B\+R\+A\+CE&Double quote key (") \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+R\+I\+G\+H\+T\+B\+R\+A\+CE@{K\+B\+\_\+\+R\+I\+G\+H\+T\+B\+R\+A\+CE}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+R\+I\+G\+H\+T\+B\+R\+A\+CE@{K\+B\+\_\+\+R\+I\+G\+H\+T\+B\+R\+A\+CE}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea6b9a875877d5fe5ab50b2ffa38db20be}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea6b9a875877d5fe5ab50b2ffa38db20be}} 
+K\+B\+\_\+\+R\+I\+G\+H\+T\+B\+R\+A\+CE&Left brace key (\{) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+L\+E\+F\+T\+B\+R\+A\+C\+K\+ET@{K\+B\+\_\+\+L\+E\+F\+T\+B\+R\+A\+C\+K\+ET}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+L\+E\+F\+T\+B\+R\+A\+C\+K\+ET@{K\+B\+\_\+\+L\+E\+F\+T\+B\+R\+A\+C\+K\+ET}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea8bcd0be6537486775e9025148903d346}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea8bcd0be6537486775e9025148903d346}} 
+K\+B\+\_\+\+L\+E\+F\+T\+B\+R\+A\+C\+K\+ET&Right brace key (\}) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+R\+I\+G\+H\+T\+B\+R\+A\+C\+K\+ET@{K\+B\+\_\+\+R\+I\+G\+H\+T\+B\+R\+A\+C\+K\+ET}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+R\+I\+G\+H\+T\+B\+R\+A\+C\+K\+ET@{K\+B\+\_\+\+R\+I\+G\+H\+T\+B\+R\+A\+C\+K\+ET}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea9c75b4de4cb3ef786d3b4ab3a5a07511}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea9c75b4de4cb3ef786d3b4ab3a5a07511}} 
+K\+B\+\_\+\+R\+I\+G\+H\+T\+B\+R\+A\+C\+K\+ET&Left bracket key (\mbox{[}) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+L\+E\+F\+T\+P\+A\+R\+EN@{K\+B\+\_\+\+L\+E\+F\+T\+P\+A\+R\+EN}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+L\+E\+F\+T\+P\+A\+R\+EN@{K\+B\+\_\+\+L\+E\+F\+T\+P\+A\+R\+EN}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eaf0a906f50d130a3335a63ac480994710}\label{namespacearcade_a347918e3b31df21087660f19962ff80eaf0a906f50d130a3335a63ac480994710}} 
+K\+B\+\_\+\+L\+E\+F\+T\+P\+A\+R\+EN&Right bracker key (\mbox{]}) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+R\+I\+G\+H\+T\+P\+A\+R\+EN@{K\+B\+\_\+\+R\+I\+G\+H\+T\+P\+A\+R\+EN}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+R\+I\+G\+H\+T\+P\+A\+R\+EN@{K\+B\+\_\+\+R\+I\+G\+H\+T\+P\+A\+R\+EN}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea9dcd2a623be9411235b7879458810cf9}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea9dcd2a623be9411235b7879458810cf9}} 
+K\+B\+\_\+\+R\+I\+G\+H\+T\+P\+A\+R\+EN&Left parenthesis key (() \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+B\+A\+C\+K\+S\+L\+A\+SH@{K\+B\+\_\+\+B\+A\+C\+K\+S\+L\+A\+SH}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+B\+A\+C\+K\+S\+L\+A\+SH@{K\+B\+\_\+\+B\+A\+C\+K\+S\+L\+A\+SH}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eacf11e7cc80ec696fa05c1b339a020995}\label{namespacearcade_a347918e3b31df21087660f19962ff80eacf11e7cc80ec696fa05c1b339a020995}} 
+K\+B\+\_\+\+B\+A\+C\+K\+S\+L\+A\+SH&Right parenthesis key ()) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+B\+AR@{K\+B\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+B\+AR}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+B\+AR@{K\+B\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+B\+AR}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eafa053222bafb910d7a0e1f114e1ed0c9}\label{namespacearcade_a347918e3b31df21087660f19962ff80eafa053222bafb910d7a0e1f114e1ed0c9}} 
+K\+B\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+B\+AR&Backslash key () \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+E\+X\+C\+L\+A\+M\+A\+T\+I\+ON@{K\+B\+\_\+\+E\+X\+C\+L\+A\+M\+A\+T\+I\+ON}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+E\+X\+C\+L\+A\+M\+A\+T\+I\+ON@{K\+B\+\_\+\+E\+X\+C\+L\+A\+M\+A\+T\+I\+ON}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea906b40548cc6113c9d8c2f7b5481b13c}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea906b40548cc6113c9d8c2f7b5481b13c}} 
+K\+B\+\_\+\+E\+X\+C\+L\+A\+M\+A\+T\+I\+ON&Vertical bar key ($\vert$) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+A\+T\+S\+Y\+M\+B\+OL@{K\+B\+\_\+\+A\+T\+S\+Y\+M\+B\+OL}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+A\+T\+S\+Y\+M\+B\+OL@{K\+B\+\_\+\+A\+T\+S\+Y\+M\+B\+OL}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea14cf7afb33d05e90ba7a0c053a4a7e81}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea14cf7afb33d05e90ba7a0c053a4a7e81}} 
+K\+B\+\_\+\+A\+T\+S\+Y\+M\+B\+OL&Exclamation mark key (!) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+H\+A\+S\+H\+T\+AG@{K\+B\+\_\+\+H\+A\+S\+H\+T\+AG}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+H\+A\+S\+H\+T\+AG@{K\+B\+\_\+\+H\+A\+S\+H\+T\+AG}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eab2661ab89070346d6d4e320bc7cfb799}\label{namespacearcade_a347918e3b31df21087660f19962ff80eab2661ab89070346d6d4e320bc7cfb799}} 
+K\+B\+\_\+\+H\+A\+S\+H\+T\+AG&At symbol key (@) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+D\+O\+L\+L\+AR@{K\+B\+\_\+\+D\+O\+L\+L\+AR}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+D\+O\+L\+L\+AR@{K\+B\+\_\+\+D\+O\+L\+L\+AR}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea37a32fb5cb993a48b602d555e7bc9e2f}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea37a32fb5cb993a48b602d555e7bc9e2f}} 
+K\+B\+\_\+\+D\+O\+L\+L\+AR&Hash key (\#) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+P\+E\+R\+C\+E\+NT@{K\+B\+\_\+\+P\+E\+R\+C\+E\+NT}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+P\+E\+R\+C\+E\+NT@{K\+B\+\_\+\+P\+E\+R\+C\+E\+NT}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea160c8c6e8d6b67c30e43c462d69b26df}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea160c8c6e8d6b67c30e43c462d69b26df}} 
+K\+B\+\_\+\+P\+E\+R\+C\+E\+NT&Dollar key (\$) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+C\+I\+R\+C\+U\+M\+F\+L\+EX@{K\+B\+\_\+\+C\+I\+R\+C\+U\+M\+F\+L\+EX}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+C\+I\+R\+C\+U\+M\+F\+L\+EX@{K\+B\+\_\+\+C\+I\+R\+C\+U\+M\+F\+L\+EX}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea8f375b35b02eacd740c051ea943ef8e4}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea8f375b35b02eacd740c051ea943ef8e4}} 
+K\+B\+\_\+\+C\+I\+R\+C\+U\+M\+F\+L\+EX&Percent symbol key (\%) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+A\+M\+P\+E\+R\+S\+A\+ND@{K\+B\+\_\+\+A\+M\+P\+E\+R\+S\+A\+ND}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+A\+M\+P\+E\+R\+S\+A\+ND@{K\+B\+\_\+\+A\+M\+P\+E\+R\+S\+A\+ND}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea651f68ff2cc76d96130083261865a8f1}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea651f68ff2cc76d96130083261865a8f1}} 
+K\+B\+\_\+\+A\+M\+P\+E\+R\+S\+A\+ND&Circumflex symbol key ($^\wedge$) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+A\+S\+T\+E\+R\+I\+SK@{K\+B\+\_\+\+A\+S\+T\+E\+R\+I\+SK}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+A\+S\+T\+E\+R\+I\+SK@{K\+B\+\_\+\+A\+S\+T\+E\+R\+I\+SK}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eab2c2612f919800f0343a4f3fbf48e989}\label{namespacearcade_a347918e3b31df21087660f19962ff80eab2c2612f919800f0343a4f3fbf48e989}} 
+K\+B\+\_\+\+A\+S\+T\+E\+R\+I\+SK&Ampersand key (\&) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+U\+N\+D\+E\+R\+S\+C\+O\+RE@{K\+B\+\_\+\+U\+N\+D\+E\+R\+S\+C\+O\+RE}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+U\+N\+D\+E\+R\+S\+C\+O\+RE@{K\+B\+\_\+\+U\+N\+D\+E\+R\+S\+C\+O\+RE}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eaf17f8cf56aab21c19db22d9094179e99}\label{namespacearcade_a347918e3b31df21087660f19962ff80eaf17f8cf56aab21c19db22d9094179e99}} 
+K\+B\+\_\+\+U\+N\+D\+E\+R\+S\+C\+O\+RE&Asterisk key ($\ast$) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+M\+I\+N\+US@{K\+B\+\_\+\+M\+I\+N\+US}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+M\+I\+N\+US@{K\+B\+\_\+\+M\+I\+N\+US}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eaaee640f7de93992be6a22d7950e2f59f}\label{namespacearcade_a347918e3b31df21087660f19962ff80eaaee640f7de93992be6a22d7950e2f59f}} 
+K\+B\+\_\+\+M\+I\+N\+US&Underscore key (\+\_\+) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+P\+L\+US@{K\+B\+\_\+\+P\+L\+US}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+P\+L\+US@{K\+B\+\_\+\+P\+L\+US}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea700ed87915dc8a99064ad33498ddc9a6}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea700ed87915dc8a99064ad33498ddc9a6}} 
+K\+B\+\_\+\+P\+L\+US&Minus symbol key (-\/) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+E\+Q\+U\+A\+LS@{K\+B\+\_\+\+E\+Q\+U\+A\+LS}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+E\+Q\+U\+A\+LS@{K\+B\+\_\+\+E\+Q\+U\+A\+LS}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ea7810fb4ea4fb7943c7dc9616305ac472}\label{namespacearcade_a347918e3b31df21087660f19962ff80ea7810fb4ea4fb7943c7dc9616305ac472}} 
+K\+B\+\_\+\+E\+Q\+U\+A\+LS&Plus symbol key (+) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+B\+\_\+\+D\+E\+L\+E\+TE@{K\+B\+\_\+\+D\+E\+L\+E\+TE}!arcade@{arcade}}\index{arcade@{arcade}!K\+B\+\_\+\+D\+E\+L\+E\+TE@{K\+B\+\_\+\+D\+E\+L\+E\+TE}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80ead477e3c7d899002dd64876ae6a0cff2a}\label{namespacearcade_a347918e3b31df21087660f19962ff80ead477e3c7d899002dd64876ae6a0cff2a}} 
+K\+B\+\_\+\+D\+E\+L\+E\+TE&Equals symbol key (=) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+B\+\_\+\+K\+E\+Y\+B\+O\+A\+R\+D\+\_\+\+K\+EY@{N\+B\+\_\+\+K\+E\+Y\+B\+O\+A\+R\+D\+\_\+\+K\+EY}!arcade@{arcade}}\index{arcade@{arcade}!N\+B\+\_\+\+K\+E\+Y\+B\+O\+A\+R\+D\+\_\+\+K\+EY@{N\+B\+\_\+\+K\+E\+Y\+B\+O\+A\+R\+D\+\_\+\+K\+EY}}}\mbox{\Hypertarget{namespacearcade_a347918e3b31df21087660f19962ff80eaa1c3de811b5803a1a65b6ae0e45cc0b1}\label{namespacearcade_a347918e3b31df21087660f19962ff80eaa1c3de811b5803a1a65b6ae0e45cc0b1}} 
+N\+B\+\_\+\+K\+E\+Y\+B\+O\+A\+R\+D\+\_\+\+K\+EY&Delete key (del) Number of keyboard keys \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bf}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bf}} 
+\index{arcade@{arcade}!Mouse\+Key@{Mouse\+Key}}
+\index{Mouse\+Key@{Mouse\+Key}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{Mouse\+Key}{MouseKey}}
+{\footnotesize\ttfamily enum \hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bf}{arcade\+::\+Mouse\+Key}}
+
+
+
+Common mouse keys. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+\_\+\+N\+O\+NE@{M\+\_\+\+N\+O\+NE}!arcade@{arcade}}\index{arcade@{arcade}!M\+\_\+\+N\+O\+NE@{M\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa91c72d27e507baddb57e88eed37e2f2f}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa91c72d27e507baddb57e88eed37e2f2f}} 
+M\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+\_\+\+L\+E\+F\+T\+\_\+\+C\+L\+I\+CK@{M\+\_\+\+L\+E\+F\+T\+\_\+\+C\+L\+I\+CK}!arcade@{arcade}}\index{arcade@{arcade}!M\+\_\+\+L\+E\+F\+T\+\_\+\+C\+L\+I\+CK@{M\+\_\+\+L\+E\+F\+T\+\_\+\+C\+L\+I\+CK}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfac1daae4d5f7b313ca00cb5fe383f343a}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfac1daae4d5f7b313ca00cb5fe383f343a}} 
+M\+\_\+\+L\+E\+F\+T\+\_\+\+C\+L\+I\+CK&Unknown key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+L\+I\+CK@{M\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+L\+I\+CK}!arcade@{arcade}}\index{arcade@{arcade}!M\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+L\+I\+CK@{M\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+L\+I\+CK}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa72602a4642a4aff4128b701b17623806}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa72602a4642a4aff4128b701b17623806}} 
+M\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+L\+I\+CK&Left button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+\_\+\+M\+I\+D\+D\+L\+E\+\_\+\+C\+L\+I\+CK@{M\+\_\+\+M\+I\+D\+D\+L\+E\+\_\+\+C\+L\+I\+CK}!arcade@{arcade}}\index{arcade@{arcade}!M\+\_\+\+M\+I\+D\+D\+L\+E\+\_\+\+C\+L\+I\+CK@{M\+\_\+\+M\+I\+D\+D\+L\+E\+\_\+\+C\+L\+I\+CK}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfabcc3fea48c87e2a1f4786260104c7106}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfabcc3fea48c87e2a1f4786260104c7106}} 
+M\+\_\+\+M\+I\+D\+D\+L\+E\+\_\+\+C\+L\+I\+CK&Middle button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+\_\+\+S\+C\+R\+O\+L\+L\+\_\+\+UP@{M\+\_\+\+S\+C\+R\+O\+L\+L\+\_\+\+UP}!arcade@{arcade}}\index{arcade@{arcade}!M\+\_\+\+S\+C\+R\+O\+L\+L\+\_\+\+UP@{M\+\_\+\+S\+C\+R\+O\+L\+L\+\_\+\+UP}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa6d93c3604c3778ac9aeb9249193ce2e2}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa6d93c3604c3778ac9aeb9249193ce2e2}} 
+M\+\_\+\+S\+C\+R\+O\+L\+L\+\_\+\+UP&Right button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+\_\+\+S\+C\+R\+O\+L\+L\+\_\+\+D\+O\+WN@{M\+\_\+\+S\+C\+R\+O\+L\+L\+\_\+\+D\+O\+WN}!arcade@{arcade}}\index{arcade@{arcade}!M\+\_\+\+S\+C\+R\+O\+L\+L\+\_\+\+D\+O\+WN@{M\+\_\+\+S\+C\+R\+O\+L\+L\+\_\+\+D\+O\+WN}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa0ef545aca48798c75ea921a90bf763df}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa0ef545aca48798c75ea921a90bf763df}} 
+M\+\_\+\+S\+C\+R\+O\+L\+L\+\_\+\+D\+O\+WN&Scroll up. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+\_\+\+B\+T0@{M\+\_\+\+B\+T0}!arcade@{arcade}}\index{arcade@{arcade}!M\+\_\+\+B\+T0@{M\+\_\+\+B\+T0}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa2f33f0f811dbc434a032019ba9fb9a59}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa2f33f0f811dbc434a032019ba9fb9a59}} 
+M\+\_\+\+B\+T0&Scroll down. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+\_\+\+B\+T1@{M\+\_\+\+B\+T1}!arcade@{arcade}}\index{arcade@{arcade}!M\+\_\+\+B\+T1@{M\+\_\+\+B\+T1}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa26c806f39133da7426933190c0c4e97b}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa26c806f39133da7426933190c0c4e97b}} 
+M\+\_\+\+B\+T1&Button 0. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+\_\+\+B\+T2@{M\+\_\+\+B\+T2}!arcade@{arcade}}\index{arcade@{arcade}!M\+\_\+\+B\+T2@{M\+\_\+\+B\+T2}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfaf8fee919e8dc5d7eac244526b9358c89}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfaf8fee919e8dc5d7eac244526b9358c89}} 
+M\+\_\+\+B\+T2&Button 1. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+\_\+\+B\+T3@{M\+\_\+\+B\+T3}!arcade@{arcade}}\index{arcade@{arcade}!M\+\_\+\+B\+T3@{M\+\_\+\+B\+T3}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa75085062db55a2e0d77b290463e4f6e9}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa75085062db55a2e0d77b290463e4f6e9}} 
+M\+\_\+\+B\+T3&Button 2. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+\_\+\+B\+T4@{M\+\_\+\+B\+T4}!arcade@{arcade}}\index{arcade@{arcade}!M\+\_\+\+B\+T4@{M\+\_\+\+B\+T4}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa1b98d7b9b0493ec5fb3f9fad1ed8e297}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa1b98d7b9b0493ec5fb3f9fad1ed8e297}} 
+M\+\_\+\+B\+T4&Button 3. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+\_\+\+B\+T5@{M\+\_\+\+B\+T5}!arcade@{arcade}}\index{arcade@{arcade}!M\+\_\+\+B\+T5@{M\+\_\+\+B\+T5}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa08c38a1c3e02d4ec3027534ac38ede1b}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa08c38a1c3e02d4ec3027534ac38ede1b}} 
+M\+\_\+\+B\+T5&Button 4. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+\_\+\+B\+T6@{M\+\_\+\+B\+T6}!arcade@{arcade}}\index{arcade@{arcade}!M\+\_\+\+B\+T6@{M\+\_\+\+B\+T6}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfab45d1d9f9c8099304a38aab8b04102b5}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfab45d1d9f9c8099304a38aab8b04102b5}} 
+M\+\_\+\+B\+T6&Button 5. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+\_\+\+B\+T7@{M\+\_\+\+B\+T7}!arcade@{arcade}}\index{arcade@{arcade}!M\+\_\+\+B\+T7@{M\+\_\+\+B\+T7}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfae0cc2448d6367308923865396100c089}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfae0cc2448d6367308923865396100c089}} 
+M\+\_\+\+B\+T7&Button 6. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+\_\+\+B\+T8@{M\+\_\+\+B\+T8}!arcade@{arcade}}\index{arcade@{arcade}!M\+\_\+\+B\+T8@{M\+\_\+\+B\+T8}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfacf34629bf429980b0a0750dd309027bc}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfacf34629bf429980b0a0750dd309027bc}} 
+M\+\_\+\+B\+T8&Button 7. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+\_\+\+B\+T9@{M\+\_\+\+B\+T9}!arcade@{arcade}}\index{arcade@{arcade}!M\+\_\+\+B\+T9@{M\+\_\+\+B\+T9}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa9a35ff4a55b0a513fb992ea8979c9cd0}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfa9a35ff4a55b0a513fb992ea8979c9cd0}} 
+M\+\_\+\+B\+T9&Button 8. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+B\+\_\+\+M\+O\+U\+S\+E\+\_\+\+K\+EY@{N\+B\+\_\+\+M\+O\+U\+S\+E\+\_\+\+K\+EY}!arcade@{arcade}}\index{arcade@{arcade}!N\+B\+\_\+\+M\+O\+U\+S\+E\+\_\+\+K\+EY@{N\+B\+\_\+\+M\+O\+U\+S\+E\+\_\+\+K\+EY}}}\mbox{\Hypertarget{namespacearcade_a41017b6e882fbcad335f303c7950e4bfae614aa4e235624c62b2fd71593ab711d}\label{namespacearcade_a41017b6e882fbcad335f303c7950e4bfae614aa4e235624c62b2fd71593ab711d}} 
+N\+B\+\_\+\+M\+O\+U\+S\+E\+\_\+\+K\+EY&Button 9. Number of mouse keys \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacearcade_acdbeb7cbb97bf2e5169a4c76456e7278}\label{namespacearcade_acdbeb7cbb97bf2e5169a4c76456e7278}} 
+\index{arcade@{arcade}!Network\+Action@{Network\+Action}}
+\index{Network\+Action@{Network\+Action}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{Network\+Action}{NetworkAction}}
+{\footnotesize\ttfamily enum \hyperlink{namespacearcade_acdbeb7cbb97bf2e5169a4c76456e7278}{arcade\+::\+Network\+Action}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+E\+L\+L\+O\+\_\+\+E\+V\+E\+NT@{H\+E\+L\+L\+O\+\_\+\+E\+V\+E\+NT}!arcade@{arcade}}\index{arcade@{arcade}!H\+E\+L\+L\+O\+\_\+\+E\+V\+E\+NT@{H\+E\+L\+L\+O\+\_\+\+E\+V\+E\+NT}}}\mbox{\Hypertarget{namespacearcade_acdbeb7cbb97bf2e5169a4c76456e7278ad914edbe84129686257d376ff5108ca8}\label{namespacearcade_acdbeb7cbb97bf2e5169a4c76456e7278ad914edbe84129686257d376ff5108ca8}} 
+H\+E\+L\+L\+O\+\_\+\+E\+V\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+L\+A\+Y\+E\+R\+\_\+\+E\+V\+E\+NT@{P\+L\+A\+Y\+E\+R\+\_\+\+E\+V\+E\+NT}!arcade@{arcade}}\index{arcade@{arcade}!P\+L\+A\+Y\+E\+R\+\_\+\+E\+V\+E\+NT@{P\+L\+A\+Y\+E\+R\+\_\+\+E\+V\+E\+NT}}}\mbox{\Hypertarget{namespacearcade_acdbeb7cbb97bf2e5169a4c76456e7278a0a70a63c6b8a329d09da2deaee3abae7}\label{namespacearcade_acdbeb7cbb97bf2e5169a4c76456e7278a0a70a63c6b8a329d09da2deaee3abae7}} 
+P\+L\+A\+Y\+E\+R\+\_\+\+E\+V\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+A\+M\+E\+\_\+\+E\+V\+E\+NT@{G\+A\+M\+E\+\_\+\+E\+V\+E\+NT}!arcade@{arcade}}\index{arcade@{arcade}!G\+A\+M\+E\+\_\+\+E\+V\+E\+NT@{G\+A\+M\+E\+\_\+\+E\+V\+E\+NT}}}\mbox{\Hypertarget{namespacearcade_acdbeb7cbb97bf2e5169a4c76456e7278a7db2d78b0114f25d2289d61d02451210}\label{namespacearcade_acdbeb7cbb97bf2e5169a4c76456e7278a7db2d78b0114f25d2289d61d02451210}} 
+G\+A\+M\+E\+\_\+\+E\+V\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+N\+T\+I\+T\+Y\+\_\+\+E\+V\+E\+NT@{E\+N\+T\+I\+T\+Y\+\_\+\+E\+V\+E\+NT}!arcade@{arcade}}\index{arcade@{arcade}!E\+N\+T\+I\+T\+Y\+\_\+\+E\+V\+E\+NT@{E\+N\+T\+I\+T\+Y\+\_\+\+E\+V\+E\+NT}}}\mbox{\Hypertarget{namespacearcade_acdbeb7cbb97bf2e5169a4c76456e7278aef2457828be9708eb822fe3b8c262ebc}\label{namespacearcade_acdbeb7cbb97bf2e5169a4c76456e7278aef2457828be9708eb822fe3b8c262ebc}} 
+E\+N\+T\+I\+T\+Y\+\_\+\+E\+V\+E\+NT&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aa}\label{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aa}} 
+\index{arcade@{arcade}!Network\+Games@{Network\+Games}}
+\index{Network\+Games@{Network\+Games}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{Network\+Games}{NetworkGames}}
+{\footnotesize\ttfamily enum \hyperlink{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aa}{arcade\+::\+Network\+Games}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+\_\+\+G\+A\+ME@{N\+O\+\_\+\+G\+A\+ME}!arcade@{arcade}}\index{arcade@{arcade}!N\+O\+\_\+\+G\+A\+ME@{N\+O\+\_\+\+G\+A\+ME}}}\mbox{\Hypertarget{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaa7dbb2f4f98a0608b1ebf611c7fcebd9a}\label{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaa7dbb2f4f98a0608b1ebf611c7fcebd9a}} 
+N\+O\+\_\+\+G\+A\+ME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+N\+A\+KE@{S\+N\+A\+KE}!arcade@{arcade}}\index{arcade@{arcade}!S\+N\+A\+KE@{S\+N\+A\+KE}}}\mbox{\Hypertarget{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaa7a0524f20d7447c2819a8d63564edcf1}\label{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaa7a0524f20d7447c2819a8d63564edcf1}} 
+S\+N\+A\+KE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+E\+N\+T\+I\+P\+E\+DE@{C\+E\+N\+T\+I\+P\+E\+DE}!arcade@{arcade}}\index{arcade@{arcade}!C\+E\+N\+T\+I\+P\+E\+DE@{C\+E\+N\+T\+I\+P\+E\+DE}}}\mbox{\Hypertarget{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaa81f8c584c981bbb107cc792b88719e08}\label{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaa81f8c584c981bbb107cc792b88719e08}} 
+C\+E\+N\+T\+I\+P\+E\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+O\+L\+A\+R\+\_\+\+F\+OX@{S\+O\+L\+A\+R\+\_\+\+F\+OX}!arcade@{arcade}}\index{arcade@{arcade}!S\+O\+L\+A\+R\+\_\+\+F\+OX@{S\+O\+L\+A\+R\+\_\+\+F\+OX}}}\mbox{\Hypertarget{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaa19cf598dbde0eb212e4e7432a3a55c73}\label{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaa19cf598dbde0eb212e4e7432a3a55c73}} 
+S\+O\+L\+A\+R\+\_\+\+F\+OX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+A\+C\+M\+AN@{P\+A\+C\+M\+AN}!arcade@{arcade}}\index{arcade@{arcade}!P\+A\+C\+M\+AN@{P\+A\+C\+M\+AN}}}\mbox{\Hypertarget{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaa6a694a93e4b7e1e6c948a038c5e1defd}\label{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaa6a694a93e4b7e1e6c948a038c5e1defd}} 
+P\+A\+C\+M\+AN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+O\+NG@{P\+O\+NG}!arcade@{arcade}}\index{arcade@{arcade}!P\+O\+NG@{P\+O\+NG}}}\mbox{\Hypertarget{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaaa19c798c9d00737a823b0ec6bd66b696}\label{namespacearcade_ac69775ea7f779dc95b0e7769f61ea6aaaa19c798c9d00737a823b0ec6bd66b696}} 
+P\+O\+NG&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacearcade_a31ef30225775697d1aeaf59819ac5051}\label{namespacearcade_a31ef30225775697d1aeaf59819ac5051}} 
+\index{arcade@{arcade}!Sound\+Action@{Sound\+Action}}
+\index{Sound\+Action@{Sound\+Action}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{Sound\+Action}{SoundAction}}
+{\footnotesize\ttfamily enum \hyperlink{namespacearcade_a31ef30225775697d1aeaf59819ac5051}{arcade\+::\+Sound\+Action}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+N\+I\+Q\+UE@{U\+N\+I\+Q\+UE}!arcade@{arcade}}\index{arcade@{arcade}!U\+N\+I\+Q\+UE@{U\+N\+I\+Q\+UE}}}\mbox{\Hypertarget{namespacearcade_a31ef30225775697d1aeaf59819ac5051a0dcacdf4484296a70e9bb6fabe7e3b8a}\label{namespacearcade_a31ef30225775697d1aeaf59819ac5051a0dcacdf4484296a70e9bb6fabe7e3b8a}} 
+U\+N\+I\+Q\+UE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+E\+P\+E\+AT@{R\+E\+P\+E\+AT}!arcade@{arcade}}\index{arcade@{arcade}!R\+E\+P\+E\+AT@{R\+E\+P\+E\+AT}}}\mbox{\Hypertarget{namespacearcade_a31ef30225775697d1aeaf59819ac5051ab19f406ef6d6a98bf432ca847cb55f69}\label{namespacearcade_a31ef30225775697d1aeaf59819ac5051ab19f406ef6d6a98bf432ca847cb55f69}} 
+R\+E\+P\+E\+AT&\hyperlink{structarcade_1_1_sound}{Sound} played once. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\+O\+L\+U\+ME@{V\+O\+L\+U\+ME}!arcade@{arcade}}\index{arcade@{arcade}!V\+O\+L\+U\+ME@{V\+O\+L\+U\+ME}}}\mbox{\Hypertarget{namespacearcade_a31ef30225775697d1aeaf59819ac5051a54b01dde0e60c6d93b4fe6effacc8c6d}\label{namespacearcade_a31ef30225775697d1aeaf59819ac5051a54b01dde0e60c6d93b4fe6effacc8c6d}} 
+V\+O\+L\+U\+ME&\hyperlink{structarcade_1_1_sound}{Sound} played indefinitly (common for musics) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+L\+AY@{P\+L\+AY}!arcade@{arcade}}\index{arcade@{arcade}!P\+L\+AY@{P\+L\+AY}}}\mbox{\Hypertarget{namespacearcade_a31ef30225775697d1aeaf59819ac5051aaffec5e59f45f53273c815889e9c11c4}\label{namespacearcade_a31ef30225775697d1aeaf59819ac5051aaffec5e59f45f53273c815889e9c11c4}} 
+P\+L\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+L\+AY@{P\+L\+AY}!arcade@{arcade}}\index{arcade@{arcade}!P\+L\+AY@{P\+L\+AY}}}\mbox{\Hypertarget{namespacearcade_a31ef30225775697d1aeaf59819ac5051a6a216efc529825c60a4a4c0bc99ad77f}\label{namespacearcade_a31ef30225775697d1aeaf59819ac5051a6a216efc529825c60a4a4c0bc99ad77f}} 
+P\+L\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+L\+AY@{P\+L\+AY}!arcade@{arcade}}\index{arcade@{arcade}!P\+L\+AY@{P\+L\+AY}}}\mbox{\Hypertarget{namespacearcade_a31ef30225775697d1aeaf59819ac5051a6a216efc529825c60a4a4c0bc99ad77f}\label{namespacearcade_a31ef30225775697d1aeaf59819ac5051a6a216efc529825c60a4a4c0bc99ad77f}} 
+P\+L\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+A\+U\+SE@{P\+A\+U\+SE}!arcade@{arcade}}\index{arcade@{arcade}!P\+A\+U\+SE@{P\+A\+U\+SE}}}\mbox{\Hypertarget{namespacearcade_a31ef30225775697d1aeaf59819ac5051aa0e7aaf91c664414477709b595513f44}\label{namespacearcade_a31ef30225775697d1aeaf59819ac5051aa0e7aaf91c664414477709b595513f44}} 
+P\+A\+U\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+E\+S\+U\+ME@{R\+E\+S\+U\+ME}!arcade@{arcade}}\index{arcade@{arcade}!R\+E\+S\+U\+ME@{R\+E\+S\+U\+ME}}}\mbox{\Hypertarget{namespacearcade_a31ef30225775697d1aeaf59819ac5051aa20791f727f3fda515c60d07eab5c54f}\label{namespacearcade_a31ef30225775697d1aeaf59819ac5051aa20791f727f3fda515c60d07eab5c54f}} 
+R\+E\+S\+U\+ME&Pause a sound. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+OP@{S\+T\+OP}!arcade@{arcade}}\index{arcade@{arcade}!S\+T\+OP@{S\+T\+OP}}}\mbox{\Hypertarget{namespacearcade_a31ef30225775697d1aeaf59819ac5051aab3ad1f71d947ba49406609ac00a904e}\label{namespacearcade_a31ef30225775697d1aeaf59819ac5051aab3ad1f71d947ba49406609ac00a904e}} 
+S\+T\+OP&Resume a sound. Stop completly a sound \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5}\label{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5}} 
+\index{arcade@{arcade}!Sound\+Type@{Sound\+Type}}
+\index{Sound\+Type@{Sound\+Type}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{Sound\+Type}{SoundType}}
+{\footnotesize\ttfamily enum \hyperlink{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5}{arcade\+::\+Sound\+Type}}
+
+
+
+Used to differenciate the sound type. 
+
+It might be very usefull with some sound libraries which need to know this type of differences \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+U\+S\+IC@{M\+U\+S\+IC}!arcade@{arcade}}\index{arcade@{arcade}!M\+U\+S\+IC@{M\+U\+S\+IC}}}\mbox{\Hypertarget{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5a5a4967c8f21ad70ba0e0459a0add50f0}\label{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5a5a4967c8f21ad70ba0e0459a0add50f0}} 
+M\+U\+S\+IC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+O\+U\+ND@{S\+O\+U\+ND}!arcade@{arcade}}\index{arcade@{arcade}!S\+O\+U\+ND@{S\+O\+U\+ND}}}\mbox{\Hypertarget{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5a37f1d8b7897a8b789c2dd953b53416ef}\label{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5a37f1d8b7897a8b789c2dd953b53416ef}} 
+S\+O\+U\+ND&The sound is a music. The sound is an normal sound \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}} 
+\index{arcade@{arcade}!Tile\+Type@{Tile\+Type}}
+\index{Tile\+Type@{Tile\+Type}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{Tile\+Type}{TileType}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}{arcade\+::\+Tile\+Type} \+: uint16\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+M\+P\+TY@{E\+M\+P\+TY}!arcade@{arcade}}\index{arcade@{arcade}!E\+M\+P\+TY@{E\+M\+P\+TY}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caaba2b45bdc11e2a4a6e86aab2ac693cbb}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caaba2b45bdc11e2a4a6e86aab2ac693cbb}} 
+E\+M\+P\+TY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+L\+O\+CK@{B\+L\+O\+CK}!arcade@{arcade}}\index{arcade@{arcade}!B\+L\+O\+CK@{B\+L\+O\+CK}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa4d34f53389ed7f28ca91fc31ea360a66}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa4d34f53389ed7f28ca91fc31ea360a66}} 
+B\+L\+O\+CK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+B\+S\+T\+A\+C\+LE@{O\+B\+S\+T\+A\+C\+LE}!arcade@{arcade}}\index{arcade@{arcade}!O\+B\+S\+T\+A\+C\+LE@{O\+B\+S\+T\+A\+C\+LE}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa2399122c182da0d5946e2937bb73edf2}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa2399122c182da0d5946e2937bb73edf2}} 
+O\+B\+S\+T\+A\+C\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+V\+I\+L\+\_\+\+D\+U\+DE@{E\+V\+I\+L\+\_\+\+D\+U\+DE}!arcade@{arcade}}\index{arcade@{arcade}!E\+V\+I\+L\+\_\+\+D\+U\+DE@{E\+V\+I\+L\+\_\+\+D\+U\+DE}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa366a47a002b9d67086cc0270f93a9935}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa366a47a002b9d67086cc0270f93a9935}} 
+E\+V\+I\+L\+\_\+\+D\+U\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+V\+I\+L\+\_\+\+S\+H\+O\+OT@{E\+V\+I\+L\+\_\+\+S\+H\+O\+OT}!arcade@{arcade}}\index{arcade@{arcade}!E\+V\+I\+L\+\_\+\+S\+H\+O\+OT@{E\+V\+I\+L\+\_\+\+S\+H\+O\+OT}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caadf38741063d3fef112980173ad06a8ba}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caadf38741063d3fef112980173ad06a8ba}} 
+E\+V\+I\+L\+\_\+\+S\+H\+O\+OT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Y\+\_\+\+S\+H\+O\+OT@{M\+Y\+\_\+\+S\+H\+O\+OT}!arcade@{arcade}}\index{arcade@{arcade}!M\+Y\+\_\+\+S\+H\+O\+OT@{M\+Y\+\_\+\+S\+H\+O\+OT}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa3b569c5ec0ad688b75b17cd17eba5ae0}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa3b569c5ec0ad688b75b17cd17eba5ae0}} 
+M\+Y\+\_\+\+S\+H\+O\+OT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+O\+W\+E\+R\+UP@{P\+O\+W\+E\+R\+UP}!arcade@{arcade}}\index{arcade@{arcade}!P\+O\+W\+E\+R\+UP@{P\+O\+W\+E\+R\+UP}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caab3e172b7afeb285bddcec5aee2be298e}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caab3e172b7afeb285bddcec5aee2be298e}} 
+P\+O\+W\+E\+R\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+T\+H\+ER@{O\+T\+H\+ER}!arcade@{arcade}}\index{arcade@{arcade}!O\+T\+H\+ER@{O\+T\+H\+ER}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa03570470bad94692ce93e32700d2e1cb}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa03570470bad94692ce93e32700d2e1cb}} 
+O\+T\+H\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+M\+P\+TY@{E\+M\+P\+TY}!arcade@{arcade}}\index{arcade@{arcade}!E\+M\+P\+TY@{E\+M\+P\+TY}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caaba2b45bdc11e2a4a6e86aab2ac693cbb}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caaba2b45bdc11e2a4a6e86aab2ac693cbb}} 
+E\+M\+P\+TY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+L\+O\+CK@{B\+L\+O\+CK}!arcade@{arcade}}\index{arcade@{arcade}!B\+L\+O\+CK@{B\+L\+O\+CK}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa4d34f53389ed7f28ca91fc31ea360a66}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa4d34f53389ed7f28ca91fc31ea360a66}} 
+B\+L\+O\+CK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+B\+S\+T\+A\+C\+LE@{O\+B\+S\+T\+A\+C\+LE}!arcade@{arcade}}\index{arcade@{arcade}!O\+B\+S\+T\+A\+C\+LE@{O\+B\+S\+T\+A\+C\+LE}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa2399122c182da0d5946e2937bb73edf2}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa2399122c182da0d5946e2937bb73edf2}} 
+O\+B\+S\+T\+A\+C\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+V\+I\+L\+\_\+\+D\+U\+DE@{E\+V\+I\+L\+\_\+\+D\+U\+DE}!arcade@{arcade}}\index{arcade@{arcade}!E\+V\+I\+L\+\_\+\+D\+U\+DE@{E\+V\+I\+L\+\_\+\+D\+U\+DE}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa366a47a002b9d67086cc0270f93a9935}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa366a47a002b9d67086cc0270f93a9935}} 
+E\+V\+I\+L\+\_\+\+D\+U\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+V\+I\+L\+\_\+\+S\+H\+O\+OT@{E\+V\+I\+L\+\_\+\+S\+H\+O\+OT}!arcade@{arcade}}\index{arcade@{arcade}!E\+V\+I\+L\+\_\+\+S\+H\+O\+OT@{E\+V\+I\+L\+\_\+\+S\+H\+O\+OT}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caadf38741063d3fef112980173ad06a8ba}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caadf38741063d3fef112980173ad06a8ba}} 
+E\+V\+I\+L\+\_\+\+S\+H\+O\+OT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Y\+\_\+\+S\+H\+O\+OT@{M\+Y\+\_\+\+S\+H\+O\+OT}!arcade@{arcade}}\index{arcade@{arcade}!M\+Y\+\_\+\+S\+H\+O\+OT@{M\+Y\+\_\+\+S\+H\+O\+OT}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa3b569c5ec0ad688b75b17cd17eba5ae0}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa3b569c5ec0ad688b75b17cd17eba5ae0}} 
+M\+Y\+\_\+\+S\+H\+O\+OT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+O\+W\+E\+R\+UP@{P\+O\+W\+E\+R\+UP}!arcade@{arcade}}\index{arcade@{arcade}!P\+O\+W\+E\+R\+UP@{P\+O\+W\+E\+R\+UP}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caab3e172b7afeb285bddcec5aee2be298e}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caab3e172b7afeb285bddcec5aee2be298e}} 
+P\+O\+W\+E\+R\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+T\+H\+ER@{O\+T\+H\+ER}!arcade@{arcade}}\index{arcade@{arcade}!O\+T\+H\+ER@{O\+T\+H\+ER}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa03570470bad94692ce93e32700d2e1cb}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa03570470bad94692ce93e32700d2e1cb}} 
+O\+T\+H\+ER&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}} 
+\index{arcade@{arcade}!Tile\+Type@{Tile\+Type}}
+\index{Tile\+Type@{Tile\+Type}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{Tile\+Type}{TileType}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}{arcade\+::\+Tile\+Type} \+: uint16\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+M\+P\+TY@{E\+M\+P\+TY}!arcade@{arcade}}\index{arcade@{arcade}!E\+M\+P\+TY@{E\+M\+P\+TY}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caaba2b45bdc11e2a4a6e86aab2ac693cbb}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caaba2b45bdc11e2a4a6e86aab2ac693cbb}} 
+E\+M\+P\+TY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+L\+O\+CK@{B\+L\+O\+CK}!arcade@{arcade}}\index{arcade@{arcade}!B\+L\+O\+CK@{B\+L\+O\+CK}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa4d34f53389ed7f28ca91fc31ea360a66}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa4d34f53389ed7f28ca91fc31ea360a66}} 
+B\+L\+O\+CK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+B\+S\+T\+A\+C\+LE@{O\+B\+S\+T\+A\+C\+LE}!arcade@{arcade}}\index{arcade@{arcade}!O\+B\+S\+T\+A\+C\+LE@{O\+B\+S\+T\+A\+C\+LE}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa2399122c182da0d5946e2937bb73edf2}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa2399122c182da0d5946e2937bb73edf2}} 
+O\+B\+S\+T\+A\+C\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+V\+I\+L\+\_\+\+D\+U\+DE@{E\+V\+I\+L\+\_\+\+D\+U\+DE}!arcade@{arcade}}\index{arcade@{arcade}!E\+V\+I\+L\+\_\+\+D\+U\+DE@{E\+V\+I\+L\+\_\+\+D\+U\+DE}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa366a47a002b9d67086cc0270f93a9935}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa366a47a002b9d67086cc0270f93a9935}} 
+E\+V\+I\+L\+\_\+\+D\+U\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+V\+I\+L\+\_\+\+S\+H\+O\+OT@{E\+V\+I\+L\+\_\+\+S\+H\+O\+OT}!arcade@{arcade}}\index{arcade@{arcade}!E\+V\+I\+L\+\_\+\+S\+H\+O\+OT@{E\+V\+I\+L\+\_\+\+S\+H\+O\+OT}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caadf38741063d3fef112980173ad06a8ba}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caadf38741063d3fef112980173ad06a8ba}} 
+E\+V\+I\+L\+\_\+\+S\+H\+O\+OT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Y\+\_\+\+S\+H\+O\+OT@{M\+Y\+\_\+\+S\+H\+O\+OT}!arcade@{arcade}}\index{arcade@{arcade}!M\+Y\+\_\+\+S\+H\+O\+OT@{M\+Y\+\_\+\+S\+H\+O\+OT}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa3b569c5ec0ad688b75b17cd17eba5ae0}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa3b569c5ec0ad688b75b17cd17eba5ae0}} 
+M\+Y\+\_\+\+S\+H\+O\+OT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+O\+W\+E\+R\+UP@{P\+O\+W\+E\+R\+UP}!arcade@{arcade}}\index{arcade@{arcade}!P\+O\+W\+E\+R\+UP@{P\+O\+W\+E\+R\+UP}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caab3e172b7afeb285bddcec5aee2be298e}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caab3e172b7afeb285bddcec5aee2be298e}} 
+P\+O\+W\+E\+R\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+T\+H\+ER@{O\+T\+H\+ER}!arcade@{arcade}}\index{arcade@{arcade}!O\+T\+H\+ER@{O\+T\+H\+ER}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa03570470bad94692ce93e32700d2e1cb}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa03570470bad94692ce93e32700d2e1cb}} 
+O\+T\+H\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+M\+P\+TY@{E\+M\+P\+TY}!arcade@{arcade}}\index{arcade@{arcade}!E\+M\+P\+TY@{E\+M\+P\+TY}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caaba2b45bdc11e2a4a6e86aab2ac693cbb}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caaba2b45bdc11e2a4a6e86aab2ac693cbb}} 
+E\+M\+P\+TY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+L\+O\+CK@{B\+L\+O\+CK}!arcade@{arcade}}\index{arcade@{arcade}!B\+L\+O\+CK@{B\+L\+O\+CK}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa4d34f53389ed7f28ca91fc31ea360a66}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa4d34f53389ed7f28ca91fc31ea360a66}} 
+B\+L\+O\+CK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+B\+S\+T\+A\+C\+LE@{O\+B\+S\+T\+A\+C\+LE}!arcade@{arcade}}\index{arcade@{arcade}!O\+B\+S\+T\+A\+C\+LE@{O\+B\+S\+T\+A\+C\+LE}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa2399122c182da0d5946e2937bb73edf2}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa2399122c182da0d5946e2937bb73edf2}} 
+O\+B\+S\+T\+A\+C\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+V\+I\+L\+\_\+\+D\+U\+DE@{E\+V\+I\+L\+\_\+\+D\+U\+DE}!arcade@{arcade}}\index{arcade@{arcade}!E\+V\+I\+L\+\_\+\+D\+U\+DE@{E\+V\+I\+L\+\_\+\+D\+U\+DE}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa366a47a002b9d67086cc0270f93a9935}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa366a47a002b9d67086cc0270f93a9935}} 
+E\+V\+I\+L\+\_\+\+D\+U\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+V\+I\+L\+\_\+\+S\+H\+O\+OT@{E\+V\+I\+L\+\_\+\+S\+H\+O\+OT}!arcade@{arcade}}\index{arcade@{arcade}!E\+V\+I\+L\+\_\+\+S\+H\+O\+OT@{E\+V\+I\+L\+\_\+\+S\+H\+O\+OT}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caadf38741063d3fef112980173ad06a8ba}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caadf38741063d3fef112980173ad06a8ba}} 
+E\+V\+I\+L\+\_\+\+S\+H\+O\+OT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Y\+\_\+\+S\+H\+O\+OT@{M\+Y\+\_\+\+S\+H\+O\+OT}!arcade@{arcade}}\index{arcade@{arcade}!M\+Y\+\_\+\+S\+H\+O\+OT@{M\+Y\+\_\+\+S\+H\+O\+OT}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa3b569c5ec0ad688b75b17cd17eba5ae0}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa3b569c5ec0ad688b75b17cd17eba5ae0}} 
+M\+Y\+\_\+\+S\+H\+O\+OT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+O\+W\+E\+R\+UP@{P\+O\+W\+E\+R\+UP}!arcade@{arcade}}\index{arcade@{arcade}!P\+O\+W\+E\+R\+UP@{P\+O\+W\+E\+R\+UP}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caab3e172b7afeb285bddcec5aee2be298e}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caab3e172b7afeb285bddcec5aee2be298e}} 
+P\+O\+W\+E\+R\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+T\+H\+ER@{O\+T\+H\+ER}!arcade@{arcade}}\index{arcade@{arcade}!O\+T\+H\+ER@{O\+T\+H\+ER}}}\mbox{\Hypertarget{namespacearcade_a61ba576694ea309cdf2b4b66902408caa03570470bad94692ce93e32700d2e1cb}\label{namespacearcade_a61ba576694ea309cdf2b4b66902408caa03570470bad94692ce93e32700d2e1cb}} 
+O\+T\+H\+ER&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4}\label{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4}} 
+\index{arcade@{arcade}!Tile\+Type\+Evolution@{Tile\+Type\+Evolution}}
+\index{Tile\+Type\+Evolution@{Tile\+Type\+Evolution}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{Tile\+Type\+Evolution}{TileTypeEvolution}}
+{\footnotesize\ttfamily enum \hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4}{arcade\+::\+Tile\+Type\+Evolution}}
+
+
+
+Type of map tile. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+M\+P\+TY@{E\+M\+P\+TY}!arcade@{arcade}}\index{arcade@{arcade}!E\+M\+P\+TY@{E\+M\+P\+TY}}}\mbox{\Hypertarget{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4a2b0cc51eb307f5d5a6f831654e07633b}\label{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4a2b0cc51eb307f5d5a6f831654e07633b}} 
+E\+M\+P\+TY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+L\+O\+CK@{B\+L\+O\+CK}!arcade@{arcade}}\index{arcade@{arcade}!B\+L\+O\+CK@{B\+L\+O\+CK}}}\mbox{\Hypertarget{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4ac4c5eb9b720499a30df9f4f0976195c2}\label{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4ac4c5eb9b720499a30df9f4f0976195c2}} 
+B\+L\+O\+CK&Empty tile. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+B\+S\+T\+A\+C\+LE@{O\+B\+S\+T\+A\+C\+LE}!arcade@{arcade}}\index{arcade@{arcade}!O\+B\+S\+T\+A\+C\+LE@{O\+B\+S\+T\+A\+C\+LE}}}\mbox{\Hypertarget{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4a5d6877372bf42760246448b1c6dd69e8}\label{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4a5d6877372bf42760246448b1c6dd69e8}} 
+O\+B\+S\+T\+A\+C\+LE&Block tile. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+N\+E\+MY@{E\+N\+E\+MY}!arcade@{arcade}}\index{arcade@{arcade}!E\+N\+E\+MY@{E\+N\+E\+MY}}}\mbox{\Hypertarget{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4aa051caea1f9628559c824ff1942a46a0}\label{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4aa051caea1f9628559c824ff1942a46a0}} 
+E\+N\+E\+MY&Obstacle tile. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+H\+O\+T\+\_\+\+E\+N\+E\+MY@{S\+H\+O\+T\+\_\+\+E\+N\+E\+MY}!arcade@{arcade}}\index{arcade@{arcade}!S\+H\+O\+T\+\_\+\+E\+N\+E\+MY@{S\+H\+O\+T\+\_\+\+E\+N\+E\+MY}}}\mbox{\Hypertarget{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4acdb71daa77a17c95ae771d6d951017e7}\label{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4acdb71daa77a17c95ae771d6d951017e7}} 
+S\+H\+O\+T\+\_\+\+E\+N\+E\+MY&Enemy tile. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+H\+O\+T\+\_\+\+P\+L\+A\+Y\+ER@{S\+H\+O\+T\+\_\+\+P\+L\+A\+Y\+ER}!arcade@{arcade}}\index{arcade@{arcade}!S\+H\+O\+T\+\_\+\+P\+L\+A\+Y\+ER@{S\+H\+O\+T\+\_\+\+P\+L\+A\+Y\+ER}}}\mbox{\Hypertarget{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4a5442845df87c9e577da49e800646b1ef}\label{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4a5442845df87c9e577da49e800646b1ef}} 
+S\+H\+O\+T\+\_\+\+P\+L\+A\+Y\+ER&Enemy shot tile. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+O\+W\+E\+R\+UP@{P\+O\+W\+E\+R\+UP}!arcade@{arcade}}\index{arcade@{arcade}!P\+O\+W\+E\+R\+UP@{P\+O\+W\+E\+R\+UP}}}\mbox{\Hypertarget{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4a2079d54be597e9cc9c26345dc170222f}\label{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4a2079d54be597e9cc9c26345dc170222f}} 
+P\+O\+W\+E\+R\+UP&Player shot tile. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+L\+A\+Y\+ER@{P\+L\+A\+Y\+ER}!arcade@{arcade}}\index{arcade@{arcade}!P\+L\+A\+Y\+ER@{P\+L\+A\+Y\+ER}}}\mbox{\Hypertarget{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4a10956309855c9a7fd7eb724a307a5129}\label{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4a10956309855c9a7fd7eb724a307a5129}} 
+P\+L\+A\+Y\+ER&Powerup tile. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+O\+OD@{F\+O\+OD}!arcade@{arcade}}\index{arcade@{arcade}!F\+O\+OD@{F\+O\+OD}}}\mbox{\Hypertarget{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4aa3c88c626f5aced21ad0eb05ffc37ca9}\label{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4aa3c88c626f5aced21ad0eb05ffc37ca9}} 
+F\+O\+OD&Player tile. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacearcade_a09ff62ff66b3d7e845d329683e977d9a}\label{namespacearcade_a09ff62ff66b3d7e845d329683e977d9a}} 
+\index{arcade@{arcade}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+attribute\+\_\+\+\_\+()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily struct \hyperlink{structarcade_1_1_get_map}{arcade\+::\+Get\+Map} arcade\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(packed)}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacearcade_ae0cdeb3398b5a1f9385b6f19de1466c4}\label{namespacearcade_ae0cdeb3398b5a1f9385b6f19de1466c4}} 
+\index{arcade@{arcade}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!arcade@{arcade}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+attribute\+\_\+\+\_\+}{\_\_attribute\_\_}}
+{\footnotesize\ttfamily struct \hyperlink{structarcade_1_1_where_am_i}{arcade\+::\+Where\+AmI} arcade\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+}
+

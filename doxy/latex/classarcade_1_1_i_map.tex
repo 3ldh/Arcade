@@ -1,0 +1,112 @@
+\hypertarget{classarcade_1_1_i_map}{}\section{arcade\+:\+:I\+Map Class Reference}
+\label{classarcade_1_1_i_map}\index{arcade\+::\+I\+Map@{arcade\+::\+I\+Map}}
+
+
+Interface representing a \hyperlink{classarcade_1_1_map}{Map}.  
+
+
+
+
+{\ttfamily \#include $<$I\+Map.\+hpp$>$}
+
+Inheritance diagram for arcade\+:\+:I\+Map\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classarcade_1_1_i_map}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classarcade_1_1_i_map_aaa3aa1b624552b9ab830067ab42f78dd}{$\sim$\+I\+Map} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor of the interface. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{classarcade_1_1_i_map_a3e5fc4c5286f92fb49c8c7d0e79f4510}{get\+Layer\+Nb} () const =0
+\begin{DoxyCompactList}\small\item\em Get the number of layers. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{classarcade_1_1_i_map_a6e7534eeff05277f1429037f8b01e25f}{get\+Width} () const =0
+\begin{DoxyCompactList}\small\item\em Get the width of the map. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{classarcade_1_1_i_map_a9282ac731fa61b8c18241a309efbd6a0}{get\+Height} () const =0
+\begin{DoxyCompactList}\small\item\em Get the height of the map. \end{DoxyCompactList}\item 
+virtual \hyperlink{classarcade_1_1_i_tile}{I\+Tile} const  \& \hyperlink{classarcade_1_1_i_map_a8206c36a51d8394145fd3b7b29e42f8d}{at} (size\+\_\+t layer, size\+\_\+t \hyperlink{include_2_protocol_8hpp_a4dde988b1b2adba65ae3efa69f65d960}{x}, size\+\_\+t \hyperlink{include_2_protocol_8hpp_ab0580f504a7428539be299fa71565f30}{y}) const =0
+\begin{DoxyCompactList}\small\item\em Get a specific \hyperlink{classarcade_1_1_i_tile}{I\+Tile} of the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface representing a \hyperlink{classarcade_1_1_map}{Map}. 
+
+A map is composed of layers, which contain tiles. Your \hyperlink{classarcade_1_1_map}{Map} must support them from its own If you want to access to the tile x\+:3 y\+:8 of the layer 2 you have to use the at method like I\+Map\+::at(2, 3, 8); 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classarcade_1_1_i_map_aaa3aa1b624552b9ab830067ab42f78dd}\label{classarcade_1_1_i_map_aaa3aa1b624552b9ab830067ab42f78dd}} 
+\index{arcade\+::\+I\+Map@{arcade\+::\+I\+Map}!````~I\+Map@{$\sim$\+I\+Map}}
+\index{````~I\+Map@{$\sim$\+I\+Map}!arcade\+::\+I\+Map@{arcade\+::\+I\+Map}}
+\subsubsection{\texorpdfstring{$\sim$\+I\+Map()}{~IMap()}}
+{\footnotesize\ttfamily arcade\+::\+I\+Map\+::$\sim$\+I\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual destructor of the interface. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1_i_map_a8206c36a51d8394145fd3b7b29e42f8d}\label{classarcade_1_1_i_map_a8206c36a51d8394145fd3b7b29e42f8d}} 
+\index{arcade\+::\+I\+Map@{arcade\+::\+I\+Map}!at@{at}}
+\index{at@{at}!arcade\+::\+I\+Map@{arcade\+::\+I\+Map}}
+\subsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily \hyperlink{classarcade_1_1_i_tile}{I\+Tile} const  \& arcade\+::\+I\+Map\+::at (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{layer,  }\item[{size\+\_\+t}]{x,  }\item[{size\+\_\+t}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get a specific \hyperlink{classarcade_1_1_i_tile}{I\+Tile} of the map. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_map_a8032d00c437cad8cedb646a0a1eb4bb1}{arcade\+::\+Map}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_map_a9282ac731fa61b8c18241a309efbd6a0}\label{classarcade_1_1_i_map_a9282ac731fa61b8c18241a309efbd6a0}} 
+\index{arcade\+::\+I\+Map@{arcade\+::\+I\+Map}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!arcade\+::\+I\+Map@{arcade\+::\+I\+Map}}
+\subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily size\+\_\+t arcade\+::\+I\+Map\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the height of the map. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_map_a914cc33687ccf159cc2876fc1d52657d}{arcade\+::\+Map}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_map_a3e5fc4c5286f92fb49c8c7d0e79f4510}\label{classarcade_1_1_i_map_a3e5fc4c5286f92fb49c8c7d0e79f4510}} 
+\index{arcade\+::\+I\+Map@{arcade\+::\+I\+Map}!get\+Layer\+Nb@{get\+Layer\+Nb}}
+\index{get\+Layer\+Nb@{get\+Layer\+Nb}!arcade\+::\+I\+Map@{arcade\+::\+I\+Map}}
+\subsubsection{\texorpdfstring{get\+Layer\+Nb()}{getLayerNb()}}
+{\footnotesize\ttfamily size\+\_\+t arcade\+::\+I\+Map\+::get\+Layer\+Nb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the number of layers. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_map_a75d832d23939401ffe062b461839bc8d}{arcade\+::\+Map}.
+
+\mbox{\Hypertarget{classarcade_1_1_i_map_a6e7534eeff05277f1429037f8b01e25f}\label{classarcade_1_1_i_map_a6e7534eeff05277f1429037f8b01e25f}} 
+\index{arcade\+::\+I\+Map@{arcade\+::\+I\+Map}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!arcade\+::\+I\+Map@{arcade\+::\+I\+Map}}
+\subsubsection{\texorpdfstring{get\+Width()}{getWidth()}}
+{\footnotesize\ttfamily size\+\_\+t arcade\+::\+I\+Map\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the width of the map. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_map_af48996ef9fc333a7c9ab6a9f2ddb7b56}{arcade\+::\+Map}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+arcade\+Interfaces/\hyperlink{_i_map_8hpp}{I\+Map.\+hpp}\end{DoxyCompactItemize}
