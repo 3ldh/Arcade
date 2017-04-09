@@ -9,9 +9,9 @@
 
 arcade::GfxLapin::GfxLapin() {
 	bunny_enable_full_blit(true);
-	font = bunny_load_pixelarray("font.png");
+	font = bunny_load_pixelarray("assets/font.png");
 	if (!font)
-		std::cerr << "Missing ./font.png unable to print text in LibLapin" << std::endl;
+		std::cerr << "Missing ./assets/font.png unable to print text in LibLapin" << std::endl;
 	window = bunny_start(800, 800, false, "Mathieu");
 	pixelarray = bunny_new_pixelarray(800, 800);
 	windowsHeight = 800;
@@ -201,7 +201,7 @@ void arcade::GfxLapin::display() {
 
 void arcade::GfxLapin::clear() {
 	bunny_fill(&window->buffer, BLACK);
-	fill(*pixelarray);
+	fillPixelarrayWithBlack();
 }
 void arcade::GfxLapin::loadSounds(const std::vector<std::pair<std::string, arcade::SoundType>> &sounds) {
 	for (auto it = sounds.begin(); it < sounds.end(); it++) {
@@ -211,10 +211,15 @@ void arcade::GfxLapin::loadSounds(const std::vector<std::pair<std::string, arcad
 	}
 }
 void arcade::GfxLapin::soundControl(const arcade::Sound &sound) {
-
+	try {
+		bunny_sound_play(&this->sound.at(sound.id)->sound);
+	}
+	catch (std::out_of_range e) {
+		std::cerr << "The sound you tried to play is not correctly indexed" << std::endl;
+	}
 }
 void arcade::GfxLapin::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites) {
-
+	(void)sprites;
 }
 
 void arcade::GfxLapin::updateGUI(arcade::IGUI &gui) {
@@ -227,7 +232,7 @@ void arcade::GfxLapin::updateGUI(arcade::IGUI &gui) {
 		tektext(pixelarray, font, &position, gui.at(i).getText().c_str(), convertArcadeColorIntoLapinColor(c).full);
 	}
 }
-void arcade::GfxLapin::fill(t_bunny_pixelarray &pPixelarray) {
+void arcade::GfxLapin::fillPixelarrayWithBlack() {
 	int i = 0;
 	
 	while (i < pixelarray->clipable.clip_height * pixelarray->clipable.clip_width) {

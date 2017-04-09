@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <dirent.h>
+#include <algorithm>
 #include "../include/Core.hpp"
 #include "../include/Exception.hpp"
 
@@ -11,28 +12,31 @@ arcade::Core::~Core() {
 
 }
 
-arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0), gameLibIndex(0),
+arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0),
 												   events(std::move(std::vector<arcade::Event>(0))) {
-
+	
 	gamesPath = getPathToSOFilesInDir("games");
 	gfxPath = getPathToSOFilesInDir("lib");
 	gameLoader = NULL;
 	libLoader = NULL;
 	currentGame = NULL;
 	currentLib = NULL;
+	
+	loadGfxLib(pathToLib);
+	auto it = std::find(gfxPath.begin(), gfxPath.end(), pathToLib);
 
-    loadGameLib(gamesPath[0]);
-    loadGfxLib(pathToLib);
-    menu = Menu(gamesPath, gfxPath);
-
-    input[KB_2] = std::bind(&Core::prevGfxLib, this);
-    input[KB_3] = std::bind(&Core::nextGfxLib, this);
-    input[KB_4] = std::bind(&Core::prevGame, this);
-    input[KB_5] = std::bind(&Core::nextGame, this);
-    input[KB_8] = std::bind(&Core::restartGame, this);
-    input[KB_9] = std::bind(&Core::backToMenu, this);
-    launched = false;
-    coreLoop();
+	loadGameLib(gamesPath[0]);
+	gfxLibIndex = (size_t)(it - gfxPath.begin());
+	menu = Menu(gamesPath, gfxPath, static_cast<size_t>(it - gfxPath.begin()));
+	
+	input[KB_2] = std::bind(&Core::prevGfxLib, this);
+	input[KB_3] = std::bind(&Core::nextGfxLib, this);
+	input[KB_4] = std::bind(&Core::prevGame, this);
+	input[KB_5] = std::bind(&Core::nextGame, this);
+	input[KB_8] = std::bind(&Core::restartGame, this);
+	input[KB_9] = std::bind(&Core::backToMenu, this);
+	launched = false;
+	coreLoop();
 }
 
 void arcade::Core::loadGfxLib(std::string const &pathToLib) {
@@ -42,10 +46,10 @@ void arcade::Core::loadGfxLib(std::string const &pathToLib) {
 	}
 	if (libLoader)
 		delete libLoader;
-
+	
 	libLoader = new DLLoader<IGfxLib>(pathToLib);
 	arcade::IGfxLib *lib = libLoader->getInstance("getLib");
-
+	
 	if (!lib)
 		throw GfxLibError("Can't load GFX Library");
 	currentLib = lib;
@@ -152,7 +156,7 @@ std::vector<std::string> arcade::Core::getPathToSOFilesInDir(std::string const &
 	std::vector<std::string> res;
 	DIR *dir = opendir(pathDir.c_str());
 	dirent *r;
-
+	
 	if (!dir)
 		throw GameLibError("Lib : " + pathDir + " directory doesn't exist");
 	while ((r = readdir(dir))) {

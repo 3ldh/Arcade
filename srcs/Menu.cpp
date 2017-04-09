@@ -11,9 +11,9 @@ arcade::Menu::~Menu() {
 
 arcade::Menu::Menu() {}
 
-arcade::Menu::Menu(std::vector<std::string> gamesPath, std::vector<std::string> gfxPath)
+arcade::Menu::Menu(std::vector<std::string> gamesPath, std::vector<std::string> gfxPath, size_t indexLib)
         : gamesPath(gamesPath),
-          gfxPath(gfxPath), indexGame(0), indexLib(0) {
+          gfxPath(gfxPath), indexGame(0), indexLib(indexLib) {
     for (size_t i = 0; i < gamesPath.size(); ++i) {
         UIComponent *component = new UIComponent(0.01, 0.05 * i, 0.04, 0.12);
         component->setText(gamesPath[i]);
@@ -26,7 +26,7 @@ arcade::Menu::Menu(std::vector<std::string> gamesPath, std::vector<std::string> 
         UIComponent *component = new UIComponent(0.5, 0.05 * i, 0.04, 0.12);
         component->setText(gfxPath[i]);
         components.push_back(component);
-		component->setSelected(i == 0);
+		component->setSelected(i == indexLib);
     }
     updateComponents();
 }
