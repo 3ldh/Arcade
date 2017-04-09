@@ -14,6 +14,7 @@ NAME        = ../../lib/lib_arcade_lapin.so
 
 $(NAME):    $(OBJ)
 			@mkdir -p ../../lib
+			@make -j4 -C LibLapin || make -C LibLapin
 			g++ -o $(NAME) $(OBJ) $(LIB) -shared
 
 all:        $(NAME)
