@@ -9,7 +9,7 @@ arcade::Spaceship::~Spaceship() {
 
 }
 
-arcade::Spaceship::Spaceship(size_t x, size_t y, int shootingRange) : Unit(x, y), shootingRange(shootingRange) {
+arcade::Spaceship::Spaceship(size_t x, size_t y, int shootingRange) : Unit(x, y), shootingRange(shootingRange), movingDirection(FORWARD) {
 
 }
 
