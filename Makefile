@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ##
 ## Started on  Wed Jan  4 12:28:45 2017 bougon_p
-## Last update Fri Mar 17 15:22:32 2017 Sauvau Mathieu
+## Last update Fri Apr 07 19:34:08 2017
 ##
 
 # USEFUL VARIABLES
@@ -57,13 +57,16 @@ else
 		@$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 endif
 
+ncurse		:
+		@make re -C gfxLibsSrcs/ncurses
+
 sfml        :
 		@make re -C gfxLibsSrcs/sfml
 
 lapin       :
 		@make re -C gfxLibsSrcs/lapin
 
-gfx         : sfml lapin
+gfx         : sfml lapin ncurse
 
 snake       :
 		@make re -C gamesSrcs/snake
@@ -72,6 +75,8 @@ solarfox    :
 		@make re -C gamesSrcs/solarFox
 
 games       : snake solarfox
+
+42          : all games gfx
 
 all         : $(LIB)
 		@make -j 4 -s compile

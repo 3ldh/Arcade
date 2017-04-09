@@ -84,58 +84,52 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/Color.cpp">
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/arcadeInterfaces/Color.cpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/Color.hpp">
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/arcadeInterfaces/Color.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/Event.hpp">
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/arcadeInterfaces/Event.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/GameState.hpp">
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/arcadeInterfaces/GameState.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/IComponent.hpp">
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/arcadeInterfaces/IComponent.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/IGUI.hpp">
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/arcadeInterfaces/IGUI.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/IGame.hpp">
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/arcadeInterfaces/IGame.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/IGfxLib.hpp">
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/arcadeInterfaces/IGfxLib.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/ILayer.hpp">
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/arcadeInterfaces/IMap.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/ILevel.hpp">
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/arcadeInterfaces/ISprite.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/IMap.hpp">
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/arcadeInterfaces/IStat.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/ISprite.hpp">
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/arcadeInterfaces/ITile.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/IStat.hpp">
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/arcadeInterfaces/NetworkPacket.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/ITile.hpp">
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/arcadeInterfaces/Protocol.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/NetworkPacket.hpp">
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/arcadeInterfaces/Sound.cpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/Protocol.hpp">
-			<Option target="cpp_arcade"/>
-		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/Sound.cpp">
-			<Option target="cpp_arcade"/>
-		</Unit>
-		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/ArcadeInterfaces/Sound.hpp">
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/arcadeInterfaces/Sound.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
 		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/gamesSrcs/snake/SnakeGame.cpp">
@@ -150,6 +144,12 @@
 		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/gamesSrcs/snake/SnakeUnit.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/gamesSrcs/solarFox/Projectile.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/gamesSrcs/solarFox/Projectile.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
 		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/gamesSrcs/solarFox/SolarFoxGame.cpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
@@ -160,6 +160,12 @@
 			<Option target="cpp_arcade"/>
 		</Unit>
 		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/gamesSrcs/solarFox/Spaceship.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/gamesSrcs/solarFox/SpaceshipEnemy.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/gamesSrcs/solarFox/SpaceshipEnemy.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
 		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/gfxLibsSrcs/lapin/LibLapin/include/deps/ANetAccess.hpp">
@@ -960,6 +966,21 @@
 		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/gfxLibsSrcs/lapin/src/GfxLapin.cpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/gfxLibsSrcs/lapin/src/my_blit.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/gfxLibsSrcs/lapin/src/write_img.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/gfxLibsSrcs/lapin/src/write_txt.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/gfxLibsSrcs/ncurses/include/GfxNcurses.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/gfxLibsSrcs/ncurses/src/GfxNcurses.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
 		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/gfxLibsSrcs/sfml/GfxSFML.cpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
@@ -1311,6 +1332,9 @@
 		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/include/Map.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/include/Menu.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
 		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/include/Protocol.hpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
@@ -1342,6 +1366,9 @@
 			<Option target="cpp_arcade"/>
 		</Unit>
 		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/srcs/Map.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/srcs/Menu.cpp">
 			<Option target="cpp_arcade"/>
 		</Unit>
 		<Unit filename="/home/peau_c/School/tek2/cpp_arcade/srcs/Sprite.cpp">

@@ -15,7 +15,7 @@ arcade::Menu::Menu(std::vector<std::string> gamesPath, std::vector<std::string> 
         : gamesPath(gamesPath),
           gfxPath(gfxPath), indexGame(0), indexLib(0) {
     for (size_t i = 0; i < gamesPath.size(); ++i) {
-        UIComponent *component = new UIComponent(10, 50 * i, 40, 100);
+        UIComponent *component = new UIComponent(0.01, 0.05 * i, 0.04, 0.12);
         component->setText(gamesPath[i]);
         components.push_back(component);
 		component->setSelected(i == 0);
@@ -23,7 +23,7 @@ arcade::Menu::Menu(std::vector<std::string> gamesPath, std::vector<std::string> 
 
     //TODO: HIGHLIGHT LA LIB PASSE EN PARAMETTRE, ACTUELLEMENT CA HIGHLIGHT LA PREMIERE DE LA LIB aka setSelected
     for (size_t i = 0; i < gfxPath.size(); ++i) {
-        UIComponent *component = new UIComponent(400, 50 * i, 40, 100);
+        UIComponent *component = new UIComponent(0.5, 0.05 * i, 0.04, 0.12);
         component->setText(gfxPath[i]);
         components.push_back(component);
 		component->setSelected(i == 0);

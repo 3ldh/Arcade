@@ -231,6 +231,33 @@ gamesSrcs/snake/SnakeUnit.cpp.s:
 	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gamesSrcs/snake/SnakeUnit.cpp.s
 .PHONY : gamesSrcs/snake/SnakeUnit.cpp.s
 
+gamesSrcs/solarFox/Projectile.o: gamesSrcs/solarFox/Projectile.cpp.o
+
+.PHONY : gamesSrcs/solarFox/Projectile.o
+
+# target to build an object file
+gamesSrcs/solarFox/Projectile.cpp.o:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gamesSrcs/solarFox/Projectile.cpp.o
+.PHONY : gamesSrcs/solarFox/Projectile.cpp.o
+
+gamesSrcs/solarFox/Projectile.i: gamesSrcs/solarFox/Projectile.cpp.i
+
+.PHONY : gamesSrcs/solarFox/Projectile.i
+
+# target to preprocess a source file
+gamesSrcs/solarFox/Projectile.cpp.i:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gamesSrcs/solarFox/Projectile.cpp.i
+.PHONY : gamesSrcs/solarFox/Projectile.cpp.i
+
+gamesSrcs/solarFox/Projectile.s: gamesSrcs/solarFox/Projectile.cpp.s
+
+.PHONY : gamesSrcs/solarFox/Projectile.s
+
+# target to generate assembly for a file
+gamesSrcs/solarFox/Projectile.cpp.s:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gamesSrcs/solarFox/Projectile.cpp.s
+.PHONY : gamesSrcs/solarFox/Projectile.cpp.s
+
 gamesSrcs/solarFox/SolarFoxGame.o: gamesSrcs/solarFox/SolarFoxGame.cpp.o
 
 .PHONY : gamesSrcs/solarFox/SolarFoxGame.o
@@ -284,6 +311,33 @@ gamesSrcs/solarFox/Spaceship.s: gamesSrcs/solarFox/Spaceship.cpp.s
 gamesSrcs/solarFox/Spaceship.cpp.s:
 	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gamesSrcs/solarFox/Spaceship.cpp.s
 .PHONY : gamesSrcs/solarFox/Spaceship.cpp.s
+
+gamesSrcs/solarFox/SpaceshipEnemy.o: gamesSrcs/solarFox/SpaceshipEnemy.cpp.o
+
+.PHONY : gamesSrcs/solarFox/SpaceshipEnemy.o
+
+# target to build an object file
+gamesSrcs/solarFox/SpaceshipEnemy.cpp.o:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gamesSrcs/solarFox/SpaceshipEnemy.cpp.o
+.PHONY : gamesSrcs/solarFox/SpaceshipEnemy.cpp.o
+
+gamesSrcs/solarFox/SpaceshipEnemy.i: gamesSrcs/solarFox/SpaceshipEnemy.cpp.i
+
+.PHONY : gamesSrcs/solarFox/SpaceshipEnemy.i
+
+# target to preprocess a source file
+gamesSrcs/solarFox/SpaceshipEnemy.cpp.i:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gamesSrcs/solarFox/SpaceshipEnemy.cpp.i
+.PHONY : gamesSrcs/solarFox/SpaceshipEnemy.cpp.i
+
+gamesSrcs/solarFox/SpaceshipEnemy.s: gamesSrcs/solarFox/SpaceshipEnemy.cpp.s
+
+.PHONY : gamesSrcs/solarFox/SpaceshipEnemy.s
+
+# target to generate assembly for a file
+gamesSrcs/solarFox/SpaceshipEnemy.cpp.s:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gamesSrcs/solarFox/SpaceshipEnemy.cpp.s
+.PHONY : gamesSrcs/solarFox/SpaceshipEnemy.cpp.s
 
 gfxLibsSrcs/lapin/LibLapin/src/allocator/calloc.o: gfxLibsSrcs/lapin/LibLapin/src/allocator/calloc.cpp.o
 
@@ -6927,32 +6981,113 @@ gfxLibsSrcs/lapin/src/GfxLapin.cpp.s:
 	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/GfxLapin.cpp.s
 .PHONY : gfxLibsSrcs/lapin/src/GfxLapin.cpp.s
 
-gfxLibsSrcs/lapin/src/tektext.o: gfxLibsSrcs/lapin/src/tektext.cpp.o
+gfxLibsSrcs/lapin/src/my_blit.o: gfxLibsSrcs/lapin/src/my_blit.cpp.o
 
-.PHONY : gfxLibsSrcs/lapin/src/tektext.o
+.PHONY : gfxLibsSrcs/lapin/src/my_blit.o
 
 # target to build an object file
-gfxLibsSrcs/lapin/src/tektext.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/tektext.cpp.o
-.PHONY : gfxLibsSrcs/lapin/src/tektext.cpp.o
+gfxLibsSrcs/lapin/src/my_blit.cpp.o:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/my_blit.cpp.o
+.PHONY : gfxLibsSrcs/lapin/src/my_blit.cpp.o
 
-gfxLibsSrcs/lapin/src/tektext.i: gfxLibsSrcs/lapin/src/tektext.cpp.i
+gfxLibsSrcs/lapin/src/my_blit.i: gfxLibsSrcs/lapin/src/my_blit.cpp.i
 
-.PHONY : gfxLibsSrcs/lapin/src/tektext.i
+.PHONY : gfxLibsSrcs/lapin/src/my_blit.i
 
 # target to preprocess a source file
-gfxLibsSrcs/lapin/src/tektext.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/tektext.cpp.i
-.PHONY : gfxLibsSrcs/lapin/src/tektext.cpp.i
+gfxLibsSrcs/lapin/src/my_blit.cpp.i:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/my_blit.cpp.i
+.PHONY : gfxLibsSrcs/lapin/src/my_blit.cpp.i
 
-gfxLibsSrcs/lapin/src/tektext.s: gfxLibsSrcs/lapin/src/tektext.cpp.s
+gfxLibsSrcs/lapin/src/my_blit.s: gfxLibsSrcs/lapin/src/my_blit.cpp.s
 
-.PHONY : gfxLibsSrcs/lapin/src/tektext.s
+.PHONY : gfxLibsSrcs/lapin/src/my_blit.s
 
 # target to generate assembly for a file
-gfxLibsSrcs/lapin/src/tektext.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/tektext.cpp.s
-.PHONY : gfxLibsSrcs/lapin/src/tektext.cpp.s
+gfxLibsSrcs/lapin/src/my_blit.cpp.s:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/my_blit.cpp.s
+.PHONY : gfxLibsSrcs/lapin/src/my_blit.cpp.s
+
+gfxLibsSrcs/lapin/src/write_img.o: gfxLibsSrcs/lapin/src/write_img.cpp.o
+
+.PHONY : gfxLibsSrcs/lapin/src/write_img.o
+
+# target to build an object file
+gfxLibsSrcs/lapin/src/write_img.cpp.o:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/write_img.cpp.o
+.PHONY : gfxLibsSrcs/lapin/src/write_img.cpp.o
+
+gfxLibsSrcs/lapin/src/write_img.i: gfxLibsSrcs/lapin/src/write_img.cpp.i
+
+.PHONY : gfxLibsSrcs/lapin/src/write_img.i
+
+# target to preprocess a source file
+gfxLibsSrcs/lapin/src/write_img.cpp.i:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/write_img.cpp.i
+.PHONY : gfxLibsSrcs/lapin/src/write_img.cpp.i
+
+gfxLibsSrcs/lapin/src/write_img.s: gfxLibsSrcs/lapin/src/write_img.cpp.s
+
+.PHONY : gfxLibsSrcs/lapin/src/write_img.s
+
+# target to generate assembly for a file
+gfxLibsSrcs/lapin/src/write_img.cpp.s:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/write_img.cpp.s
+.PHONY : gfxLibsSrcs/lapin/src/write_img.cpp.s
+
+gfxLibsSrcs/lapin/src/write_txt.o: gfxLibsSrcs/lapin/src/write_txt.cpp.o
+
+.PHONY : gfxLibsSrcs/lapin/src/write_txt.o
+
+# target to build an object file
+gfxLibsSrcs/lapin/src/write_txt.cpp.o:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/write_txt.cpp.o
+.PHONY : gfxLibsSrcs/lapin/src/write_txt.cpp.o
+
+gfxLibsSrcs/lapin/src/write_txt.i: gfxLibsSrcs/lapin/src/write_txt.cpp.i
+
+.PHONY : gfxLibsSrcs/lapin/src/write_txt.i
+
+# target to preprocess a source file
+gfxLibsSrcs/lapin/src/write_txt.cpp.i:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/write_txt.cpp.i
+.PHONY : gfxLibsSrcs/lapin/src/write_txt.cpp.i
+
+gfxLibsSrcs/lapin/src/write_txt.s: gfxLibsSrcs/lapin/src/write_txt.cpp.s
+
+.PHONY : gfxLibsSrcs/lapin/src/write_txt.s
+
+# target to generate assembly for a file
+gfxLibsSrcs/lapin/src/write_txt.cpp.s:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/write_txt.cpp.s
+.PHONY : gfxLibsSrcs/lapin/src/write_txt.cpp.s
+
+gfxLibsSrcs/ncurses/src/GfxNcurses.o: gfxLibsSrcs/ncurses/src/GfxNcurses.cpp.o
+
+.PHONY : gfxLibsSrcs/ncurses/src/GfxNcurses.o
+
+# target to build an object file
+gfxLibsSrcs/ncurses/src/GfxNcurses.cpp.o:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/ncurses/src/GfxNcurses.cpp.o
+.PHONY : gfxLibsSrcs/ncurses/src/GfxNcurses.cpp.o
+
+gfxLibsSrcs/ncurses/src/GfxNcurses.i: gfxLibsSrcs/ncurses/src/GfxNcurses.cpp.i
+
+.PHONY : gfxLibsSrcs/ncurses/src/GfxNcurses.i
+
+# target to preprocess a source file
+gfxLibsSrcs/ncurses/src/GfxNcurses.cpp.i:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/ncurses/src/GfxNcurses.cpp.i
+.PHONY : gfxLibsSrcs/ncurses/src/GfxNcurses.cpp.i
+
+gfxLibsSrcs/ncurses/src/GfxNcurses.s: gfxLibsSrcs/ncurses/src/GfxNcurses.cpp.s
+
+.PHONY : gfxLibsSrcs/ncurses/src/GfxNcurses.s
+
+# target to generate assembly for a file
+gfxLibsSrcs/ncurses/src/GfxNcurses.cpp.s:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/ncurses/src/GfxNcurses.cpp.s
+.PHONY : gfxLibsSrcs/ncurses/src/GfxNcurses.cpp.s
 
 gfxLibsSrcs/sfml/GfxSFML.o: gfxLibsSrcs/sfml/GfxSFML.cpp.o
 
@@ -7704,12 +7839,18 @@ help:
 	@echo "... gamesSrcs/snake/SnakeUnit.o"
 	@echo "... gamesSrcs/snake/SnakeUnit.i"
 	@echo "... gamesSrcs/snake/SnakeUnit.s"
+	@echo "... gamesSrcs/solarFox/Projectile.o"
+	@echo "... gamesSrcs/solarFox/Projectile.i"
+	@echo "... gamesSrcs/solarFox/Projectile.s"
 	@echo "... gamesSrcs/solarFox/SolarFoxGame.o"
 	@echo "... gamesSrcs/solarFox/SolarFoxGame.i"
 	@echo "... gamesSrcs/solarFox/SolarFoxGame.s"
 	@echo "... gamesSrcs/solarFox/Spaceship.o"
 	@echo "... gamesSrcs/solarFox/Spaceship.i"
 	@echo "... gamesSrcs/solarFox/Spaceship.s"
+	@echo "... gamesSrcs/solarFox/SpaceshipEnemy.o"
+	@echo "... gamesSrcs/solarFox/SpaceshipEnemy.i"
+	@echo "... gamesSrcs/solarFox/SpaceshipEnemy.s"
 	@echo "... gfxLibsSrcs/lapin/LibLapin/src/allocator/calloc.o"
 	@echo "... gfxLibsSrcs/lapin/LibLapin/src/allocator/calloc.i"
 	@echo "... gfxLibsSrcs/lapin/LibLapin/src/allocator/calloc.s"
@@ -8448,9 +8589,18 @@ help:
 	@echo "... gfxLibsSrcs/lapin/src/GfxLapin.o"
 	@echo "... gfxLibsSrcs/lapin/src/GfxLapin.i"
 	@echo "... gfxLibsSrcs/lapin/src/GfxLapin.s"
-	@echo "... gfxLibsSrcs/lapin/src/tektext.o"
-	@echo "... gfxLibsSrcs/lapin/src/tektext.i"
-	@echo "... gfxLibsSrcs/lapin/src/tektext.s"
+	@echo "... gfxLibsSrcs/lapin/src/my_blit.o"
+	@echo "... gfxLibsSrcs/lapin/src/my_blit.i"
+	@echo "... gfxLibsSrcs/lapin/src/my_blit.s"
+	@echo "... gfxLibsSrcs/lapin/src/write_img.o"
+	@echo "... gfxLibsSrcs/lapin/src/write_img.i"
+	@echo "... gfxLibsSrcs/lapin/src/write_img.s"
+	@echo "... gfxLibsSrcs/lapin/src/write_txt.o"
+	@echo "... gfxLibsSrcs/lapin/src/write_txt.i"
+	@echo "... gfxLibsSrcs/lapin/src/write_txt.s"
+	@echo "... gfxLibsSrcs/ncurses/src/GfxNcurses.o"
+	@echo "... gfxLibsSrcs/ncurses/src/GfxNcurses.i"
+	@echo "... gfxLibsSrcs/ncurses/src/GfxNcurses.s"
 	@echo "... gfxLibsSrcs/sfml/GfxSFML.o"
 	@echo "... gfxLibsSrcs/sfml/GfxSFML.i"
 	@echo "... gfxLibsSrcs/sfml/GfxSFML.s"
