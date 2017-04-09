@@ -53,6 +53,10 @@ void arcade::Core::loadGfxLib(std::string const &pathToLib) {
 	if (!lib)
 		throw GfxLibError("Can't load GFX Library");
 	currentLib = lib;
+    if (currentLib && currentGame) {
+        currentLib->loadSounds(currentGame->getSoundsToLoad());
+        currentLib->loadSprites(currentGame->getSpritesToLoad());
+    }
 }
 
 void arcade::Core::loadGameLib(std::string const &pathToGame) {
@@ -62,18 +66,22 @@ void arcade::Core::loadGameLib(std::string const &pathToGame) {
 	}
 	if (gameLoader)
 		delete gameLoader;
-	
+
 	gameLoader = new DLLoader<IGame>(pathToGame);
 	IGame *game = gameLoader->getInstance("getGame");
-	
+
 	if (!game)
 		throw GameLibError("Can't load Game Library");
 	currentGame = game;
+    if (currentLib && currentGame) {
+        currentLib->loadSounds(currentGame->getSoundsToLoad());
+        currentLib->loadSprites(currentGame->getSpritesToLoad());
+    }
 }
 
 bool arcade::Core::getEvents() {
 	arcade::Event event;
-	
+
 	events.clear();
 	while (currentLib->pollEvent(event)) {
 		if (event.action == AT_PRESSED || event.action == AT_RELEASED) {

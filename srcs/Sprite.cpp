@@ -8,7 +8,7 @@ arcade::Sprite::~Sprite() {
 
 }
 
-arcade::Sprite::Sprite(const std::vector<char> &ascii, const std::vector<std::string> &paths) : ascii(ascii),
+arcade::Sprite::Sprite(const std::vector<std::string> &paths, const std::vector<char> &ascii) : ascii(ascii),
                                                                                                 paths(paths) {}
 
 arcade::Sprite::Sprite(const arcade::Sprite &s) {

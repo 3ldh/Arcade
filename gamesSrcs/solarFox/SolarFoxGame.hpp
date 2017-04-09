@@ -52,12 +52,14 @@ namespace arcade {
         std::unordered_map<arcade::KeyboardKey, arcade::Unit::Direction> inputs;
         std::vector<std::unique_ptr<Sprite>> sprites;
         std::vector<std::pair<std::string, arcade::SoundType>> sounds;
-        std::vector<arcade::NetworkPacket> &&netPacket;
+        std::vector<arcade::NetworkPacket> netPacket;
         GUI gui;
         Timer timer;
         Timer timerProjectile;
         Timer totalTime;
         int accelerationRate;
+        int shootDirectionToSpriteId(int player, Unit::Direction direction);
+        int playerDirectionToSpriteId(Unit::Direction direction);
         void clearEnemyPos();
         void updateEnemyPos();
         void cleaPlayerPos();
@@ -67,6 +69,7 @@ namespace arcade {
         void processProjectile();
         bool moveShipProjectiles(Spaceship &spaceship);
         bool checkFinish();
+        void init();
 
     public:
         virtual ~SolarFoxGame();
@@ -74,7 +77,9 @@ namespace arcade {
         GameState getGameState() const override;
         void notifyEvent(std::vector<Event> &&events) override;
         void notifyNetwork(std::vector<NetworkPacket> &&events) override;
-        std::vector<NetworkPacket> &&getNetworkToSend() override;
+
+        std::vector<NetworkPacket> getNetworkToSend() override;
+
         void process() override;
         std::vector<std::unique_ptr<ISprite>> getSpritesToLoad() const override;
         std::vector<std::pair<std::string, SoundType>> getSoundsToLoad() const override;
@@ -85,6 +90,8 @@ namespace arcade {
         void setAccelerationRate(int accelerationRate);
         Spaceship &getPlayer();
         void restart();
+
+        bool hasNetwork() const override;
     };
 }
 

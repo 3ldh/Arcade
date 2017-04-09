@@ -66,11 +66,12 @@ void arcade::SpaceshipEnemy::shoot(Map const &map) {
 
 void arcade::SpaceshipEnemy::updateMapForProjectile(arcade::Map &map) {
     for (size_t i = 0; i < projectiles.size(); ++i)
-        map.updateMapTileForUnit(*projectiles[i], 1, Color::Green, TileType::EVIL_SHOOT, TileTypeEvolution::SHOT_ENEMY);
+        map.updateMapTileForUnit(*projectiles[i], 1, Color::Green, TileType::EVIL_SHOOT, TileTypeEvolution::SHOT_ENEMY,
+                                 shootDirectionToSpriteId(0, movingDirection));
 }
 
 void arcade::SpaceshipEnemy::clearMapForProjectile(arcade::Map &map) {
     for (size_t i = 0; i < projectiles.size(); ++i) {
-        map.updateMapTileForUnit(*projectiles[i], 1, Color::Transparent, TileType::EMPTY, TileTypeEvolution::EMPTY);
+        map.updateMapTileForUnit(*projectiles[i], 1, Color::Transparent, TileType::EMPTY, TileTypeEvolution::EMPTY, 0);
     }
 }

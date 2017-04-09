@@ -29,7 +29,7 @@ void arcade::Tile::setColor(arcade::Color color) {
 }
 
 size_t arcade::Tile::getSpriteId() const {
-    return 0;
+    return spriteID;
 }
 
 size_t arcade::Tile::getSpritePos() const {
@@ -52,14 +52,16 @@ arcade::Tile::~Tile() {
 
 }
 
-arcade::Tile::Tile(TileType type) : type(type), typeEv(EMPTY), _hasSprite(false) {
+arcade::Tile::Tile(TileType type) : type(type), typeEv(EMPTY), spriteID(0), _hasSprite(false) {
 }
 
-const arcade::Sprite &arcade::Tile::getSprite() const {
-    return sprite;
-}
-
-void arcade::Tile::setSprite(const arcade::Sprite &sprite) {
-    Tile::sprite = sprite;
+void arcade::Tile::setSprite(int id) {
+    spriteID = id;
     _hasSprite = true;
 }
+
+void arcade::Tile::removeSprite() {
+    spriteID = 0;
+    _hasSprite = false;
+}
+
