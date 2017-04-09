@@ -25,16 +25,23 @@ arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0),
 	currentGame = NULL;
 	currentLib = NULL;
 	
-	loadGfxLib(pathToLib);
-	auto it = std::find(gfxPath.begin(), gfxPath.end(), pathToLib);
-	
-	if (gamesPath.empty()) {
-		std::cerr << "Please make sure you have games compiled in the ./games directory.\nOtherwise type \"make 42re\" or \"make games\"" << std::endl;
+	try {
+		loadGfxLib(pathToLib);
+		auto it = std::find(gfxPath.begin(), gfxPath.end(), pathToLib);
+		
+		if (gamesPath.empty()) {
+			std::cerr
+					<< "Please make sure you have games compiled in the ./games directory.\nOtherwise type \"make 42re\" or \"make games\""
+					<< std::endl;
+			abort();
+		}
+		loadGameLib(gamesPath[0]);
+		gfxLibIndex = (size_t) (it - gfxPath.begin());
+		menu = Menu(gamesPath, gfxPath, static_cast<size_t>(it - gfxPath.begin()));
+	} catch (arcade::DLLoaderError e) {
+		std::cerr << "Please make sure you did not mistyped the filename" << std::endl;
 		abort();
 	}
-	loadGameLib(gamesPath[0]);
-	gfxLibIndex = (size_t)(it - gfxPath.begin());
-	menu = Menu(gamesPath, gfxPath, static_cast<size_t>(it - gfxPath.begin()));
 	
 	input[KB_2] = std::bind(&Core::prevGfxLib, this);
 	input[KB_3] = std::bind(&Core::nextGfxLib, this);
@@ -60,10 +67,10 @@ void arcade::Core::loadGfxLib(std::string const &pathToLib) {
 	if (!lib)
 		throw GfxLibError("Can't load GFX Library");
 	currentLib = lib;
-    if (currentLib && currentGame) {
-        currentLib->loadSounds(currentGame->getSoundsToLoad());
-        currentLib->loadSprites(currentGame->getSpritesToLoad());
-    }
+	if (currentLib && currentGame) {
+		currentLib->loadSounds(currentGame->getSoundsToLoad());
+		currentLib->loadSprites(currentGame->getSpritesToLoad());
+	}
 }
 
 void arcade::Core::loadGameLib(std::string const &pathToGame) {
@@ -75,19 +82,19 @@ void arcade::Core::loadGameLib(std::string const &pathToGame) {
 		delete gameLoader;
 	gameLoader = new DLLoader<IGame>(pathToGame);
 	IGame *game = gameLoader->getInstance("getGame");
-
+	
 	if (!game)
 		throw GameLibError("Can't load Game Library");
 	currentGame = game;
-    if (currentLib && currentGame) {
-        currentLib->loadSounds(currentGame->getSoundsToLoad());
-        currentLib->loadSprites(currentGame->getSpritesToLoad());
-    }
+	if (currentLib && currentGame) {
+		currentLib->loadSounds(currentGame->getSoundsToLoad());
+		currentLib->loadSprites(currentGame->getSpritesToLoad());
+	}
 }
 
 bool arcade::Core::getEvents() {
 	arcade::Event event;
-
+	
 	events.clear();
 	while (currentLib->pollEvent(event)) {
 		if (event.action == AT_PRESSED || event.action == AT_RELEASED) {
