@@ -105,7 +105,7 @@ void arcade::Core::coreLoop() {
 			break;
 		if (events.size() > 0 && events[0].action == AT_PRESSED && input.find(events[0].kb_key) != input.end())
 			input[events[0].kb_key]();
-		if (launched && currentGame) {
+		if (launched && currentGame && currentGame->getGameState() == arcade::GameState::INGAME) {
 			currentGame->notifyEvent(std::move(events));
 			currentGame->process();
 			currentLib->updateMap(currentGame->getCurrentMap());

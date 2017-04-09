@@ -28,7 +28,6 @@ namespace arcade {
         virtual void clearMapForProjectile(Map &map);
         virtual void updateMapForProjectile(Map &map, Color color);
         bool doesProjectilesCollide(Map &map, std::vector<arcade::Projectile*> &units);
-        int shootDirectionToSpriteId(bool player, arcade::Unit::Direction direction);
         void reset();
     };
 }
