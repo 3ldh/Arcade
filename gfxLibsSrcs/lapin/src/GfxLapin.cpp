@@ -138,7 +138,7 @@ void arcade::GfxLapin::tekpixel(t_bunny_pixelarray &pix,
 	t_color *color;
 	
 	if ((pos.x * pos.y) < (pix.clipable.clip_width *
-							 pix.clipable.clip_height)) {
+						   pix.clipable.clip_height)) {
 		color = (t_color *) pix.pixels + (int) pos.x + (int) pos.y * pix.clipable.clip_width;
 		color->full = col;
 	}
@@ -175,19 +175,15 @@ void arcade::GfxLapin::updateMap(const arcade::IMap &map) {
 	for(size_t i = 0; i < map.getLayerNb(); ++i) {
 		for(size_t j = 0; j < map.getHeight(); ++j) {
 			for(size_t k = 0; k < map.getWidth(); ++k) {
-				if (map.at(i, j, k).hasSprite()) {
+				arcade::Color c = map.at(i, j, k).getColor();
 				
-				} else {
-					arcade::Color c = map.at(i, j, k).getColor();
-					
-					if (c.full != arcade::Color::Transparent.full) {
-						t_color color = convertArcadeColorIntoLapinColor(c);
-						pos.x = windowsWidth / map.getWidth() * k;
-						pos.y = windowsHeight / map.getHeight() * j;
-						size.x = windowsWidth / map.getWidth() - 1;
-						size.y = windowsHeight / map.getHeight() - 1;
-						drawSquare(pos, size, color.full);
-					}
+				if (c.full != arcade::Color::Transparent.full) {
+					t_color color = convertArcadeColorIntoLapinColor(c);
+					pos.x = windowsWidth / map.getWidth() * k;
+					pos.y = windowsHeight / map.getHeight() * j;
+					size.x = windowsWidth / map.getWidth() - 1;
+					size.y = windowsHeight / map.getHeight() - 1;
+					drawSquare(pos, size, color.full);
 				}
 			}
 		}
@@ -204,10 +200,10 @@ void arcade::GfxLapin::clear() {
 	fillPixelarrayWithBlack();
 }
 void arcade::GfxLapin::loadSounds(const std::vector<std::pair<std::string, arcade::SoundType>> &sounds) {
-	for (auto it = sounds.begin(); it < sounds.end(); it++) {
-			t_bunny_music *music = bunny_load_music(it->first.c_str());
-			if (music)
-				sound.push_back(music);
+	for(auto it = sounds.begin(); it < sounds.end(); it++) {
+		t_bunny_music *music = bunny_load_music(it->first.c_str());
+		if (music)
+			sound.push_back(music);
 	}
 }
 void arcade::GfxLapin::soundControl(const arcade::Sound &sound) {
@@ -219,7 +215,7 @@ void arcade::GfxLapin::soundControl(const arcade::Sound &sound) {
 	}
 }
 void arcade::GfxLapin::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites) {
-	(void)sprites;
+	(void) sprites;
 }
 
 void arcade::GfxLapin::updateGUI(arcade::IGUI &gui) {

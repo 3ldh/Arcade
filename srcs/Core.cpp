@@ -116,7 +116,7 @@ void arcade::Core::coreLoop() {
 
 void arcade::Core::prevGame() {
 	if (gameLibIndex  == 0)
-		gameLibIndex = gamesPath.size() - 1;
+		gameLibIndex = gamesPath.size();
 	else
 		--gameLibIndex;
 	gameLibIndex = gameLibIndex % gamesPath.size();
@@ -135,7 +135,7 @@ void arcade::Core::nextGame() {
 
 void arcade::Core::prevGfxLib() {
 	if (gfxLibIndex  == 0)
-		gfxLibIndex = gamesPath.size() - 1;
+		gfxLibIndex = gamesPath.size();
 	else
 		--gfxLibIndex;
 	gfxLibIndex = gfxLibIndex % gfxPath.size();

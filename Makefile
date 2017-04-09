@@ -1,11 +1,7 @@
 ##
-## Makefile for MAKEFILE in /home/bougon_p
+## Makefile for MAKEFILE in /home/
 ##
-## Made by bougon_p
-## Login   <bougon_p@epitech.net>
 ##
-## Started on  Wed Jan  4 12:28:45 2017 bougon_p
-## Last update Sun Apr 09 17:23:21 2017 
 ##
 
 # USEFUL VARIABLES
