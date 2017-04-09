@@ -46,19 +46,6 @@ arcade::SolarFoxGame::SolarFoxGame() : map(Map(MAP_WIDTH, MAP_HEIGHT, 2)),
     pathToSprite.clear();
     pathToSprite.push_back("./Textures/bonus.png");
     sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
-    pathToSprite.clear();
-    pathToSprite.push_back("./Textures/laser.png");
-    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
-    pathToSprite.clear();
-    pathToSprite.push_back("./Textures/laser_left.png");
-    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
-    pathToSprite.clear();
-    pathToSprite.push_back("./Textures/laser_down.png");
-    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
-    pathToSprite.clear();
-    pathToSprite.push_back("./Textures/laser_right.png");
-    sprites.push_back(std::unique_ptr<Sprite>(new Sprite(pathToSprite)));
-
 
     inputs[KeyboardKey::KB_ARROW_UP] = Unit::Direction::UP;
     inputs[KeyboardKey::KB_ARROW_DOWN] = Unit::Direction::DOWN;
@@ -101,10 +88,8 @@ arcade::GameState arcade::SolarFoxGame::getGameState() const {
 
 void arcade::SolarFoxGame::notifyEvent(std::vector<arcade::Event> &&events) {
     if (events.size() > 0) {
-        if (inputs.find(events[0].kb_key) != inputs.end()) {
-            std::cerr << inputs[events[0].kb_key] << std::endl;
+        if (inputs.find(events[0].kb_key) != inputs.end())
             player.setMovingDirection(inputs[events[0].kb_key]);
-        }
         else if (events[0].action == AT_PRESSED) {
             if (events[0].kb_key == KB_SPACE) {
                 player.shoot();

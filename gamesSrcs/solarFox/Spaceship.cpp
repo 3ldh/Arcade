@@ -9,7 +9,8 @@ arcade::Spaceship::~Spaceship() {
 
 }
 
-arcade::Spaceship::Spaceship(size_t x, size_t y, int shootingRange) : Unit(x, y), movingDirection(FORWARD),shootingRange(shootingRange) {
+arcade::Spaceship::Spaceship(size_t x, size_t y, int shootingRange) : Unit(x, y), movingDirection(FORWARD),
+                                                                      shootingRange(shootingRange) {
 
 }
 
@@ -40,8 +41,7 @@ std::vector<arcade::Projectile *> &arcade::Spaceship::getProjectiles() {
 void arcade::Spaceship::updateMapForProjectile(arcade::Map &map, Color color) {
     for (size_t i = 0; i < projectiles.size(); ++i) {
         {
-            map.updateMapTileForUnit(*projectiles[i], 1, color, TileType::MY_SHOOT, TileTypeEvolution::SHOT_PLAYER,
-                                     shootDirectionToSpriteId(true, projectiles[i]->getDirection()));
+            map.updateMapTileForUnit(*projectiles[i], 1, color, TileType::MY_SHOOT, TileTypeEvolution::SHOT_PLAYER, 10);
         }
     }
 }
@@ -83,22 +83,6 @@ bool arcade::Spaceship::doesProjectilesCollide(Map &map, std::vector<arcade::Pro
         }
     }
     return (false);
-}
-
-int arcade::Spaceship::shootDirectionToSpriteId(bool player, arcade::Unit::Direction direction) {
-    switch (direction) {
-        case arcade::Unit::Direction::UP:
-            return player ? 10 : 14;
-        case arcade::Unit::Direction::DOWN:
-            return player ? 12 : 16;
-        case arcade::Unit::Direction::LEFT:
-            return player ? 13 : 17;
-        case arcade::Unit::Direction::RIGHT:
-            return player ? 11 : 15;
-        case arcade::Unit::Direction::FORWARD:
-            return 0;
-    }
-    return player ? 10 : 15;
 }
 
 void arcade::Spaceship::reset() {
