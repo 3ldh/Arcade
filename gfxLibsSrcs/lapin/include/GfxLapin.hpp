@@ -39,25 +39,22 @@ namespace arcade {
 		std::map<sf::Keyboard::Key, arcade::KeyboardKey> keyboardMap;
 		std::map<sf::Event::EventType, arcade::ActionType> actionTypeMap;
 		std::map<sf::Event::EventType, arcade::EventType> eventsTypeMap;
-		std::vector<t_bunny_sound *> sound;
+		std::vector<t_bunny_music *> sound;
 		size_t windowsWidth;
 		size_t windowsHeight;
 		t_bunny_pixelarray *font;
 		t_bunny_window *window;
 		t_bunny_pixelarray *pixelarray;
+		
 		void fill(t_bunny_pixelarray &pPixelarray);
 		void drawSquare(t_bunny_accurate_position pos, t_bunny_accurate_position size, u_int32_t color);
 		t_color convertArcadeColorIntoLapinColor(Color c);
-		t_bunny_position pos_(int x, int y);
-		void write_txt_next(t_bunny_position *offset, t_bunny_pixelarray *pix_ar, t_bunny_pixelarray *letter);
-		void write_txt(t_bunny_pixelarray *pix_ar, t_bunny_pixelarray *font, char *str, t_bunny_position);
-		t_bunny_position offset_center_txt(char *str);
-		void write_png(t_bunny_pixelarray *pix_ar, t_bunny_pixelarray *font, char *str);
-		void my_fill(t_bunny_pixelarray *pix, uint32_t i);
-		t_bunny_pixelarray *get_letter(t_bunny_pixelarray *f, int index);
-		void my_blit(t_bunny_pixelarray *pix_ar, t_bunny_pixelarray *pix_ar2, t_bunny_position offset);
-		t_color blend(t_color bg, t_color fg);
-		void tekpixel(t_bunny_pixelarray &pix, t_bunny_accurate_position &pos, unsigned int col);
+		void tekpixel(t_bunny_pixelarray &pix, t_bunny_accurate_position pos, unsigned int col);
+		void tekpixel(t_bunny_pixelarray &array, t_bunny_position pos, u_int32_t);
+		int test_color(t_color *color);
+		void pixel_cpy(t_bunny_pixelarray *out, t_bunny_pixelarray *fontpng, t_bunny_position new_pos,
+							   u_int32_t i);
+		void tektext(t_bunny_pixelarray *out, t_bunny_pixelarray *fontpng, const t_bunny_position *pos, const char *str, u_int32_t color);
 	};
 }
 

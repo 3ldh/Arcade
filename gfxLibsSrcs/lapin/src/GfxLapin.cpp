@@ -133,7 +133,7 @@ bool arcade::GfxLapin::doesSupportSound() const {
 }
 
 void arcade::GfxLapin::tekpixel(t_bunny_pixelarray &pix,
-								t_bunny_accurate_position &pos,
+								t_bunny_accurate_position pos,
 								unsigned int col) {
 	t_color *color;
 	
@@ -204,7 +204,11 @@ void arcade::GfxLapin::clear() {
 	fill(*pixelarray);
 }
 void arcade::GfxLapin::loadSounds(const std::vector<std::pair<std::string, arcade::SoundType>> &sounds) {
-
+	for (auto it = sounds.begin(); it < sounds.end(); it++) {
+			t_bunny_music *music = bunny_load_music(it->first.c_str());
+			if (music)
+				sound.push_back(music);
+	}
 }
 void arcade::GfxLapin::soundControl(const arcade::Sound &sound) {
 
@@ -217,13 +221,10 @@ void arcade::GfxLapin::updateGUI(arcade::IGUI &gui) {
 	for(size_t i = 0; i < gui.size(); ++i) {
 		t_bunny_position position;
 		
-		position.x = (int) gui.at(i).getX();
-		position.y = (int) gui.at(i).getY();
+		position.x = (int) (windowsWidth * gui.at(i).getX());
+		position.y = (int) (windowsHeight * gui.at(i).getY());
 		arcade::Color c = gui.at(i).getTextColor();
-		write_txt(pixelarray, font, (char *) gui.at(i).getText().c_str(), position);
-		
-		//printf("boulce n*%lu\n", i);
-		
+		tektext(pixelarray, font, &position, gui.at(i).getText().c_str(), convertArcadeColorIntoLapinColor(c).full);
 	}
 }
 void arcade::GfxLapin::fill(t_bunny_pixelarray &pPixelarray) {

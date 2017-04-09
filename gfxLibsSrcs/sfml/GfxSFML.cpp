@@ -188,7 +188,7 @@ void arcade::GfxSFML::updateGUI(arcade::IGUI &gui) {
         text.setFont(font);
         text.setCharacterSize(16);
         text.setString(gui.at(i).getText());
-        text.setPosition((int) gui.at(i).getX(), (int) gui.at(i).getY());
+        text.setPosition((int)(WIN_WIDTH * gui.at(i).getX()), (int) (WIN_HEIGHT * gui.at(i).getY()));
         text.setColor(sf::Color(c.rgba[0], c.rgba[1], c.rgba[2]));
         window.draw(text);
     }
