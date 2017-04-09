@@ -77,6 +77,7 @@ void arcade::SolarFoxGame::init() {
             map[1][y][x]->setColor(Color::Transparent);
         }
     }
+    updatePlayerPos();
     timer.start();
     timerProjectile.start();
     totalTime.start();
@@ -264,7 +265,7 @@ int arcade::SolarFoxGame::playerDirectionToSpriteId(arcade::Unit::Direction dire
         case arcade::Unit::Direction::RIGHT:
             return 2;
         case arcade::Unit::Direction::FORWARD:
-            return 0;
+            return 1;
     }
     return 1;
 }

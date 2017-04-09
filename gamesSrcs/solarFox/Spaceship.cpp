@@ -40,9 +40,7 @@ std::vector<arcade::Projectile *> &arcade::Spaceship::getProjectiles() {
 
 void arcade::Spaceship::updateMapForProjectile(arcade::Map &map, Color color) {
     for (size_t i = 0; i < projectiles.size(); ++i) {
-        {
-            map.updateMapTileForUnit(*projectiles[i], 1, color, TileType::MY_SHOOT, TileTypeEvolution::SHOT_PLAYER, 10);
-        }
+        map.updateMapTileForUnit(*projectiles[i], 1, color, TileType::MY_SHOOT, TileTypeEvolution::SHOT_PLAYER, 10);
     }
 }
 

@@ -58,7 +58,6 @@ namespace arcade {
         Timer timerProjectile;
         Timer totalTime;
         int accelerationRate;
-        int shootDirectionToSpriteId(int player, Unit::Direction direction);
         int playerDirectionToSpriteId(Unit::Direction direction);
         void clearEnemyPos();
         void updateEnemyPos();
