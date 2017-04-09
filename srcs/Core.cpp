@@ -9,7 +9,10 @@
 #include "../include/Exception.hpp"
 
 arcade::Core::~Core() {
-
+	if (currentGame)
+		delete currentGame;
+	if (currentLib)
+		delete currentLib;
 }
 
 arcade::Core::Core(std::string const &pathToLib) : gfxLibIndex(0),

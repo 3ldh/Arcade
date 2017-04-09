@@ -101,26 +101,23 @@ arcade::GameState arcade::SolarFoxGame::getGameState() const {
 
 void arcade::SolarFoxGame::notifyEvent(std::vector<arcade::Event> &&events) {
     if (events.size() > 0) {
-        if (events[0].action == AT_PRESSED) {
+        if (inputs.find(events[0].kb_key) != inputs.end()) {
+            std::cerr << inputs[events[0].kb_key] << std::endl;
+            player.setMovingDirection(inputs[events[0].kb_key]);
+        }
+        else if (events[0].action == AT_PRESSED) {
             if (events[0].kb_key == KB_SPACE) {
                 player.shoot();
                 player.updateMapForProjectile(map, Color::Magenta);
-            }
-            else if (events[0].kb_key == KB_8)
+            } else if (events[0].kb_key == KB_8)
                 restart();
         }
-        else if (inputs.find(events[0].kb_key) != inputs.end())
-            player.setMovingDirection(inputs[events[0].kb_key]);
-
     }
 }
 
 void arcade::SolarFoxGame::notifyNetwork(std::vector<arcade::NetworkPacket> &&events) {
     (void) events;
 }
-
-
-
 
 bool arcade::SolarFoxGame::moveShipProjectiles(arcade::Spaceship &spaceship) {
     auto it = spaceship.getProjectiles().begin();
@@ -212,7 +209,8 @@ void arcade::SolarFoxGame::cleaPlayerPos() {
 }
 
 void arcade::SolarFoxGame::updatePlayerPos() {
-    map.updateMapTileForUnit(player, 1, Color::Blue, TileType::OTHER, TileTypeEvolution::PLAYER, playerDirectionToSpriteId(player.getMovingDirection()));
+    map.updateMapTileForUnit(player, 1, Color::Blue, TileType::OTHER, TileTypeEvolution::PLAYER,
+                             playerDirectionToSpriteId(player.getMovingDirection()));
 }
 
 void arcade::SolarFoxGame::clearEnemyPos() {

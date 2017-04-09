@@ -6981,86 +6981,32 @@ gfxLibsSrcs/lapin/src/GfxLapin.cpp.s:
 	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/GfxLapin.cpp.s
 .PHONY : gfxLibsSrcs/lapin/src/GfxLapin.cpp.s
 
-gfxLibsSrcs/lapin/src/my_blit.o: gfxLibsSrcs/lapin/src/my_blit.cpp.o
+gfxLibsSrcs/lapin/src/tektext.o: gfxLibsSrcs/lapin/src/tektext.cpp.o
 
-.PHONY : gfxLibsSrcs/lapin/src/my_blit.o
-
-# target to build an object file
-gfxLibsSrcs/lapin/src/my_blit.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/my_blit.cpp.o
-.PHONY : gfxLibsSrcs/lapin/src/my_blit.cpp.o
-
-gfxLibsSrcs/lapin/src/my_blit.i: gfxLibsSrcs/lapin/src/my_blit.cpp.i
-
-.PHONY : gfxLibsSrcs/lapin/src/my_blit.i
-
-# target to preprocess a source file
-gfxLibsSrcs/lapin/src/my_blit.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/my_blit.cpp.i
-.PHONY : gfxLibsSrcs/lapin/src/my_blit.cpp.i
-
-gfxLibsSrcs/lapin/src/my_blit.s: gfxLibsSrcs/lapin/src/my_blit.cpp.s
-
-.PHONY : gfxLibsSrcs/lapin/src/my_blit.s
-
-# target to generate assembly for a file
-gfxLibsSrcs/lapin/src/my_blit.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/my_blit.cpp.s
-.PHONY : gfxLibsSrcs/lapin/src/my_blit.cpp.s
-
-gfxLibsSrcs/lapin/src/write_img.o: gfxLibsSrcs/lapin/src/write_img.cpp.o
-
-.PHONY : gfxLibsSrcs/lapin/src/write_img.o
+.PHONY : gfxLibsSrcs/lapin/src/tektext.o
 
 # target to build an object file
-gfxLibsSrcs/lapin/src/write_img.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/write_img.cpp.o
-.PHONY : gfxLibsSrcs/lapin/src/write_img.cpp.o
+gfxLibsSrcs/lapin/src/tektext.cpp.o:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/tektext.cpp.o
+.PHONY : gfxLibsSrcs/lapin/src/tektext.cpp.o
 
-gfxLibsSrcs/lapin/src/write_img.i: gfxLibsSrcs/lapin/src/write_img.cpp.i
+gfxLibsSrcs/lapin/src/tektext.i: gfxLibsSrcs/lapin/src/tektext.cpp.i
 
-.PHONY : gfxLibsSrcs/lapin/src/write_img.i
-
-# target to preprocess a source file
-gfxLibsSrcs/lapin/src/write_img.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/write_img.cpp.i
-.PHONY : gfxLibsSrcs/lapin/src/write_img.cpp.i
-
-gfxLibsSrcs/lapin/src/write_img.s: gfxLibsSrcs/lapin/src/write_img.cpp.s
-
-.PHONY : gfxLibsSrcs/lapin/src/write_img.s
-
-# target to generate assembly for a file
-gfxLibsSrcs/lapin/src/write_img.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/write_img.cpp.s
-.PHONY : gfxLibsSrcs/lapin/src/write_img.cpp.s
-
-gfxLibsSrcs/lapin/src/write_txt.o: gfxLibsSrcs/lapin/src/write_txt.cpp.o
-
-.PHONY : gfxLibsSrcs/lapin/src/write_txt.o
-
-# target to build an object file
-gfxLibsSrcs/lapin/src/write_txt.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/write_txt.cpp.o
-.PHONY : gfxLibsSrcs/lapin/src/write_txt.cpp.o
-
-gfxLibsSrcs/lapin/src/write_txt.i: gfxLibsSrcs/lapin/src/write_txt.cpp.i
-
-.PHONY : gfxLibsSrcs/lapin/src/write_txt.i
+.PHONY : gfxLibsSrcs/lapin/src/tektext.i
 
 # target to preprocess a source file
-gfxLibsSrcs/lapin/src/write_txt.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/write_txt.cpp.i
-.PHONY : gfxLibsSrcs/lapin/src/write_txt.cpp.i
+gfxLibsSrcs/lapin/src/tektext.cpp.i:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/tektext.cpp.i
+.PHONY : gfxLibsSrcs/lapin/src/tektext.cpp.i
 
-gfxLibsSrcs/lapin/src/write_txt.s: gfxLibsSrcs/lapin/src/write_txt.cpp.s
+gfxLibsSrcs/lapin/src/tektext.s: gfxLibsSrcs/lapin/src/tektext.cpp.s
 
-.PHONY : gfxLibsSrcs/lapin/src/write_txt.s
+.PHONY : gfxLibsSrcs/lapin/src/tektext.s
 
 # target to generate assembly for a file
-gfxLibsSrcs/lapin/src/write_txt.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/write_txt.cpp.s
-.PHONY : gfxLibsSrcs/lapin/src/write_txt.cpp.s
+gfxLibsSrcs/lapin/src/tektext.cpp.s:
+	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/lapin/src/tektext.cpp.s
+.PHONY : gfxLibsSrcs/lapin/src/tektext.cpp.s
 
 gfxLibsSrcs/ncurses/src/GfxNcurses.o: gfxLibsSrcs/ncurses/src/GfxNcurses.cpp.o
 
@@ -7115,384 +7061,6 @@ gfxLibsSrcs/sfml/GfxSFML.s: gfxLibsSrcs/sfml/GfxSFML.cpp.s
 gfxLibsSrcs/sfml/GfxSFML.cpp.s:
 	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/GfxSFML.cpp.s
 .PHONY : gfxLibsSrcs/sfml/GfxSFML.cpp.s
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.o: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.cpp.o
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.o
-
-# target to build an object file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.cpp.o
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.cpp.o
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.i: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.cpp.i
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.i
-
-# target to preprocess a source file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.cpp.i
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.cpp.i
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.s: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.cpp.s
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.s
-
-# target to generate assembly for a file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.cpp.s
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.cpp.s
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.o: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.cpp.o
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.o
-
-# target to build an object file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.cpp.o
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.cpp.o
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.i: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.cpp.i
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.i
-
-# target to preprocess a source file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.cpp.i
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.cpp.i
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.s: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.cpp.s
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.s
-
-# target to generate assembly for a file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.cpp.s
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.cpp.s
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.o: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.cpp.o
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.o
-
-# target to build an object file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.cpp.o
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.cpp.o
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.i: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.cpp.i
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.i
-
-# target to preprocess a source file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.cpp.i
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.cpp.i
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.s: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.cpp.s
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.s
-
-# target to generate assembly for a file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.cpp.s
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.cpp.s
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.o: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.cpp.o
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.o
-
-# target to build an object file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.cpp.o
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.cpp.o
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.i: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.cpp.i
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.i
-
-# target to preprocess a source file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.cpp.i
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.cpp.i
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.s: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.cpp.s
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.s
-
-# target to generate assembly for a file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.cpp.s
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.cpp.s
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.o: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.cpp.o
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.o
-
-# target to build an object file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.cpp.o
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.cpp.o
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.i: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.cpp.i
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.i
-
-# target to preprocess a source file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.cpp.i
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.cpp.i
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.s: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.cpp.s
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.s
-
-# target to generate assembly for a file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.cpp.s
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.cpp.s
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.o: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.cpp.o
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.o
-
-# target to build an object file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.cpp.o
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.cpp.o
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.i: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.cpp.i
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.i
-
-# target to preprocess a source file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.cpp.i
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.cpp.i
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.s: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.cpp.s
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.s
-
-# target to generate assembly for a file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.cpp.s
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.cpp.s
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.o: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.cpp.o
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.o
-
-# target to build an object file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.cpp.o
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.cpp.o
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.i: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.cpp.i
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.i
-
-# target to preprocess a source file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.cpp.i
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.cpp.i
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.s: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.cpp.s
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.s
-
-# target to generate assembly for a file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.cpp.s
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.cpp.s
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.o: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.cpp.o
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.o
-
-# target to build an object file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.cpp.o
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.cpp.o
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.i: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.cpp.i
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.i
-
-# target to preprocess a source file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.cpp.i
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.cpp.i
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.s: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.cpp.s
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.s
-
-# target to generate assembly for a file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.cpp.s
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.cpp.s
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.o: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.cpp.o
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.o
-
-# target to build an object file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.cpp.o
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.cpp.o
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.i: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.cpp.i
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.i
-
-# target to preprocess a source file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.cpp.i
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.cpp.i
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.s: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.cpp.s
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.s
-
-# target to generate assembly for a file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.cpp.s
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.cpp.s
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.o: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.cpp.o
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.o
-
-# target to build an object file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.cpp.o
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.cpp.o
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.i: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.cpp.i
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.i
-
-# target to preprocess a source file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.cpp.i
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.cpp.i
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.s: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.cpp.s
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.s
-
-# target to generate assembly for a file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.cpp.s
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.cpp.s
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.o: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.cpp.o
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.o
-
-# target to build an object file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.cpp.o
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.cpp.o
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.i: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.cpp.i
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.i
-
-# target to preprocess a source file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.cpp.i
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.cpp.i
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.s: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.cpp.s
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.s
-
-# target to generate assembly for a file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.cpp.s
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.cpp.s
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.o: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.cpp.o
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.o
-
-# target to build an object file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.cpp.o
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.cpp.o
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.i: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.cpp.i
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.i
-
-# target to preprocess a source file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.cpp.i
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.cpp.i
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.s: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.cpp.s
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.s
-
-# target to generate assembly for a file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.cpp.s
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.cpp.s
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.o: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.cpp.o
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.o
-
-# target to build an object file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.cpp.o
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.cpp.o
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.i: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.cpp.i
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.i
-
-# target to preprocess a source file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.cpp.i
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.cpp.i
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.s: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.cpp.s
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.s
-
-# target to generate assembly for a file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.cpp.s
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.cpp.s
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.o: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.cpp.o
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.o
-
-# target to build an object file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.cpp.o
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.cpp.o
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.i: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.cpp.i
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.i
-
-# target to preprocess a source file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.cpp.i
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.cpp.i
-
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.s: gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.cpp.s
-
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.s
-
-# target to generate assembly for a file
-gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_arcade.dir/build.make CMakeFiles/cpp_arcade.dir/gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.cpp.s
-.PHONY : gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.cpp.s
 
 srcs/Core.o: srcs/Core.cpp.o
 
@@ -8589,63 +8157,15 @@ help:
 	@echo "... gfxLibsSrcs/lapin/src/GfxLapin.o"
 	@echo "... gfxLibsSrcs/lapin/src/GfxLapin.i"
 	@echo "... gfxLibsSrcs/lapin/src/GfxLapin.s"
-	@echo "... gfxLibsSrcs/lapin/src/my_blit.o"
-	@echo "... gfxLibsSrcs/lapin/src/my_blit.i"
-	@echo "... gfxLibsSrcs/lapin/src/my_blit.s"
-	@echo "... gfxLibsSrcs/lapin/src/write_img.o"
-	@echo "... gfxLibsSrcs/lapin/src/write_img.i"
-	@echo "... gfxLibsSrcs/lapin/src/write_img.s"
-	@echo "... gfxLibsSrcs/lapin/src/write_txt.o"
-	@echo "... gfxLibsSrcs/lapin/src/write_txt.i"
-	@echo "... gfxLibsSrcs/lapin/src/write_txt.s"
+	@echo "... gfxLibsSrcs/lapin/src/tektext.o"
+	@echo "... gfxLibsSrcs/lapin/src/tektext.i"
+	@echo "... gfxLibsSrcs/lapin/src/tektext.s"
 	@echo "... gfxLibsSrcs/ncurses/src/GfxNcurses.o"
 	@echo "... gfxLibsSrcs/ncurses/src/GfxNcurses.i"
 	@echo "... gfxLibsSrcs/ncurses/src/GfxNcurses.s"
 	@echo "... gfxLibsSrcs/sfml/GfxSFML.o"
 	@echo "... gfxLibsSrcs/sfml/GfxSFML.i"
 	@echo "... gfxLibsSrcs/sfml/GfxSFML.s"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.o"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.i"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/X11/X11.s"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.o"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.i"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/ftp/Ftp.s"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.o"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.i"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.s"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.o"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.i"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/pong/Pong.s"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.o"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.i"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/shader/Shader.s"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.o"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.i"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/Sockets.s"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.o"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.i"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/TCP.s"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.o"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.i"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sockets/UDP.s"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.o"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.i"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.s"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.o"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.i"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/sound/Sound.s"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.o"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.i"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Client.s"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.o"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.i"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/Server.s"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.o"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.i"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/voip/VoIP.s"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.o"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.i"
-	@echo "... gfxLibsSrcs/sfml/SFML-2.4.2/share/SFML/examples/window/Window.s"
 	@echo "... srcs/Core.o"
 	@echo "... srcs/Core.i"
 	@echo "... srcs/Core.s"
